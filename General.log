@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.25)  25 SEP 2016 19:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.25)  25 SEP 2016 20:19
 entering extended mode
 **./General.tex
 (General.tex
@@ -1567,15 +1567,9 @@ formatica.aux) (Pruebas.aux)
 (Conclusiones.aux) (Anexos.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 135.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 135.
+Package rerunfilecheck Info: File `General.out' has not changed.
+(rerunfilecheck)             Checksum: BCD8220390123924989342F656840EC7;832.
 
-
-Package rerunfilecheck Warning: File `General.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `General.out':
-(rerunfilecheck)             Before: 275393D6A0251F1E71BCC32C296F963E;841
-(rerunfilecheck)             After:  BCD8220390123924989342F656840EC7;832.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1596,7 +1590,7 @@ Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Pr
 ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on General.pdf (23 pages, 138462 bytes).
+Output written on General.pdf (23 pages, 138133 bytes).
 PDF statistics:
  222 PDF objects out of 1000 (max. 8388607)
  43 named destinations out of 1000 (max. 500000)
