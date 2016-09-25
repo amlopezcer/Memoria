@@ -1,0 +1,135 @@
+% ###########################################
+% #											#
+% #	Autor: Alejandro M. López Cerezo    	#
+% #                                        	#
+% ###########################################
+
+
+\documentclass[a4paper,12pt]{book}
+
+\usepackage[spanish]{babel}		% Para usar el español
+\usepackage[utf8]{inputenc}		% La codificación
+\usepackage{geometry} 			% Para alterar con facilidad los márgenes
+\usepackage{fancyhdr}			% Para los encabezados y pies de página
+\usepackage{graphicx} 			% Para la inclusión de imágenes, figuras, etc..
+%\usepackage{makeidx} 			% Para el índice de palabras
+\usepackage{hyperref}			% Para incluir url's, para que los elementos de los índices sean enlaces, etc...
+
+%\geometry{left = 3.0cm, right = 3.0cm, top = 2.5cm, bottom = 2.5cm}
+
+%\makeindex % Para el índice de palabras que se crea al final
+
+
+\begin{document} 
+
+%\renewcommand{\baselinestretch}{1.5} 	% Interlineado de 1.5. Pero sólo parece tener efecto en el índice...
+
+% Formateo de los encabezados y pies de página 
+\pagestyle{fancy}
+\fancyhf{} % Limpia todos los encabezados y pies de página
+%\renewcommand{\headrulewidth}{0.4pt} % Grosor de la líneas del encabezado.
+%\renewcommand{\footrulewidth}{0.4pt}
+% Encabezados
+\fancyhead[LO]{\rightmark}		% En las pags. impares (O: Odd) a la izq. (L: left) el nombre del capítulo (\rightmark)
+\fancyhead[RE]{\leftmark}		% En las pags. pares (E: Even) a la der. (R: right) el nombre de la sección (\leftmark)
+\fancyhead[RO, LE]{\thepage} 	% El número de página en las esquinas der. en impares e izq. en pares.
+
+
+\frontmatter % Formato a la parte previa al cuerpo del proyecto
+
+
+% ----------------- PORTADA ---------------------
+
+\include{Portada}
+\newpage{\pagestyle{empty}\cleardoublepage} % Página en blanco
+
+
+% ----------------- AGRADECIMIENTOS -------------
+
+\include{Agradecimientos}
+\newpage{\pagestyle{empty}\cleardoublepage}
+
+
+% ------------------ RESUMEN --------------------
+
+\include{Resumen}
+\newpage{\pagestyle{empty}\cleardoublepage}
+
+
+% ------------------ ÍNDICE GENERAL -------------
+
+\tableofcontents
+\newpage{\pagestyle{empty}\cleardoublepage}
+
+
+% ------------------ ÍNDICE DE FIGURAS ----------
+
+\listoffigures
+\newpage{\pagestyle{empty}\cleardoublepage}
+
+% -----------------------------------------------
+
+
+% Formato para cuerpo del proyecto
+\mainmatter
+
+
+% ------------------ INTRODUCCIÓN ---------------
+
+\include{Introduccion}
+
+
+% ------------------ OBJETIVOS ------------------
+
+\include{Objetivos} 
+
+
+% ------------------ DESCRIPCIÓN INFORMÁTICA ----
+
+\include{DescInformatica}
+
+
+% ------------------ PRUEBAS --------------------
+
+\include{Pruebas}
+
+
+% ------------------ CONCLUSIONES ---------------
+
+\include{Conclusiones}
+
+
+% ------------------ ANEXOS ---------------------
+
+\appendix
+\include{Anexos}
+
+% -----------------------------------------------
+
+
+% Formato para la parte final del documento
+\backmatter
+
+
+
+
+% ------------------ BIBLIOGRAFÍA ---------------
+
+
+\begin{thebibliography}{99} % Máximo de referencias
+	\bibitem{oetiker15}
+	Oetiker T. et al,
+	\emph{The Not So Short Introduction to \LaTeXe},
+	Version 5.05,
+	2015.
+\end{thebibliography}
+
+
+% ------------------ ÍNDICE DE PALABRAS ---------
+
+%\printindex % Crea el índice de palabras
+
+% -----------------------------------------------
+
+
+\end{document}
