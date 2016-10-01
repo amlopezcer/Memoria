@@ -15,20 +15,13 @@
 %\usepackage{makeidx} 			% Para el índice de palabras
 \usepackage{hyperref}			% Para incluir url's, para que los elementos de los índices sean enlaces, etc...
 
-%\geometry{left = 3.0cm, right = 3.0cm, top = 2.5cm, bottom = 2.5cm}
-
 %\makeindex % Para el índice de palabras que se crea al final
 
-
 \begin{document} 
-
-%\renewcommand{\baselinestretch}{1.5} 	% Interlineado de 1.5. Pero sólo parece tener efecto en el índice...
 
 % Formateo de los encabezados y pies de página 
 \pagestyle{fancy}
 \fancyhf{} % Limpia todos los encabezados y pies de página
-%\renewcommand{\headrulewidth}{0.4pt} % Grosor de la líneas del encabezado.
-%\renewcommand{\footrulewidth}{0.4pt}
 % Encabezados
 \fancyhead[LO]{\rightmark}		% En las pags. impares (O: Odd) a la izq. (L: left) el nombre del capítulo (\rightmark)
 \fancyhead[RE]{\leftmark}		% En las pags. pares (E: Even) a la der. (R: right) el nombre de la sección (\leftmark)
@@ -115,14 +108,7 @@
 
 % ------------------ BIBLIOGRAFÍA ---------------
 
-
-\begin{thebibliography}{99} % Máximo de referencias
-	\bibitem{oetiker15}
-	Oetiker T. et al,
-	\emph{The Not So Short Introduction to \LaTeXe},
-	Version 5.05,
-	2015.
-\end{thebibliography}
+\include{Bibliografia}
 
 
 % ------------------ ÍNDICE DE PALABRAS ---------
