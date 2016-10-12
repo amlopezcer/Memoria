@@ -1,16 +1,182 @@
 \chapter{Descripción informática}
 
-\section{Requisitos}
+\section{Especificación de Requisitos Software}
 
-Casos de uso, etc\dots
+\subsection{Introducción}
+
+\subsubsection{Propósito}
+
+El propósito de esta sección es el de presentar los requisitos de la aplicación acorde al estándar \emph{IEEE Std. 830-1998: Especificación de Requisitos Software} (ERS en adelante), mostrando y esquematizando la funcionalidad básica del software a desarrollar.
+
+El documento va principalmente dirigido a futuros usuarios y desarrolladores de la aplicación, de modo que cuenten con una aproximación teórica a la misma y a sus posibilidades.
+
+\subsubsection{Ámbito del Sistema}
+
+El futuro sistema, de nombre \emph{Bikesmanager}, consistirá en una aplicación Android encargada de la gestión de parques públicos de bicicletas a través de usuarios previamente registrados. 
+
+Se buscará desarrollar una aplicación intuitiva y fácil de usar que cubra las necesidades de manera eficiente y eficaz, proporcionando una adecuada experiencia al usuario final.
+
+\subsubsection{Definiciones, Acrónimos y Abreviaturas}
+
+\begin{itemize}
+	\item ERS: Especificación de Requisitos Software.
+	\item Bikesmanager: Nombre de la aplicación a desarrollar.
+	\item Android: Sistema operativo diseñado principalmente para dispositivos móviles con pantalla táctil.
+	\item Usuario: Persona que hará uso de la aplicación.
+	\item RF: Requerimiento Funcional.
+	\item RNF: Requerimineto No Funcional.
+\end{itemize}
+
+\subsubsection{Referencias}
+
+\begin{itemize}
+	\item IEEE Std. 830-1998: Especificaciones de los Requisitos del Software
+\end{itemize}
+
+\subsubsection{Visión General del Documento}
+
+Una vez realizada la introducción general previa, se aportará a continuación una primera descripción general del sistema a desarrollar para, finalmente, pasar a detallar los requisitos específicos básicos del mismo.
+
+En el apartado dedicado a la descripción general se aporta una visión global de la aplicación, así como de las funciones básicas de la misma. Funciones que se detallan en la sección siguiente, junto con otros aspectos como los atributos del sistema sobre los que se implantará el desarrollo.
+
+\subsection{Descripción General}
+
+\subsubsection{Perspectiva del Producto}
+
+La aplicación \emph{Bikesmanager} será un producto diseñado para trabajar sobre dispositivos móviles con sistema operativo Android, donde los datos quedarán almacenados en una base de datos a la que se accederá mediante el servidor de la aplicación. La conexión de la herramienta con el servidor se realizará mediante servicios web.
+
+\subsubsection{Funciones del Producto}
+
+Se aporta el diagrama de casos de uso que muestra, a grandes rasgos, las funciones del futuro sistema.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/01_CasosDeUso}
+	\caption{Diagrama de casos de uso}
+	\label{fig:diagramaCasosUso}
+\end{figure}
+
+
+\FloatBarrier % Evita que figuras de secciones previas se cuelen por aquí
+\subsubsection{Características de los Usuarios}
+
+\begin{itemize}
+	\item Tipo de usuario: Usuario
+	\begin{itemize}
+		\item Nivel educacional: irrelevante.
+		\item Experiencia técnica: experiencia en el manejo de \textit{smartphones}.
+		\item Actividad: manejo de la aplicación.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Restricciones}
+
+\begin{itemize}	
+	\item Limitaciones hardware:
+	\begin{itemize}
+		\item Los servidores han de ser capaces de atender consultas concurrentes.
+		\item Los dispositivos móviles deberán estar gestionados por el sistema operativo Android.
+	\end{itemize}
+	\item Arquitectura del sistema: cliente-servidor de tres capas, con servidor de aplicación Glassfish y SQL Server de base de datos.
+	\item Lenguaje(s) en uso: JAVA, SQL.
+	\item Protocolos de comunicación: 
+	\begin{itemize}
+		\item Aplicación -- Servidor: HTTP (RESTful Web Services - JSON).
+		\item Servidor Aplicación -- Base de Datos: MySQL Connector/JDBC.
+	\end{itemize}
+	\item Consideraciones acerca de la seguridad:
+	\begin{itemize}
+		\item El acceso a la aplicación se realizará mediante el par usuario-contraseña
+		\item Las claves de usuario deberán almacenarse de manera segura mediante encriptación SHA-1.
+		\item Desde la aplicación ningún usuario tendrá acceso a la administración interna de la misma, sino que dicha tarea se realizará directamente sobre el servidor o base de datos.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Suposiciones y Dependencias}
+
+\begin{itemize}	
+	\item Se asume que los requisitos aquí descritos son estables.
+	\item Los equipos en los que se vaya a ejecutar el sistema deben cumplir los requisitos antes indicados para garantizar el adecuado funcionamiento de la aplicación.
+\end{itemize}
+
+\subsubsection{Requisitos Futuros}
+
+\begin{itemize}	
+	\item Adaptación a nuevas plataformas (iOS, versión Web, etc.).
+\end{itemize}
+
+\subsection{Requisitos Específicos}
+
+\subsubsection{Interfaces Externas}
+
+La interfaz con el usuario consistirá en un conjunto de pantallas con los controles habituales: botones, campos de texto, listas, etc. sobre la que se deberá asegurar una adecuada experiencia de usuario mediante diseños que sigan las normas Android \footnote{\url{https://developer.android.com/guide/practices/ui_guidelines/index.html}}. Esta interfaz deberá ser construida para el sistema especificado y será visualizada mediante dispositivos móviles. Del mismo modo, destacar que el diseño de la interfaz gráfica de usuario deberá fundamentarse en los llamados \emph{fragments} de Android, de modo que el mismo pueda ser reutilizable y fácilmente transportable a otras dimensiones u orientaciones de pantalla.
+
+En relación a las interfaces hardware-software, se deberá contar con un dispositivo móvil con conexión a internet y que implemente, como mínimo, la versión 4.0 del sistema Android (llamada \emph{Ice Cream Sandwich}\footnote{Android denomina alfabéticamente y con nombres de dulces a cada una de las versiones de su sistema operativo. En el momento de la redacción de este documento, la versión más actualizada es la 7.0, \textit{Nougat}.}).
+
+Finalmente, acerca de las interfaces de comunicación, la aplicación se comunicará con su servidor mediante el protocolo HTTP haciendo uso de RESTful Web Services y cadenas JSON. La conexión entre el servidor de aplicación y la base de datos se realizará mediante las tecnologías MySQL Connector/JDBC.
+
+\subsubsection{Funciones}
+
+Esta parte es la más larga, donde tengo que desarrollar un poco cada requisito
+
+\subsubsection{Requisitos de Rendimiento}
+
+Desde el punto de vista de la aplicación móvil, no se espera una carga excesiva en el dispositivo por gestionar únicamente los datos del usuario registrado.
+
+El servidor, por su parte, ha de ser capaz de dar respuesta a una serie de peticiones concurrentes que puede escalar a la cantidad de dispositivos que tengan instalada la aplicación.
+
+Finalmente, en relación a la cantidad de registros almacenados en la base de datos, se espera que queden registrados de manera individual tanto usuarios como puestos de bicicletas, además de posibles tablas adicionales.
+
+\subsubsection{Restricciones de Diseño}
+
+Para el diseño de la aplicación se deberán utilizar componentes compatibles con la versión 4.0 de Android, en caso de no estar disponibles, se deberá recurrir a librerías de soporte para dar servicio a dicha versión, cumpliendo con ella, las restricciones hardware quedan, a su vez, cubiertas.
+
+En relación al servidor de aplicación, éste ha de ser capaz de gestionar accesos concurrentes a recursos compartidos, controlando las posibles condiciones de carrera que puedan aparecer y dando un respuesta oportuna al usuario. 
+
+\subsubsection{Atributos del Sistema}
+
+\begin{itemize}
+	\item Seguridad.
+	\begin{itemize}
+		\item El acceso a la aplicación se realizará mediante el par usuario-contraseña
+		\item Las claves de usuario deberán almacenarse de manera segura mediante encriptación SHA-1.
+		\item Desde la aplicación ningún usuario tendrá acceso a la administración interna de la misma, sino que dicha tarea se realizará directamente sobre el servidor o base de datos donde sólo el desarrollador o mantendor de la aplicación podrá acceder.
+	\end{itemize}
+	\item Fiabilidad.
+	\begin{itemize}
+		\item El sistema ha de quedar adecuadamente testeado previa distribución para obtener una adecuada cobertura de fallos.
+		\item La interfaz de usuario ha de ser sencilla e intuitiva y, en caso de ser necesario, deberá informar con el resultado de las operaciones para una adecuada experiencia en su uso.
+	\end{itemize}
+	\item Mantenibilidad.
+	\begin{itemize}
+		\item La aplicación ha de quedar desarrollada siguiendo las buenas prácticas del desarrollo software (código adecuadamente organizado y comentado, utilización de patrones de diseño estandarizados, utilización de \textit{idioms}, etc.).
+		\item La herramienta deberá dejar \textit{logs} internos de las áreas que se consideren más relevantes o susceptibles a fallos de modo que puedan ser consultados por los desarrolladores para realizar tareas de depuración.
+	\end{itemize}
+	\item Portabilidad. 
+	\begin{itemize}
+		\item La aplicación podrá ser instalada en cualquier dispositivo con sistema operativo Android (versión mínima 4.0).
+		\item Los servidores de aplicación y base de datos se podrán desplegar sobre cualquiera de los sistemas operativos más extendidos (Windows, Linux, iOS, etc.).
+	\end{itemize}
+	\item Disponibilidad. 
+	\begin{itemize}
+		\item Los servidores han de estar operativos 24x7 para atender las necesidades de uso.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Otros Requisitos}
+
+No se consideran otros requisitos de los especificados en secciones previas.
+
 
 \section{Análisis}
 
 Diagramas de secuencia, estados\dots
 
+
 \section{Diseño}
 
 Aquí va la arquitectura, diagramas de clases\dots
+
 
 \section{Implementación}
 
