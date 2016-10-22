@@ -8,29 +8,29 @@
 \contentsline {chapter}{\numberline {3}Descripci\IeC {\'o}n inform\IeC {\'a}tica}{5}{chapter.3}
 \contentsline {section}{\numberline {3.1}Especificaci\IeC {\'o}n de Requisitos Software}{5}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Introducci\IeC {\'o}n}{5}{subsection.3.1.1}
-\contentsline {subsubsection}{Prop\IeC {\'o}sito}{5}{section*.5}
-\contentsline {subsubsection}{\IeC {\'A}mbito del Sistema}{5}{section*.6}
-\contentsline {subsubsection}{Definiciones, Acr\IeC {\'o}nimos y Abreviaturas}{5}{section*.7}
-\contentsline {subsubsection}{Referencias}{6}{section*.8}
-\contentsline {subsubsection}{Visi\IeC {\'o}n General del Documento}{6}{section*.9}
+\contentsline {subsubsection}{Prop\IeC {\'o}sito}{5}{section*.6}
+\contentsline {subsubsection}{\IeC {\'A}mbito del Sistema}{5}{section*.7}
+\contentsline {subsubsection}{Definiciones, Acr\IeC {\'o}nimos y Abreviaturas}{5}{section*.8}
+\contentsline {subsubsection}{Referencias}{6}{section*.9}
+\contentsline {subsubsection}{Visi\IeC {\'o}n General del Documento}{6}{section*.10}
 \contentsline {subsection}{\numberline {3.1.2}Descripci\IeC {\'o}n General}{6}{subsection.3.1.2}
-\contentsline {subsubsection}{Perspectiva del Producto}{6}{section*.10}
-\contentsline {subsubsection}{Funciones del Producto}{6}{section*.11}
-\contentsline {subsubsection}{Caracter\IeC {\'\i }sticas de los Usuarios}{7}{section*.12}
-\contentsline {subsubsection}{Restricciones}{7}{section*.13}
-\contentsline {subsubsection}{Suposiciones y Dependencias}{8}{section*.14}
-\contentsline {subsubsection}{Requisitos Futuros}{8}{section*.15}
+\contentsline {subsubsection}{Perspectiva del Producto}{6}{section*.11}
+\contentsline {subsubsection}{Funciones del Producto}{6}{section*.12}
+\contentsline {subsubsection}{Caracter\IeC {\'\i }sticas de los Usuarios}{7}{section*.13}
+\contentsline {subsubsection}{Restricciones}{7}{section*.14}
+\contentsline {subsubsection}{Suposiciones y Dependencias}{8}{section*.15}
+\contentsline {subsubsection}{Requisitos Futuros}{8}{section*.16}
 \contentsline {subsection}{\numberline {3.1.3}Requisitos Espec\IeC {\'\i }ficos}{8}{subsection.3.1.3}
-\contentsline {subsubsection}{Interfaces Externas}{8}{section*.16}
-\contentsline {subsubsection}{Funciones}{9}{section*.17}
-\contentsline {subsubsection}{Requisitos de Rendimiento}{9}{section*.18}
-\contentsline {subsubsection}{Restricciones de Dise\IeC {\~n}o}{9}{section*.19}
-\contentsline {subsubsection}{Atributos del Sistema}{9}{section*.20}
-\contentsline {subsubsection}{Otros Requisitos}{10}{section*.21}
-\contentsline {section}{\numberline {3.2}An\IeC {\'a}lisis}{11}{section.3.2}
-\contentsline {section}{\numberline {3.3}Dise\IeC {\~n}o}{11}{section.3.3}
-\contentsline {section}{\numberline {3.4}Implementaci\IeC {\'o}n}{11}{section.3.4}
-\contentsline {chapter}{\numberline {4}Pruebas}{13}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusiones}{15}{chapter.5}
-\contentsline {section}{\numberline {5.1}L\IeC {\'\i }neas futuras}{15}{section.5.1}
-\contentsline {chapter}{\numberline {A}Manual de usuario}{17}{appendix.Alph1}
+\contentsline {subsubsection}{Interfaces Externas}{8}{section*.17}
+\contentsline {subsubsection}{Funciones}{9}{section*.18}
+\contentsline {subsubsection}{Requisitos de Rendimiento}{15}{section*.19}
+\contentsline {subsubsection}{Restricciones de Dise\IeC {\~n}o}{15}{section*.20}
+\contentsline {subsubsection}{Atributos del Sistema}{16}{section*.21}
+\contentsline {subsubsection}{Otros Requisitos}{17}{section*.22}
+\contentsline {section}{\numberline {3.2}An\IeC {\'a}lisis}{17}{section.3.2}
+\contentsline {section}{\numberline {3.3}Dise\IeC {\~n}o}{17}{section.3.3}
+\contentsline {section}{\numberline {3.4}Implementaci\IeC {\'o}n}{17}{section.3.4}
+\contentsline {chapter}{\numberline {4}Pruebas}{19}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusiones}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}L\IeC {\'\i }neas futuras}{21}{section.5.1}
+\contentsline {chapter}{\numberline {A}Manual de usuario}{23}{appendix.Alph1}

@@ -7,7 +7,7 @@
 
 \documentclass[a4paper,12pt]{book}
 
-\usepackage[spanish]{babel}		% Para usar el español
+\usepackage[spanish, es-tabla]{babel}		% Para usar el español y que las tablas se llamen "tablas", no "cuadros"
 \usepackage[utf8]{inputenc}		% La codificación
 \usepackage{geometry} 			% Para alterar con facilidad los márgenes
 \usepackage{fancyhdr}			% Para los encabezados y pies de página
@@ -60,6 +60,13 @@
 % ------------------ ÍNDICE DE FIGURAS ----------
 
 \listoffigures
+\newpage{\pagestyle{empty}\cleardoublepage}
+
+% -----------------------------------------------
+
+% ------------------ ÍNDICE DE TABLAS -----------
+
+\listoftables
 \newpage{\pagestyle{empty}\cleardoublepage}
 
 % -----------------------------------------------

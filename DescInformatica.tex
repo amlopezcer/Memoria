@@ -47,7 +47,7 @@ La aplicación \emph{Bikesmanager} será un producto diseñado para trabajar sob
 
 \subsubsection{Funciones del Producto}
 
-Se aporta el diagrama de casos de uso que muestra, a grandes rasgos, las funciones del futuro sistema.
+En la figura ~\ref{fig:diagramaCasosUso} se aporta el diagrama de casos de uso que muestra, a grandes rasgos, las funciones del futuro sistema.
 
 \begin{figure}[!htb]
 	\centering
@@ -86,7 +86,7 @@ Se aporta el diagrama de casos de uso que muestra, a grandes rasgos, las funcion
 	\end{itemize}
 	\item Consideraciones acerca de la seguridad:
 	\begin{itemize}
-		\item El acceso a la aplicación se realizará mediante el par usuario-contraseña
+		\item El acceso a la aplicación se realizará mediante el par usuario-contraseña.
 		\item Las claves de usuario deberán almacenarse de manera segura mediante encriptación SHA-1.
 		\item Desde la aplicación ningún usuario tendrá acceso a la administración interna de la misma, sino que dicha tarea se realizará directamente sobre el servidor o base de datos.
 	\end{itemize}
@@ -117,13 +117,281 @@ Finalmente, acerca de las interfaces de comunicación, la aplicación se comunic
 
 \subsubsection{Funciones}
 
-Esta parte es la más larga, donde tengo que desarrollar un poco cada requisito
+En esta sección se aporta la descripción de los diferentes requerimientos funcionales y no funcionales con que deberá contar el sistema. 
+
+Se comienza por los \emph{Requerimientos Funcionales}:
+
+\begin{itemize}
+	\item \textbf{RF01: Registrar usuario}. El sistema deberá permitir el registro de nuevos usuarios. Para ello, se solicitarán el nombre usuario, contraseña, dirección de correo electrónico y nombre y apellidos reales. El nombre de usuario y la dirección de correo han de ser únicos, de modo que no se permita la duplicidad de los mismos en la aplicación. Asimismo, la contraseña ha de ser encriptada a la hora de ser almacenada en la base de datos.
+	
+	Se aporta la descripción textual del requisito:
+	
+	\begin{table}[h]
+		\centering	
+		\begin{tabular}{|l|l|}
+			\hline
+			\multicolumn{2}{|c|}{\textbf{RF01: Registrar usuario}} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Usuario}} & \multicolumn{1}{c|}{\textbf{Sistema}} \\ \hline
+			1. Seleccionar registro &\\ \hline
+			& 2. Mostrar interfaz \\ \hline
+			3. Introducir datos &\\ \hline
+			& 4. Comprobar datos obligatorios \\ \hline
+			& 5. Validar campos únicos\\ \hline
+			& 6. Crear registro \\ \hline	
+		\end{tabular}
+		\caption{Descripción textual de RF01: Registrar usuario}
+		\label{tab:tablaDescTextualRF01}
+	\end{table}
+	 
+	\item \textbf{RF02: Loguear usuario}. El sistema deberá permitir la autenticación de usuarios para su acceso. Este proceso se realizará mediante el par usuario-contraseña. Señalar que, como se ha especificado en el requisito previo, la contraseña se almacena encriptada, de modo que la introducida por el usuario que trata de acceder ha de ser tratada por el mismo algortimo para poder realizar la comparación.
+	
+	Se aporta la descripción textual del requisito:
+	
+	\begin{table}[h]
+		\centering	
+		\begin{tabular}{|l|l|}
+			\hline
+			\multicolumn{2}{|c|}{\textbf{RF02: Loguear usuario}} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Usuario}} & \multicolumn{1}{c|}{\textbf{Sistema}} \\ \hline
+			1. Seleccionar login &\\ \hline
+			& 2. Mostrar interfaz \\ \hline
+			3. Introducir datos &\\ \hline
+			& 4. Comprobar campos obligatorios \\ \hline
+			& 5. Completar login\\ \hline
+		\end{tabular}
+		\caption{Descripción textual de RF02: Loguear usuario}
+		\label{tab:tablaDescTextualRF02}
+	\end{table}
+	
+	\item \textbf{RF03: Modificar perfil}. El sistema deberá permitir la modificación del perfil de usuario solicitados en el proceso de registro, considerando que el nombre de usuario y dirección de correo han de ser únicos.
+	
+	Se aporta la descripción textual del requisito:
+	
+	\begin{table}[h]
+		\centering	
+		\begin{tabular}{|l|l|}
+			\hline
+			\multicolumn{2}{|c|}{\textbf{RF03: Modificar perfil}} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Usuario}} & \multicolumn{1}{c|}{\textbf{Sistema}} \\ \hline
+			[Pto. inclusión: RF02: Loguear usuario] &\\ \hline
+			1. Seleccionar modificar perfil &\\ \hline
+			& 2. Mostrar interfaz\\ \hline
+			3. Introducir datos &\\ \hline
+			& 4. Validar campos únicos\\ \hline
+			& 5. Solicitar confirmación\\ \hline
+			6. Confirmar operación &\\ \hline
+			& 7. Actualizar registro \\ \hline
+			& 8. Confirmar operación terminada \\ \hline 
+		\end{tabular}
+		\caption{Descripción textual de RF03: Modificar perfil}
+		\label{tab:tablaDescTextualRF03}
+	\end{table}
+	
+	\item \textbf{RF04: Borrar perfil}. El sistema deberá permitir el borrado completo de perfiles. Este proceso requerirá de una confirmación explícita por parte del usuario y, en el momento en que se realice, será irreversible, borrando el registro específico de la base de datos. El dinero ingresado será devuelto y las posibles reservas, canceladas.
+	
+	Se aporta la descripción textual del requisito:
+	
+	\begin{table}[h]
+		\centering	
+		\begin{tabular}{|l|l|}
+			\hline
+			\multicolumn{2}{|c|}{\textbf{RF04: Borrar perfil}} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Usuario}} & \multicolumn{1}{c|}{\textbf{Sistema}} \\ \hline
+			[Pto. inclusión: RF02: Loguear usuario] &\\ \hline
+			1. Seleccionar borrar perfil &\\ \hline
+			& 2. Solicitar confirmación\\ \hline
+			3. Confirmar operación &\\ \hline
+			& 4. Devolver saldo y eliminar posibles reservas \\ \hline
+			& 5. Borrar registro \\ \hline
+		\end{tabular}
+		\caption{Descripción textual de RF04: Borrar perfil}
+		\label{tab:tablaDescTextualRF04}
+	\end{table}
+	
+	\item \textbf{RF05: Ingresar saldo}. El sistema deberá permitir el ingreso de dinero, de modo que el usuario cuente con saldo suficiente para que pueda operar con el parque de bicicletas.
+	
+	Se aporta la descripción textual del requisito:
+	
+	\begin{table}[h]
+		\centering	
+		\begin{tabular}{|l|l|}
+			\hline
+			\multicolumn{2}{|c|}{\textbf{RF05: Ingresar saldo}} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Usuario}} & \multicolumn{1}{c|}{\textbf{Sistema}} \\ \hline
+			[Pto. inclusión: RF02: Loguear usuario] &\\ \hline
+			1. Seleccionar ingreso &\\ \hline
+			& 2. Mostrar interfaz \\ \hline
+			3. Introducir datos &\\ \hline
+			& 4. Actualizar registro \\ \hline
+			& 5. Confirmar operación terminada \\ \hline 	
+		\end{tabular}
+		\caption{Descripción textual de RF05: Ingresar saldo}
+		\label{tab:tablaDescTextualRF05}
+	\end{table}
+	
+	\item \textbf{RF06: Coger bicicleta}. El sistema deberá permitir coger bicicletas a los usuarios registrados y logueados en el sistema. Se han tener en cuenta las siguientes restricciones:
+	\begin{itemize}
+		\item El usuario sólo puede tener una bicicleta cogida a la vez.
+		\item El usuario ha de disponer de saldo suficiente para completar la operación.
+		\item En caso de haber reservado previamente, el usuario sólo podrá coger la bicicleta de la estación en la que haya realizado dicha reserva.
+		\item Las bicicletas reservadas por otros usuarios no están disponibles.
+	\end{itemize}
+	
+	Se aporta la descripción textual del requisito:
+	
+	\begin{table}[h]
+		\centering	
+		\begin{tabular}{|l|l|}
+			\hline
+			\multicolumn{2}{|c|}{\textbf{RF06: Coger bicicleta}} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Usuario}} & \multicolumn{1}{c|}{\textbf{Sistema}} \\ \hline
+			[Pto. inclusión: RF02: Loguear usuario] &\\ \hline
+			1. Seleccionar estación &\\ \hline
+			& 2. Mostrar estado estación \\ \hline
+			3. Seleccionar coger bici &\\ \hline
+			& 4. Comprobar restricciones \\ \hline
+			& 5. Realizar pago \\ \hline
+			& 6. Actualizar estado global \\ \hline
+			& 7. Confirmar operación terminada \\ \hline 	
+		\end{tabular}
+		\caption{Descripción textual de RF06: Coger bicicleta}
+		\label{tab:tablaDescTextualRF06}
+	\end{table}
+	\item \textbf{RF07: Dejar bicicleta}. El sistema deberá permitir dejar, en estaciones con disponibilidad suficiente, bicicletas previamente cogidas por usuarios. Se han tener en cuenta las siguientes restricciones:
+	\begin{itemize}
+		\item En caso de haber reservado un anclaje previamente, el usuario sólo podrá dejar la bicicleta en la estación en la que haya realizado dicha reserva.
+		\item Los anclajes reservados por otros usuarios no están disponibles
+	\end{itemize}
+	
+	Se aporta la descripción textual del requisito:
+	
+	\begin{table}[h]
+		\centering	
+		\begin{tabular}{|l|l|}
+			\hline
+			\multicolumn{2}{|c|}{\textbf{RF07: Dejar bicicleta}} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Usuario}} & \multicolumn{1}{c|}{\textbf{Sistema}} \\ \hline
+			[Pto. inclusión: RF02: Loguear usuario] &\\ \hline
+			1. Seleccionar estación &\\ \hline
+			& 2. Mostrar estado estación \\ \hline
+			3. Seleccionar dejar bici &\\ \hline
+			& 4. Comprobar restricciones \\ \hline
+			& 5. Actualizar estado global \\ \hline
+			& 6. Confirmar operación terminada \\ \hline 
+		\end{tabular}
+		\caption{Descripción textual de RF07: Dejar bicicleta}
+		\label{tab:tablaDescTextualRF07}
+	\end{table}
+	
+	\item \textbf{RF08: Reservar}. El sistema deberá permitir la reserva de recursos, que podrán ser de dos tipos: bicicletas o anclajes. Se han tener en cuenta las siguientes restricciones:
+	\begin{itemize}
+		\item El usuario sólo puede tener una reserva de cada tipo a la vez. Es decir, se permiten tener, como mucho, dos reservas simultáneas por usuario: una bicicleta y un anclaje.
+		\item En caso de tener una bicicleta cogida, el usuario no podrá realizar la reserva de otra.
+	\end{itemize}
+	
+	Se aporta la descripción textual del requisito:
+	
+	\begin{table}[h]
+		\centering	
+		\begin{tabular}{|l|l|}
+			\hline
+			\multicolumn{2}{|c|}{\textbf{RF08: Reservar}} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Usuario}} & \multicolumn{1}{c|}{\textbf{Sistema}} \\ \hline
+			[Pto. inclusión: RF02: Loguear usuario] &\\ \hline
+			1. Seleccionar estación &\\ \hline
+			& 2. Mostrar estado estación \\ \hline
+			3. Seleccionar reservar &\\ \hline
+			& 4. Comprobar restricciones \\ \hline
+			& 5. Mostrar opciones de reserva \\ \hline
+			6. Seleccionar reserva &\\ \hline
+			& 7. Actualizar estado global \\ \hline
+			& 8. Confirmar operación terminada \\ \hline 
+		\end{tabular}
+		\caption{Descripción textual de RF08: Reservar}
+		\label{tab:tablaDescTextualRF08}
+	\end{table}
+	
+	\item \textbf{RF09: Cancelar reserva}. El sistema deberá permitir la cancelación de reservas, tanto de bicicletas como de anclajes. Esta cancelación se podrá realizar por las siguientes vías:
+	\begin{itemize}
+		\item Cancelación explícita por parte del usuario. Este tipo de cancelación implica una confirmación por parte del usuario.
+		\item Cancelación implícita al cabo de 30 minutos del momento de la reserva.
+	\end{itemize}
+	Si un usuario ejerce su derecho sobre una reserva, la misma queda automáticamente cancelada.
+	
+	Se aporta la descripción textual del requisito referido a la cancelación explícita, puesto que es la única en la que interviene el usuario de manera directa:
+	
+	\begin{table}[h]
+		\centering	
+		\begin{tabular}{|l|l|}
+			\hline
+			\multicolumn{2}{|c|}{\textbf{RF09: Cancelar reserva (explícita)}} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Usuario}} & \multicolumn{1}{c|}{\textbf{Sistema}} \\ \hline
+			[Pto. inclusión: RF08: Reservar] &\\ \hline
+			1. Seleccionar cancelar reserva &\\ \hline
+			& 2. Solicitar confirmación \\ \hline
+			3. Confirmar operación &\\ \hline
+			& 4. Actualizar estado global \\ \hline
+			& 5. Confirmar operación terminada \\ \hline 	
+		\end{tabular}
+		\caption{Descripción textual de RF09: Cancelar reserva (explícita)}
+		\label{tab:tablaDescTextualRF09}
+	\end{table}
+	
+	\FloatBarrier
+	\item \textbf{RF10: Pagar}. El sistema deberá permitir realizar el pago de las operaciones desarrolladas por los usuarios.
+	
+	Se aporta la descripción textual del requisito:
+	
+	\begin{table}[h]
+		\centering	
+		\begin{tabular}{|l|l|}
+			\hline
+			\multicolumn{2}{|c|}{\textbf{RF10:Pagar}} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Usuario}} & \multicolumn{1}{c|}{\textbf{Sistema}} \\ \hline
+			[Pto. inclusión: RF06: Coger bicicleta] &\\ \hline
+			& 1. Confirmar operación terminada \\ \hline 	
+		\end{tabular}
+		\caption{Descripción textual de RF10: Pagar}
+		\label{tab:tablaDescTextualRF10}
+	\end{table}
+
+\end{itemize}
+
+Finalmente, se pasan a detallar los \emph{Requerimientos No Funcionales} más relevantes:
+
+\begin{itemize}
+	\item \textbf{RNF01: Usabilidad}. El sistema ha de presentar una interfaz sencilla e intuitiva, respetando las normas de diseño Android y proporcionando una adecuada retroalimentación al usuario de las operaciones terminadas y de posibles errores en su manejo.
+	
+	\item \textbf{RNF02: Eficiencia}. El sistema ha de trasladar toda operación posible a la capa de servidor, de modo que el cliente suponga la menor carga posible para el dispositivo móvil y se reduzcan los tiempos de espera.
+
+	
+	\item \textbf{RNF03: Seguridad}. El sistema ha de asegurar la seguridad en el tratamiento de la información del usuario. 
+	
+	El detalle de este \textsc{RNF} se recoge en el apartado posterior referido a los Atributos del Sistema
+	
+	\item \textbf{RNF04: Fiabilidad}. El sistema ha operar según lo esperado y minimizando en la medida de los posible la probabilidad de aparición de fallos. E
+	
+	El detalle de este \textsc{RNF} se recoge en el apartado posterior referido a los Atributos del Sistema
+	
+	\item \textbf{RNF05: Mantenibilidad}. El sistema se ha de desarrollar de modo que pueda ser conservado y restituido (en caso necesario) con facilidad.
+	
+	El detalle de este \textsc{RNF} se recoge en el apartado posterior referido a los Atributos del Sistema
+	
+	\item \textbf{RNF06: Portabilidad}. El sistema ha de desarrollarse de modo que pueda ser ejecutado en diferentes plataformas. 
+	
+	El detalle de este \textsc{RNF} se recoge en el apartado posterior referido a los Atributos del Sistema
+	
+	\item \textbf{RNF07: Disponibilidad}. El sistema ha de permanecer en funcionamiento continuo para prestar una servicio adecuado a los usuarios.
+	
+	El detalle de este \textsc{RNF} se recoge en el apartado posterior referido a los Atributos del Sistema
+	
+\end{itemize}
 
 \subsubsection{Requisitos de Rendimiento}
 
 Desde el punto de vista de la aplicación móvil, no se espera una carga excesiva en el dispositivo por gestionar únicamente los datos del usuario registrado.
 
-El servidor, por su parte, ha de ser capaz de dar respuesta a una serie de peticiones concurrentes que puede escalar a la cantidad de dispositivos que tengan instalada la aplicación.
+El servidor, por su parte, ha de ser capaz de dar respuesta a una serie de peticiones concurrentes que pueden escalar a la cantidad de dispositivos que tengan instalada la aplicación.
 
 Finalmente, en relación a la cantidad de registros almacenados en la base de datos, se espera que queden registrados de manera individual tanto usuarios como puestos de bicicletas, además de posibles tablas adicionales.
 
@@ -138,7 +406,7 @@ En relación al servidor de aplicación, éste ha de ser capaz de gestionar acce
 \begin{itemize}
 	\item Seguridad.
 	\begin{itemize}
-		\item El acceso a la aplicación se realizará mediante el par usuario-contraseña
+		\item El acceso a la aplicación se realizará mediante el par usuario-contraseña.
 		\item Las claves de usuario deberán almacenarse de manera segura mediante encriptación SHA-1.
 		\item Desde la aplicación ningún usuario tendrá acceso a la administración interna de la misma, sino que dicha tarea se realizará directamente sobre el servidor o base de datos donde sólo el desarrollador o mantendor de la aplicación podrá acceder.
 	\end{itemize}
@@ -156,6 +424,7 @@ En relación al servidor de aplicación, éste ha de ser capaz de gestionar acce
 	\begin{itemize}
 		\item La aplicación podrá ser instalada en cualquier dispositivo con sistema operativo Android (versión mínima 4.0).
 		\item Los servidores de aplicación y base de datos se podrán desplegar sobre cualquiera de los sistemas operativos más extendidos (Windows, Linux, iOS, etc.).
+		\item Queda como tarea futura la adaptación de la aplicación móvil a entornos web e iOS.
 	\end{itemize}
 	\item Disponibilidad. 
 	\begin{itemize}
