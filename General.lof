@@ -6,6 +6,16 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de casos de uso}}{7}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama de actividad de RF01: Registrar usuario}}{10}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama de actividad de RF02: Loguear usuario}}{11}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagrama de actividad de RF03: Modificar perfil}}{12}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagrama de actividad de RF04: Borrar perfil}}{13}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagrama de actividad de RF05: Ingresar saldo}}{14}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagrama de actividad de RF06: Coger bicicleta}}{16}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Diagrama de actividad de RF07: Dejar bicicleta}}{17}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Diagrama de actividad de RF08: Reservar}}{19}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Diagrama de actividad de RF09: Cancelar reserva (expl\IeC {\'\i }cita)}}{20}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Diagrama de actividad de RF10: Pagar}}{21}{figure.3.11}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

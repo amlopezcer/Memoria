@@ -117,14 +117,14 @@ Finalmente, acerca de las interfaces de comunicación, la aplicación se comunic
 
 \subsubsection{Funciones}
 
-En esta sección se aporta la descripción de los diferentes requerimientos funcionales y no funcionales con que deberá contar el sistema. 
+En esta sección se desarrolla la descripción de los diferentes requerimientos funcionales y no funcionales con que deberá contar el sistema. 
 
-Se comienza por los \emph{Requerimientos Funcionales}:
+Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su definición acompañada de una descripción textual y del diagrama de actividad correspondiente, de modo que cada requerimiento quede adecuadamente descrito.
 
 \begin{itemize}
 	\item \textbf{RF01: Registrar usuario}. El sistema deberá permitir el registro de nuevos usuarios. Para ello, se solicitarán el nombre usuario, contraseña, dirección de correo electrónico y nombre y apellidos reales. El nombre de usuario y la dirección de correo han de ser únicos, de modo que no se permita la duplicidad de los mismos en la aplicación. Asimismo, la contraseña ha de ser encriptada a la hora de ser almacenada en la base de datos.
 	
-	Se aporta la descripción textual del requisito:
+	La descripción textual:
 	
 	\begin{table}[h]
 		\centering	
@@ -137,15 +137,25 @@ Se comienza por los \emph{Requerimientos Funcionales}:
 			3. Introducir datos &\\ \hline
 			& 4. Comprobar datos obligatorios \\ \hline
 			& 5. Validar campos únicos\\ \hline
-			& 6. Crear registro \\ \hline	
+			& 6. Crear registro \\ \hline
 		\end{tabular}
 		\caption{Descripción textual de RF01: Registrar usuario}
 		\label{tab:tablaDescTextualRF01}
 	\end{table}
+	
+	\FloatBarrier
+	Y el diagrama de actividad:
+		
+	\begin{figure}[!htb]
+		\centering
+		\resizebox{12cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF01_registrarUsuario}}
+		\caption{Diagrama de actividad de RF01: Registrar usuario}
+		\label{fig:diagramaActividad_RF01}
+	\end{figure}
 	 
 	\item \textbf{RF02: Loguear usuario}. El sistema deberá permitir la autenticación de usuarios para su acceso. Este proceso se realizará mediante el par usuario-contraseña. Señalar que, como se ha especificado en el requisito previo, la contraseña se almacena encriptada, de modo que la introducida por el usuario que trata de acceder ha de ser tratada por el mismo algortimo para poder realizar la comparación.
 	
-	Se aporta la descripción textual del requisito:
+	La descripción textual:
 	
 	\begin{table}[h]
 		\centering	
@@ -157,15 +167,26 @@ Se comienza por los \emph{Requerimientos Funcionales}:
 			& 2. Mostrar interfaz \\ \hline
 			3. Introducir datos &\\ \hline
 			& 4. Comprobar campos obligatorios \\ \hline
-			& 5. Completar login\\ \hline
+			& 5. Autenticar \\ \hline
+			& 6. Completar login\\ \hline
 		\end{tabular}
 		\caption{Descripción textual de RF02: Loguear usuario}
 		\label{tab:tablaDescTextualRF02}
 	\end{table}
 	
+	Y el diagrama de actividad:
+	
+	\begin{figure}[!htb]
+		\centering
+		\resizebox{9.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF02_loguear}}
+		\caption{Diagrama de actividad de RF02: Loguear usuario}
+		\label{fig:diagramaActividad_RF02}
+	\end{figure}
+
+	\FloatBarrier
 	\item \textbf{RF03: Modificar perfil}. El sistema deberá permitir la modificación del perfil de usuario solicitados en el proceso de registro, considerando que el nombre de usuario y dirección de correo han de ser únicos.
 	
-	Se aporta la descripción textual del requisito:
+	La descripción textual:
 	
 	\begin{table}[h]
 		\centering	
@@ -187,9 +208,19 @@ Se comienza por los \emph{Requerimientos Funcionales}:
 		\label{tab:tablaDescTextualRF03}
 	\end{table}
 	
+	Y el diagrama de actividad:
+	
+	\begin{figure}[!htb]
+		\centering
+		\resizebox{8cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF03_modificarPerfil}}
+		\caption{Diagrama de actividad de RF03: Modificar perfil}
+		\label{fig:diagramaActividad_RF03}
+	\end{figure}
+	
+	\FloatBarrier
 	\item \textbf{RF04: Borrar perfil}. El sistema deberá permitir el borrado completo de perfiles. Este proceso requerirá de una confirmación explícita por parte del usuario y, en el momento en que se realice, será irreversible, borrando el registro específico de la base de datos. El dinero ingresado será devuelto y las posibles reservas, canceladas.
 	
-	Se aporta la descripción textual del requisito:
+	La descripción textual:
 	
 	\begin{table}[h]
 		\centering	
@@ -208,9 +239,19 @@ Se comienza por los \emph{Requerimientos Funcionales}:
 		\label{tab:tablaDescTextualRF04}
 	\end{table}
 	
+	Y el diagrama de actividad:
+	
+	\begin{figure}[!htb]
+		\centering
+		\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF04_borrarPerfil}}
+		\caption{Diagrama de actividad de RF04: Borrar perfil}
+		\label{fig:diagramaActividad_RF04}
+	\end{figure}
+	
+	\FloatBarrier
 	\item \textbf{RF05: Ingresar saldo}. El sistema deberá permitir el ingreso de dinero, de modo que el usuario cuente con saldo suficiente para que pueda operar con el parque de bicicletas.
 	
-	Se aporta la descripción textual del requisito:
+	La descripción textual:
 	
 	\begin{table}[h]
 		\centering	
@@ -229,6 +270,16 @@ Se comienza por los \emph{Requerimientos Funcionales}:
 		\label{tab:tablaDescTextualRF05}
 	\end{table}
 	
+	Y el diagrama de actividad:
+	
+	\begin{figure}[!htb]
+		\centering
+		\resizebox{10.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF05_ingresarSaldo}}
+		\caption{Diagrama de actividad de RF05: Ingresar saldo}
+		\label{fig:diagramaActividad_RF05}
+	\end{figure}
+	
+	\FloatBarrier
 	\item \textbf{RF06: Coger bicicleta}. El sistema deberá permitir coger bicicletas a los usuarios registrados y logueados en el sistema. Se han tener en cuenta las siguientes restricciones:
 	\begin{itemize}
 		\item El usuario sólo puede tener una bicicleta cogida a la vez.
@@ -237,7 +288,7 @@ Se comienza por los \emph{Requerimientos Funcionales}:
 		\item Las bicicletas reservadas por otros usuarios no están disponibles.
 	\end{itemize}
 	
-	Se aporta la descripción textual del requisito:
+	La descripción textual:
 	
 	\begin{table}[h]
 		\centering	
@@ -250,20 +301,32 @@ Se comienza por los \emph{Requerimientos Funcionales}:
 			& 2. Mostrar estado estación \\ \hline
 			3. Seleccionar coger bici &\\ \hline
 			& 4. Comprobar restricciones \\ \hline
-			& 5. Realizar pago \\ \hline
+			& 5. [RF10: Pagar] \\ \hline
 			& 6. Actualizar estado global \\ \hline
 			& 7. Confirmar operación terminada \\ \hline 	
 		\end{tabular}
 		\caption{Descripción textual de RF06: Coger bicicleta}
 		\label{tab:tablaDescTextualRF06}
 	\end{table}
+	
+	\FloatBarrier
+	Y el diagrama de actividad:
+	
+	\begin{figure}[!htb]
+		\centering
+		\resizebox{13.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF06_cogerBicicleta}}
+		\caption{Diagrama de actividad de RF06: Coger bicicleta}
+		\label{fig:diagramaActividad_RF06}
+	\end{figure}
+	
+	\FloatBarrier
 	\item \textbf{RF07: Dejar bicicleta}. El sistema deberá permitir dejar, en estaciones con disponibilidad suficiente, bicicletas previamente cogidas por usuarios. Se han tener en cuenta las siguientes restricciones:
 	\begin{itemize}
 		\item En caso de haber reservado un anclaje previamente, el usuario sólo podrá dejar la bicicleta en la estación en la que haya realizado dicha reserva.
 		\item Los anclajes reservados por otros usuarios no están disponibles
 	\end{itemize}
 	
-	Se aporta la descripción textual del requisito:
+	La descripción textual:
 	
 	\begin{table}[h]
 		\centering	
@@ -283,13 +346,24 @@ Se comienza por los \emph{Requerimientos Funcionales}:
 		\label{tab:tablaDescTextualRF07}
 	\end{table}
 	
+	\FloatBarrier
+	Y el diagrama de actividad:
+	
+	\begin{figure}[!htb]
+		\centering
+		\resizebox{13.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF07_dejarBicicleta}}
+		\caption{Diagrama de actividad de RF07: Dejar bicicleta}
+		\label{fig:diagramaActividad_RF07}
+	\end{figure}
+	
+	\FloatBarrier
 	\item \textbf{RF08: Reservar}. El sistema deberá permitir la reserva de recursos, que podrán ser de dos tipos: bicicletas o anclajes. Se han tener en cuenta las siguientes restricciones:
 	\begin{itemize}
 		\item El usuario sólo puede tener una reserva de cada tipo a la vez. Es decir, se permiten tener, como mucho, dos reservas simultáneas por usuario: una bicicleta y un anclaje.
 		\item En caso de tener una bicicleta cogida, el usuario no podrá realizar la reserva de otra.
 	\end{itemize}
 	
-	Se aporta la descripción textual del requisito:
+	La descripción textual:
 	
 	\begin{table}[h]
 		\centering	
@@ -301,9 +375,9 @@ Se comienza por los \emph{Requerimientos Funcionales}:
 			1. Seleccionar estación &\\ \hline
 			& 2. Mostrar estado estación \\ \hline
 			3. Seleccionar reservar &\\ \hline
-			& 4. Comprobar restricciones \\ \hline
-			& 5. Mostrar opciones de reserva \\ \hline
-			6. Seleccionar reserva &\\ \hline
+			& 4. Mostrar opciones de reserva \\ \hline
+			5. Seleccionar tipo de reserva &\\ \hline
+			& 6. Comprobar restricciones \\ \hline
 			& 7. Actualizar estado global \\ \hline
 			& 8. Confirmar operación terminada \\ \hline 
 		\end{tabular}
@@ -311,6 +385,16 @@ Se comienza por los \emph{Requerimientos Funcionales}:
 		\label{tab:tablaDescTextualRF08}
 	\end{table}
 	
+	Y el diagrama de actividad:
+	
+	\begin{figure}[!htb]
+		\centering
+		\resizebox{12cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF08_reservar}}
+		\caption{Diagrama de actividad de RF08: Reservar}
+		\label{fig:diagramaActividad_RF08}
+	\end{figure}
+	
+	\FloatBarrier
 	\item \textbf{RF09: Cancelar reserva}. El sistema deberá permitir la cancelación de reservas, tanto de bicicletas como de anclajes. Esta cancelación se podrá realizar por las siguientes vías:
 	\begin{itemize}
 		\item Cancelación explícita por parte del usuario. Este tipo de cancelación implica una confirmación por parte del usuario.
@@ -337,10 +421,19 @@ Se comienza por los \emph{Requerimientos Funcionales}:
 		\label{tab:tablaDescTextualRF09}
 	\end{table}
 	
+	Y el diagrama de actividad:
+	
+	\begin{figure}[!htb]
+		\centering
+		\resizebox{11.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF09_cancelarReserva}}
+		\caption{Diagrama de actividad de RF09: Cancelar reserva (explícita)}
+		\label{fig:diagramaActividad_RF09}
+	\end{figure}
+	
 	\FloatBarrier
 	\item \textbf{RF10: Pagar}. El sistema deberá permitir realizar el pago de las operaciones desarrolladas por los usuarios.
 	
-	Se aporta la descripción textual del requisito:
+	La descripción textual:
 	
 	\begin{table}[h]
 		\centering	
@@ -349,11 +442,24 @@ Se comienza por los \emph{Requerimientos Funcionales}:
 			\multicolumn{2}{|c|}{\textbf{RF10:Pagar}} \\ \hline
 			\multicolumn{1}{|c|}{\textbf{Usuario}} & \multicolumn{1}{c|}{\textbf{Sistema}} \\ \hline
 			[Pto. inclusión: RF06: Coger bicicleta] &\\ \hline
-			& 1. Confirmar operación terminada \\ \hline 	
+			& 1. Realizar pago \\ \hline 
+			& 2. Actualizar usuario \\ \hline 
+			& 3. Confirmar operación terminada \\ \hline 	
 		\end{tabular}
 		\caption{Descripción textual de RF10: Pagar}
 		\label{tab:tablaDescTextualRF10}
 	\end{table}
+	
+	Y el diagrama de actividad:
+	
+	\begin{figure}[!htb]
+		\centering
+		\resizebox{13.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF10_pagar}}
+		\caption{Diagrama de actividad de RF10: Pagar}
+		\label{fig:diagramaActividad_RF10}
+	\end{figure}
+	
+	\FloatBarrier
 
 \end{itemize}
 
