@@ -1,5 +1,9 @@
 \chapter{Descripción informática}
 
+% ----------------------------
+% -- Modelo de casos de uso --
+% ----------------------------
+
 \section{Especificación de Requisitos Software}
 
 \subsection{Introducción}
@@ -287,6 +291,9 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 		\item En caso de haber reservado previamente, el usuario sólo podrá coger la bicicleta de la estación en la que haya realizado dicha reserva.
 		\item Las bicicletas reservadas por otros usuarios no están disponibles.
 	\end{itemize}
+	Señalar, a su vez, que la estación deberá mostrar una tarifa adaptada a la disponibilidad de bicicletas. Es decir, partiendo de una tarifa base, ésta se verá acrecentada a medida que las bicis disponibles se vean reducidas. 
+	
+	El objetivo es introducir un primer nivel de adaptación a las condiciones del entorno, de modo que los usuarios tengan alicientes para coger bicicletas de estaciones con una mayor disponibilidad. 
 	
 	La descripción textual:
 	
@@ -298,7 +305,7 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 			\multicolumn{1}{|c|}{\textbf{Usuario}} & \multicolumn{1}{c|}{\textbf{Sistema}} \\ \hline
 			[Pto. inclusión: RF02: Loguear usuario] &\\ \hline
 			1. Seleccionar estación &\\ \hline
-			& 2. Mostrar estado estación \\ \hline
+			& 2. Mostrar estado estación (incluyen tarifa) \\ \hline
 			3. Seleccionar coger bici &\\ \hline
 			& 4. Comprobar restricciones \\ \hline
 			& 5. [RF10: Pagar] \\ \hline
@@ -543,9 +550,80 @@ En relación al servidor de aplicación, éste ha de ser capaz de gestionar acce
 No se consideran otros requisitos de los especificados en secciones previas.
 
 
+% ------------------------
+% -- Modelo de analisis --
+% ------------------------
+
 \section{Análisis}
 
-Diagramas de secuencia, estados\dots
+\subsection{Introducción}
+
+El análisis de los requerimientos especificados en la sección anterior ha de dar como resultado la especificación de las características operativas del software, indicando la interfaz de éste y otros elementos del sistema, y estableciendo las restricciones que limitan al software.
+
+Este proceso de análisis otorga la información que se traduce en diseños de arquitectura, interfaz y componentes, así como los medios para evaluar la calidad del software una vez construido. 
+
+Por lo tanto, el modelo de análisis supone un puente entre la descripción del sistema y su diseño posterior. Esta relación queda esquematizada en la figura ~\ref{fig:modeloAnalisis}.
+
+\begin{figure}
+	\centering
+	\resizebox{8cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/ModeloAnalisis}}
+	\caption{El modelo de análisis como puente entre los requerimientos y el diseño del software}
+	\label{fig:modeloAnalisis}
+\end{figure}
+
+Este modelo se desarrollará en dos pasos: 
+
+\begin{enumerate}  
+	\item En primer lugar, se presentará la vista estática general del sistema mediante un diagrama de clases de análisis que represente el modelo conceptual de datos. De este modo se pretende obtener una perspectiva global de las entidades básicas presentes en el software.
+	\item En segundo lugar, los requisitos descritos en la sección anterior se comenzarán a desarrollar mediante diagramas de colaboración (o comunicación) de modo que se tenga una primera visión de la futura implementación de cada uno.
+\end{enumerate}
+
+Cabe señalar que, en este punto, la atención se centra en el \emph{qué}, no en el \emph{cómo}, con lo no se entrará en detalles técnicos, de diseño o de implementación.
+
+\subsection{Diagrama de clases de análisis}
+
+El diagrama de clases de análisis representa el el modelo conceptual de datos, dando lugar a la vista estática general del sistema e identificación de sus entidades básicas. Si bien se cuenta con un cierto grado de subjetividad, las clases potenciales a incluir en este punto deberán cubrir todos (o casi todos) los puntos siguientes, de acuerdo a Pressman \cite{pressman10}:
+
+
+\begin{enumerate}  
+	\item \textit{Información retenida}. Debe recordarse la información sobre la clase para que el sistema pueda funcionar.
+	\item \textit{Servicios necesarios}. La clase potencial debe tener un conjunto de operaciones identificables que cambien en cierta manera el valor de sus atributos.
+	\item \textit{Atributos múltiples}.
+	\item \textit{Atributos comunes}. Para la clase potencial se define un conjunto de atributos y se aplican éstos a todas las instancias de la clase.
+	\item \textit{Operaciones comunes}. Se define un conjunto de operaciones para la clase potencial y éstas se aplican a todas las instancias de la clase.
+	\item \textit{Requerimientos esenciales}. Las entidades externas que aparezcan en el espacio del problema y que produzcan o consuman información esencial para la operación de cualquier solución para el sistema casi siempre se definirán como clases en el modelo de requerimientos.	
+\end{enumerate}
+
+Quedan identificadas las siguientes entidades básicas:
+
+\begin{itemize}
+	\item \textbf{Gestor conexión remota}. Desde el momento en el que la aplicación contará con una arquitectura cliente-servidor y la comunicación entre ambas entidades se realizará de manera remota, se requiere de una entidad que gestione dicha comunicación y sepa dar respuesta a las operaciones \textsc{CRUD}.
+	\item \textbf{Entidad remota}. La entidad que quedará gestionada por el gestor anterior, supone la generalización de alguna de las siguientes entidades:
+	\begin{itemize}
+		\item \textbf{Usuario}. Se deberán recoger los atributos básicos para poder realizar el login, como el nombre de usuario y contraseña, datos personales, como el nombre y apellidos, y datos operativos, como el saldo o datos acerca de si se tiene una reserva o bicicleta. Del mismo modo, el usuario deberá ser capaz de interactuar con las estaciones de bicicletas, cogiendo y dejando las mismas o gestionando reservas.
+		\item \textbf{Estación}. La estación de bicicletas, deberá contar con datos identificativos, como la dirección donde se encuentre ubicada, y con datos operativos referidos al total de bicicletas o anclajes disponibles, reservados, etc., así como la tarifa base de esa estación. La estación deberá poder gestionar las operaciones comenzadas por los usuarios y mostrar su estado convenientemente actualizado.
+		\item \textbf{Reserva}. Se considera relevante contar con una clase para almacenar las reservas de usuarios, de modo que su gestión global sea más sencilla. Esta entidad deberá contar con los datos de la reserva (tipo (anclaje o bicicleta), nombre de usuario, fecha y estación) y con la constante que defina el tiempo máximo por reserva (30' de acuerdo a los requisitos).
+	\end{itemize}
+\end{itemize}
+
+Este conjunto de entidades básicas junto con sus potenciales atributos y operaciones básicas queda modelizado en la figura ~\ref{fig:clasesAnalisis}.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/03_ClasesAnalisis}
+	\caption{Diagrama de clases de análisis}
+	\label{fig:clasesAnalisis}
+\end{figure}
+
+\subsection{Diagramas de colaboración}
+
+Aquí se desarrollan los requisitos
+
+
+
+
+
+
 
 
 \section{Diseño}
