@@ -16,7 +16,33 @@
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Diagrama de actividad de RF08: Reservar}}{19}{figure.3.9}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Diagrama de actividad de RF09: Cancelar reserva (expl\IeC {\'\i }cita)}}{20}{figure.3.10}
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Diagrama de actividad de RF10: Pagar}}{21}{figure.3.11}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces El modelo de an\IeC {\'a}lisis como puente entre los requerimientos y el dise\IeC {\~n}o del software}}{25}{figure.3.12}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Diagrama de clases de an\IeC {\'a}lisis}}{27}{figure.3.13}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Diagrama de actividad de RF11: Actualizar}}{22}{figure.3.12}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces El modelo de an\IeC {\'a}lisis como puente entre los requerimientos y el dise\IeC {\~n}o del software}}{26}{figure.3.13}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Diagrama de clases de an\IeC {\'a}lisis}}{28}{figure.3.14}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF01}}{29}{figure.3.15}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF01}}{29}{figure.3.16}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del segundo camino alternativo del RF01}}{29}{figure.3.17}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF02}}{30}{figure.3.18}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF02}}{30}{figure.3.19}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del segundo camino alternativo del RF02}}{31}{figure.3.20}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF03}}{31}{figure.3.21}
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF03}}{32}{figure.3.22}
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del segundo camino alternativo del RF03}}{32}{figure.3.23}
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF04}}{33}{figure.3.24}
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF04}}{33}{figure.3.25}
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF05}}{33}{figure.3.26}
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF06}}{34}{figure.3.27}
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF06}}{34}{figure.3.28}
+\contentsline {figure}{\numberline {3.29}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF07}}{35}{figure.3.29}
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF07}}{35}{figure.3.30}
+\contentsline {figure}{\numberline {3.31}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF08}}{36}{figure.3.31}
+\contentsline {figure}{\numberline {3.32}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF08}}{36}{figure.3.32}
+\contentsline {figure}{\numberline {3.33}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF09}}{37}{figure.3.33}
+\contentsline {figure}{\numberline {3.34}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF09}}{37}{figure.3.34}
+\contentsline {figure}{\numberline {3.35}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF10}}{38}{figure.3.35}
+\contentsline {figure}{\numberline {3.36}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF10}}{38}{figure.3.36}
+\contentsline {figure}{\numberline {3.37}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF11}}{39}{figure.3.37}
+\contentsline {figure}{\numberline {3.38}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF11}}{39}{figure.3.38}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

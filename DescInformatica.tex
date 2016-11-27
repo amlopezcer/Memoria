@@ -105,9 +105,7 @@ En la figura ~\ref{fig:diagramaCasosUso} se aporta el diagrama de casos de uso q
 
 \subsubsection{Requisitos Futuros}
 
-\begin{itemize}	
-	\item Adaptación a nuevas plataformas (iOS, versión Web, etc.).
-\end{itemize}
+No se consideran requisitos futuros.
 
 \subsection{Requisitos Específicos}
 
@@ -118,7 +116,6 @@ La interfaz con el usuario consistirá en un conjunto de pantallas con los contr
 En relación a las interfaces hardware-software, se deberá contar con un dispositivo móvil con conexión a internet y que implemente, como mínimo, la versión 4.0 del sistema Android (llamada \emph{Ice Cream Sandwich}\footnote{Android denomina alfabéticamente y con nombres de dulces a cada una de las versiones de su sistema operativo. En el momento de la redacción de este documento, la versión más actualizada es la 7.0, \textit{Nougat}.}).
 
 Finalmente, acerca de las interfaces de comunicación, la aplicación se comunicará con su servidor mediante el protocolo HTTP haciendo uso de RESTful Web Services y cadenas JSON. La conexión entre el servidor de aplicación y la base de datos se realizará mediante las tecnologías MySQL Connector/JDBC.
-
 \subsubsection{Funciones}
 
 En esta sección se desarrolla la descripción de los diferentes requerimientos funcionales y no funcionales con que deberá contar el sistema. 
@@ -129,7 +126,6 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	\item \textbf{RF01: Registrar usuario}. El sistema deberá permitir el registro de nuevos usuarios. Para ello, se solicitarán el nombre usuario, contraseña, dirección de correo electrónico y nombre y apellidos reales. El nombre de usuario y la dirección de correo han de ser únicos, de modo que no se permita la duplicidad de los mismos en la aplicación. Asimismo, la contraseña ha de ser encriptada a la hora de ser almacenada en la base de datos.
 	
 	La descripción textual:
-	
 	\begin{table}[h]
 		\centering	
 		\begin{tabular}{|l|l|}
@@ -149,7 +145,6 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	
 	\FloatBarrier
 	Y el diagrama de actividad:
-		
 	\begin{figure}[!htb]
 		\centering
 		\resizebox{12cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF01_registrarUsuario}}
@@ -160,7 +155,6 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	\item \textbf{RF02: Loguear usuario}. El sistema deberá permitir la autenticación de usuarios para su acceso. Este proceso se realizará mediante el par usuario-contraseña. Señalar que, como se ha especificado en el requisito previo, la contraseña se almacena encriptada, de modo que la introducida por el usuario que trata de acceder ha de ser tratada por el mismo algortimo para poder realizar la comparación.
 	
 	La descripción textual:
-	
 	\begin{table}[h]
 		\centering	
 		\begin{tabular}{|l|l|}
@@ -179,10 +173,9 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	\end{table}
 	
 	Y el diagrama de actividad:
-	
 	\begin{figure}[!htb]
 		\centering
-		\resizebox{9.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF02_loguear}}
+		\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF02_loguear}}
 		\caption{Diagrama de actividad de RF02: Loguear usuario}
 		\label{fig:diagramaActividad_RF02}
 	\end{figure}
@@ -191,7 +184,6 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	\item \textbf{RF03: Modificar perfil}. El sistema deberá permitir la modificación del perfil de usuario solicitados en el proceso de registro, considerando que el nombre de usuario y dirección de correo han de ser únicos.
 	
 	La descripción textual:
-	
 	\begin{table}[h]
 		\centering	
 		\begin{tabular}{|l|l|}
@@ -213,7 +205,6 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	\end{table}
 	
 	Y el diagrama de actividad:
-	
 	\begin{figure}[!htb]
 		\centering
 		\resizebox{8cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF03_modificarPerfil}}
@@ -225,7 +216,6 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	\item \textbf{RF04: Borrar perfil}. El sistema deberá permitir el borrado completo de perfiles. Este proceso requerirá de una confirmación explícita por parte del usuario y, en el momento en que se realice, será irreversible, borrando el registro específico de la base de datos. El dinero ingresado será devuelto y las posibles reservas, canceladas.
 	
 	La descripción textual:
-	
 	\begin{table}[h]
 		\centering	
 		\begin{tabular}{|l|l|}
@@ -244,7 +234,6 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	\end{table}
 	
 	Y el diagrama de actividad:
-	
 	\begin{figure}[!htb]
 		\centering
 		\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF04_borrarPerfil}}
@@ -256,7 +245,6 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	\item \textbf{RF05: Ingresar saldo}. El sistema deberá permitir el ingreso de dinero, de modo que el usuario cuente con saldo suficiente para que pueda operar con el parque de bicicletas.
 	
 	La descripción textual:
-	
 	\begin{table}[h]
 		\centering	
 		\begin{tabular}{|l|l|}
@@ -275,7 +263,6 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	\end{table}
 	
 	Y el diagrama de actividad:
-	
 	\begin{figure}[!htb]
 		\centering
 		\resizebox{10.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF05_ingresarSaldo}}
@@ -296,7 +283,6 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	El objetivo es introducir un primer nivel de adaptación a las condiciones del entorno, de modo que los usuarios tengan alicientes para coger bicicletas de estaciones con una mayor disponibilidad. 
 	
 	La descripción textual:
-	
 	\begin{table}[h]
 		\centering	
 		\begin{tabular}{|l|l|}
@@ -305,7 +291,7 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 			\multicolumn{1}{|c|}{\textbf{Usuario}} & \multicolumn{1}{c|}{\textbf{Sistema}} \\ \hline
 			[Pto. inclusión: RF02: Loguear usuario] &\\ \hline
 			1. Seleccionar estación &\\ \hline
-			& 2. Mostrar estado estación (incluyen tarifa) \\ \hline
+			& 2. [RF11: Actualizar] \\ \hline
 			3. Seleccionar coger bici &\\ \hline
 			& 4. Comprobar restricciones \\ \hline
 			& 5. [RF10: Pagar] \\ \hline
@@ -318,7 +304,6 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	
 	\FloatBarrier
 	Y el diagrama de actividad:
-	
 	\begin{figure}[!htb]
 		\centering
 		\resizebox{13.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF06_cogerBicicleta}}
@@ -334,7 +319,6 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	\end{itemize}
 	
 	La descripción textual:
-	
 	\begin{table}[h]
 		\centering	
 		\begin{tabular}{|l|l|}
@@ -343,7 +327,7 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 			\multicolumn{1}{|c|}{\textbf{Usuario}} & \multicolumn{1}{c|}{\textbf{Sistema}} \\ \hline
 			[Pto. inclusión: RF02: Loguear usuario] &\\ \hline
 			1. Seleccionar estación &\\ \hline
-			& 2. Mostrar estado estación \\ \hline
+			& 2. [RF11: Actualizar] \\ \hline
 			3. Seleccionar dejar bici &\\ \hline
 			& 4. Comprobar restricciones \\ \hline
 			& 5. Actualizar estado global \\ \hline
@@ -355,7 +339,6 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	
 	\FloatBarrier
 	Y el diagrama de actividad:
-	
 	\begin{figure}[!htb]
 		\centering
 		\resizebox{13.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF07_dejarBicicleta}}
@@ -371,7 +354,6 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	\end{itemize}
 	
 	La descripción textual:
-	
 	\begin{table}[h]
 		\centering	
 		\begin{tabular}{|l|l|}
@@ -380,7 +362,7 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 			\multicolumn{1}{|c|}{\textbf{Usuario}} & \multicolumn{1}{c|}{\textbf{Sistema}} \\ \hline
 			[Pto. inclusión: RF02: Loguear usuario] &\\ \hline
 			1. Seleccionar estación &\\ \hline
-			& 2. Mostrar estado estación \\ \hline
+			& 2. [RF11: Actualizar] \\ \hline
 			3. Seleccionar reservar &\\ \hline
 			& 4. Mostrar opciones de reserva \\ \hline
 			5. Seleccionar tipo de reserva &\\ \hline
@@ -393,7 +375,6 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	\end{table}
 	
 	Y el diagrama de actividad:
-	
 	\begin{figure}[!htb]
 		\centering
 		\resizebox{12cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF08_reservar}}
@@ -410,7 +391,6 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	Si un usuario ejerce su derecho sobre una reserva, la misma queda automáticamente cancelada.
 	
 	Se aporta la descripción textual del requisito referido a la cancelación explícita, puesto que es la única en la que interviene el usuario de manera directa:
-	
 	\begin{table}[h]
 		\centering	
 		\begin{tabular}{|l|l|}
@@ -429,10 +409,9 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	\end{table}
 	
 	Y el diagrama de actividad:
-	
 	\begin{figure}[!htb]
 		\centering
-		\resizebox{11.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF09_cancelarReserva}}
+		\resizebox{11cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF09_cancelarReserva}}
 		\caption{Diagrama de actividad de RF09: Cancelar reserva (explícita)}
 		\label{fig:diagramaActividad_RF09}
 	\end{figure}
@@ -441,7 +420,6 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	\item \textbf{RF10: Pagar}. El sistema deberá permitir realizar el pago de las operaciones desarrolladas por los usuarios.
 	
 	La descripción textual:
-	
 	\begin{table}[h]
 		\centering	
 		\begin{tabular}{|l|l|}
@@ -449,24 +427,49 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 			\multicolumn{2}{|c|}{\textbf{RF10:Pagar}} \\ \hline
 			\multicolumn{1}{|c|}{\textbf{Usuario}} & \multicolumn{1}{c|}{\textbf{Sistema}} \\ \hline
 			[Pto. inclusión: RF06: Coger bicicleta] &\\ \hline
-			& 1. Realizar pago \\ \hline 
-			& 2. Actualizar usuario \\ \hline 
-			& 3. Confirmar operación terminada \\ \hline 	
+			& 1. Solicitar confirmación \\ \hline
+			2. Confirmar operación &\\ \hline
+			& 3. Realizar pago \\ \hline
+			& 4. Actualizar usuario \\ \hline 
+			& 5. Confirmar operación terminada \\ \hline 	
 		\end{tabular}
 		\caption{Descripción textual de RF10: Pagar}
 		\label{tab:tablaDescTextualRF10}
 	\end{table}
 	
 	Y el diagrama de actividad:
-	
 	\begin{figure}[!htb]
 		\centering
-		\resizebox{13.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF10_pagar}}
+		\resizebox{11cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF10_pagar}}
 		\caption{Diagrama de actividad de RF10: Pagar}
 		\label{fig:diagramaActividad_RF10}
 	\end{figure}
 	
-	\FloatBarrier
+	\item \textbf{RF11: Actualizar}. El sistema deberá permitir actualizar el estado global tomando la información más reciente almacenada en el servidor. En este sentido, con cada solicitud de actualización, en el proceso se deberá comprobar si existen reservas caducadas, cancelándolas automáticamente de modo que se ofrezca al usuario una visión consistente de la disponibilidad del parque de bicicletas.
+	
+	La descripción textual:
+	\begin{table}[h]
+		\centering	
+		\begin{tabular}{|l|l|}
+			\hline
+			\multicolumn{2}{|c|}{\textbf{RF11:Actualizar}} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Usuario}} & \multicolumn{1}{c|}{\textbf{Sistema}} \\ \hline
+			[Pto. inclusión: RF02: Loguear usuario] &\\ \hline
+			1. Seleccionar actualizar &\\ \hline
+			& 2. Actualizar estado\\ \hline
+			& 3. Mostrar estado actualizado \\ \hline 	
+		\end{tabular}
+		\caption{Descripción textual de RF11: Actualizar}
+		\label{tab:tablaDescTextualRF11}
+	\end{table}
+	
+	Y el diagrama de actividad:
+	\begin{figure}[!htb]
+		\centering
+		\resizebox{13cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF11_actualizar}}
+		\caption{Diagrama de actividad de RF11: Actualizar}
+		\label{fig:diagramaActividad_RF11}
+	\end{figure}
 
 \end{itemize}
 
@@ -480,23 +483,23 @@ Finalmente, se pasan a detallar los \emph{Requerimientos No Funcionales} más re
 	
 	\item \textbf{RNF03: Seguridad}. El sistema ha de asegurar la seguridad en el tratamiento de la información del usuario. 
 	
-	El detalle de este \textsc{RNF} se recoge en el apartado posterior referido a los Atributos del Sistema
+	El detalle de este RNF se recoge en el apartado posterior referido a los Atributos del Sistema
 	
 	\item \textbf{RNF04: Fiabilidad}. El sistema ha operar según lo esperado y minimizando en la medida de los posible la probabilidad de aparición de fallos. E
 	
-	El detalle de este \textsc{RNF} se recoge en el apartado posterior referido a los Atributos del Sistema
+	El detalle de este RNF se recoge en el apartado posterior referido a los Atributos del Sistema
 	
 	\item \textbf{RNF05: Mantenibilidad}. El sistema se ha de desarrollar de modo que pueda ser conservado y restituido (en caso necesario) con facilidad.
 	
-	El detalle de este \textsc{RNF} se recoge en el apartado posterior referido a los Atributos del Sistema
+	El detalle de este RNF se recoge en el apartado posterior referido a los Atributos del Sistema
 	
 	\item \textbf{RNF06: Portabilidad}. El sistema ha de desarrollarse de modo que pueda ser ejecutado en diferentes plataformas. 
 	
-	El detalle de este \textsc{RNF} se recoge en el apartado posterior referido a los Atributos del Sistema
+	El detalle de este RNF se recoge en el apartado posterior referido a los Atributos del Sistema
 	
 	\item \textbf{RNF07: Disponibilidad}. El sistema ha de permanecer en funcionamiento continuo para prestar una servicio adecuado a los usuarios.
 	
-	El detalle de este \textsc{RNF} se recoge en el apartado posterior referido a los Atributos del Sistema
+	El detalle de este RNF se recoge en el apartado posterior referido a los Atributos del Sistema
 	
 \end{itemize}
 
@@ -575,7 +578,7 @@ Este modelo se desarrollará en dos pasos:
 
 \begin{enumerate}  
 	\item En primer lugar, se presentará la vista estática general del sistema mediante un diagrama de clases de análisis que represente el modelo conceptual de datos. De este modo se pretende obtener una perspectiva global de las entidades básicas presentes en el software.
-	\item En segundo lugar, los requisitos descritos en la sección anterior se comenzarán a desarrollar mediante diagramas de colaboración (o comunicación) de modo que se tenga una primera visión de la futura implementación de cada uno.
+	\item En segundo lugar, los requisitos descritos en la sección anterior se comenzarán a desarrollar mediante diagramas de colaboración (o comunicación) de modo que se tenga una primera visión de la futura implementación de cada uno y se muestre una primera aproximación a la interacción entre objetos.
 \end{enumerate}
 
 Cabe señalar que, en este punto, la atención se centra en el \emph{qué}, no en el \emph{cómo}, con lo no se entrará en detalles técnicos, de diseño o de implementación.
@@ -583,7 +586,6 @@ Cabe señalar que, en este punto, la atención se centra en el \emph{qué}, no e
 \subsection{Diagrama de clases de análisis}
 
 El diagrama de clases de análisis representa el el modelo conceptual de datos, dando lugar a la vista estática general del sistema e identificación de sus entidades básicas. Si bien se cuenta con un cierto grado de subjetividad, las clases potenciales a incluir en este punto deberán cubrir todos (o casi todos) los puntos siguientes, de acuerdo a Pressman \cite{pressman10}:
-
 
 \begin{enumerate}  
 	\item \textit{Información retenida}. Debe recordarse la información sobre la clase para que el sistema pueda funcionar.
@@ -594,42 +596,270 @@ El diagrama de clases de análisis representa el el modelo conceptual de datos, 
 	\item \textit{Requerimientos esenciales}. Las entidades externas que aparezcan en el espacio del problema y que produzcan o consuman información esencial para la operación de cualquier solución para el sistema casi siempre se definirán como clases en el modelo de requerimientos.	
 \end{enumerate}
 
-Quedan identificadas las siguientes entidades básicas:
+Con todo, quedan identificadas las siguientes entidades básicas:
 
 \begin{itemize}
-	\item \textbf{Gestor conexión remota}. Desde el momento en el que la aplicación contará con una arquitectura cliente-servidor y la comunicación entre ambas entidades se realizará de manera remota, se requiere de una entidad que gestione dicha comunicación y sepa dar respuesta a las operaciones \textsc{CRUD}.
-	\item \textbf{Entidad remota}. La entidad que quedará gestionada por el gestor anterior, supone la generalización de alguna de las siguientes entidades:
+	\item \textbf{Gestor Conexión Remota}. Desde el momento en el que la aplicación contará con una arquitectura cliente-servidor y la comunicación entre ambas entidades se realizará de manera remota, se requiere de una entidad que gestione dicha comunicación y sepa dar respuesta a las operaciones CRUD\footnote{Siglas en inglés de las operaciones básicas para la gestión de datos: Create, Read, Update y Delete}.
+	\item \textbf{Entidad Remota}. La entidad que quedará gestionada por la clase anterior, supone la generalización de alguna de las siguientes entidades:
 	\begin{itemize}
 		\item \textbf{Usuario}. Se deberán recoger los atributos básicos para poder realizar el login, como el nombre de usuario y contraseña, datos personales, como el nombre y apellidos, y datos operativos, como el saldo o datos acerca de si se tiene una reserva o bicicleta. Del mismo modo, el usuario deberá ser capaz de interactuar con las estaciones de bicicletas, cogiendo y dejando las mismas o gestionando reservas.
 		\item \textbf{Estación}. La estación de bicicletas, deberá contar con datos identificativos, como la dirección donde se encuentre ubicada, y con datos operativos referidos al total de bicicletas o anclajes disponibles, reservados, etc., así como la tarifa base de esa estación. La estación deberá poder gestionar las operaciones comenzadas por los usuarios y mostrar su estado convenientemente actualizado.
-		\item \textbf{Reserva}. Se considera relevante contar con una clase para almacenar las reservas de usuarios, de modo que su gestión global sea más sencilla. Esta entidad deberá contar con los datos de la reserva (tipo (anclaje o bicicleta), nombre de usuario, fecha y estación) y con la constante que defina el tiempo máximo por reserva (30' de acuerdo a los requisitos).
+		\item \textbf{Reserva}. Se considera relevante contar con una clase para almacenar las reservas de usuarios, de modo que su gestión global sea más sencilla. Esta entidad deberá contar con los datos de la reserva (tipo (anclaje o bicicleta), nombre de usuario, fecha y estación) y con la constante que defina el tiempo máximo por reserva (30 minutos, de acuerdo a los requisitos).
 	\end{itemize}
 \end{itemize}
 
-Este conjunto de entidades básicas junto con sus potenciales atributos y operaciones básicas queda modelizado en la figura ~\ref{fig:clasesAnalisis}.
+De este modo, el \emph{Gestor de Conexión Remota} será el encargado de enviar y recibir datos para las entidades, sin necesidad de diferenciar entre ninguna de ellas por atender directamente la general \emph{Entidad Remota}.
 
-\begin{figure}[!htb]
+Este conjunto de entidades básicas, junto con sus potenciales atributos y operaciones básicas, queda modelizado en la figura ~\ref{fig:diagramaClasesAnalisis}.
+
+\begin{figure}
 	\centering
 	\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/03_ClasesAnalisis}
 	\caption{Diagrama de clases de análisis}
-	\label{fig:clasesAnalisis}
+	\label{fig:diagramaClasesAnalisis}
 \end{figure}
 
 \subsection{Diagramas de colaboración}
 
-Aquí se desarrollan los requisitos
+Con la vista estática del futuro sistema presentada, a continuación se pasa a describir las realizaciones más relevantes de cada caso de uso presentados en la pasada figura ~\ref{fig:diagramaCasosUso}. Esto es, por cada requisito funcional se modelizará la realización de su camino principal y caminos alternativos de relevancia obtenidos a partir de los diagramas de actividad anteriores.
+
+El objetivo es el de componer un análisis adecuado de las posibles operaciones e interacciones que cada requisito puede desencadenar y las entidades afectadas ante los caminos de ejecución más probables.
+
+\begin{itemize}
+	\item \textbf{RF01: Registrar usuario}. Tres caminos básicos: 
+	\begin{enumerate}
+		\item Camino principal, la operación de registro finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF01_1}
+		\item Camino alternativo 1, el usuario no introduce todos los datos obligatorios. Ver figura ~\ref{fig:diagramaColaboracion_RF01_2}
+		\item Camino alternativo 2, se aportan todos los datos requeridos, pero el nombre de usuario o dirección de correo electrónico ya están en uso. Ver figura ~\ref{fig:diagramaColaboracion_RF01_3}
+	\end{enumerate}
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{13.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF01_1}}
+		\caption{Diagrama de colaboración del camino principal del RF01}
+		\label{fig:diagramaColaboracion_RF01_1}
+	\end{figure}
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{13.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF01_2}}
+		\caption{Diagrama de colaboración del primer camino alternativo del RF01}
+		\label{fig:diagramaColaboracion_RF01_2}
+	\end{figure}
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{13.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF01_3}}
+		\caption{Diagrama de colaboración del segundo camino alternativo del RF01}
+		\label{fig:diagramaColaboracion_RF01_3}
+	\end{figure}
+	
+	\FloatBarrier
+	\item \textbf{RF02: Loguear usuario}. Tres caminos básicos: 
+	\begin{enumerate}
+		\item Camino principal, la operación de inicio de sesión finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF02_1}
+		\item Camino alternativo 1, el usuario no introduce todos los datos obligatorios. Ver figura ~\ref{fig:diagramaColaboracion_RF02_2}
+		\item Camino alternativo 2, autenticación incorrecta, se aportan todos los datos requeridos, pero el nombre de usuario y/o contraseña no son correctos. Ver figura ~\ref{fig:diagramaColaboracion_RF02_3}
+	\end{enumerate}
+	\begin{figure} [!htb]
+		\centering
+		\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF02_1}
+		\caption{Diagrama de colaboración del camino principal del RF02}
+		\label{fig:diagramaColaboracion_RF02_1}
+	\end{figure}
+	\begin{figure} [!htb]
+		\centering
+		\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF02_2}
+		\caption{Diagrama de colaboración del primer camino alternativo del RF02}
+		\label{fig:diagramaColaboracion_RF02_2}
+	\end{figure}
+	\begin{figure} [!htb]
+		\centering
+		\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF02_3}
+		\caption{Diagrama de colaboración del segundo camino alternativo del RF02}
+		\label{fig:diagramaColaboracion_RF02_3}
+	\end{figure}
+	
+	\FloatBarrier
+	\item \textbf{RF03: Modificar perfil}. Se consideran tres caminos básicos: 
+	\begin{enumerate}
+		\item Camino principal, la operación de modificación de perfil finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF03_1}
+		\item Camino alternativo 1, el nuevo nombre de usuario y/o dirección de correo electrónico ya están en uso. Ver figura ~\ref{fig:diagramaColaboracion_RF03_2}
+		\item Camino alternativo 2, el usuario cancela la operación ante la confirmación final. Ver figura ~\ref{fig:diagramaColaboracion_RF03_3}
+	\end{enumerate}
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{13.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF03_1}}
+		\caption{Diagrama de colaboración del camino principal del RF03}
+		\label{fig:diagramaColaboracion_RF03_1}
+	\end{figure}
+	\begin{figure} [!htb]
+		\centering
+		\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF03_2}
+		\caption{Diagrama de colaboración del primer camino alternativo del RF03}
+		\label{fig:diagramaColaboracion_RF03_2}
+	\end{figure}
+	\begin{figure} [!htb]
+		\centering
+		\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF03_3}
+		\caption{Diagrama de colaboración del segundo camino alternativo del RF03}
+		\label{fig:diagramaColaboracion_RF03_3}
+	\end{figure}
+	
+	\FloatBarrier
+	\item \textbf{RF04: Borrar perfil}. Se consideran dos caminos básicos: 
+	\begin{enumerate}
+		\item Camino principal, la operación de borrado de perfil finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF04_1}
+		\item Camino alternativo 1, el usuario cancela la operación ante la confirmación final. Ver figura ~\ref{fig:diagramaColaboracion_RF04_2}
+	\end{enumerate}
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{12.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF04_1}}•
+		\caption{Diagrama de colaboración del camino principal del RF04}
+		\label{fig:diagramaColaboracion_RF04_1}
+	\end{figure}
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{12.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF04_2}}
+		\caption{Diagrama de colaboración del primer camino alternativo del RF04}
+		\label{fig:diagramaColaboracion_RF04_2}
+	\end{figure}
+	
+	\FloatBarrier
+	\item \textbf{RF05: Ingresar saldo}. Se considera un único camino básico: el ingreso sin incidencias de saldo. Ver figura ~\ref{fig:diagramaColaboracion_RF05_1}
+	\begin{figure}[!htb]
+		\centering
+		\resizebox{12.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF05_1}}
+		\caption{Diagrama de colaboración del camino principal del RF05}
+		\label{fig:diagramaColaboracion_RF05_1}
+	\end{figure}
+	
+	\FloatBarrier
+	\item \textbf{RF06: Coger bicicleta}. Se consideran dos caminos básicos: 
+	\begin{enumerate}
+		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF06_1}
+		\item Camino alternativo 1, el usuario no supera alguna de las restricciones impuestas sobre la operación (mencionadas en la especificación de requisitos anterior). Ver figura ~\ref{fig:diagramaColaboracion_RF06_2}
+	\end{enumerate}
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{12cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF06_1}}
+		\caption{Diagrama de colaboración del camino principal del RF06}
+		\label{fig:diagramaColaboracion_RF06_1}
+	\end{figure}
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{12cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF06_2}}
+		\caption{Diagrama de colaboración del primer camino alternativo del RF06}
+		\label{fig:diagramaColaboracion_RF06_2}
+	\end{figure}
+	
+	\FloatBarrier
+	\item \textbf{RF07: Dejar bicicleta}. Se consideran dos caminos básicos: 
+	\begin{enumerate}
+		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF07_1}
+		\item Camino alternativo 1, el usuario no supera alguna de las restricciones impuestas sobre la operación (mencionadas en la especificación de requisitos anterior). Ver figura ~\ref{fig:diagramaColaboracion_RF07_2}
+	\end{enumerate}
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{12.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF07_1}}
+		\caption{Diagrama de colaboración del camino principal del RF07}
+		\label{fig:diagramaColaboracion_RF07_1}
+	\end{figure}
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{12.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF07_2}}
+		\caption{Diagrama de colaboración del primer camino alternativo del RF07}
+		\label{fig:diagramaColaboracion_RF07_2}
+	\end{figure}
+	
+	\FloatBarrier
+	\item \textbf{RF08: Reservar}. Se consideran dos caminos básicos: 
+	\begin{enumerate}
+		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF08_1}
+		\item Camino alternativo 1, el usuario no supera alguna de las restricciones impuestas sobre la operación (mencionadas en la especificación de requisitos anterior). Ver figura ~\ref{fig:diagramaColaboracion_RF08_2}
+	\end{enumerate}
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{11cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF08_1}}
+		\caption{Diagrama de colaboración del camino principal del RF08}
+		\label{fig:diagramaColaboracion_RF08_1}
+	\end{figure}
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{11cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF08_2}}
+		\caption{Diagrama de colaboración del primer camino alternativo del RF08}
+		\label{fig:diagramaColaboracion_RF08_2}
+	\end{figure}
+	
+	\FloatBarrier
+	\item \textbf{RF09: Cancelar reserva}. Se consideran dos caminos básicos: 
+	\begin{enumerate}
+		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF09_1}
+		\item Camino alternativo 1, el usuario cancelar la operación ante la confirmación final. Ver figura ~\ref{fig:diagramaColaboracion_RF09_2}
+	\end{enumerate}
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{14cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF09_1}}
+		\caption{Diagrama de colaboración del camino principal del RF09}
+		\label{fig:diagramaColaboracion_RF09_1}
+	\end{figure}
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{14cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF09_2}}
+		\caption{Diagrama de colaboración del primer camino alternativo del RF09}
+		\label{fig:diagramaColaboracion_RF09_2}
+	\end{figure}
+	
+	\FloatBarrier
+	\item \textbf{RF10: Pagar}. Se consideran dos caminos básicos: 
+	\begin{enumerate}
+		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF10_1}
+		\item Camino alternativo 1, el usuario cancelar la operación ante la confirmación final. Ver figura ~\ref{fig:diagramaColaboracion_RF10_2}
+	\end{enumerate}
+	\begin{figure} [!htb]
+		\centering
+		\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF10_1}
+		\caption{Diagrama de colaboración del camino principal del RF10}
+		\label{fig:diagramaColaboracion_RF10_1}
+	\end{figure}
+	\begin{figure} [!htb]
+		\centering
+		\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF10_2}
+		\caption{Diagrama de colaboración del primer camino alternativo del RF10}
+		\label{fig:diagramaColaboracion_RF10_2}
+	\end{figure}
+	
+	\FloatBarrier
+	\item \textbf{RF11: Actualizar}. Se consideran dos caminos básicos: 
+	\begin{enumerate}
+		\item Camino principal, en el proceso de actualización se identifican reservas caducadas, que se cancelan automáticamente. Ver figura ~\ref{fig:diagramaColaboracion_RF11_1}
+		\item Camino alternativo 1, no se identifican reservas caducadas, el proceso consiste en leer datos actualizados. Ver figura ~\ref{fig:diagramaColaboracion_RF11_2}
+	\end{enumerate}
+	\begin{figure} [!htb]
+		\centering
+		\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF11_1}
+		\caption{Diagrama de colaboración del camino principal del RF11}
+		\label{fig:diagramaColaboracion_RF11_1}
+	\end{figure}
+	\begin{figure} [!htb]
+		\centering
+		\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF11_2}
+		\caption{Diagrama de colaboración del primer camino alternativo del RF11}
+		\label{fig:diagramaColaboracion_RF11_2}
+	\end{figure}
+		
+\end{itemize}
 
 
-
-
-
-
-
+% ----------------------
+% -- Modelo de diseño --
+% ----------------------
 
 \section{Diseño}
 
 Aquí va la arquitectura, diagramas de clases\dots
 
+
+% ------------------------------
+% -- Modelo de implementación --
+% ------------------------------
 
 \section{Implementación}
 
