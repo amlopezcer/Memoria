@@ -81,7 +81,7 @@ En la figura ~\ref{fig:diagramaCasosUso} se aporta el diagrama de casos de uso q
 		\item Los servidores han de ser capaces de atender consultas concurrentes.
 		\item Los dispositivos móviles deberán estar gestionados por el sistema operativo Android.
 	\end{itemize}
-	\item Arquitectura del sistema: cliente-servidor de tres capas, con servidor de aplicación Glassfish y SQL Server de base de datos.
+	\item Arquitectura del sistema: cliente/servidor de tres capas, con servidor de aplicación Glassfish y SQL Server de base de datos.
 	\item Lenguaje(s) en uso: JAVA, SQL.
 	\item Protocolos de comunicación: 
 	\begin{itemize}
@@ -558,10 +558,11 @@ No se consideran otros requisitos de los especificados en secciones previas.
 % ------------------------
 
 \section{Análisis}
+\label{sec:secModeloAn}
 
 \subsection{Introducción}
 
-El análisis de los requerimientos especificados en la sección anterior ha de dar como resultado la especificación de las características operativas del software, indicando la interfaz de éste y otros elementos del sistema, y estableciendo las restricciones que limitan al software.
+El análisis de los requerimientos descritos ha de dar como resultado la especificación de las características operativas del software, indicando la interfaz de éste y otros elementos del sistema, y estableciendo las restricciones que limitan al software.
 
 Este proceso de análisis otorga la información que se traduce en diseños de arquitectura, interfaz y componentes, así como los medios para evaluar la calidad del software una vez construido. 
 
@@ -577,20 +578,20 @@ Por lo tanto, el modelo de análisis supone un puente entre la descripción del 
 Este modelo se desarrollará en dos pasos: 
 
 \begin{enumerate}  
-	\item En primer lugar, se presentará la vista estática general del sistema mediante un diagrama de clases de análisis que represente el modelo conceptual de datos. De este modo se pretende obtener una perspectiva global de las entidades básicas presentes en el software.
-	\item En segundo lugar, los requisitos descritos en la sección anterior se comenzarán a desarrollar mediante diagramas de colaboración (o comunicación) de modo que se tenga una primera visión de la futura implementación de cada uno y se muestre una primera aproximación a la interacción entre objetos.
+	\item \textbf{Análisis conceptual del sistema}. Se presentará la vista estática general del sistema mediante un diagrama de clases de análisis. El objetivo es el de obtener una perspectiva global y con un alto nivel de abstracción del software y sus entidades básicas.
+	\item \textbf{Análisis y desarrollo de requisitos}. Los requisitos descritos en la sección anterior se comenzarán a desarrollar mediante diagramas de colaboración (o comunicación), de modo que se tenga una primera visión de la futura implementación de cada uno y se muestre una primera aproximación a la interacción entre entidades.
 \end{enumerate}
 
 Cabe señalar que, en este punto, la atención se centra en el \emph{qué}, no en el \emph{cómo}, con lo no se entrará en detalles técnicos, de diseño o de implementación.
 
-\subsection{Diagrama de clases de análisis}
+\subsection{Análisis conceptual del sistema}
 
-El diagrama de clases de análisis representa el el modelo conceptual de datos, dando lugar a la vista estática general del sistema e identificación de sus entidades básicas. Si bien se cuenta con un cierto grado de subjetividad, las clases potenciales a incluir en este punto deberán cubrir todos (o casi todos) los puntos siguientes, de acuerdo a Pressman \cite{pressman10}:
+Para el análisis y representación del modelo conceptual de datos se recurrirá diagrama de clases de análisis, que de lugar a la vista estática general del sistema e identifique sus entidades básicas usando la terminología del dominio aplicable. Si bien se cuenta con un cierto grado de subjetividad, las clases potenciales a incluir en este punto deberán cubrir todos (o casi todos) los puntos siguientes \cite{Coa91}:
 
 \begin{enumerate}  
 	\item \textit{Información retenida}. Debe recordarse la información sobre la clase para que el sistema pueda funcionar.
 	\item \textit{Servicios necesarios}. La clase potencial debe tener un conjunto de operaciones identificables que cambien en cierta manera el valor de sus atributos.
-	\item \textit{Atributos múltiples}.
+	\item \textit{Atributos múltiples}. Centrando la atención en la información “principal”;
 	\item \textit{Atributos comunes}. Para la clase potencial se define un conjunto de atributos y se aplican éstos a todas las instancias de la clase.
 	\item \textit{Operaciones comunes}. Se define un conjunto de operaciones para la clase potencial y éstas se aplican a todas las instancias de la clase.
 	\item \textit{Requerimientos esenciales}. Las entidades externas que aparezcan en el espacio del problema y que produzcan o consuman información esencial para la operación de cualquier solución para el sistema casi siempre se definirán como clases en el modelo de requerimientos.	
@@ -599,7 +600,7 @@ El diagrama de clases de análisis representa el el modelo conceptual de datos, 
 Con todo, quedan identificadas las siguientes entidades básicas:
 
 \begin{itemize}
-	\item \textbf{Gestor Conexión Remota}. Desde el momento en el que la aplicación contará con una arquitectura cliente-servidor y la comunicación entre ambas entidades se realizará de manera remota, se requiere de una entidad que gestione dicha comunicación y sepa dar respuesta a las operaciones CRUD\footnote{Siglas en inglés de las operaciones básicas para la gestión de datos: Create, Read, Update y Delete}.
+	\item \textbf{Gestor Conexión Remota}. Desde el momento en el que la aplicación contará con una arquitectura cliente/servidor y la comunicación entre ambas entidades se realizará de manera remota, se requiere de una entidad que gestione dicha comunicación y sepa dar respuesta a las operaciones CRUD\footnote{Siglas en inglés de las operaciones básicas para la gestión de datos: Create, Read, Update y Delete}.
 	\item \textbf{Entidad Remota}. La entidad que quedará gestionada por la clase anterior, supone la generalización de alguna de las siguientes entidades:
 	\begin{itemize}
 		\item \textbf{Usuario}. Se deberán recoger los atributos básicos para poder realizar el login, como el nombre de usuario y contraseña, datos personales, como el nombre y apellidos, y datos operativos, como el saldo o datos acerca de si se tiene una reserva o bicicleta. Del mismo modo, el usuario deberá ser capaz de interactuar con las estaciones de bicicletas, cogiendo y dejando las mismas o gestionando reservas.
@@ -619,9 +620,9 @@ Este conjunto de entidades básicas, junto con sus potenciales atributos y opera
 	\label{fig:diagramaClasesAnalisis}
 \end{figure}
 
-\subsection{Diagramas de colaboración}
+\subsection{Análisis y desarrollo de requisitos}
 
-Con la vista estática del futuro sistema presentada, a continuación se pasa a describir las realizaciones más relevantes de cada caso de uso presentados en la pasada figura ~\ref{fig:diagramaCasosUso}. Esto es, por cada requisito funcional se modelizará la realización de su camino principal y caminos alternativos de relevancia obtenidos a partir de los diagramas de actividad anteriores.
+Con la vista estática del futuro sistema presentada, a continuación se pasa a describir las realizaciones más relevantes de cada caso de uso presentados en la figura ~\ref{fig:diagramaCasosUso}. Esto es, por cada requisito funcional se modelizará la realización de su camino principal y caminos alternativos de relevancia obtenidos a partir de los diagramas de actividad anteriores.
 
 El objetivo es el de componer un análisis adecuado de las posibles operaciones e interacciones que cada requisito puede desencadenar y las entidades afectadas ante los caminos de ejecución más probables.
 
@@ -854,7 +855,67 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 
 \section{Diseño}
 
-Aquí va la arquitectura, diagramas de clases\dots
+\subsection{Introducción}
+
+Sintetizando a Pressman \cite{Pre10}, el diseño del software comienza una vez que se han analizado y modelado los requerimientos (etapas centradas en describir los datos que se necesitan, la función y el comportamiento), es la última acción de la ingeniería de software dentro de la actividad de modelado y prepara la etapa de construcción (generación y prueba de código) proporcionando detalles sobre arquitectura del software, estructuras de datos, interfaces y componentes.
+
+Así, el modelo de diseño que a continuación se desarrolla, se dividirá dos partes principales:
+
+\begin{enumerate}
+	\item \textbf{Diseño de la arquitectura}. Se presentará el diseño de la arquitectura general que adoptará el sistema y de las interrelaciones entre sus componentes. La modelización de dicha estructura se llevará a cabo mediante el diagrama de clases de diseño, dando lugar a visión más detallada del sistema a implementar.
+	\item \textbf{Diseño de las interfaces}. En esta segunda parte se recogerán las decisiones de diseño más relevantes con referencia a las interfaces de usuario y comunicación de la aplicación.
+\end{enumerate}
+
+Por su parte, el diseño en el nivel de componentes y despliegue se tratará en la sección ~\ref{sec:secModeloImp} siguiente, acerca del \emph{Modelo de Implementación}.
+
+\subsection{Diseño de la arquitectura}
+
+La \emph{arquitectura del software} supone “la estructura o estructuras del sistema, lo que comprende a los componentes del software, sus propiedades externas visibles y las relaciones entre ellos” \cite{Bas03}.
+
+Si bien cabe señalar que la arquitectura no es el software operativo. Es una representación que permite \cite{Pre10}: 1) analizar la efectividad del diseño para cumplir los requerimientos establecidos, 2) considerar alternativas arquitectónicas en una etapa en la que hacer cambios al diseño todavía es relativamente fácil y 3) reducir los riesgos asociados con la construcción del software.
+
+La definición previa pone el énfasis en el papel de los “componentes del software”, que puede ser algo tan simple como un módulo de programa o una clase orientada a objeto, si bien también puede ampliarse a conceptos más extensos y complejos.
+
+\subsubsection{Estilo arquitectónico}
+
+Considerando los conceptos anteriores y con base en las especificación de requisitos previa, el estilo arquitectónico sobre el que se sustentará el sistema es el \emph{Cliente/Servidor} en su variación de tres capas, tal y como se muestra en la figura ~\ref{fig:arqClienteServ3Cap}:
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/ArqClienteServ3Cap}
+	\caption{Esquema de la arquitectura Cliente/Servidor de tres capas}
+	\label{fig:arqClienteServ3Cap}
+\end{figure}
+
+\begin{enumerate}
+	\item \textbf{Cliente}. Supone la capa de presentación, la Interfaz de Usuario. Su función es traducir tareas y/o resultados para resultar comprensibles por el usuario.
+	\item \textbf{Servidor}. La capa lógica encargada de coordinar la aplicación y procesar datos entre el resto de capas.
+	\item \textbf{Base de datos}. Implica la capa de datos, donde la información es almacenada y recuperada por parte de la capa lógica para su procesamiento.
+\end{enumerate}
+
+En la sección ~\ref{sec:secModeloImp} se entra en mayor detalle sobre estas capas, especificando las tecnologías para la implementación de cada una y la comunicación entre ellas.
+
+\subsubsection{Modelización de la arquitectura}
+
+En el modelo de análisis desarrollado en la sección ~\ref{sec:secModeloAn} quedaron definidas un conjunto de clases de análisis (representadas en la figura ~\ref{fig:diagramaClasesAnalisis}). Con un nivel de abstracción relativamente alto, cada una describe algún elemento del dominio del problema y se centra en aspectos de éste visibles para el usuario.
+
+En este punto, se reduce el nivel de abstracción y las clases de análisis se afinan hacía las clases de diseño, aportando los detalles que permitirán que las clases se implementen y generen una infraestructura para el software a desarrollar.
+
+A la hora de realizar este refinamiento, se han de tener en cuenta una serie de características que aseguren que las clases de diseño quedan bien formadas \cite{Arl02}:
+
+\begin{enumerate}
+	\item \textit{Completa y suficiente}. Una clase de diseño debe encapsular todos los atributos y métodos que sea razonable esperar y que existan para la clase.
+	\item \textit{Primitivismo}. Los métodos asociados con una clase de diseño deben centrarse en el cumplimiento de un servicio para la clase. Una vez implementado el servicio con un método, la
+	clase no debe proveer otro modo de hacer lo mismo.
+	\item \textit{Mucha cohesión}. Una clase de diseño cohesiva tiene un conjunto pequeño y centrado de	responsabilidades; para implementarlas emplea atributos y métodos de objetivo único.
+	\item \textit{Poco acoplamiento}. Dentro del modelo de diseño, es necesario que las clases de diseño colaboren una con otra. Sin embargo, la colaboración debe mantenerse en un mínimo aceptable. Si un modelo de diseño está muy acoplado (todas las clases de diseño colaboran con todas las demás), el sistema es difícil de implementar, probar y mantener con el paso del tiempo. En general, las clases de diseño dentro de un subsistema deben tener sólo un conocimiento limitado de otras clases.
+\end{enumerate}
+
+METER DIAGRAMA DE CLASES
+
+
+\subsection{Diseño de las interfaces}
+
 
 
 % ------------------------------
@@ -862,5 +923,6 @@ Aquí va la arquitectura, diagramas de clases\dots
 % ------------------------------
 
 \section{Implementación}
+\label{sec:secModeloImp}
 
 Sin enrollarse mucho con detalles\dots Herramientas utilizadas\dots Un diagrama de despliegue a lo mejor\dots

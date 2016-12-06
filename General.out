@@ -11,11 +11,14 @@
 \BOOKMARK [2][-]{subsection.3.1.3}{Requisitos Espec\355ficos}{section.3.1}% 11
 \BOOKMARK [1][-]{section.3.2}{An\341lisis}{chapter.3}% 12
 \BOOKMARK [2][-]{subsection.3.2.1}{Introducci\363n}{section.3.2}% 13
-\BOOKMARK [2][-]{subsection.3.2.2}{Diagrama de clases de an\341lisis}{section.3.2}% 14
-\BOOKMARK [2][-]{subsection.3.2.3}{Diagramas de colaboraci\363n}{section.3.2}% 15
+\BOOKMARK [2][-]{subsection.3.2.2}{An\341lisis conceptual del sistema}{section.3.2}% 14
+\BOOKMARK [2][-]{subsection.3.2.3}{An\341lisis y desarrollo de requisitos}{section.3.2}% 15
 \BOOKMARK [1][-]{section.3.3}{Dise\361o}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.4}{Implementaci\363n}{chapter.3}% 17
-\BOOKMARK [0][-]{chapter.4}{Pruebas}{}% 18
-\BOOKMARK [0][-]{chapter.5}{Conclusiones}{}% 19
-\BOOKMARK [1][-]{section.5.1}{L\355neas futuras}{chapter.5}% 20
-\BOOKMARK [0][-]{appendix.Alph1}{Manual de usuario}{}% 21
+\BOOKMARK [2][-]{subsection.3.3.1}{Introducci\363n}{section.3.3}% 17
+\BOOKMARK [2][-]{subsection.3.3.2}{Dise\361o de la arquitectura}{section.3.3}% 18
+\BOOKMARK [2][-]{subsection.3.3.3}{Dise\361o de las interfaces}{section.3.3}% 19
+\BOOKMARK [1][-]{section.3.4}{Implementaci\363n}{chapter.3}% 20
+\BOOKMARK [0][-]{chapter.4}{Pruebas}{}% 21
+\BOOKMARK [0][-]{chapter.5}{Conclusiones}{}% 22
+\BOOKMARK [1][-]{section.5.1}{L\355neas futuras}{chapter.5}% 23
+\BOOKMARK [0][-]{appendix.Alph1}{Manual de usuario}{}% 24
