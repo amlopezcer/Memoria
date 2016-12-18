@@ -571,7 +571,7 @@ Por lo tanto, el modelo de análisis supone un puente entre la descripción del 
 \begin{figure}
 	\centering
 	\resizebox{8cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/ModeloAnalisis}}
-	\caption{El modelo de análisis como puente entre los requerimientos y el diseño del software}
+	\caption{El modelo de análisis como puente entre los requerimientos y el diseño del software, de Pressman 2010}
 	\label{fig:modeloAnalisis}
 \end{figure}
 
@@ -911,10 +911,80 @@ A la hora de realizar este refinamiento, se han de tener en cuenta una serie de 
 	\item \textit{Poco acoplamiento}. Dentro del modelo de diseño, es necesario que las clases de diseño colaboren una con otra. Sin embargo, la colaboración debe mantenerse en un mínimo aceptable. Si un modelo de diseño está muy acoplado (todas las clases de diseño colaboran con todas las demás), el sistema es difícil de implementar, probar y mantener con el paso del tiempo. En general, las clases de diseño dentro de un subsistema deben tener sólo un conocimiento limitado de otras clases.
 \end{enumerate}
 
-METER DIAGRAMA DE CLASES
+Se ha de tener en cuenta que el sistema cuenta tanto con una capa de aplicación como con otra de servidor, con lo que se ha de modelizar la arquitectura de ambas capas.
+
+Así, en la figura ~\ref{fig:diagramaClasesDisenoCliente} se aporta el diagrama de clases de diseño para la capa del cliente del futuro sistema, si bien cabe señalar que el objetivo del diagrama de clases de diseño es el de modelizar la arquitectura básica del sistema a implementar; con lo que, para mantener la vista de dicha arquitectura útil y clara, no se incluyen clases, atributos o métodos que tengan un carácter accesorio o no aporten de manera directa a la consecución de los requisitos descritos en secciones anteriores. 
+
+De este modo, no se incluyen métodos ligados a inicializaciones de interfaces de usuario o atributos relativos a dichas interfaces, métodos básicos como los \textit{get()} y \textit{set()} o clases accesorias sin implicación directa en los casos de uso, entre otros.
+
+Sobre el diagrama presentado, destaca el empleo de dos patrones de diseño:
+
+\begin{enumerate}
+	\item \textbf{Singleton}. Patrón creacional utilizado con el objetivo de asegurarse de que una clase se instancia una única vez. 
+	
+	Dada la naturaleza de la entidad \emph{Usuario} según la cual una ejecución únicamente puede contar con un usuario activo a la vez (con posibles modificaciones sobre su estado), se considera que este patrón ayuda a forzar dicho objetivo, eliminando posibles errores o fallos futuros.
+	\item \textbf{Observer}. Patrón de comportamiento utilizado para implementar la actualización de un objeto (o varios) ante el cambio en el estado de otro.
+	
+	Dado que los datos se almacenan por unas entidades y se muestran por otras, es necesario que cada vez que se produzca una operación con el servidor y éste notifique con el resultado, las clases del cliente que provocaron dicha llamada se actualicen convenientemente mediante la modificación de su estado, mostrando un mensaje de error si aplica, etc. Con ello, dicho patrón se aplica sobre las clases que provocan llamadas directas al servidor y las que gestionan las mismas. La base del patrón es una interfaz a ser implementada por las clases a ser actualizadas y sobre la que se notificarán los cambios o respuestas del servidor por parte de las clases gestoras de las comunicaciones.
+\end{enumerate} 
+
+\begin{landscape}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/05_ClasesDiseno_App}
+		\caption{Diagrama de clases de diseño de la capa del cliente}
+		\label{fig:diagramaClasesDisenoCliente}
+	\end{figure}	
+\end{landscape}
+
+Por su parte, en la figura ~\ref{fig:diagramaClasesDisenoServidor} queda esquematizada la arquitectura del servidor.
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{10cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/05_ClasesDiseno_Server}}
+	\caption{Diagrama de clases de diseño de la capa del servidor}
+	\label{fig:diagramaClasesDisenoServidor}
+\end{figure}
+
+En este caso, se identifica el patrón \emph{Facade}, un patrón estructural utilizado para simplificar las interfaces o comunicaciones entre subsistemas.
+
+Dado que el servidor supone la capa intermedia entre el cliente y la base de datos, este patrón ayuda a facilitar la comunicación entre ellos. El patrón se implementará partiendo de un clase abstracta de la que heredan las \emph{fachadas} específicas de cada entidad, siendo estas especificaciones las que recibirán las llamadas remotas. Todas ellas contarán con los métodos CRUD básicos implementados en la fachada padre, que es la que finalmente realiza la conexión con la base de datos. Esta clase padre será la que implementará, a su vez, los métodos de control para todas las entidades, de modo que las fachadas hijas sólo se dedican a recibir llamadas y e invocar el método de la clase padre oportuno.
+
+Por claridad en el esquema, en las fachadas hijas no se han incluido los métodos de comunicación básicos por tratarse de llamadas al método  CRUD  específico de la clase padre. Asimismo, en esta fachada padre se apuntan dichos métodos CRUD sin entrar en posibles adecuaciones a cada entidad, además de métodos operativos necesarios para la funcionalidad del sistema.
+
+Se observa, a su vez, que la fachada padre ha de incluir dos mensajes estándar de respuesta para indicar si la operación ha ido bien o no, de modo que el cliente (que también conoce estos mensajes) reaccione de manera oportuna.
 
 
 \subsection{Diseño de las interfaces}
+
+Una vez establecida la arquitectura básica sobre la que se fundamentará el sistema, el segundo apartado a definir en el modelo de diseño son las interfaces de comunicación y de usuario. Estos elementos permiten que el software se comunique externamente y permita la comunicación y colaboración internas entre los componentes que constituyen la arquitectura del software.
+
+\subsubsection{Interfaces de comunicación}
+
+Dentro de la arquitectura Cliente/Servidor se hace necesario definir la comunicación entre ambas capas. Si bien los detalles técnicos para su implementación se comentan en la siguiente sección ~\ref{sec:secModeloImp}, en este punto se aporta una capa de diseño que suponga una introducción conceptual a las mismas. 
+
+Como quedó definido en el apartado de requisitos, la comunicación Cliente/Servidor se ha de regir de acuerdo a la tecnología RESTful Web Services, que se comentará más adelante. Esta tecnología parte de comunicaciones HTTP, alcanzando los diferentes métodos remotos mediante URLs diferenciadas. Así, se hace necesario definir una URL estándar que sirva de base para todas las concretas de cada método a ejecutar en el servidor. Se considera la siguiente plantilla: $$http://[IP\_SERV]:[PORT]/BikesManager/rest/entities.[ENTITY]$$
+donde $IP\_SERV$ indica la IP dirección del servidor, $PORT$ indica el puerto donde el servidor se encuentra escuchando y $ENTITY$ indica la entidad (Usuario, Estación o Reserva) que realiza la llamada remota.
+
+A partir de esta URL general se formarán las específicas de la forma siguiente: $$[BASE\_URL]/[METHOD]$$
+donde $BASE\_URL$ es la URL básica indicada más arriba y $METHOD$ indica el método o parámetros que se añaden en la dirección para la llamada del método que sea necesario.
+
+Una vez un método se ejecuta en el servidor, éste devolverá la cadena resultante al cliente. En caso de que se tenga que indicar si la operación se ha realizado correctamente o no, se enviarán cadenas del estilo $[ENTITY]\_SERVER\_OK$ o $[ENTITY]\_SERVER\_KO$, respectivamente.
+
+Las cadenas que se intercambian entre ambas capas seguirán el formato de texto JSON\footnote{Una introducción a este lenguaje se recoge en la web \url{http://www.json.org/json-es.html}}, la tecnología para la traducción de cadenas se comenta en la siguiente sección ~\ref{sec:secModeloImp}.
+
+La selección de este formato en lugar del tradicional XML queda principalmente motivada por el hecho de que el primero es más sencillo a la hora compartir \emph{datos tradicionales} como texto o números, que son los utilizados por el sistema descrito, y no datos estructurados como podrían ser documentos, fotos, vídeos, etc.
+
+Finalmente, comentar la utilización de los patrones \emph{Observer} y \emph{Facade} para mejorar y estandarizar la comunicación entre componentes ante las problemáticas específicas apuntadas anteriormente.
+
+
+
+
+%urls, mensajes entre servidor y cliente: entityID, RESPONSE_OK y KO, web services y json (en la sección de implementación se dice: REST y SOAP, librería JACKSON, JSON vs XML, ...))
+
+\subsubsection{Interfaces de usuario}
+
+Diseño Android, fragments, reglas de oro, "aspectos de diseño"
 
 
 
@@ -926,3 +996,4 @@ METER DIAGRAMA DE CLASES
 \label{sec:secModeloImp}
 
 Sin enrollarse mucho con detalles\dots Herramientas utilizadas\dots Un diagrama de despliegue a lo mejor\dots
+Herramientas: NetBeans, Android Estudio, MySQL Workbecnh. Tecnologías: Android, GlassFish, SQL, JACKSON (vs otras) y RESTFul (vs SOAP) Comentar la versión Android utilizada y poner el pantallazo de la cobertura. Librerías de compatibilidad también.
