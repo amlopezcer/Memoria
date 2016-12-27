@@ -5,6 +5,7 @@
 % ----------------------------
 
 \section{Especificación de Requisitos Software}
+\label{sec:secERS}
 
 \subsection{Introducción}
 
@@ -51,7 +52,7 @@ La aplicación \emph{Bikesmanager} será un producto diseñado para trabajar sob
 
 \subsubsection{Funciones del Producto}
 
-En la figura ~\ref{fig:diagramaCasosUso} se aporta el diagrama de casos de uso que muestra, a grandes rasgos, las funciones del futuro sistema.
+En la figura~\ref{fig:diagramaCasosUso} se aporta el diagrama de casos de uso que muestra, a grandes rasgos, las funciones del futuro sistema.
 
 \begin{figure}[!htb]
 	\centering
@@ -111,7 +112,7 @@ No se consideran requisitos futuros.
 
 \subsubsection{Interfaces Externas}
 
-La interfaz con el usuario consistirá en un conjunto de pantallas con los controles habituales: botones, campos de texto, listas, etc. sobre la que se deberá asegurar una adecuada experiencia de usuario mediante diseños que sigan las normas Android \footnote{\url{https://developer.android.com/guide/practices/ui_guidelines/index.html}}. Esta interfaz deberá ser construida para el sistema especificado y será visualizada mediante dispositivos móviles. Del mismo modo, destacar que el diseño de la interfaz gráfica de usuario deberá fundamentarse en los llamados \emph{fragments} de Android, de modo que el mismo pueda ser reutilizable y fácilmente transportable a otras dimensiones u orientaciones de pantalla.
+La interfaz con el usuario consistirá en un conjunto de pantallas con los controles habituales: botones, campos de texto, listas, etc. sobre la que se deberá asegurar una adecuada experiencia de usuario mediante diseños que sigan las normas Android \footnote{\url{https://developer.android.com/design/index.html}}. Esta interfaz deberá ser construida para el sistema especificado y será visualizada mediante dispositivos móviles. Del mismo modo, destacar que el diseño de la interfaz gráfica de usuario deberá fundamentarse en los llamados \emph{fragments} de Android, de modo que el mismo pueda ser reutilizable y fácilmente transportable a otras dimensiones u orientaciones de pantalla.
 
 En relación a las interfaces hardware-software, se deberá contar con un dispositivo móvil con conexión a internet y que implemente, como mínimo, la versión 4.0 del sistema Android (llamada \emph{Ice Cream Sandwich}\footnote{Android denomina alfabéticamente y con nombres de dulces a cada una de las versiones de su sistema operativo. En el momento de la redacción de este documento, la versión más actualizada es la 7.0, \textit{Nougat}.}).
 
@@ -566,7 +567,7 @@ El análisis de los requerimientos descritos ha de dar como resultado la especif
 
 Este proceso de análisis otorga la información que se traduce en diseños de arquitectura, interfaz y componentes, así como los medios para evaluar la calidad del software una vez construido. 
 
-Por lo tanto, el modelo de análisis supone un puente entre la descripción del sistema y su diseño posterior. Esta relación queda esquematizada en la figura ~\ref{fig:modeloAnalisis}.
+Por lo tanto, el modelo de análisis supone un puente entre la descripción del sistema y su diseño posterior. Esta relación queda esquematizada en la figura~\ref{fig:modeloAnalisis}.
 
 \begin{figure}
 	\centering
@@ -611,7 +612,7 @@ Con todo, quedan identificadas las siguientes entidades básicas:
 
 De este modo, el \emph{Gestor de Conexión Remota} será el encargado de enviar y recibir datos para las entidades, sin necesidad de diferenciar entre ninguna de ellas por atender directamente la general \emph{Entidad Remota}.
 
-Este conjunto de entidades básicas, junto con sus potenciales atributos y operaciones básicas, queda modelizado en la figura ~\ref{fig:diagramaClasesAnalisis}.
+Este conjunto de entidades básicas, junto con sus potenciales atributos y operaciones básicas, queda modelizado en la figura~\ref{fig:diagramaClasesAnalisis}.
 
 \begin{figure}
 	\centering
@@ -622,16 +623,16 @@ Este conjunto de entidades básicas, junto con sus potenciales atributos y opera
 
 \subsection{Análisis y desarrollo de requisitos}
 
-Con la vista estática del futuro sistema presentada, a continuación se pasa a describir las realizaciones más relevantes de cada caso de uso presentados en la figura ~\ref{fig:diagramaCasosUso}. Esto es, por cada requisito funcional se modelizará la realización de su camino principal y caminos alternativos de relevancia obtenidos a partir de los diagramas de actividad anteriores.
+Con la vista estática del futuro sistema presentada, a continuación se pasa a describir las realizaciones más relevantes de cada caso de uso presentados en la figura~\ref{fig:diagramaCasosUso}. Esto es, por cada requisito funcional se modelizará la realización de su camino principal y caminos alternativos de relevancia obtenidos a partir de los diagramas de actividad anteriores.
 
 El objetivo es el de componer un análisis adecuado de las posibles operaciones e interacciones que cada requisito puede desencadenar y las entidades afectadas ante los caminos de ejecución más probables.
 
 \begin{itemize}
 	\item \textbf{RF01: Registrar usuario}. Tres caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación de registro finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF01_1}
-		\item Camino alternativo 1, el usuario no introduce todos los datos obligatorios. Ver figura ~\ref{fig:diagramaColaboracion_RF01_2}
-		\item Camino alternativo 2, se aportan todos los datos requeridos, pero el nombre de usuario o dirección de correo electrónico ya están en uso. Ver figura ~\ref{fig:diagramaColaboracion_RF01_3}
+		\item Camino principal, la operación de registro finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF01_1}
+		\item Camino alternativo 1, el usuario no introduce todos los datos obligatorios. Ver figura~\ref{fig:diagramaColaboracion_RF01_2}
+		\item Camino alternativo 2, se aportan todos los datos requeridos, pero el nombre de usuario o dirección de correo electrónico ya están en uso. Ver figura~\ref{fig:diagramaColaboracion_RF01_3}
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -655,9 +656,9 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF02: Loguear usuario}. Tres caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación de inicio de sesión finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF02_1}
-		\item Camino alternativo 1, el usuario no introduce todos los datos obligatorios. Ver figura ~\ref{fig:diagramaColaboracion_RF02_2}
-		\item Camino alternativo 2, autenticación incorrecta, se aportan todos los datos requeridos, pero el nombre de usuario y/o contraseña no son correctos. Ver figura ~\ref{fig:diagramaColaboracion_RF02_3}
+		\item Camino principal, la operación de inicio de sesión finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF02_1}
+		\item Camino alternativo 1, el usuario no introduce todos los datos obligatorios. Ver figura~\ref{fig:diagramaColaboracion_RF02_2}
+		\item Camino alternativo 2, autenticación incorrecta, se aportan todos los datos requeridos, pero el nombre de usuario y/o contraseña no son correctos. Ver figura~\ref{fig:diagramaColaboracion_RF02_3}
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -681,9 +682,9 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF03: Modificar perfil}. Se consideran tres caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación de modificación de perfil finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF03_1}
-		\item Camino alternativo 1, el nuevo nombre de usuario y/o dirección de correo electrónico ya están en uso. Ver figura ~\ref{fig:diagramaColaboracion_RF03_2}
-		\item Camino alternativo 2, el usuario cancela la operación ante la confirmación final. Ver figura ~\ref{fig:diagramaColaboracion_RF03_3}
+		\item Camino principal, la operación de modificación de perfil finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF03_1}
+		\item Camino alternativo 1, el nuevo nombre de usuario y/o dirección de correo electrónico ya están en uso. Ver figura~\ref{fig:diagramaColaboracion_RF03_2}
+		\item Camino alternativo 2, el usuario cancela la operación ante la confirmación final. Ver figura~\ref{fig:diagramaColaboracion_RF03_3}
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -707,8 +708,8 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF04: Borrar perfil}. Se consideran dos caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación de borrado de perfil finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF04_1}
-		\item Camino alternativo 1, el usuario cancela la operación ante la confirmación final. Ver figura ~\ref{fig:diagramaColaboracion_RF04_2}
+		\item Camino principal, la operación de borrado de perfil finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF04_1}
+		\item Camino alternativo 1, el usuario cancela la operación ante la confirmación final. Ver figura~\ref{fig:diagramaColaboracion_RF04_2}
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -724,7 +725,7 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\end{figure}
 	
 	\FloatBarrier
-	\item \textbf{RF05: Ingresar saldo}. Se considera un único camino básico: el ingreso sin incidencias de saldo. Ver figura ~\ref{fig:diagramaColaboracion_RF05_1}
+	\item \textbf{RF05: Ingresar saldo}. Se considera un único camino básico: el ingreso sin incidencias de saldo. Ver figura~\ref{fig:diagramaColaboracion_RF05_1}
 	\begin{figure}[!htb]
 		\centering
 		\resizebox{12.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF05_1}}
@@ -735,8 +736,8 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF06: Coger bicicleta}. Se consideran dos caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF06_1}
-		\item Camino alternativo 1, el usuario no supera alguna de las restricciones impuestas sobre la operación (mencionadas en la especificación de requisitos anterior). Ver figura ~\ref{fig:diagramaColaboracion_RF06_2}
+		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF06_1}
+		\item Camino alternativo 1, el usuario no supera alguna de las restricciones impuestas sobre la operación (mencionadas en la especificación de requisitos anterior). Ver figura~\ref{fig:diagramaColaboracion_RF06_2}
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -754,8 +755,8 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF07: Dejar bicicleta}. Se consideran dos caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF07_1}
-		\item Camino alternativo 1, el usuario no supera alguna de las restricciones impuestas sobre la operación (mencionadas en la especificación de requisitos anterior). Ver figura ~\ref{fig:diagramaColaboracion_RF07_2}
+		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF07_1}
+		\item Camino alternativo 1, el usuario no supera alguna de las restricciones impuestas sobre la operación (mencionadas en la especificación de requisitos anterior). Ver figura~\ref{fig:diagramaColaboracion_RF07_2}
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -773,8 +774,8 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF08: Reservar}. Se consideran dos caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF08_1}
-		\item Camino alternativo 1, el usuario no supera alguna de las restricciones impuestas sobre la operación (mencionadas en la especificación de requisitos anterior). Ver figura ~\ref{fig:diagramaColaboracion_RF08_2}
+		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF08_1}
+		\item Camino alternativo 1, el usuario no supera alguna de las restricciones impuestas sobre la operación (mencionadas en la especificación de requisitos anterior). Ver figura~\ref{fig:diagramaColaboracion_RF08_2}
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -792,8 +793,8 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF09: Cancelar reserva}. Se consideran dos caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF09_1}
-		\item Camino alternativo 1, el usuario cancelar la operación ante la confirmación final. Ver figura ~\ref{fig:diagramaColaboracion_RF09_2}
+		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF09_1}
+		\item Camino alternativo 1, el usuario cancelar la operación ante la confirmación final. Ver figura~\ref{fig:diagramaColaboracion_RF09_2}
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -811,8 +812,8 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF10: Pagar}. Se consideran dos caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura ~\ref{fig:diagramaColaboracion_RF10_1}
-		\item Camino alternativo 1, el usuario cancelar la operación ante la confirmación final. Ver figura ~\ref{fig:diagramaColaboracion_RF10_2}
+		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF10_1}
+		\item Camino alternativo 1, el usuario cancelar la operación ante la confirmación final. Ver figura~\ref{fig:diagramaColaboracion_RF10_2}
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -830,8 +831,8 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF11: Actualizar}. Se consideran dos caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, en el proceso de actualización se identifican reservas caducadas, que se cancelan automáticamente. Ver figura ~\ref{fig:diagramaColaboracion_RF11_1}
-		\item Camino alternativo 1, no se identifican reservas caducadas, el proceso consiste en leer datos actualizados. Ver figura ~\ref{fig:diagramaColaboracion_RF11_2}
+		\item Camino principal, en el proceso de actualización se identifican reservas caducadas, que se cancelan automáticamente. Ver figura~\ref{fig:diagramaColaboracion_RF11_1}
+		\item Camino alternativo 1, no se identifican reservas caducadas, el proceso consiste en leer datos actualizados. Ver figura~\ref{fig:diagramaColaboracion_RF11_2}
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -866,7 +867,7 @@ Así, el modelo de diseño que a continuación se desarrolla, se dividirá dos p
 	\item \textbf{Diseño de las interfaces}. En esta segunda parte se recogerán las decisiones de diseño más relevantes con referencia a las interfaces de usuario y comunicación de la aplicación.
 \end{enumerate}
 
-Por su parte, el diseño en el nivel de componentes y despliegue se tratará en la sección ~\ref{sec:secModeloImp} siguiente, acerca del \emph{Modelo de Implementación}.
+Por su parte, el diseño en el nivel de componentes y despliegue se tratará en la sección~\ref{sec:secModeloImp} siguiente, acerca del \emph{Modelo de Implementación}.
 
 \subsection{Diseño de la arquitectura}
 
@@ -878,7 +879,7 @@ La definición previa pone el énfasis en el papel de los “componentes del sof
 
 \subsubsection{Estilo arquitectónico}
 
-Considerando los conceptos anteriores y con base en las especificación de requisitos previa, el estilo arquitectónico sobre el que se sustentará el sistema es el \emph{Cliente/Servidor} en su variación de tres capas, tal y como se muestra en la figura ~\ref{fig:arqClienteServ3Cap}:
+Considerando los conceptos anteriores y con base en las especificación de requisitos previa, el estilo arquitectónico sobre el que se sustentará el sistema es el \emph{Cliente/Servidor} en su variación de tres capas, tal y como se muestra en la figura~\ref{fig:arqClienteServ3Cap}:
 
 \begin{figure}
 	\centering
@@ -893,11 +894,11 @@ Considerando los conceptos anteriores y con base en las especificación de requi
 	\item \textbf{Base de datos}. Implica la capa de datos, donde la información es almacenada y recuperada por parte de la capa lógica para su procesamiento.
 \end{enumerate}
 
-En la sección ~\ref{sec:secModeloImp} se entra en mayor detalle sobre estas capas, especificando las tecnologías para la implementación de cada una y la comunicación entre ellas.
+En la sección~\ref{sec:secModeloImp} se entra en mayor detalle sobre estas capas, especificando las tecnologías para la implementación de cada una y la comunicación entre ellas.
 
 \subsubsection{Modelización de la arquitectura}
 
-En el modelo de análisis desarrollado en la sección ~\ref{sec:secModeloAn} quedaron definidas un conjunto de clases de análisis (representadas en la figura ~\ref{fig:diagramaClasesAnalisis}). Con un nivel de abstracción relativamente alto, cada una describe algún elemento del dominio del problema y se centra en aspectos de éste visibles para el usuario.
+En el modelo de análisis desarrollado en la sección~\ref{sec:secModeloAn} quedaron definidas un conjunto de clases de análisis (representadas en la figura~\ref{fig:diagramaClasesAnalisis}). Con un nivel de abstracción relativamente alto, cada una describe algún elemento del dominio del problema y se centra en aspectos de éste visibles para el usuario.
 
 En este punto, se reduce el nivel de abstracción y las clases de análisis se afinan hacía las clases de diseño, aportando los detalles que permitirán que las clases se implementen y generen una infraestructura para el software a desarrollar.
 
@@ -913,7 +914,7 @@ A la hora de realizar este refinamiento, se han de tener en cuenta una serie de 
 
 Se ha de tener en cuenta que el sistema cuenta tanto con una capa de aplicación como con otra de servidor, con lo que se ha de modelizar la arquitectura de ambas capas.
 
-Así, en la figura ~\ref{fig:diagramaClasesDisenoCliente} se aporta el diagrama de clases de diseño para la capa del cliente del futuro sistema, si bien cabe señalar que el objetivo del diagrama de clases de diseño es el de modelizar la arquitectura básica del sistema a implementar; con lo que, para mantener la vista de dicha arquitectura útil y clara, no se incluyen clases, atributos o métodos que tengan un carácter accesorio o no aporten de manera directa a la consecución de los requisitos descritos en secciones anteriores. 
+Así, en la figura~\ref{fig:diagramaClasesDisenoCliente} se aporta el diagrama de clases de diseño para la capa del cliente del futuro sistema, si bien cabe señalar que el objetivo del diagrama de clases de diseño es el de modelizar la arquitectura básica del sistema a implementar; con lo que, para mantener la vista de dicha arquitectura útil y clara, no se incluyen clases, atributos o métodos que tengan un carácter accesorio o no aporten de manera directa a la consecución de los requisitos descritos en secciones anteriores. 
 
 De este modo, no se incluyen métodos ligados a inicializaciones de interfaces de usuario o atributos relativos a dichas interfaces, métodos básicos como los \textit{get()} y \textit{set()} o clases accesorias sin implicación directa en los casos de uso, entre otros.
 
@@ -937,7 +938,7 @@ Sobre el diagrama presentado, destaca el empleo de dos patrones de diseño:
 	\end{figure}	
 \end{landscape}
 
-Por su parte, en la figura ~\ref{fig:diagramaClasesDisenoServidor} queda esquematizada la arquitectura del servidor.
+Por su parte, en la figura~\ref{fig:diagramaClasesDisenoServidor} queda esquematizada la arquitectura del servidor.
 
 \begin{figure} [!htb]
 	\centering
@@ -961,9 +962,9 @@ Una vez establecida la arquitectura básica sobre la que se fundamentará el sis
 
 \subsubsection{Interfaces de comunicación}
 
-Dentro de la arquitectura Cliente/Servidor se hace necesario definir la comunicación entre ambas capas. Si bien los detalles técnicos para su implementación se comentan en la siguiente sección ~\ref{sec:secModeloImp}, en este punto se aporta una capa de diseño que suponga una introducción conceptual a las mismas. 
+Dentro de la arquitectura Cliente/Servidor se hace necesario definir la comunicación entre ambas capas. Si bien los detalles técnicos para su implementación se comentan en la siguiente sección~\ref{sec:secModeloImp}, en este punto se aporta una capa de diseño que suponga una introducción conceptual. 
 
-Como quedó definido en el apartado de requisitos, la comunicación Cliente/Servidor se ha de regir de acuerdo a la tecnología RESTful Web Services, que se comentará más adelante. Esta tecnología parte de comunicaciones HTTP, alcanzando los diferentes métodos remotos mediante URLs diferenciadas. Así, se hace necesario definir una URL estándar que sirva de base para todas las concretas de cada método a ejecutar en el servidor. Se considera la siguiente plantilla: $$http://[IP\_SERV]:[PORT]/BikesManager/rest/entities.[ENTITY]$$
+Como quedó definido en la sección~\ref{sec:secERS} dedicada a la ERS, la comunicación Cliente/Servidor se ha de regir de acuerdo a la tecnología RESTful Web Services, que se comentará más adelante. Esta tecnología parte de comunicaciones HTTP y alcanzan los diferentes métodos remotos mediante URLs diferenciadas. Así, se hace necesario definir una URL estándar que sirva de base para todas las concretas de cada método a ejecutar en el servidor. Se considera la siguiente plantilla: $$http://[IP\_SERV]:[PORT]/BikesManager/rest/entities.[ENTITY]$$
 donde $IP\_SERV$ indica la IP dirección del servidor, $PORT$ indica el puerto donde el servidor se encuentra escuchando y $ENTITY$ indica la entidad (Usuario, Estación o Reserva) que realiza la llamada remota.
 
 A partir de esta URL general se formarán las específicas de la forma siguiente: $$[BASE\_URL]/[METHOD]$$
@@ -971,20 +972,74 @@ donde $BASE\_URL$ es la URL básica indicada más arriba y $METHOD$ indica el m�
 
 Una vez un método se ejecuta en el servidor, éste devolverá la cadena resultante al cliente. En caso de que se tenga que indicar si la operación se ha realizado correctamente o no, se enviarán cadenas del estilo $[ENTITY]\_SERVER\_OK$ o $[ENTITY]\_SERVER\_KO$, respectivamente.
 
-Las cadenas que se intercambian entre ambas capas seguirán el formato de texto JSON\footnote{Una introducción a este lenguaje se recoge en la web \url{http://www.json.org/json-es.html}}, la tecnología para la traducción de cadenas se comenta en la siguiente sección ~\ref{sec:secModeloImp}.
+Por su parte, las cadenas que se intercambian entre ambas capas seguirán el formato de texto JSON\footnote{Una introducción a este lenguaje se recoge en la web \url{http://www.json.org/json-es.html}}, la tecnología ha utilizar para la traducción de cadenas se comenta en la siguiente sección~\ref{sec:secModeloImp}.
 
-La selección de este formato en lugar del tradicional XML queda principalmente motivada por el hecho de que el primero es más sencillo a la hora compartir \emph{datos tradicionales} como texto o números, que son los utilizados por el sistema descrito, y no datos estructurados como podrían ser documentos, fotos, vídeos, etc.
+La selección de este formato en lugar del tradicional XML queda principalmente motivada por el hecho de que el primero es más sencillo a la hora compartir \emph{datos tradicionales} como texto o números, que son los utilizados por el sistema a desarrollar, y no datos estructurados como podrían ser documentos, fotos, vídeos\dots donde XML es más eficiente.
 
 Finalmente, comentar la utilización de los patrones \emph{Observer} y \emph{Facade} para mejorar y estandarizar la comunicación entre componentes ante las problemáticas específicas apuntadas anteriormente.
 
-
-
-
-%urls, mensajes entre servidor y cliente: entityID, RESPONSE_OK y KO, web services y json (en la sección de implementación se dice: REST y SOAP, librería JACKSON, JSON vs XML, ...))
-
 \subsubsection{Interfaces de usuario}
 
-Diseño Android, fragments, reglas de oro, "aspectos de diseño"
+La interfaz de usuario (IU en adelante) se considera como uno de los elementos más importantes de un sistema o producto basado en computadora. Una interfaz inadecuada perjudica la capacidad del usuario de aprovechar todo el potencial de una aplicación, pudiendo dar lugar al fracaso de un adecuado diseño e implementación.
+
+De acuerdo a Pressman~\cite{Pre10}, el diseño de la IU (o diseño de la \emph{usabilidad}) crea un medio eficaz de comunicación entre los seres humanos y la computadora. Siguiendo un conjunto de principios de diseño de la interfaz, se identifican los objetos y acciones de ésta y luego crea una plantilla de pantalla que constituye la base del prototipo de la interfaz de usuario.
+
+Este apartado está dedicado, por tanto, a desarrollar brevemente la decisiones y principios de diseño de IU de mayor relevancia adoptados para alcanzar una IU consistente y adecuada.
+
+En primer término, el diseño general de cualquier IU se ha de basar en las conocidas como \emph{Reglas de Oro} establecidas por Mandel~\cite{Man97}:
+
+\begin{enumerate}
+	\item{\textit{Dejar el control al usuario}}.
+	\item{\textit{Reducir la carga de memoria del usuario}}.
+	\item{\textit{Hacer que la interfaz sea consistente}}.
+\end{enumerate}
+
+Cada una de las tres Reglas anteriores supone una agrupación de reglas más específicas y su estudio teórico queda fuera del alcance de este documento, que se limita a su nombrado para su aplicación práctica\footnote{El detalle de cada regla se puede consultar en el manual de Theo Mandel al respecto: \emph{The Elements of User Interface Design}~\cite{Man97}.}.
+
+Con la base anterior establecida, se ha de tener en cuenta que la IU se presentará sobre dispositivos móviles con sistema operativo Android, que presenta numerosa documentación oficial acerca del adecuado diseño de IUs\footnote{Dicha documentación puede ser consultada en \url{https://developer.android.com/design/index.html}}. Se hace necesario, por tanto, hacer un seguimiento de estos principios específicos para lograr una IU adecuada a la naturaleza del dispositivo sobre el que se despliega el sistema.
+
+Una vez considerados los principios generales y los específicos para los elementos específicos de Android, la decisión de mayor relevancia en el diseño de IU en Android es la utilización de los llamados \emph{Fragments} (o Fragmentos). Un Fragmento representa un comportamiento específico de una porción de la IU en una \emph{Actividad}\footnote{Una Actividad es uno de los elementos básicos de cualquier aplicación Android. Sin entrar en detalles y por dar una primera aproximación, cada una de las pantallas o vistas de una aplicación suponen una Actividad. Más detalles en \url{https://developer.android.com/reference/android/app/Activity.html}}; es decir, agrupa elementos de una interfaz (tanto el diseño gráfico como sus controles lógicos asociados) de modo que estos sean reutilizables entre diversos tamaños u orientaciones de pantalla.
+
+En la figura~\ref{fig:fragmentsAndroid} se aporta un esquema gráfico de la utilidad de estos elementos de diseño para una mejor comprensión.
+
+\begin{figure} [!htb]
+	\centering
+	\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/FragmentsAndroid}
+	\caption{Fragmentos en el diseño de IUs, de la documentación oficial Android.}
+	\label{fig:fragmentsAndroid}
+\end{figure}
+
+De este modo, si bien el sistema se desarrollará para dispositivos móviles, la utilización de Fragmentos posibilitará su adaptación a otros tamaños de pantalla de manera sencilla y simple.
+
+Con todo, a modo de resumen, las decisiones o principios de diseño de IU adoptados son tres:
+
+\begin{enumerate}
+	\item{Las Reglas de Oro establecidas por Mandel}.
+	\item{Las normas de diseño Android para cada uno de sus componentes y elementos gráficos}.
+	\item{El empleo de Fragmentos para la agrupación y reutilización de elementos de IU entre diveros tamaños u operaciones de pantalla}.
+\end{enumerate}
+
+Estas decisiones regirán la construcción de la futura interfaz gráfica, proceso iterativo que consta de cuatro actividades estructurales~\cite{Man97}: 1) análisis y modelado, 2) diseño, 3) construcción y 4) validación.
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{11cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/disenoIU}}
+	\caption{Proceso de diseño y construcción de una IU, de Pressman 2010.}
+	\label{fig:disenoIU}
+\end{figure}
+
+El \emph{análisis de la interfaz} se centra en el perfil de los usuarios que interactuarán con el sistema; es decir, se trabaja para entender la percepción del sistema para cada clase de usuarios.
+
+La meta \emph{del diseño de la interfaz} es definir un conjunto de objetos y acciones de ésta (y sus
+representaciones en la pantalla) que permitan al usuario efectuar todas las tareas definidas cumpliendo con los requisitos de usabilidad y diseño básicos..
+
+La \emph{construcción de la interfaz} comienza por lo general con la creación de un prototipo que
+permite evaluar los escenarios de uso.
+
+La \emph{validación de la interfaz} se centra en: 1) la capacidad de la interfaz para implementar
+correctamente todas las tareas y requerimientos del usuario; 2) el grado en el que la interfaz es fácil de usar y de aprender y 3) la aceptación que tiene por parte del usuario.
+
+
 
 
 
