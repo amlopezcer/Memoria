@@ -82,7 +82,7 @@ En la figura~\ref{fig:diagramaCasosUso} se aporta el diagrama de casos de uso qu
 		\item Los servidores han de ser capaces de atender consultas concurrentes.
 		\item Los dispositivos móviles deberán estar gestionados por el sistema operativo Android.
 	\end{itemize}
-	\item Arquitectura del sistema: cliente/servidor de tres capas, con servidor de aplicación Glassfish y SQL Server de base de datos.
+	\item Arquitectura del sistema: cliente/servidor de tres capas, con servidor de aplicación GlassFish y SQL Server de base de datos.
 	\item Lenguaje(s) en uso: JAVA, SQL.
 	\item Protocolos de comunicación: 
 	\begin{itemize}
@@ -114,7 +114,7 @@ No se consideran requisitos futuros.
 
 La interfaz con el usuario consistirá en un conjunto de pantallas con los controles habituales: botones, campos de texto, listas, etc. sobre la que se deberá asegurar una adecuada experiencia de usuario mediante diseños que sigan las normas Android \footnote{\url{https://developer.android.com/design/index.html}}. Esta interfaz deberá ser construida para el sistema especificado y será visualizada mediante dispositivos móviles. Del mismo modo, destacar que el diseño de la interfaz gráfica de usuario deberá fundamentarse en los llamados \emph{fragments} de Android, de modo que el mismo pueda ser reutilizable y fácilmente transportable a otras dimensiones u orientaciones de pantalla.
 
-En relación a las interfaces hardware-software, se deberá contar con un dispositivo móvil con conexión a internet y que implemente, como mínimo, la versión 4.0 del sistema Android (llamada \emph{Ice Cream Sandwich}\footnote{Android denomina alfabéticamente y con nombres de dulces a cada una de las versiones de su sistema operativo. En el momento de la redacción de este documento, la versión más actualizada es la 7.0, \textit{Nougat}.}).
+En relación a las interfaces hardware-software, se deberá contar con un dispositivo móvil con conexión a internet y que implemente, como mínimo, la versión 4.0 del sistema Android (llamada \emph{Ice Cream Sandwich}\footnote{Android denomina alfabéticamente y con nombres de dulces a cada una de las versiones de su sistema operativo. En el momento de la redacción de este documento, la versión más actualizada es la 7, \textit{Nougat}.}).
 
 Finalmente, acerca de las interfaces de comunicación, la aplicación se comunicará con su servidor mediante el protocolo HTTP haciendo uso de RESTful Web Services y cadenas JSON. La conexión entre el servidor de aplicación y la base de datos se realizará mediante las tecnologías MySQL Connector/JDBC.
 \subsubsection{Funciones}
@@ -951,12 +951,12 @@ En este caso, se identifica el patrón \emph{Facade}, un patrón estructural uti
 
 Dado que el servidor supone la capa intermedia entre el cliente y la base de datos, este patrón ayuda a facilitar la comunicación entre ellos. El patrón se implementará partiendo de un clase abstracta de la que heredan las \emph{fachadas} específicas de cada entidad, siendo estas especificaciones las que recibirán las llamadas remotas. Todas ellas contarán con los métodos CRUD básicos implementados en la fachada padre, que es la que finalmente realiza la conexión con la base de datos. Esta clase padre será la que implementará, a su vez, los métodos de control para todas las entidades, de modo que las fachadas hijas sólo se dedican a recibir llamadas y e invocar el método de la clase padre oportuno.
 
-Por claridad en el esquema, en las fachadas hijas no se han incluido los métodos de comunicación básicos por tratarse de llamadas al método  CRUD  específico de la clase padre. Asimismo, en esta fachada padre se apuntan dichos métodos CRUD sin entrar en posibles adecuaciones a cada entidad, además de métodos operativos necesarios para la funcionalidad del sistema.
+Por claridad en el esquema, en las fachadas hijas no se han incluido los métodos de comunicación básicos por tratarse de llamadas al método CRUD específico de la clase padre. Asimismo, en esta fachada padre se apuntan dichos métodos CRUD sin entrar en posibles adecuaciones a cada entidad, además de métodos operativos necesarios para la funcionalidad del sistema.
 
 Se observa, a su vez, que la fachada padre ha de incluir dos mensajes estándar de respuesta para indicar si la operación ha ido bien o no, de modo que el cliente (que también conoce estos mensajes) reaccione de manera oportuna.
 
-
 \subsection{Diseño de las interfaces}
+\label{subsec:disenoInterfaces}
 
 Una vez establecida la arquitectura básica sobre la que se fundamentará el sistema, el segundo apartado a definir en el modelo de diseño son las interfaces de comunicación y de usuario. Estos elementos permiten que el software se comunique externamente y permita la comunicación y colaboración internas entre los componentes que constituyen la arquitectura del software.
 
@@ -996,7 +996,7 @@ En primer término, el diseño general de cualquier IU se ha de basar en las con
 
 Cada una de las tres Reglas anteriores supone una agrupación de reglas más específicas y su estudio teórico queda fuera del alcance de este documento, que se limita a su nombrado para su aplicación práctica\footnote{El detalle de cada regla se puede consultar en el manual de Theo Mandel al respecto: \emph{The Elements of User Interface Design}~\cite{Man97}.}.
 
-Con la base anterior establecida, se ha de tener en cuenta que la IU se presentará sobre dispositivos móviles con sistema operativo Android, que presenta numerosa documentación oficial acerca del adecuado diseño de IUs\footnote{Dicha documentación puede ser consultada en \url{https://developer.android.com/design/index.html}}. Se hace necesario, por tanto, hacer un seguimiento de estos principios específicos para lograr una IU adecuada a la naturaleza del dispositivo sobre el que se despliega el sistema.
+Con la base anterior establecida, se ha de tener en cuenta que la IU se presentará sobre dispositivos móviles con sistema operativo Android, que presenta numerosa documentación oficial acerca del adecuado diseño de IUs\footnote{La documentación puede ser consultada en \url{https://developer.android.com/design/index.html}}. Se hace necesario, por tanto, hacer un seguimiento de estos principios específicos para lograr una IU adecuada a la naturaleza del dispositivo sobre el que se despliega el sistema.
 
 Una vez considerados los principios generales y los específicos para los elementos específicos de Android, la decisión de mayor relevancia en el diseño de IU en Android es la utilización de los llamados \emph{Fragments} (o Fragmentos). Un Fragmento representa un comportamiento específico de una porción de la IU en una \emph{Actividad}\footnote{Una Actividad es uno de los elementos básicos de cualquier aplicación Android. Sin entrar en detalles y por dar una primera aproximación, cada una de las pantallas o vistas de una aplicación suponen una Actividad. Más detalles en \url{https://developer.android.com/reference/android/app/Activity.html}}; es decir, agrupa elementos de una interfaz (tanto el diseño gráfico como sus controles lógicos asociados) de modo que estos sean reutilizables entre diversos tamaños u orientaciones de pantalla.
 
@@ -1040,9 +1040,6 @@ La \emph{validación de la interfaz} se centra en: 1) la capacidad de la interfa
 correctamente todas las tareas y requerimientos del usuario; 2) el grado en el que la interfaz es fácil de usar y de aprender y 3) la aceptación que tiene por parte del usuario.
 
 
-
-
-
 % ------------------------------
 % -- Modelo de implementación --
 % ------------------------------
@@ -1050,5 +1047,106 @@ correctamente todas las tareas y requerimientos del usuario; 2) el grado en el q
 \section{Implementación}
 \label{sec:secModeloImp}
 
-Sin enrollarse mucho con detalles\dots Herramientas utilizadas\dots Un diagrama de despliegue a lo mejor\dots
-Herramientas: NetBeans, Android Estudio, MySQL Workbecnh. Tecnologías: Android, GlassFish, SQL, JACKSON (vs otras) y RESTFul (vs SOAP) Comentar la versión Android utilizada y poner el pantallazo de la cobertura. Librerías de compatibilidad también.
+\subsection{Introducción}
+
+El modelo de implementación indica la distribución física de los artefactos software que componen el sistema, cuya arquitectura ha quedado modelada en el apartado anterior.
+
+Con el objetivo de desarrollar adecuadamente este modelo, se consideran dos apartados:
+
+\begin{enumerate}
+	\item{\textbf{Herramientas utilizadas}. Se enumeran y comentan brevemente las tecnologías de mayor relevencia utilizadas en la implementación del software. Sin ahondar en detalles, se pretende aportar una aproximación a las herramientas seleccionadas con el objetivo de establecer una adecuada relación entre el software modelado anteriormente y el hardware que lo desarrollará y soportará}.
+	\item{\textbf{Distribución física}. Una vez comprendidas las tecnologías a utilizar, se muestra la distribución física de sistema, de modo que se tenga una visión global del mismo con los nodos involucrados y la comunicación entre ellos}.
+\end{enumerate}
+
+\subsection{Herramientas utilizadas}
+
+Dada la arquitectura Cliente/Servidor que soporta el sistema, las herramientas y tecnologías se pueden agrupar en cada una de sus capas (cliente, servidor y base de datos) y en la comunicación entre ellas. 
+
+Este apartado no pretende profundizar en detalles técnicos, sino enumerar las tecnologías de mayor relevancia presentes en el sistema para comprender adecuadamente la relación entre la parte lógica y física de la aplicación.
+
+\subsubsection{Cliente}
+
+El cliente del sistema queda pensado, en su primera versión, para ser desplegado en dispositivos móviles con sistema operativo Android. El entorno de desarrollo para la programación de esta capa de datos es Android Studio.
+
+\begin{itemize}
+	\item{\textbf{Android}. Android es un sistema operativo basado en un núcleo Linux diseñado principalmente para dispositivos móviles con pantalla táctil. Se lanzó inicialmente en 2008 y su versión estable más actual es la 7, \textit{Nougat}\footnote{Tal y como se indicó en la sección de requisitos, Android denomina alfabéticamente y con nombres de postres o dulces a cada una de las versiones de su sistema operativo.}.
+	
+	Las razones para la elección de este sistema, frente a otros como iOS o Windows, son principalmente la cobertura de mercado (en España, superior al 90\% en 2016\footnote{Dato a junio de 2016: \url{http://cincodias.com/cincodias/2016/06/15/tecnologia/1465987235_750846.html}}) y que el desarrollo de aplicaciones sobre esta plataforma es gratuito y queda basado en el lenguaje de programación Java, ampliamente extendido y con un fuerte soporte}.
+	
+	\item{\textbf{Android Studio}. Android Studio es el entorno de desarrollo integrado (IDE) oficial para el desarrollo de aplicaciones Android y se basa en IntelliJ IDEA\footnote{IDE para el desarrollo de sistemas informáticos desarrollado por JetBrains, más detalles en \url{https://www.jetbrains.com/idea/}.}. Además del editor de códigos y las herramientas para desarrolladores de IntelliJ, Android Studio ofrece más funciones para la mejora de la productividad durante la compilación de apps para Android\footnote{El detalle sobre estas funciones adicionales se puede consultar en \url{https://developer.android.com/studio/intro/index.html}.}}.
+\end{itemize}
+
+Como se ha comentado, Android actualmente tiene desplegada la versión 7. Cada una de estas nuevas versiones incorpora nuevas funcionalidades y desestima o sustituye otras de versiones previas. Esto provoca que, a la hora de desarrollar una aplicación, se tenga que tener en cuenta el grado de compatibilidad de la misma con las versiones previas para lograr un alcance y cobertura suficientes. Para ello, Android prevé la utilización de numerosas \emph{librerías de compatibilidad}, que posibilitan la utilización de nuevos componentes o funcionalidades en versiones anteriores que, originalmente, no contaban con ellos. Del mismo modo, a la hora de crear una aplicación Android, se ha de dejar especificado la API mínima (y máxima) sobre la que dicha aplicación puede ser ejecutada (de modo que GooglePlay ofrezca aplicaciones adaptadas a la versión de cada dispositivo).
+
+Para la aplicación desarrollada en este documento se ha seleccionado una compatibilidad hasta la versión 4.1 \textit{Jelly Bean} (API 16), que alcanza una cobertura total del 97,5\% respecto al total de dispositivos repartidos por el mercado a nivel global\footnote{Dato a diciembre de 2016, Android actualiza esta información periódicamente en \url{https://developer.android.com/about/dashboards/index.html}}, tal y como se muestra en la figura~\ref{fig:androidDistribution}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/androidDistribution}
+	\caption{Datos oficiales Android de distribución de versiones a diciembre de 2016}
+	\label{fig:androidDistribution}
+\end{figure}
+
+\subsubsection{Servidor}
+
+La capa intermedia del sistema queda soportado por el servidor de software libre GlassFish. El entorno de desarrollo empleado en este caso es NetBeans.
+
+\begin{itemize}
+	\item{\textbf{GlassFish}. GlassFish es un servidor basado en Apache Tomcat para el desarrollo y ejecución de aplicaciones regidas por la especificación \textit{Java Platform, Enterprise Edition} (Java EE platform)\footnote{Plataforma de programación que incluye varias especificaciones para el desarrollo de aplicaciones distribuidas y empresariales, más detalles en \url{http://www.oracle.com/technetwork/java/javaee/overview/index.html}.} y tecnologías web basadas en Java.
+	
+	El motivo para la elección de este servidor es su carácter gratuito y de código libre, además del hecho de que, a diferencia de Tomcat, su instalación básica incluye un conjunto amplio de librerías, suficiente para cubrir las necesidades del sistema, sin que con ello se vea afectado su rendimiento de manera perceptible respecto a otras opciones, como el citado Apache Tomcat}.
+	
+	\item{\textbf{NetBeans}. NetBeans es el IDE oficial para Java 8, supone un entorno de desarrollo de libre distribución y queda pensado principalmente para el lenguaje de programación Java.
+		
+	La utilización de este entorno viene motivada principalmente por el soporte altamente desarrollado que tiene para la implementación de aplicaciones distribuidas, controlando desde el IDE las conexiones con servidor y base de datos y construyendo automáticamente el esqueleto de la aplicación a desplegar sobre dicho servidor (dependiendo de la naturaleza de la misma, como una basada en Web Services, por ejemplo)}.
+\end{itemize}
+
+\subsubsection{Base de datos}
+
+Capa de datos de la aplicación, implementada sobre un sistema MySQL y apoyado por el entorno MySQL Workbench.
+
+\begin{itemize}
+	\item{\textbf{MySQL Server}. MySQL es un sistema de gestión de bases de datos relacional y de código abierto. Tradicionalmente se ha enfocado a aplicaciones web donde la principal preocupación es la optimización de consultas sencillas, aspecto compartido por la aplicación en desarrollo}.	
+	
+	\item{\textbf{MySQL Workbench}. MySQL Workbench es una herramienta visual de diseño de bases de datos que integra un conjunto de funcionalidades para facilitar la gestión de bases de datos MySQL}.
+\end{itemize}
+
+\subsubsection{Comunicación}
+
+Dado su carácter transversal, se ha decidido crear un grupo separado de tecnologías relativas a la comunicación entre capas de datos, si bien cada una puede quedar implementada en una u otra capa de la arquitectura.
+
+\begin{itemize}
+	\item{\textbf{Jackson}. Librería implementada en la capa cliente para la traducción de cadenas JSON a objetos Java y viceversa. El empleo de esta librería frente a otras es debido fundamentalmente a que esta librería suele dar mejores índices de rendimiento a medida que los ficheros a traducir van creciendo, aspecto potencialmente preferible\footnote{En Internet se pueden identificar numerosos estudios de rendimiento al respecto, todos con las mismas conclusiones mencionadas, se aporta uno de ellos: \url{https://dzone.com/articles/compare-json-api}}.}.
+	
+	\item{\textbf{RESTful}. Servicios web basados en la arquitectura REST\footnote{Arquitectura que, haciendo uso del protocolo HTTP, proporciona una API que utiliza cada uno de sus métodos (GET, POST, PUT, DELETE, etc.) para poder realizar diferentes operaciones entre la aplicación que ofrece el servicio web y el cliente. Una introducción teórica se puede encontrar en \url{https://es.wikipedia.org/wiki/Transferencia_de_Estado_Representacional.}} utilizados para el intercambio de datos entre el cliente y el servidor.
+		
+	Se ha decidido utilizar este tipo de servicios web frente a otros como SOAP por varias razones:
+	\begin{itemize}
+		\item \textit{Simpleza}. REST hace uso del protocolo estándar HTTP, lo que desemboca en una facilidad de desarrollo y entendimiento superior a SOAP. Ésto facilita, adicionalmente, su mantenimiento posterior. En general, hay pocas cosas que REST no haga de un modo más sencillo que SOAP. 
+		\item \textit{Amplitud de formatos}. REST permite multitud de formatos, mientras que SOAP sólo acepta XML. Aspecto de relevancia considerando, además, que JSON es más eficiente y sencillo que XML para el sistema en desarrollo, como ya se comentó en el apartado~\ref{subsec:disenoInterfaces}.
+		\item \textit{Rendimiento y escalabilidad}. REST presenta mejores métricas de rendimiento y escalabilidad respecto a SOAP.
+	\end{itemize}
+	Las características anteriores han hecho que REST se imponga a SOAP como servicio web dominante. De hecho, compañías como Yahoo o Google hacen uso de REST para todos sus servicios.}
+
+	\item{\textbf{MySQL Connector / JDBC}. Conector estándar para la comunicación entre el servidor y la base de datos utilizando la API \emph{Java Database Connectivity} (JDBC)\footnote{API que permite la ejecución de operaciones sobre bases de datos desde el lenguaje de programación Java utilizando el dialecto SQL, más detalles en \url{http://www.oracle.com/technetwork/java/javase/jdbc/index.html}.}.}
+
+\end{itemize}
+
+\subsection{Distribución física}
+
+Una vez definidas las principales tecnologías utilizadas para la implementación del sistema, queda modelar la distribución física de los artefactos software presentes en el mismo con el objetivo de tener una visión general del soporte físico del sistema.
+
+En la figura ~\ref{fig:diagramaDespliegue} se esquematiza la distribución mencionada. Se identifican tres nodos, distribución acorde a la arquitectura Cliente/Servidor utilizada:
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/09_DiagramaDeDespliegue}
+	\caption{Diagrama de despliegue del sistema}
+	\label{fig:diagramaDespliegue}
+\end{figure}
+
+\begin{itemize}
+	\item{\textbf{Nodo Cliente}. Representa la capa de presentación del sistema, implementado en el dispositivo Android. Este nodo recoge la arquitectura de la aplicación modelada anteriormente en la figura ~\ref{fig:diagramaClasesDisenoCliente} y es el utilizado por el usuario para interactuar}.	
+	\item{\textbf{Nodo Servidor}. La capa intermedia de la arquitectura, desplegada sobre GlassFish. Recoge la arquitectura del servidor modelada en la figura~\ref{fig:diagramaClasesDisenoServidor} y supone la capa que comunica la capa de presentación con la de datos. La comunicación con el cliente se realiza mediante el protocolo HTTP con los servicios web RESTful y el lenguaje JSON}.
+	\item{\textbf{Nodo Base de Datos}. La capa de datos soportada por el sistema gestor MySQL. La comunicación con el servidor se realiza mediante los conectores estándar MySQL Connector y la API JDBC}.
+\end{itemize}
