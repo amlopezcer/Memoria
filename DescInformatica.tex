@@ -35,7 +35,7 @@ Se buscará desarrollar una aplicación intuitiva y fácil de usar que cubra las
 \subsubsection{Referencias}
 
 \begin{itemize}
-	\item IEEE Std. 830-1998: Especificaciones de los Requisitos del Software
+	\item IEEE Std. 830-1998: Especificaciones de los Requisitos del Software~\cite{IE830}.
 \end{itemize}
 
 \subsubsection{Visión General del Documento}
@@ -112,7 +112,7 @@ No se consideran requisitos futuros.
 
 \subsubsection{Interfaces Externas}
 
-La interfaz con el usuario consistirá en un conjunto de pantallas con los controles habituales: botones, campos de texto, listas, etc. sobre la que se deberá asegurar una adecuada experiencia de usuario mediante diseños que sigan las normas Android \footnote{\url{https://developer.android.com/design/index.html}}. Esta interfaz deberá ser construida para el sistema especificado y será visualizada mediante dispositivos móviles. Del mismo modo, destacar que el diseño de la interfaz gráfica de usuario deberá fundamentarse en los llamados \emph{fragments} de Android, de modo que el mismo pueda ser reutilizable y fácilmente transportable a otras dimensiones u orientaciones de pantalla.
+La interfaz con el usuario consistirá en un conjunto de pantallas con los controles habituales: botones, campos de texto, listas, etc. sobre la que se deberá asegurar una adecuada experiencia de usuario mediante diseños que sigan las normas Android \footnote{Los detalles al respecto se pueden consultar en \url{https://developer.android.com/design/index.html}~\cite{AnDev}.}. Esta interfaz deberá ser construida para el sistema especificado y será visualizada mediante dispositivos móviles. Del mismo modo, destacar que el diseño de la interfaz gráfica de usuario deberá fundamentarse en los llamados \emph{fragments} de Android, de modo que el mismo pueda ser reutilizable y fácilmente transportable a otras dimensiones u orientaciones de pantalla.
 
 En relación a las interfaces hardware-software, se deberá contar con un dispositivo móvil con conexión a internet y que implemente, como mínimo, la versión 4.0 del sistema Android (llamada \emph{Ice Cream Sandwich}\footnote{Android denomina alfabéticamente y con nombres de dulces a cada una de las versiones de su sistema operativo. En el momento de la redacción de este documento, la versión más actualizada es la 7, \textit{Nougat}.}).
 
@@ -481,28 +481,29 @@ Finalmente, se pasan a detallar los \emph{Requerimientos No Funcionales} más re
 	
 	\item \textbf{RNF02: Eficiencia}. El sistema ha de trasladar toda operación posible a la capa de servidor, de modo que el cliente suponga la menor carga posible para el dispositivo móvil y se reduzcan los tiempos de espera.
 
-	
 	\item \textbf{RNF03: Seguridad}. El sistema ha de asegurar la seguridad en el tratamiento de la información del usuario. 
 	
-	El detalle de este RNF se recoge en el apartado posterior referido a los Atributos del Sistema
+	El detalle de este RNF se recoge en el apartado posterior referido a los Atributos del Sistema.
 	
-	\item \textbf{RNF04: Fiabilidad}. El sistema ha operar según lo esperado y minimizando en la medida de los posible la probabilidad de aparición de fallos. E
+	\item \textbf{RNF04: Fiabilidad}. El sistema ha operar según lo esperado y minimizando en la medida de los posible la probabilidad de aparición de fallos.
 	
-	El detalle de este RNF se recoge en el apartado posterior referido a los Atributos del Sistema
+	El detalle de este RNF se recoge en el apartado posterior referido a los Atributos del Sistema.
 	
 	\item \textbf{RNF05: Mantenibilidad}. El sistema se ha de desarrollar de modo que pueda ser conservado y restituido (en caso necesario) con facilidad.
 	
-	El detalle de este RNF se recoge en el apartado posterior referido a los Atributos del Sistema
+	El detalle de este RNF se recoge en el apartado posterior referido a los Atributos del Sistema.
 	
 	\item \textbf{RNF06: Portabilidad}. El sistema ha de desarrollarse de modo que pueda ser ejecutado en diferentes plataformas. 
 	
-	El detalle de este RNF se recoge en el apartado posterior referido a los Atributos del Sistema
+	El detalle de este RNF se recoge en el apartado posterior referido a los Atributos del Sistema.
 	
 	\item \textbf{RNF07: Disponibilidad}. El sistema ha de permanecer en funcionamiento continuo para prestar una servicio adecuado a los usuarios.
 	
-	El detalle de este RNF se recoge en el apartado posterior referido a los Atributos del Sistema
+	El detalle de este RNF se recoge en el apartado posterior referido a los Atributos del Sistema.
 	
 \end{itemize}
+
+Este conjunto de RNF suponen una adaptación tomada de los factores de calidad más extendidos como son los Factores de Calidad de McCall~\cite{McC77}, de Garvin~\cite{Gar87} o de la norma ISO 25010 (antigua 9126)~\cite{ISO25}.
 
 \subsubsection{Requisitos de Rendimiento}
 
@@ -572,7 +573,7 @@ Por lo tanto, el modelo de análisis supone un puente entre la descripción del 
 \begin{figure}
 	\centering
 	\resizebox{8cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/ModeloAnalisis}}
-	\caption{El modelo de análisis como puente entre los requerimientos y el diseño del software, de Pressman 2010}
+	\caption{El modelo de análisis como puente entre los requerimientos y el diseño del software \textit{Fuente:~\cite{Pre10}}}
 	\label{fig:modeloAnalisis}
 \end{figure}
 
@@ -592,7 +593,7 @@ Para el análisis y representación del modelo conceptual de datos se recurrirá
 \begin{enumerate}  
 	\item \textit{Información retenida}. Debe recordarse la información sobre la clase para que el sistema pueda funcionar.
 	\item \textit{Servicios necesarios}. La clase potencial debe tener un conjunto de operaciones identificables que cambien en cierta manera el valor de sus atributos.
-	\item \textit{Atributos múltiples}. Centrando la atención en la información “principal”;
+	\item \textit{Atributos múltiples}. Centrando la atención en la información ``principal'';
 	\item \textit{Atributos comunes}. Para la clase potencial se define un conjunto de atributos y se aplican éstos a todas las instancias de la clase.
 	\item \textit{Operaciones comunes}. Se define un conjunto de operaciones para la clase potencial y éstas se aplican a todas las instancias de la clase.
 	\item \textit{Requerimientos esenciales}. Las entidades externas que aparezcan en el espacio del problema y que produzcan o consuman información esencial para la operación de cualquier solución para el sistema casi siempre se definirán como clases en el modelo de requerimientos.	
@@ -630,9 +631,9 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 \begin{itemize}
 	\item \textbf{RF01: Registrar usuario}. Tres caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación de registro finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF01_1}
-		\item Camino alternativo 1, el usuario no introduce todos los datos obligatorios. Ver figura~\ref{fig:diagramaColaboracion_RF01_2}
-		\item Camino alternativo 2, se aportan todos los datos requeridos, pero el nombre de usuario o dirección de correo electrónico ya están en uso. Ver figura~\ref{fig:diagramaColaboracion_RF01_3}
+		\item Camino principal, la operación de registro finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF01_1}.
+		\item Camino alternativo 1, el usuario no introduce todos los datos obligatorios. Ver figura~\ref{fig:diagramaColaboracion_RF01_2}.
+		\item Camino alternativo 2, se aportan todos los datos requeridos, pero el nombre de usuario o dirección de correo electrónico ya están en uso. Ver figura~\ref{fig:diagramaColaboracion_RF01_3}.
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -656,9 +657,9 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF02: Loguear usuario}. Tres caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación de inicio de sesión finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF02_1}
-		\item Camino alternativo 1, el usuario no introduce todos los datos obligatorios. Ver figura~\ref{fig:diagramaColaboracion_RF02_2}
-		\item Camino alternativo 2, autenticación incorrecta, se aportan todos los datos requeridos, pero el nombre de usuario y/o contraseña no son correctos. Ver figura~\ref{fig:diagramaColaboracion_RF02_3}
+		\item Camino principal, la operación de inicio de sesión finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF02_1}.
+		\item Camino alternativo 1, el usuario no introduce todos los datos obligatorios. Ver figura~\ref{fig:diagramaColaboracion_RF02_2}.
+		\item Camino alternativo 2, autenticación incorrecta, se aportan todos los datos requeridos, pero el nombre de usuario y/o contraseña no son correctos. Ver figura~\ref{fig:diagramaColaboracion_RF02_3}.
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -682,25 +683,25 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF03: Modificar perfil}. Se consideran tres caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación de modificación de perfil finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF03_1}
-		\item Camino alternativo 1, el nuevo nombre de usuario y/o dirección de correo electrónico ya están en uso. Ver figura~\ref{fig:diagramaColaboracion_RF03_2}
-		\item Camino alternativo 2, el usuario cancela la operación ante la confirmación final. Ver figura~\ref{fig:diagramaColaboracion_RF03_3}
+		\item Camino principal, la operación de modificación de perfil finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF03_1}.
+		\item Camino alternativo 1, el nuevo nombre de usuario y/o dirección de correo electrónico ya están en uso. Ver figura~\ref{fig:diagramaColaboracion_RF03_2}.
+		\item Camino alternativo 2, el usuario cancela la operación ante la confirmación final. Ver figura~\ref{fig:diagramaColaboracion_RF03_3}.
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
-		\resizebox{13.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF03_1}}
+		\resizebox{11cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF03_1}}
 		\caption{Diagrama de colaboración del camino principal del RF03}
 		\label{fig:diagramaColaboracion_RF03_1}
 	\end{figure}
 	\begin{figure} [!htb]
 		\centering
-		\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF03_2}
+		\resizebox{11cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF03_2}}
 		\caption{Diagrama de colaboración del primer camino alternativo del RF03}
 		\label{fig:diagramaColaboracion_RF03_2}
 	\end{figure}
 	\begin{figure} [!htb]
 		\centering
-		\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF03_3}
+		\resizebox{11cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF03_3}}
 		\caption{Diagrama de colaboración del segundo camino alternativo del RF03}
 		\label{fig:diagramaColaboracion_RF03_3}
 	\end{figure}
@@ -708,12 +709,12 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF04: Borrar perfil}. Se consideran dos caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación de borrado de perfil finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF04_1}
-		\item Camino alternativo 1, el usuario cancela la operación ante la confirmación final. Ver figura~\ref{fig:diagramaColaboracion_RF04_2}
+		\item Camino principal, la operación de borrado de perfil finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF04_1}.
+		\item Camino alternativo 1, el usuario cancela la operación ante la confirmación final. Ver figura~\ref{fig:diagramaColaboracion_RF04_2}.
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
-		\resizebox{12.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF04_1}}•
+		\resizebox{12.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF04_1}}
 		\caption{Diagrama de colaboración del camino principal del RF04}
 		\label{fig:diagramaColaboracion_RF04_1}
 	\end{figure}
@@ -725,7 +726,7 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\end{figure}
 	
 	\FloatBarrier
-	\item \textbf{RF05: Ingresar saldo}. Se considera un único camino básico: el ingreso sin incidencias de saldo. Ver figura~\ref{fig:diagramaColaboracion_RF05_1}
+	\item \textbf{RF05: Ingresar saldo}. Se considera un único camino básico: el ingreso sin incidencias de saldo. Ver figura~\ref{fig:diagramaColaboracion_RF05_1}.
 	\begin{figure}[!htb]
 		\centering
 		\resizebox{12.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/04_Colaboracion_RF05_1}}
@@ -736,8 +737,8 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF06: Coger bicicleta}. Se consideran dos caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF06_1}
-		\item Camino alternativo 1, el usuario no supera alguna de las restricciones impuestas sobre la operación (mencionadas en la especificación de requisitos anterior). Ver figura~\ref{fig:diagramaColaboracion_RF06_2}
+		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF06_1}.
+		\item Camino alternativo 1, el usuario no supera alguna de las restricciones impuestas sobre la operación (mencionadas en la especificación de requisitos anterior). Ver figura~\ref{fig:diagramaColaboracion_RF06_2}.
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -755,8 +756,8 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF07: Dejar bicicleta}. Se consideran dos caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF07_1}
-		\item Camino alternativo 1, el usuario no supera alguna de las restricciones impuestas sobre la operación (mencionadas en la especificación de requisitos anterior). Ver figura~\ref{fig:diagramaColaboracion_RF07_2}
+		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF07_1}.
+		\item Camino alternativo 1, el usuario no supera alguna de las restricciones impuestas sobre la operación (mencionadas en la especificación de requisitos anterior). Ver figura~\ref{fig:diagramaColaboracion_RF07_2}.
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -774,8 +775,8 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF08: Reservar}. Se consideran dos caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF08_1}
-		\item Camino alternativo 1, el usuario no supera alguna de las restricciones impuestas sobre la operación (mencionadas en la especificación de requisitos anterior). Ver figura~\ref{fig:diagramaColaboracion_RF08_2}
+		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF08_1}.
+		\item Camino alternativo 1, el usuario no supera alguna de las restricciones impuestas sobre la operación (mencionadas en la especificación de requisitos anterior). Ver figura~\ref{fig:diagramaColaboracion_RF08_2}.
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -793,8 +794,8 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF09: Cancelar reserva}. Se consideran dos caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF09_1}
-		\item Camino alternativo 1, el usuario cancelar la operación ante la confirmación final. Ver figura~\ref{fig:diagramaColaboracion_RF09_2}
+		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF09_1}.
+		\item Camino alternativo 1, el usuario cancelar la operación ante la confirmación final. Ver figura~\ref{fig:diagramaColaboracion_RF09_2}.
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -812,8 +813,8 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF10: Pagar}. Se consideran dos caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF10_1}
-		\item Camino alternativo 1, el usuario cancelar la operación ante la confirmación final. Ver figura~\ref{fig:diagramaColaboracion_RF10_2}
+		\item Camino principal, la operación finaliza satisfactoriamente. Ver figura~\ref{fig:diagramaColaboracion_RF10_1}.
+		\item Camino alternativo 1, el usuario cancelar la operación ante la confirmación final. Ver figura~\ref{fig:diagramaColaboracion_RF10_2}.
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -831,8 +832,8 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 	\FloatBarrier
 	\item \textbf{RF11: Actualizar}. Se consideran dos caminos básicos: 
 	\begin{enumerate}
-		\item Camino principal, en el proceso de actualización se identifican reservas caducadas, que se cancelan automáticamente. Ver figura~\ref{fig:diagramaColaboracion_RF11_1}
-		\item Camino alternativo 1, no se identifican reservas caducadas, el proceso consiste en leer datos actualizados. Ver figura~\ref{fig:diagramaColaboracion_RF11_2}
+		\item Camino principal, en el proceso de actualización se identifican reservas caducadas, que se cancelan automáticamente. Ver figura~\ref{fig:diagramaColaboracion_RF11_1}.
+		\item Camino alternativo 1, no se identifican reservas caducadas, el proceso consiste en leer datos actualizados. Ver figura~\ref{fig:diagramaColaboracion_RF11_2}.
 	\end{enumerate}
 	\begin{figure} [!htb]
 		\centering
@@ -871,11 +872,11 @@ Por su parte, el diseño en el nivel de componentes y despliegue se tratará en 
 
 \subsection{Diseño de la arquitectura}
 
-La \emph{arquitectura del software} supone “la estructura o estructuras del sistema, lo que comprende a los componentes del software, sus propiedades externas visibles y las relaciones entre ellos” \cite{Bas03}.
+La \emph{arquitectura del software} supone ``la estructura o estructuras del sistema, lo que comprende a los componentes del software, sus propiedades externas visibles y las relaciones entre ellos'' \cite{Bas03}.
 
 Si bien cabe señalar que la arquitectura no es el software operativo. Es una representación que permite \cite{Pre10}: 1) analizar la efectividad del diseño para cumplir los requerimientos establecidos, 2) considerar alternativas arquitectónicas en una etapa en la que hacer cambios al diseño todavía es relativamente fácil y 3) reducir los riesgos asociados con la construcción del software.
 
-La definición previa pone el énfasis en el papel de los “componentes del software”, que puede ser algo tan simple como un módulo de programa o una clase orientada a objeto, si bien también puede ampliarse a conceptos más extensos y complejos.
+La definición previa pone el énfasis en el papel de los ``componentes del software'', que puede ser algo tan simple como un módulo de programa o una clase orientada a objeto, si bien también puede ampliarse a conceptos más extensos y complejos.
 
 \subsubsection{Estilo arquitectónico}
 
@@ -972,7 +973,7 @@ donde $BASE\_URL$ es la URL básica indicada más arriba y $METHOD$ indica el m�
 
 Una vez un método se ejecuta en el servidor, éste devolverá la cadena resultante al cliente. En caso de que se tenga que indicar si la operación se ha realizado correctamente o no, se enviarán cadenas del estilo $[ENTITY]\_SERVER\_OK$ o $[ENTITY]\_SERVER\_KO$, respectivamente.
 
-Por su parte, las cadenas que se intercambian entre ambas capas seguirán el formato de texto JSON\footnote{Una introducción a este lenguaje se recoge en la web \url{http://www.json.org/json-es.html}}, la tecnología ha utilizar para la traducción de cadenas se comenta en la siguiente sección~\ref{sec:secModeloImp}.
+Por su parte, las cadenas que se intercambian entre ambas capas seguirán el formato de texto JSON\footnote{Una introducción a este lenguaje se recoge en ~\cite{JSON}.}, la tecnología ha utilizar para la traducción de cadenas se comenta en la siguiente sección~\ref{sec:secModeloImp}.
 
 La selección de este formato en lugar del tradicional XML queda principalmente motivada por el hecho de que el primero es más sencillo a la hora compartir \emph{datos tradicionales} como texto o números, que son los utilizados por el sistema a desarrollar, y no datos estructurados como podrían ser documentos, fotos, vídeos\dots donde XML es más eficiente.
 
@@ -994,18 +995,18 @@ En primer término, el diseño general de cualquier IU se ha de basar en las con
 	\item{\textit{Hacer que la interfaz sea consistente}}.
 \end{enumerate}
 
-Cada una de las tres Reglas anteriores supone una agrupación de reglas más específicas y su estudio teórico queda fuera del alcance de este documento, que se limita a su nombrado para su aplicación práctica\footnote{El detalle de cada regla se puede consultar en el manual de Theo Mandel al respecto: \emph{The Elements of User Interface Design}~\cite{Man97}.}.
+Cada una de las tres Reglas anteriores supone una agrupación de reglas más específicas y su estudio teórico queda fuera del alcance de este documento, que se limita a su nombrado para su aplicación práctica\footnote{El detalle de cada regla se puede consultar en el manual de Theo Mandel al respecto en~\cite{Man97}.}.
 
-Con la base anterior establecida, se ha de tener en cuenta que la IU se presentará sobre dispositivos móviles con sistema operativo Android, que presenta numerosa documentación oficial acerca del adecuado diseño de IUs\footnote{La documentación puede ser consultada en \url{https://developer.android.com/design/index.html}}. Se hace necesario, por tanto, hacer un seguimiento de estos principios específicos para lograr una IU adecuada a la naturaleza del dispositivo sobre el que se despliega el sistema.
+Con la base anterior establecida, se ha de tener en cuenta que la IU se presentará sobre dispositivos móviles con sistema operativo Android, que presenta numerosa documentación oficial acerca del adecuado diseño de IUs\footnote{La documentación puede ser consultada en \url{https://developer.android.com/design/index.html}~\cite{AnDev}.}. Se hace necesario, por tanto, hacer un seguimiento de estos principios específicos para lograr una IU adecuada a la naturaleza del dispositivo sobre el que se despliega el sistema.
 
-Una vez considerados los principios generales y los específicos para los elementos específicos de Android, la decisión de mayor relevancia en el diseño de IU en Android es la utilización de los llamados \emph{Fragments} (o Fragmentos). Un Fragmento representa un comportamiento específico de una porción de la IU en una \emph{Actividad}\footnote{Una Actividad es uno de los elementos básicos de cualquier aplicación Android. Sin entrar en detalles y por dar una primera aproximación, cada una de las pantallas o vistas de una aplicación suponen una Actividad. Más detalles en \url{https://developer.android.com/reference/android/app/Activity.html}}; es decir, agrupa elementos de una interfaz (tanto el diseño gráfico como sus controles lógicos asociados) de modo que estos sean reutilizables entre diversos tamaños u orientaciones de pantalla.
+Una vez considerados los principios generales y los específicos para los elementos específicos de Android, la decisión de mayor relevancia en el diseño de IU en Android es la utilización de los llamados \emph{Fragments} (o Fragmentos). Un Fragmento representa un comportamiento específico de una porción de la IU en una \emph{Actividad}\footnote{Una Actividad es uno de los elementos básicos de cualquier aplicación Android. Sin entrar en detalles y por dar una primera aproximación, cada una de las pantallas o vistas de una aplicación suponen una Actividad. Más detalles en \url{https://developer.android.com/reference/android/app/Activity.html}~\cite{AnDev}.}; es decir, agrupa elementos de una interfaz (tanto el diseño gráfico como sus controles lógicos asociados) de modo que estos sean reutilizables entre diversos tamaños u orientaciones de pantalla.
 
 En la figura~\ref{fig:fragmentsAndroid} se aporta un esquema gráfico de la utilidad de estos elementos de diseño para una mejor comprensión.
 
 \begin{figure} [!htb]
 	\centering
 	\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/FragmentsAndroid}
-	\caption{Fragmentos en el diseño de IUs, de la documentación oficial Android.}
+	\caption{Fragmentos en el diseño de IUs \textit{Fuente:~\cite{AnDev}}}
 	\label{fig:fragmentsAndroid}
 \end{figure}
 
@@ -1024,7 +1025,7 @@ Estas decisiones regirán la construcción de la futura interfaz gráfica, proce
 \begin{figure} [!htb]
 	\centering
 	\resizebox{11cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/disenoIU}}
-	\caption{Proceso de diseño y construcción de una IU, de Pressman 2010.}
+	\caption{Proceso de diseño y construcción de una IU \textit{Fuente:~\cite{Pre10}}}
 	\label{fig:disenoIU}
 \end{figure}
 
@@ -1073,12 +1074,12 @@ El cliente del sistema queda pensado, en su primera versión, para ser desplegad
 	
 	Las razones para la elección de este sistema, frente a otros como iOS o Windows, son principalmente la cobertura de mercado (en España, superior al 90\% en 2016\footnote{Dato a junio de 2016: \url{http://cincodias.com/cincodias/2016/06/15/tecnologia/1465987235_750846.html}}) y que el desarrollo de aplicaciones sobre esta plataforma es gratuito y queda basado en el lenguaje de programación Java, ampliamente extendido y con un fuerte soporte}.
 	
-	\item{\textbf{Android Studio}. Android Studio es el entorno de desarrollo integrado (IDE) oficial para el desarrollo de aplicaciones Android y se basa en IntelliJ IDEA\footnote{IDE para el desarrollo de sistemas informáticos desarrollado por JetBrains, más detalles en \url{https://www.jetbrains.com/idea/}.}. Además del editor de códigos y las herramientas para desarrolladores de IntelliJ, Android Studio ofrece más funciones para la mejora de la productividad durante la compilación de apps para Android\footnote{El detalle sobre estas funciones adicionales se puede consultar en \url{https://developer.android.com/studio/intro/index.html}.}}.
+	\item{\textbf{Android Studio}. Android Studio es el entorno de desarrollo integrado (IDE) oficial para el desarrollo de aplicaciones Android y se basa en IntelliJ IDEA\footnote{IDE para el desarrollo de sistemas informáticos desarrollado por JetBrains, más detalles en \url{https://www.jetbrains.com/idea/}.}. Además del editor de códigos y las herramientas para desarrolladores de IntelliJ, Android Studio ofrece más funciones para la mejora de la productividad durante la compilación de apps para Android\footnote{El detalle sobre estas funciones adicionales se puede consultar en \url{https://developer.android.com/studio/intro/index.html}~\cite{AnDev}.}}.
 \end{itemize}
 
 Como se ha comentado, Android actualmente tiene desplegada la versión 7. Cada una de estas nuevas versiones incorpora nuevas funcionalidades y desestima o sustituye otras de versiones previas. Esto provoca que, a la hora de desarrollar una aplicación, se tenga que tener en cuenta el grado de compatibilidad de la misma con las versiones previas para lograr un alcance y cobertura suficientes. Para ello, Android prevé la utilización de numerosas \emph{librerías de compatibilidad}, que posibilitan la utilización de nuevos componentes o funcionalidades en versiones anteriores que, originalmente, no contaban con ellos. Del mismo modo, a la hora de crear una aplicación Android, se ha de dejar especificado la API mínima (y máxima) sobre la que dicha aplicación puede ser ejecutada (de modo que GooglePlay ofrezca aplicaciones adaptadas a la versión de cada dispositivo).
 
-Para la aplicación desarrollada en este documento se ha seleccionado una compatibilidad hasta la versión 4.1 \textit{Jelly Bean} (API 16), que alcanza una cobertura total del 97,5\% respecto al total de dispositivos repartidos por el mercado a nivel global\footnote{Dato a diciembre de 2016, Android actualiza esta información periódicamente en \url{https://developer.android.com/about/dashboards/index.html}}, tal y como se muestra en la figura~\ref{fig:androidDistribution}.
+Para la aplicación desarrollada en este documento se ha seleccionado una compatibilidad hasta la versión 4.1 \textit{Jelly Bean} (API 16), que alcanza una cobertura total del 97,5\% respecto al total de dispositivos repartidos por el mercado a nivel global\footnote{Dato a diciembre de 2016, Android actualiza esta información periódicamente en \url{https://developer.android.com/about/dashboards/index.html}~\cite{AnDev}.}, tal y como se muestra en la figura~\ref{fig:androidDistribution}.
 
 \begin{figure}
 	\centering
@@ -1092,7 +1093,7 @@ Para la aplicación desarrollada en este documento se ha seleccionado una compat
 La capa intermedia del sistema queda soportado por el servidor de software libre GlassFish. El entorno de desarrollo empleado en este caso es NetBeans.
 
 \begin{itemize}
-	\item{\textbf{GlassFish}. GlassFish es un servidor basado en Apache Tomcat para el desarrollo y ejecución de aplicaciones regidas por la especificación \textit{Java Platform, Enterprise Edition} (Java EE platform)\footnote{Plataforma de programación que incluye varias especificaciones para el desarrollo de aplicaciones distribuidas y empresariales, más detalles en \url{http://www.oracle.com/technetwork/java/javaee/overview/index.html}.} y tecnologías web basadas en Java.
+	\item{\textbf{GlassFish}. GlassFish es un servidor basado en Apache Tomcat para el desarrollo y ejecución de aplicaciones regidas por la especificación \textit{Java Platform, Enterprise Edition} (Java EE platform)\footnote{Plataforma de programación que incluye varias especificaciones para el desarrollo de aplicaciones distribuidas y empresariales, más detalles en~\cite{OraEE}.} y tecnologías web basadas en Java.
 	
 	El motivo para la elección de este servidor es su carácter gratuito y de código libre, además del hecho de que, a diferencia de Tomcat, su instalación básica incluye un conjunto amplio de librerías, suficiente para cubrir las necesidades del sistema, sin que con ello se vea afectado su rendimiento de manera perceptible respecto a otras opciones, como el citado Apache Tomcat}.
 	
@@ -1128,7 +1129,7 @@ Dado su carácter transversal, se ha decidido crear un grupo separado de tecnolo
 	\end{itemize}
 	Las características anteriores han hecho que REST se imponga a SOAP como servicio web dominante. De hecho, compañías como Yahoo o Google hacen uso de REST para todos sus servicios.}
 
-	\item{\textbf{MySQL Connector / JDBC}. Conector estándar para la comunicación entre el servidor y la base de datos utilizando la API \emph{Java Database Connectivity} (JDBC)\footnote{API que permite la ejecución de operaciones sobre bases de datos desde el lenguaje de programación Java utilizando el dialecto SQL, más detalles en \url{http://www.oracle.com/technetwork/java/javase/jdbc/index.html}.}.}
+	\item{\textbf{MySQL Connector / JDBC}. Conector estándar para la comunicación entre el servidor y la base de datos utilizando la API \emph{Java Database Connectivity} (JDBC)\footnote{API que permite la ejecución de operaciones sobre bases de datos desde el lenguaje de programación Java utilizando el dialecto SQL, más detalles en~\cite{OraDB}.}.}
 
 \end{itemize}
 

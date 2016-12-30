@@ -2,7 +2,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces El modelo incremental, de Pressman 2010}}{2}{figure.1.1}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces El modelo incremental \textit {Fuente:~\cite {Pre10}}}}{2}{figure.1.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de casos de uso}}{7}{figure.3.1}
@@ -17,39 +17,39 @@
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Diagrama de actividad de RF09: Cancelar reserva (expl\IeC {\'\i }cita)}}{20}{figure.3.10}
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Diagrama de actividad de RF10: Pagar}}{21}{figure.3.11}
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Diagrama de actividad de RF11: Actualizar}}{22}{figure.3.12}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces El modelo de an\IeC {\'a}lisis como puente entre los requerimientos y el dise\IeC {\~n}o del software, de Pressman 2010}}{26}{figure.3.13}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces El modelo de an\IeC {\'a}lisis como puente entre los requerimientos y el dise\IeC {\~n}o del software \textit {Fuente:~\cite {Pre10}}}}{26}{figure.3.13}
 \contentsline {figure}{\numberline {3.14}{\ignorespaces Diagrama de clases de an\IeC {\'a}lisis}}{28}{figure.3.14}
 \contentsline {figure}{\numberline {3.15}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF01}}{29}{figure.3.15}
 \contentsline {figure}{\numberline {3.16}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF01}}{29}{figure.3.16}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del segundo camino alternativo del RF01}}{29}{figure.3.17}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del segundo camino alternativo del RF01}}{30}{figure.3.17}
 \contentsline {figure}{\numberline {3.18}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF02}}{30}{figure.3.18}
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF02}}{30}{figure.3.19}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF02}}{31}{figure.3.19}
 \contentsline {figure}{\numberline {3.20}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del segundo camino alternativo del RF02}}{31}{figure.3.20}
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF03}}{31}{figure.3.21}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF03}}{32}{figure.3.21}
 \contentsline {figure}{\numberline {3.22}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF03}}{32}{figure.3.22}
 \contentsline {figure}{\numberline {3.23}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del segundo camino alternativo del RF03}}{32}{figure.3.23}
 \contentsline {figure}{\numberline {3.24}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF04}}{33}{figure.3.24}
 \contentsline {figure}{\numberline {3.25}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF04}}{33}{figure.3.25}
-\contentsline {figure}{\numberline {3.26}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF05}}{33}{figure.3.26}
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF05}}{34}{figure.3.26}
 \contentsline {figure}{\numberline {3.27}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF06}}{34}{figure.3.27}
-\contentsline {figure}{\numberline {3.28}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF06}}{34}{figure.3.28}
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF06}}{35}{figure.3.28}
 \contentsline {figure}{\numberline {3.29}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF07}}{35}{figure.3.29}
-\contentsline {figure}{\numberline {3.30}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF07}}{35}{figure.3.30}
-\contentsline {figure}{\numberline {3.31}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF08}}{36}{figure.3.31}
-\contentsline {figure}{\numberline {3.32}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF08}}{36}{figure.3.32}
-\contentsline {figure}{\numberline {3.33}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF09}}{37}{figure.3.33}
-\contentsline {figure}{\numberline {3.34}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF09}}{37}{figure.3.34}
-\contentsline {figure}{\numberline {3.35}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF10}}{38}{figure.3.35}
-\contentsline {figure}{\numberline {3.36}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF10}}{38}{figure.3.36}
-\contentsline {figure}{\numberline {3.37}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF11}}{39}{figure.3.37}
-\contentsline {figure}{\numberline {3.38}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF11}}{39}{figure.3.38}
-\contentsline {figure}{\numberline {3.39}{\ignorespaces Esquema de la arquitectura Cliente/Servidor de tres capas}}{41}{figure.3.39}
-\contentsline {figure}{\numberline {3.40}{\ignorespaces Diagrama de clases de dise\IeC {\~n}o de la capa del cliente}}{43}{figure.3.40}
-\contentsline {figure}{\numberline {3.41}{\ignorespaces Diagrama de clases de dise\IeC {\~n}o de la capa del servidor}}{44}{figure.3.41}
-\contentsline {figure}{\numberline {3.42}{\ignorespaces Fragmentos en el dise\IeC {\~n}o de IUs, de la documentaci\IeC {\'o}n oficial Android.}}{47}{figure.3.42}
-\contentsline {figure}{\numberline {3.43}{\ignorespaces Proceso de dise\IeC {\~n}o y construcci\IeC {\'o}n de una IU, de Pressman 2010.}}{48}{figure.3.43}
-\contentsline {figure}{\numberline {3.44}{\ignorespaces Datos oficiales Android de distribuci\IeC {\'o}n de versiones a diciembre de 2016}}{51}{figure.3.44}
-\contentsline {figure}{\numberline {3.45}{\ignorespaces Diagrama de despliegue del sistema}}{54}{figure.3.45}
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF07}}{36}{figure.3.30}
+\contentsline {figure}{\numberline {3.31}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF08}}{37}{figure.3.31}
+\contentsline {figure}{\numberline {3.32}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF08}}{37}{figure.3.32}
+\contentsline {figure}{\numberline {3.33}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF09}}{38}{figure.3.33}
+\contentsline {figure}{\numberline {3.34}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF09}}{38}{figure.3.34}
+\contentsline {figure}{\numberline {3.35}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF10}}{39}{figure.3.35}
+\contentsline {figure}{\numberline {3.36}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF10}}{39}{figure.3.36}
+\contentsline {figure}{\numberline {3.37}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del camino principal del RF11}}{40}{figure.3.37}
+\contentsline {figure}{\numberline {3.38}{\ignorespaces Diagrama de colaboraci\IeC {\'o}n del primer camino alternativo del RF11}}{40}{figure.3.38}
+\contentsline {figure}{\numberline {3.39}{\ignorespaces Esquema de la arquitectura Cliente/Servidor de tres capas}}{42}{figure.3.39}
+\contentsline {figure}{\numberline {3.40}{\ignorespaces Diagrama de clases de dise\IeC {\~n}o de la capa del cliente}}{44}{figure.3.40}
+\contentsline {figure}{\numberline {3.41}{\ignorespaces Diagrama de clases de dise\IeC {\~n}o de la capa del servidor}}{45}{figure.3.41}
+\contentsline {figure}{\numberline {3.42}{\ignorespaces Fragmentos en el dise\IeC {\~n}o de IUs \textit {Fuente:~\cite {AnDev}}}}{48}{figure.3.42}
+\contentsline {figure}{\numberline {3.43}{\ignorespaces Proceso de dise\IeC {\~n}o y construcci\IeC {\'o}n de una IU \textit {Fuente:~\cite {Pre10}}}}{49}{figure.3.43}
+\contentsline {figure}{\numberline {3.44}{\ignorespaces Datos oficiales Android de distribuci\IeC {\'o}n de versiones a diciembre de 2016}}{52}{figure.3.44}
+\contentsline {figure}{\numberline {3.45}{\ignorespaces Diagrama de despliegue del sistema}}{55}{figure.3.45}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
