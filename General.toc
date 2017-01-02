@@ -50,9 +50,12 @@
 \contentsline {chapter}{\numberline {4}Pruebas}{57}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introducci\IeC {\'o}n}{57}{section.4.1}
 \contentsline {section}{\numberline {4.2}Estrategia de pruebas}{58}{section.4.2}
-\contentsline {section}{\numberline {4.3}Pruebas de validaci\IeC {\'o}n}{58}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Especificaci\IeC {\'o}n de las pruebas planteadas}{58}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Resultados}{58}{subsection.4.3.2}
-\contentsline {chapter}{\numberline {5}Conclusiones}{59}{chapter.5}
-\contentsline {section}{\numberline {5.1}L\IeC {\'\i }neas futuras}{59}{section.5.1}
-\contentsline {chapter}{\numberline {A}Manual de usuario}{61}{appendix.Alph1}
+\contentsline {subsection}{\numberline {4.2.1}Pruebas de unidad}{59}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Pruebas de integraci\IeC {\'o}n}{59}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Pruebas de validaci\IeC {\'o}n}{59}{subsection.4.2.3}
+\contentsline {subsubsection}{Especificaci\IeC {\'o}n de las pruebas planteadas}{59}{section*.31}
+\contentsline {subsubsection}{Resultados}{59}{section*.32}
+\contentsline {subsection}{\numberline {4.2.4}Pruebas de sistema}{59}{subsection.4.2.4}
+\contentsline {chapter}{\numberline {5}Conclusiones}{61}{chapter.5}
+\contentsline {section}{\numberline {5.1}L\IeC {\'\i }neas futuras}{61}{section.5.1}
+\contentsline {chapter}{\numberline {A}Manual de usuario}{63}{appendix.Alph1}

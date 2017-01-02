@@ -13,17 +13,46 @@ Por tanto, el software se prueba para descubrir errores que se cometieron de man
 Las pruebas de software forman parte de un tema más amplio conocido como verificación y validación. La \emph{verificación} se refiere al conjunto de tareas que garantizan que el software implementa correctamente una función específica. La \emph{validación} es un conjunto diferente de tareas que aseguran que el software que se construye sigue los requerimientos establecidos en las etapas iniciales. La estrategia de pruebas se deberá enfocar a cubrir ambos aspectos: el sistema ha de funcionar adecuadamente de acuerdo a las funciones marcadas en la ERS (sección~\ref{sec:secERS}).
 
 \section{Estrategia de pruebas}
-
-Una estrategia de pruebas software proporciona una guía que incorpora la planificación de la prueba, el diseño de casos de prueba, la ejecución de la prueba y la recolección y evaluación de los resultados.
 %seguir las notas del cuadreno...pero aquí hay que poner el entorno de pruebas: bicis de madrid, dispositivos (versiones android mío de Ana, de Jorge...), personas...mención a cositas de pruebas de unidad e integración pero por encima y citar directamnete al apartado siguiente de pruebas de validación.
 
+Una estrategia de pruebas software proporciona una guía que incorpora la planificación de la prueba, el diseño de casos de prueba, la ejecución de la prueba y la recolección y evaluación de los resultados. En esta sección, por tanto, se detallarán las pruebas realizadas, su entorno de control y los actores involucrados.
+
+Dentro del contexto de la Ingeniería del Software, las pruebas suponen una serie de cuatro pasos que se implementan de manera secuencial, tal y como se muestra en la figura~\ref{fig:estrategiaPruebas}. 
+
+\begin{figure}
+	\centering
+	\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/estrategiaPruebas}}
+	\caption{Pasos de las pruebas software \textit{Fuente:~\cite{Pre10}}}
+	\label{fig:estrategiaPruebas}
+\end{figure}
+
+Inicialmente, las pruebas se enfocan en cada componente de manera individual, son las \emph{pruebas de unidad} y garantizan que todo módulo de software funciona adecuadamente como unidad, de ahí el nombre. A continuación, los componentes deben ensamblarse e integrarse para formar el paquete de software completo. La \emph{prueba de integración} aborda los conflictos asociados con los problemas de verificación y construcción de programas. Después de integrar (construir) el software, se realiza una serie de \emph{pruebas de orden superior}, donde se identifican las \emph{pruebas de validación}, que proporcionan la garantía final de que el software cumple con todos los requerimientos funcionales y de compartimento abordados en la fase de requisitos, y las \emph{pruebas del sistema}, para verificar que todos los elementos se mezclan de manera adecuada y que se logra el funcionamiento/rendimiento global del sistema deseado.
+
+Considerando el proceso descrito, en los apartados siguientes se aportarán los elementos más destacables empleados para probar la aplicación construida; si bien en este documento sólo se indicará el detalle concreto de las \emph{pruebas de validación}, por ser aquellas que se centran en la funcionalidad específica del sistema y cuyo éxito depende del de las pruebas previas.
+
+\subsection{Pruebas de unidad}
+
+\subsection{Pruebas de integración}
+
+\subsection{Pruebas de validación}
+
+\subsubsection{Especificación de las pruebas planteadas}
+
+\subsubsection{Resultados}
+
+\subsection{Pruebas de sistema}
+
+La \emph{prueba del sistema} es una serie de diferentes pruebas cuyo propósito principal es ejercitar por completo, saliendo de la Ingeniería del Software y entrando en la de Sistemas, el sistema construido. Algunos de los ejemplos más representativos son~\cite{Pre10}:
+
+\begin{itemize}
+	\item \textbf{Pruebas de recuperación}, dedicadas a la capacidad de relanzamiento (autónomo o con intervención humana) del software ante fallos que provoquen momentos de inactividad.
+	\item \textbf{Pruebas de seguridad}, para asegurar el sistema ante ataques o intentos de entrada impropios.
+	\item \textbf{Pruebas de esfuerzo}, destinadas a evaluar el comportamiento del sistema ante una demanda anormal de recursos.
+	\item \textbf{Pruebas de rendimiento}, similares a las anteriores, estas pruebas están centradas en obtener unas métricas de funcionamiento mínimas.
+	\item \textbf{Pruebas de despliegue o configuración}, para aquellos sistemas destinados a implementarse en varias plataformas, estas pruebas evalúan su desempeño en cada una de ellas.
+\end{itemize}
+
+Dado el tipo de pruebas encuadradas en este epígrafe, y considerando la naturaleza académica del proyecto aquí presentado, las \emph{pruebas de sistema} quedan fuera del alcance de la estrategia de pruebas para la aplicación construida. Algunas de las anteriores, sin embargo, sí se pueden asimilar a ciertas \emph{pruebas de validación} antes mencionadas, como la evaluación del correcto funcionamiento en diferentes plataformas como \emph{prueba de despliegue}, o el impedimento de acceso a un usuario no registrado como \emph{prueba de seguridad}.
 
 
 
-
-
-\section{Pruebas de validación}
-
-\subsection{Especificación de las pruebas planteadas}
-
-\subsection{Resultados}
