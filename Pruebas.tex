@@ -13,9 +13,8 @@ Por tanto, el software se prueba para descubrir errores que se cometieron de man
 Las pruebas de software forman parte de un tema más amplio conocido como verificación y validación. La \emph{verificación} se refiere al conjunto de tareas que garantizan que el software implementa correctamente una función específica. La \emph{validación} es un conjunto diferente de tareas que aseguran que el software que se construye sigue los requerimientos establecidos en las etapas iniciales. La estrategia de pruebas se deberá enfocar a cubrir ambos aspectos: el sistema ha de funcionar adecuadamente de acuerdo a las funciones marcadas en la ERS (sección~\ref{sec:secERS}).
 
 \section{Estrategia de pruebas}
-%seguir las notas del cuadreno...pero aquí hay que poner el entorno de pruebas: bicis de madrid, dispositivos (versiones android mío de Ana, de Jorge...), personas...mención a cositas de pruebas de unidad e integración pero por encima y citar directamnete al apartado siguiente de pruebas de validación.
 
-Una estrategia de pruebas software proporciona una guía que incorpora la planificación de la prueba, el diseño de casos de prueba, la ejecución de la prueba y la recolección y evaluación de los resultados. En esta sección, por tanto, se detallarán las pruebas realizadas, su entorno de control y los actores involucrados.
+Una estrategia de pruebas software proporciona una guía que incorpora la planificación de la prueba, el diseño de casos de prueba, la ejecución de la prueba y la recolección y evaluación de los resultados.
 
 Dentro del contexto de la Ingeniería del Software, las pruebas suponen una serie de cuatro pasos que se implementan de manera secuencial, tal y como se muestra en la figura~\ref{fig:estrategiaPruebas}. 
 
@@ -28,11 +27,74 @@ Dentro del contexto de la Ingeniería del Software, las pruebas suponen una seri
 
 Inicialmente, las pruebas se enfocan en cada componente de manera individual, son las \emph{pruebas de unidad} y garantizan que todo módulo de software funciona adecuadamente como unidad, de ahí el nombre. A continuación, los componentes deben ensamblarse e integrarse para formar el paquete de software completo. La \emph{prueba de integración} aborda los conflictos asociados con los problemas de verificación y construcción de programas. Después de integrar (construir) el software, se realiza una serie de \emph{pruebas de orden superior}, donde se identifican las \emph{pruebas de validación}, que proporcionan la garantía final de que el software cumple con todos los requerimientos funcionales y de compartimento abordados en la fase de requisitos, y las \emph{pruebas del sistema}, para verificar que todos los elementos se mezclan de manera adecuada y que se logra el funcionamiento/rendimiento global del sistema deseado.
 
-Considerando el proceso descrito, en los apartados siguientes se aportarán los elementos más destacables empleados para probar la aplicación construida; si bien en este documento sólo se indicará el detalle concreto de las \emph{pruebas de validación}, por ser aquellas que se centran en la funcionalidad específica del sistema y cuyo éxito depende del de las pruebas previas.
+En este punto, cabe mencionar los atributos con que cuenta una ``buena'' prueba~\cite{Kan99}:
+
+\begin{itemize}
+	\item \textit{Una buena prueba tiene una alta probabilidad de encontrar un error}. Para ello, es conveniente que el examinador conozca el software para saber dónde podría fallar y probar dichos caminos.
+	\item \textit{Una buena prueba no es redundante}. Cada prueba ha debe tener un propósito diferente a otra.
+	\item \textit{Una buena prueba debe ser ``la mejor de la camada''}~\cite{Kan99}. Para un conjunto de pruebas similares, se debe recurrir a la que tenga la mayor probabilidad de descubrir errores.
+	\item \textit{Una buena prueba no debe ser demasiado simple o demasiado compleja}. En general, cada prueba debe ejecutarse por separado.
+\end{itemize}
+
+Considerando el proceso descrito y las características mencionadas, en los apartados siguientes se aportarán los elementos más destacables empleados para probar la aplicación construida; si bien en este documento sólo se indicará el detalle concreto de las \emph{pruebas de validación}, por ser aquellas que se centran en la funcionalidad específica del sistema y cuyo éxito depende del de las pruebas previas.
 
 \subsection{Pruebas de unidad}
 
+La \emph{prueba de unidad} enfoca los esfuerzos de verificación en la unidad más pequeña del diseño de software: el componente o módulo de software, enfocándose en la lógica de procesamiento interno y de las estructuras de datos dentro de sus límites.
+
+Las validaciones se han realizado siguiendo principalmente los métodos de \emph{caja blanca}, filosofía de diseño de casos de prueba que~\cite{Pre10}: 1) garanticen que todas las rutas independientes dentro de un módulo se revisaron al menos una vez, 2) revisen todas las decisiones lógicas en sus lados verdadero y falso, 3) ejecuten todos los bucles en sus fronteras y dentro de sus fronteras operativas y 4) revisen estructuras de datos internas para garantizar su validez.
+
+Sin entras en detalles concretos, a continuación se mencionan las herramientas fundamentales utilizadas para realizar estas pruebas sobre los diferentes elementos del sistema.
+
+\subsubsection{Cliente - Android}
+
+La utilidad de mayor relevancia empleada para probar la aplicación Android de manera individual ha sido \emph{Logcat}. Consiste en una herramienta de línea de comandos que vuelca un registro de mensajes del sistema, incluidos los seguimientos de pila, los casos de error del sistema y los mensajes escritos por el programador desde la app con la clase \emph{Log}. Muestra los mensajes en tiempo real y mantiene un histórico para su consulta en caso de necesidad.
+
+Con esta herramienta se puede hacer un seguimiento exhaustivo del estado de cada componente, estructura de datos o variable utilizada. Las posibilidades ofrecidas por la clase \emph{Log} hacen que dicho seguimiento se pueda realizar de manera ordenada y sencilla\footnote{Para más detalles acerca de Logcat se puede consultar \url{https://developer.android.com/studio/debug/am-logcat.html}, y acerca de la clase Log \url{https://developer.android.com/reference/android/util/Log.html}; ambos a partir de~\cite{AnDev}.}.
+
+Adicionalmente a Logcat, y desde un punto de vista de abstracción mayor, también se ha recurrido a la clase \emph{Toast}. Un \emph{toast} proporciona un \textit{feedback} sencillo acerca de una operación mediante un mensaje de texto que se muestra durante unos instantes en la pantalla. Mientras que Logcat recurre a la línea de comandos del sistema, los \emph{toast} se muestran en el propio dispositivo, siendo muy convenientes para mostrar al usuario el resultado de alguna operación que haya realizado\footnote{Como en la nota anterior, para más detalles acerca de Toast se puede consultar \url{https://developer.android.com/guide/topics/ui/notifiers/toasts.html}, a partir de~\cite{AnDev}.}, en la figura~\ref{fig:ejemploToast} se aporta un ejemplo de uso de esta utilidad.
+
+\begin{figure}
+	\centering
+	\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/ejemploToast}}
+	\caption{Ejemplo de un toast en Android}
+	\label{fig:ejemploToast}
+\end{figure}
+
+\subsubsection{Servidor - GlassFish}
+
+El servidor queda programado en Java y como herramientas básicas de depuración se utilizaron las habituales escrituras en línea de comandos mediante la clase \emph{System} y sus atributos \emph{out} y \emph{err}\footnote{Más detalles en \url{https://docs.oracle.com/javase/7/docs/api/java/lang/System.html}, a partir de~\cite{DocOr}}, de modo que se pudiese hacer un seguimiento paso a paso del estado del elementos contenidos en esta capa de datos.
+
+Adicionalmente, para la prueba de los diferentes módulos implementados en el servidor de manera aislada a la aplicación móvil, se ha recurrido a un complemento del navegador web llamado \emph{RESTClient}, un depurador para servicios web RESTful que permite realizar consultas tal y como las haría la aplicación. En la figura~\ref{fig:RESTClient} se aporta una captura de pantalla del depurador.
+
+\begin{figure}
+	\centering
+	\resizebox{12cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/RESTClient}}
+	\caption{RESTClient, depurador de servicios web RESTful}
+	\label{fig:RESTClient}
+\end{figure}
+
+Este tipo de prueba se podría considerar una prueba de mayor nivel al incluir también una conexión con la base de datos (la invocación de un servicio web finaliza mediante la obtención de un resultado al que se llega mediante la lectura o modificación de la base); sin embargo, considerando que el primer objetivo con el que se recurrió a esta herramienta fue el de ejercitar, bajo un entorno controlado, los diferentes métodos del servidor (los servicios web individuales), se considera adecuado incluirla en esta sección.
+
+\subsubsection{Base de datos - MySQL}
+
+De manera individual, sobre la base de datos se han realizado consultas SQL directas mediante de la herramienta \emph{MySQLWorkbench}, mencionada en la sección~\ref{subsec:herramientasImp}. 
+
+Cabe señalar que este tipo de pruebas sobre la capa de base de datos pueden no tener tanto interés como otras, puesto que dicha capa carece de lógica implementada para ser probada. El objetivo principal es el de probar la precisión y la integridad de los datos para asegurar que se almacenen, actualicen y recuperen de manera adecuada.
+
 \subsection{Pruebas de integración}
+
+El objetivo de las \emph{pruebas de integración} es tomar los componentes probados de manera individual y construir la arquitectura señalada en la etapa de diseño. Dos han sido los enfoques fundamentales que se han seguido durante el desarrollo de este tipo de pruebas:
+
+\begin{enumerate}
+	\item \textbf{Integración ascendente}. Enfoque principal seguido, se comienza por la verificación de módulo atómicos y se van integrando y construyendo hacia niveles superiores.
+	\item \textbf{Pruebas de humo}. Enfoque secundario al anterior utilizado para agregados o arreglos no previstos, supone una integración constante según la cual el software se reconstruye (con el agregado de nuevos componentes) y se prueba día a día.
+\end{enumerate}
+
+Los métodos para realizar las verificaciones se han basado principalmente en las técnicas de \emph{caja negra}, enfocadas en los requerimientos funcionales del software. Es decir, las pruebas de caja negra intentan encontrar errores en las categorías siguientes~\cite{Pre10}: 1) funciones incorrectas o faltantes, 2) errores de interfaz, 3) errores en las estructuras de datos o en el acceso a bases de datos externas, 4) errores de comportamiento o rendimiento y 5) errores de inicialización y terminación.
+
+Las herramientas utilizadas para completar este tipo de pruebas son las mismas que las empleadas en las pruebas de unidad, la diferencia está en que esté nivel tiene un enfoque más amplio, considerando los componentes y sus interrelaciones.
+
 
 \subsection{Pruebas de validación}
 

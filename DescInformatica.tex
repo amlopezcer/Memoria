@@ -112,7 +112,7 @@ No se consideran requisitos futuros.
 
 \subsubsection{Interfaces Externas}
 
-La interfaz con el usuario consistirá en un conjunto de pantallas con los controles habituales: botones, campos de texto, listas, etc. sobre la que se deberá asegurar una adecuada experiencia de usuario mediante diseños que sigan las normas Android \footnote{Los detalles al respecto se pueden consultar en \url{https://developer.android.com/design/index.html}~\cite{AnDev}.}. Esta interfaz deberá ser construida para el sistema especificado y será visualizada mediante dispositivos móviles. Del mismo modo, destacar que el diseño de la interfaz gráfica de usuario deberá fundamentarse en los llamados \emph{fragments} de Android, de modo que el mismo pueda ser reutilizable y fácilmente transportable a otras dimensiones u orientaciones de pantalla.
+La interfaz con el usuario consistirá en un conjunto de pantallas con los controles habituales: botones, campos de texto, listas, etc. sobre la que se deberá asegurar una adecuada experiencia de usuario mediante diseños que sigan las normas Android \footnote{Los detalles al respecto se pueden consultar en \url{https://developer.android.com/design/index.html}, a partir de~\cite{AnDev}.}. Esta interfaz deberá ser construida para el sistema especificado y será visualizada mediante dispositivos móviles. Del mismo modo, destacar que el diseño de la interfaz gráfica de usuario deberá fundamentarse en los llamados \emph{fragments} de Android, de modo que el mismo pueda ser reutilizable y fácilmente transportable a otras dimensiones u orientaciones de pantalla.
 
 En relación a las interfaces hardware-software, se deberá contar con un dispositivo móvil con conexión a internet y que implemente, como mínimo, la versión 4.0 del sistema Android (llamada \emph{Ice Cream Sandwich}\footnote{Android denomina alfabéticamente y con nombres de dulces a cada una de las versiones de su sistema operativo. En el momento de la redacción de este documento, la versión más actualizada es la 7, \textit{Nougat}.}).
 
@@ -997,9 +997,9 @@ En primer término, el diseño general de cualquier IU se ha de basar en las con
 
 Cada una de las tres Reglas anteriores supone una agrupación de reglas más específicas y su estudio teórico queda fuera del alcance de este documento, que se limita a su nombrado para su aplicación práctica\footnote{El detalle de cada regla se puede consultar en el manual de Theo Mandel al respecto en~\cite{Man97}.}.
 
-Con la base anterior establecida, se ha de tener en cuenta que la IU se presentará sobre dispositivos móviles con sistema operativo Android, que presenta numerosa documentación oficial acerca del adecuado diseño de IUs\footnote{La documentación puede ser consultada en \url{https://developer.android.com/design/index.html}~\cite{AnDev}.}. Se hace necesario, por tanto, hacer un seguimiento de estos principios específicos para lograr una IU adecuada a la naturaleza del dispositivo sobre el que se despliega el sistema.
+Con la base anterior establecida, se ha de tener en cuenta que la IU se presentará sobre dispositivos móviles con sistema operativo Android, que presenta numerosa documentación oficial acerca del adecuado diseño de IUs\footnote{La documentación puede ser consultada en \url{https://developer.android.com/design/index.html}, a partir de~\cite{AnDev}.}. Se hace necesario, por tanto, hacer un seguimiento de estos principios específicos para lograr una IU adecuada a la naturaleza del dispositivo sobre el que se despliega el sistema.
 
-Una vez considerados los principios generales y los específicos para los elementos específicos de Android, la decisión de mayor relevancia en el diseño de IU en Android es la utilización de los llamados \emph{Fragments} (o Fragmentos). Un Fragmento representa un comportamiento específico de una porción de la IU en una \emph{Actividad}\footnote{Una Actividad es uno de los elementos básicos de cualquier aplicación Android. Sin entrar en detalles y por dar una primera aproximación, cada una de las pantallas o vistas de una aplicación suponen una Actividad. Más detalles en \url{https://developer.android.com/reference/android/app/Activity.html}~\cite{AnDev}.}; es decir, agrupa elementos de una interfaz (tanto el diseño gráfico como sus controles lógicos asociados) de modo que estos sean reutilizables entre diversos tamaños u orientaciones de pantalla.
+Una vez considerados los principios generales y los específicos para los elementos específicos de Android, la decisión de mayor relevancia en el diseño de IU en Android es la utilización de los llamados \emph{Fragments} (o Fragmentos). Un Fragmento representa un comportamiento específico de una porción de la IU en una \emph{Actividad}\footnote{Una Actividad es uno de los elementos básicos de cualquier aplicación Android. Sin entrar en detalles y por dar una primera aproximación, cada una de las pantallas o vistas de una aplicación suponen una Actividad. Más detalles en \url{https://developer.android.com/reference/android/app/Activity.html}, a partir de~\cite{AnDev}.}; es decir, agrupa elementos de una interfaz (tanto el diseño gráfico como sus controles lógicos asociados) de modo que estos sean reutilizables entre diversos tamaños u orientaciones de pantalla.
 
 En la figura~\ref{fig:fragmentsAndroid} se aporta un esquema gráfico de la utilidad de estos elementos de diseño para una mejor comprensión.
 
@@ -1060,6 +1060,7 @@ Con el objetivo de desarrollar adecuadamente este modelo, se consideran dos apar
 \end{enumerate}
 
 \subsection{Herramientas utilizadas}
+\label{subsec:herramientasImp}
 
 Dada la arquitectura Cliente/Servidor que soporta el sistema, las herramientas y tecnologías se pueden agrupar en cada una de sus capas (cliente, servidor y base de datos) y en la comunicación entre ellas. 
 
@@ -1074,12 +1075,12 @@ El cliente del sistema queda pensado, en su primera versión, para ser desplegad
 	
 	Las razones para la elección de este sistema, frente a otros como iOS o Windows, son principalmente la cobertura de mercado (en España, superior al 90\% en 2016\footnote{Dato a junio de 2016: \url{http://cincodias.com/cincodias/2016/06/15/tecnologia/1465987235_750846.html}}) y que el desarrollo de aplicaciones sobre esta plataforma es gratuito y queda basado en el lenguaje de programación Java, ampliamente extendido y con un fuerte soporte}.
 	
-	\item{\textbf{Android Studio}. Android Studio es el entorno de desarrollo integrado (IDE) oficial para el desarrollo de aplicaciones Android y se basa en IntelliJ IDEA\footnote{IDE para el desarrollo de sistemas informáticos desarrollado por JetBrains, más detalles en \url{https://www.jetbrains.com/idea/}.}. Además del editor de códigos y las herramientas para desarrolladores de IntelliJ, Android Studio ofrece más funciones para la mejora de la productividad durante la compilación de apps para Android\footnote{El detalle sobre estas funciones adicionales se puede consultar en \url{https://developer.android.com/studio/intro/index.html}~\cite{AnDev}.}}.
+	\item{\textbf{Android Studio}. Android Studio es el entorno de desarrollo integrado (IDE) oficial para el desarrollo de aplicaciones Android y se basa en IntelliJ IDEA\footnote{IDE para el desarrollo de sistemas informáticos desarrollado por JetBrains, más detalles en \url{https://www.jetbrains.com/idea/}.}. Además del editor de códigos y las herramientas para desarrolladores de IntelliJ, Android Studio ofrece más funciones para la mejora de la productividad durante la compilación de apps para Android\footnote{El detalle sobre estas funciones adicionales se puede consultar en \url{https://developer.android.com/studio/intro/index.html}, a partir de~\cite{AnDev}.}}.
 \end{itemize}
 
 Como se ha comentado, Android actualmente tiene desplegada la versión 7. Cada una de estas nuevas versiones incorpora nuevas funcionalidades y desestima o sustituye otras de versiones previas. Esto provoca que, a la hora de desarrollar una aplicación, se tenga que tener en cuenta el grado de compatibilidad de la misma con las versiones previas para lograr un alcance y cobertura suficientes. Para ello, Android prevé la utilización de numerosas \emph{librerías de compatibilidad}, que posibilitan la utilización de nuevos componentes o funcionalidades en versiones anteriores que, originalmente, no contaban con ellos. Del mismo modo, a la hora de crear una aplicación Android, se ha de dejar especificado la API mínima (y máxima) sobre la que dicha aplicación puede ser ejecutada (de modo que GooglePlay ofrezca aplicaciones adaptadas a la versión de cada dispositivo).
 
-Para la aplicación desarrollada en este documento se ha seleccionado una compatibilidad hasta la versión 4.1 \textit{Jelly Bean} (API 16), que alcanza una cobertura total del 97,5\% respecto al total de dispositivos repartidos por el mercado a nivel global\footnote{Dato a diciembre de 2016, Android actualiza esta información periódicamente en \url{https://developer.android.com/about/dashboards/index.html}~\cite{AnDev}.}, tal y como se muestra en la figura~\ref{fig:androidDistribution}.
+Para la aplicación desarrollada en este documento se ha seleccionado una compatibilidad hasta la versión 4.1 \textit{Jelly Bean} (API 16), que alcanza una cobertura total del 97,5\% respecto al total de dispositivos repartidos por el mercado a nivel global\footnote{Dato a diciembre de 2016, Android actualiza esta información periódicamente en \url{https://developer.android.com/about/dashboards/index.html}, a partir de~\cite{AnDev}.}, tal y como se muestra en la figura~\ref{fig:androidDistribution}.
 
 \begin{figure}
 	\centering
@@ -1141,7 +1142,7 @@ En la figura ~\ref{fig:diagramaDespliegue} se esquematiza la distribución menci
 
 \begin{figure}
 	\centering
-	\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/09_DiagramaDeDespliegue}
+	{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/09_DiagramaDeDespliegue}}
 	\caption{Diagrama de despliegue del sistema}
 	\label{fig:diagramaDespliegue}
 \end{figure}
