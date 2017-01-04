@@ -1,0 +1,72 @@
+\chapter{Resultados de las pruebas de validación}
+\label{app:appPesultadosPruebas}
+
+Se aportan los resultado de las pruebas planteadas en la sección~\ref{subsec:pruebasValidacion}. Adicionalmente, se aportan los posibles ajustes derivados de la realización de las mismas, si bien los resultados mostrados en este apéndice hacen referencia a la última versión de la aplicación, sobre la cual no se derivaron más modificaciones.
+
+\newcolumntype{C}[1]{>{\arraybackslash}m{#1}} %Sin la definción de una columna propia (C), la sección de comentarios no se ajusta bien a la página
+\begin{center}
+	\begin{longtable}{|c|c|c|C{8,5cm}|}
+		\hline
+		
+		\multicolumn{1}{|c|}{\textbf{RF}}	& \textbf{Prueba}	& \textbf{Resultado}	& \textbf{Comentarios}	\\ 	\hline
+		\endfirsthead
+		
+		\multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continúa desde la página anterior}} 			\\	\hline
+		\multicolumn{1}{|c|}{\textbf{RF}}	& \textbf{Prueba}	& \textbf{Resultado}	& \textbf{Comentarios}	\\ 	\hline
+		\endhead
+		
+		\hline \multicolumn{4}{|r|}{{\textit{Continúa en la página siguiente}}} \\ \hline
+		\endfoot
+		
+		\endlastfoot
+		
+		\multirow{3}{*}{RF01}           	& 1					& $\checkmark$			& Se añade una pantalla una vez se completa el registro a modo de confirmación explícita. Además otorga 5\euro{} al nuevo usuario para que pueda empezar a operar inmediatamente.	\\ \cline{2-4}
+											& 2					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \cline{2-4}
+											& 3					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \hline
+											
+		\multirow{4}{*}{RF02}           	& 1					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \cline{2-4}
+											& 2					& $\checkmark$			& Se inhabilita el botón de acceso hasta que se hayan completado todos los campos para reducir la generación de mensajes de error.	\\ \cline{2-4}
+											& 3					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \cline{2-4}
+											& 4					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \hline
+											
+		\multirow{4}{*}{RF03}           	& 1					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \cline{2-4}
+											& 2					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \cline{2-4}
+											& 3					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \cline{2-4}
+											& 4					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \hline
+											
+		\multirow{2}{*}{RF04}           	& 1					& $\checkmark$			& Se introduce la restricción referente a que si el usuario tiene una bici cogida no pueda borrar su perfil hasta que no la devuelva.	\\ \cline{2-4}
+											& 2					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \hline
+											
+		\multirow{1}{*}{RF05}           	& 1					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \hline
+											
+		\multirow{6}{*}{RF06}           	& 1					& $\checkmark$			& Dos mejoras de IU: 1) Además de la confirmación inmediata, se crea una barra de estado que informa permanentemente si el usuario tiene bici o no; y 2) se introduce un código de colores sobre las estaciones para informar visualmente de su disponibilidad.	\\ \cline{2-4}
+											& 2					& $\checkmark$			& Prueba completada satisfactoriamente (aplica el comentario realizado en la prueba RF06 - 1).	\\ \cline{2-4}
+											& 3					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \cline{2-4}
+											& 4					& $\checkmark$			& En la barra de estado comentada anteriormente se introduce también el saldo disponible y un acceso directo a la modificación del perfil para contar con un acceso más ágil al ingreso de dinero.	\\ \cline{2-4}
+											& 5					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \cline{2-4}
+											& 6					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \hline
+											
+		\multirow{5}{*}{RF07}           	& 1					& $\checkmark$			& Prueba completada satisfactoriamente (aplica el comentario realizado en la prueba RF06 - 1).	\\ \cline{2-4}
+											& 2					& $\checkmark$			& Prueba completada satisfactoriamente (aplica el comentario realizado en la prueba RF06 - 1).	\\ \cline{2-4}
+											& 3					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \cline{2-4}
+											& 4					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \cline{2-4}
+											& 5					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \hline
+											
+		\multirow{4}{*}{RF08}           	& 1					& $\checkmark$			& Se introduce un código de colores sobre las estaciones para informar visualmente de la estación sobre la que se ha efectuado la reserva Este código desaparece si no hay reservas activas.	\\ \cline{2-4}
+											& 2					& $\checkmark$			& Las opciones de reserva que no se puedan realizar se desactivan para reducir las necesidades de navegación del usuario y ofrecer una experiencia más ágil.	\\ \cline{2-4}
+											& 3					& $\checkmark$			&Prueba completada satisfactoriamente (aplica el comentario de la prueba RF08 - 2).	\\ \cline{2-4}
+											& 4					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \hline
+											
+		\multirow{3}{*}{RF09}           	& 1					& $\checkmark$			& Prueba completada satisfactoriamente (aplica el comentario realizado en la prueba RF08 - 1)	\\ \cline{2-4}
+											& 2					& $\checkmark$			& Prueba completada satisfactoriamente (aplica el comentario realizado en la prueba RF08 - 1)	\\ \cline{2-4}
+											& 3					& $\checkmark$			& Prueba completada satisfactoriamente (aplica el comentario realizado en la prueba RF08 - 1)	\\ \hline
+											
+		\multirow{2}{*}{RF10}           	& 1					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \cline{2-4}
+											& 2					& $\checkmark$			& Prueba completada satisfactoriamente.	\\ \hline
+											
+		\multirow{1}{*}{RF11}           	& 1					& $\checkmark$			& Para una visualización general más completa del estado del sistema, se introducen dos vistas adicionales: una lista con el detalle de todas las estaciones y unos gráficos de disponibilidad. \\ \hline
+		
+	\caption{Resultados de las pruebas de validación}
+	\label{tab:tablaResultadosPruebas}
+	\end{longtable}
+\end{center}

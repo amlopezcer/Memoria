@@ -17,6 +17,12 @@
 \usepackage{placeins}			% Para controlar que las imágenes no cambian de sección
 \usepackage{url}				% Para poder referenciar URLs
 \usepackage{lscape}				% Para poner páginas en horizontal
+\usepackage{multirow}			% Para combinar filas en una columna de una tabla
+\usepackage{amssymb}			% Para el uso de símbolos
+\usepackage{longtable}			% Para tablas que puedan ocupar más de una página
+\usepackage{caption}			% Para poder configurar las notas de figuras y tablas
+\usepackage{eurosym}			% Símbolo del euro
+\usepackage{array}				% Para definir formatos de columna multilínea en tablas
 
 %\makeindex % Para el índice de palabras que se crea al final
 
@@ -39,24 +45,20 @@
 \include{Portada}
 \newpage{\pagestyle{empty}\cleardoublepage} % Página en blanco
 
-
 % ----------------- AGRADECIMIENTOS -------------
 
 \include{Agradecimientos}
 \newpage{\pagestyle{empty}\cleardoublepage}
-
 
 % ------------------ RESUMEN --------------------
 
 \include{Resumen}
 \newpage{\pagestyle{empty}\cleardoublepage}
 
-
 % ------------------ ÍNDICE GENERAL -------------
 
 \tableofcontents
 \newpage{\pagestyle{empty}\cleardoublepage}
-
 
 % ------------------ ÍNDICE DE FIGURAS ----------
 
@@ -72,40 +74,34 @@
 
 % -----------------------------------------------
 
-
 % Formato para cuerpo del proyecto
 \mainmatter
-
 
 % ------------------ INTRODUCCIÓN ---------------
 
 \include{Introduccion}
 
-
 % ------------------ OBJETIVOS ------------------
 
 \include{Objetivos} 
-
 
 % ------------------ DESCRIPCIÓN INFORMÁTICA ----
 
 \include{DescInformatica}
 
-
 % ------------------ PRUEBAS --------------------
 
 \include{Pruebas}
-
 
 % ------------------ CONCLUSIONES ---------------
 
 \include{Conclusiones}
 
-
 % ------------------ ANEXOS ---------------------
 
 \appendix
-\include{Anexos}
+\include{AnexoResPruebasVal}
+\include{AnexoManualUsuario}
 
 % -----------------------------------------------
 
@@ -113,19 +109,14 @@
 % Formato para la parte final del documento
 \backmatter
 
-
-
-
 % ------------------ BIBLIOGRAFÍA ---------------
 
 \include{Bibliografia}
-
 
 % ------------------ ÍNDICE DE PALABRAS ---------
 
 %\printindex % Crea el índice de palabras
 
 % -----------------------------------------------
-
 
 \end{document}

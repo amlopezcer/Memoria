@@ -1,7 +1,5 @@
 \chapter{Pruebas}
 
-%Describir el escenario de pruebas usado (bicis de Madrid) y cómo lo has probado\dots Comentar el número de dispositivos, personas, herramientas (como el RESTClient de Firefox)
-
 \section{Introducción}
 
 Mediante la actividad conocida como \emph{aseguramiento de la calidad del software}\footnote{Para conocer más en detalle esta actividad se puede recurrir a~\cite{Pre10}.} se busca conseguir unos mínimos de calidad sobre las diversas etapas de ingeniería del software por las que pasa el producto: requerimientos, diseño e implementación (o código). Sin embargo, en este proceso pueden pasar errores inadvertidos que, sin unas pruebas adecuadamente planteadas y planificadas permanecerían en el sistema construido hasta su publicación.
@@ -21,7 +19,7 @@ Dentro del contexto de la Ingeniería del Software, las pruebas suponen una seri
 \begin{figure}
 	\centering
 	\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/estrategiaPruebas}}
-	\caption{Pasos de las pruebas software \textit{Fuente:~\cite{Pre10}}}
+	\caption[Pasos de las pruebas software]{Pasos de las pruebas software \textit{Fuente:~\cite{Pre10}}}
 	\label{fig:estrategiaPruebas}
 \end{figure}
 
@@ -95,12 +93,282 @@ Los métodos para realizar las verificaciones se han basado principalmente en la
 
 Las herramientas utilizadas para completar este tipo de pruebas son las mismas que las empleadas en las pruebas de unidad, la diferencia está en que esté nivel tiene un enfoque más amplio, considerando los componentes y sus interrelaciones.
 
-
 \subsection{Pruebas de validación}
+\label{subsec:pruebasValidacion}
 
-\subsubsection{Especificación de las pruebas planteadas}
+Las \emph{pruebas de validación} comienzan con la culminación de las pruebas de integración, enfocándose en las acciones visibles para el usuario y las salidas del sistema reconocibles por él. Como el resto de pruebas, la validación intenta descubrir errores, pero el enfoque se orienta en los requerimientos, siendo exitosa cuando el software funciona de forma que cumpla con las expectativas introducidas en la ERS.
 
-\subsubsection{Resultados}
+Así, los casos de prueba se centran en la validación de los requisitos descritos en la sección~\ref{sec:secERS}. En los siguientes apartados se específica el entorno de pruebas y el detalle para cada una.
+
+\subsubsection{Entorno de pruebas}
+
+El entorno de pruebas se ha basado en el parque de bicicletas de Madrid, se han creado una serie de estaciones directamente sobre la base de datos con diferentes niveles de disponibilidad para la validación de diferentes casuisticas. Del mismo modo, se han creado una serie de usuarios con el objetivo de tener una aplicación más cercana a un entorno de ejecución real.
+
+La batería de pruebas se ha ejecutado sobre varios dispositivos o plataformas diferentes:
+
+\begin{itemize}
+	\item Emulador Android para PC, API 22 (Versión 5.1 - \textit{Lollipop}).
+	\item Dispositivo móvil, API 21 (Versión 5.0 - \textit{Lollipop}).
+	\item Dispositivo móvil, API XX (Versión X.X - \textit{xxxxx}). -> JORGE
+\end{itemize}
+
+También se ha involucrado a varios usuarios con diferentes niveles de conocimiento en el ámbito tecnológico para evaluar la adaptación del sistema a cada uno. En este sentido, se han desarrollado tanto \emph{pruebas alfa}, aquellas ejecutadas en un ambiente controlado y en presencia del desarrollador, como \emph{pruebas beta}, ejecutadas sin presencia del desarrollador en un ambiente de ``usuario final''.
+
+Dada el entorno presentado, a continuación se describen las pruebas realizadas y sus resultados; si bien, por simplicidad, no se hará distinción entre dispositivos, usuarios o tipos de prueba, presentando cada una de manera única.
+
+\subsubsection{Especificación de pruebas}
+
+A continuación se listan las pruebas planteadas por cada requisito funcional del sistema. Por cada una se describen las condiciones que se han de cumplir para considerar el test como superado.
+
+\begin{itemize}
+	\item \textbf{RF01: Registrar usuario}
+	\begin{enumerate}
+		\item \textit{Prueba 1. Registro satisfactorio}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item El usuario se crea convenientemente en la base de datos.
+			\item El usuario tiene acceso a la funcionalidad de la aplicación una vez completado el registro.
+		\end{itemize}
+		\item \textit{Prueba 2. Registro fallido. Nombre de usuario y/o dirección de correo electrónico en uso}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item El usuario no se crea en la base de datos.
+			\item El usuario no tiene acceso a la funcionalidad de la aplicación.
+			\item La aplicación informa del error.
+			\item Se permite la modificación de los campos erróneos sin necesidad de salir del proceso.
+		\end{itemize}
+		\item \textit{Prueba 3. Registro fallido. Ausencia de datos obligatorios}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item El usuario no se crea en la base de datos.
+			\item El usuario no tiene acceso a la funcionalidad de la aplicación.
+			\item La aplicación informa del error.
+			\item Se permite la modificación de los campos erróneos sin necesidad de salir del proceso.
+		\end{itemize}
+	\end{enumerate}
+	
+	\item \textbf{RF02: Loguear usuario}
+	\begin{enumerate}
+		\item \textit{Prueba 1. Autenticación satisfactoria}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item Los datos introducidos se corresponden con los almacenados en la base de datos.
+			\item El usuario tiene acceso a la funcionalidad de la aplicación una vez completado el proceso.
+		\end{itemize}
+		\item \textit{Prueba 2. Autenticación fallida. Ausencia de datos obligatorios}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item El usuario no tiene acceso a la funcionalidad de la aplicación.
+			\item La aplicación informa del error.
+			\item Se permite la modificación de los campos erróneos sin necesidad de salir del proceso.
+		\end{itemize}
+		\item \textit{Prueba 3. Autenticación fallida. Nombre de usuario erróneo}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item El usuario no tiene acceso a la funcionalidad de la aplicación.
+			\item La aplicación informa del error.
+		\end{itemize}
+		\item \textit{Prueba 4. Autenticación fallida. Contraseña errónea}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item El usuario no tiene acceso a la funcionalidad de la aplicación.
+			\item La aplicación informa del error.
+		\end{itemize}
+	\end{enumerate}
+	
+	\item \textbf{RF03: Modificar perfil}
+	\begin{enumerate}
+		\item \textit{Prueba 1. Modificación satisfactoria}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación confirma con el usuario la modificación.
+			\item La aplicación confirma la modificación.
+			\item El usuario se actualiza convenientemente, tanto en la base de datos como en la aplicación.
+		\end{itemize}
+		\item \textit{Prueba 2. Modificación fallida. El nuevo nombre de usuario o correo electrónico (campos únicos) ya están en uso}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item El usuario no se modifica ni en la base de datos ni en la aplicación.
+			\item La aplicación informa del error.
+			\item Se permite la modificación de los campos erróneos sin necesidad de salir del proceso.
+		\end{itemize}
+		\item \textit{Prueba 3. Modificación fallida. Se dejan en blanco campos obligatorios}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item El usuario no se modifica ni en la base de datos ni en la aplicación.
+			\item La aplicación informa del error.
+			\item Se permite la modificación de los campos erróneos sin necesidad de salir del proceso.
+		\end{itemize}
+		\item \textit{Prueba 4. Modificación fallida. El usuario cancela los cambios}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación vuelve a su estado anterior sin cambios.
+		\end{itemize}
+	\end{enumerate}
+	
+	\item \textbf{RF04: Borrar perfil}
+	\begin{enumerate}
+		\item \textit{Prueba 1. Borrado satisfactorio}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación confirma con el usuario el borrado, informando del saldo a devolver.
+			\item Las reservas activas del usuario se cancelan automáticamente.
+			\item La aplicación regresa a la pantalla de autenticación.
+			\item El usuario se elimina convenientemente, tanto en la base de datos como en la aplicación.
+		\end{itemize}
+		\item \textit{Prueba 2. Borrado fallido. El usuario cancela los cambios}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación vuelve a su estado anterior sin cambios.
+		\end{itemize}
+	\end{enumerate}
+	
+	\item \textbf{RF05: Ingresar saldo}
+	\begin{enumerate}
+		\item \textit{Prueba 1. Ingreso satisfactorio}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación informa al usuario de la realización de la operación.
+			\item El usuario se actualiza convenientemente, tanto en la base de datos como en la aplicación.
+		\end{itemize}
+	\end{enumerate}
+	
+	\item \textbf{RF06: Coger bicicleta}
+	\begin{enumerate}
+		\item \textit{Prueba 1. Operación satisfactoria (sin reserva de bicicleta previa)}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa al usuario de la realización de la operación.
+			\item Se realiza el pago.
+			\item El sistema se actualiza convenientemente, tanto en la base de datos como en la aplicación. Las entidades afectadas son: el Usuario y la Estación (donde entra la tarifa dependiente de la disponibilidad).
+		\end{itemize}
+		\item \textit{Prueba 2. Operación satisfactoria (con reserva de bicicleta previa)}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa al usuario de la realización de la operación.
+			\item El sistema se actualiza convenientemente, tanto en la base de datos como en la aplicación. Las entidades afectadas son: el Usuario, la Estación (donde entra la tarifa dependiente de la disponibilidad) y la Reserva (que se cancela automáticamente).
+		\end{itemize}
+		\item \textit{Prueba 3. Operación errónea. No quedan bicicletas disponibles en la estación}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa del error.
+			\item El sistema vuelve a su estado anterior sin cambios.
+		\end{itemize}
+		\item \textit{Prueba 4. Operación errónea. El usuario no tiene saldo suficiente}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa del error.
+			\item El sistema vuelve a su estado anterior sin cambios.
+		\end{itemize}
+		\item \textit{Prueba 5. Operación errónea. El usuario ya tiene cogida una bici o una reserva de bicicletas en otra estación}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa del error.
+			\item El sistema vuelve a su estado anterior sin cambios.
+		\end{itemize}
+		\item \textit{Prueba 6. Intento de coger la última bicicleta por parte de dos usuarios al mismo tiempo}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación concede la bicicleta al usuario que llegue el primero, informando al segundo del error y actualizando el sistema.
+		\end{itemize}
+	\end{enumerate}
+	
+	\item \textbf{RF07: Dejar bicicleta}
+	\begin{enumerate}
+		\item \textit{Prueba 1. Operación satisfactoria (sin reserva de anclaje previa)}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa al usuario de la realización de la operación.
+			\item El sistema se actualiza convenientemente, tanto en la base de datos como en la aplicación. Las entidades afectadas son: el Usuario, la Estación (donde entra la tarifa dependiente de la disponibilidad).
+		\end{itemize}
+		\item \textit{Prueba 2. Operación satisfactoria (con reserva de anclaje previa)}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa al usuario de la realización de la operación.
+			\item El sistema se actualiza convenientemente, tanto en la base de datos como en la aplicación. Las entidades afectadas son: el Usuario, la Estación (donde entra la tarifa dependiente de la disponibilidad) y la Reserva (que se cancela automáticamente).
+		\end{itemize}
+		\item \textit{Prueba 3. Operación errónea. No quedan anclajes disponibles en la estación}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa del error.
+			\item El sistema vuelve a su estado anterior sin cambios.
+		\end{itemize}
+		\item \textit{Prueba 4. Operación errónea. El usuario no tiene cogida una bici o tiene una reserva de anclajes en otra estación}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa del error.
+			\item El sistema vuelve a su estado anterior sin cambios.
+		\end{itemize}
+		\item \textit{Prueba 5. Intento de dejar una bicicleta en el último anclaje por parte de dos usuarios al mismo tiempo}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación concede el anclaje al usuario que llegue el primero, informando al segundo del error y actualizando el sistema.
+		\end{itemize}
+	\end{enumerate}
+	
+	\item \textbf{RF08: Reservar}
+	\begin{enumerate}
+		\item \textit{Prueba 1. Operación satisfactoria (sin distinguir entre reservas de un tipo u otro)}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa al usuario de la realización de la operación.
+			\item La cuenta atrás de tiempo máximo de reserva (30 minutos) se inicia inmediatamente y se habilita la opción de cancelación.
+			\item El sistema se actualiza convenientemente, tanto en la base de datos como en la aplicación. Las entidades afectadas son: el Usuario, la Estación y la Reserva.
+		\end{itemize}
+		\item \textit{Prueba 2. Operación fallida. El usuario trata de coger una segunda reserva del mismo tipo a una que ya tiene}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa del error.
+			\item El sistema vuelve a su estado anterior sin cambios.
+		\end{itemize}
+		\item \textit{Prueba 3. Operación fallida. El usuario trata de reservar una bici con otra cogida}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa del error.
+			\item El sistema vuelve a su estado anterior sin cambios.
+		\end{itemize}
+		\item \textit{Prueba 4. Intento de reservar el último elemento de una estación (sin importar el tipo) por parte de dos usuarios diferentes al mismo tiempo}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación concede la reserva al usuario que llegue el primero, informando al segundo del error y actualizando el sistema.
+		\end{itemize}
+	\end{enumerate}
+		
+	\item \textbf{RF08: Reservar}
+	\begin{enumerate}
+		\item \textit{Prueba 1. Operación satisfactoria (sin distinguir entre reservas de un tipo u otro)}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa al usuario de la realización de la operación.
+			\item La cuenta atrás de tiempo máximo de reserva (30 minutos) se inicia inmediatamente y se habilita la opción de cancelación.
+			\item El sistema se actualiza convenientemente, tanto en la base de datos como en la aplicación. Las entidades afectadas son: el Usuario, la Estación y la Reserva.
+		\end{itemize}
+		\item \textit{Prueba 2. Operación fallida. El usuario trata de coger una segunda reserva del mismo tipo a una que ya tiene}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa del error.
+			\item El sistema vuelve a su estado anterior sin cambios.
+		\end{itemize}
+		\item \textit{Prueba 3. Operación fallida. El usuario trata de reservar una bici con otra cogida}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa del error.
+			\item El sistema vuelve a su estado anterior sin cambios.
+		\end{itemize}
+		\item \textit{Prueba 4. Intento de reservar el último elemento de una estación (sin importar el tipo) por parte de dos usuarios diferentes al mismo tiempo}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación concede la reserva al usuario que llegue el primero, informando al segundo del error y actualizando el sistema.
+		\end{itemize}
+	\end{enumerate}
+		
+	\item \textbf{RF10: Pagar}
+	\begin{enumerate}
+		\item \textit{Prueba 1. Pago satisfactorio}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item La aplicación confirma con el usuario la realización del pago.
+			\item La aplicación informa al usuario de la realización de la operación.
+			\item El usuario se actualiza convenientemente, tanto en la base de datos como en la aplicación.
+		\end{itemize}
+		\item \textit{Prueba 2. Pago fallido. Operación cancelada}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item El sistema vuelve a su estado anterior sin cambios (se cancela la toma de bicicleta).
+		\end{itemize}
+	\end{enumerate}
+		
+	\item \textbf{RF11: Actualizar}
+	\begin{enumerate}
+		\item \textit{Prueba 1. Actualización satisfactoria}. Condiciones para superar la prueba:
+		\begin{itemize}
+			\item El sistema se actualiza convenientemente. Lo que implica que se cancelen automáticamente todas as reservas pasadas de otros usuarios (cancelación implícita a los 30 minutos), de modo que dichos recursos queden disponibles.
+			\item La aplicación informa al usuario de la realización de la operación.
+		\end{itemize}
+	\end{enumerate}
+\end{itemize}
+
+Los resultados de cada una se pueden consultar en el apéndice~\ref{app:appPesultadosPruebas}.
 
 \subsection{Pruebas de sistema}
 
@@ -115,6 +383,3 @@ La \emph{prueba del sistema} es una serie de diferentes pruebas cuyo propósito 
 \end{itemize}
 
 Dado el tipo de pruebas encuadradas en este epígrafe, y considerando la naturaleza académica del proyecto aquí presentado, las \emph{pruebas de sistema} quedan fuera del alcance de la estrategia de pruebas para la aplicación construida. Algunas de las anteriores, sin embargo, sí se pueden asimilar a ciertas \emph{pruebas de validación} antes mencionadas, como la evaluación del correcto funcionamiento en diferentes plataformas como \emph{prueba de despliegue}, o el impedimento de acceso a un usuario no registrado como \emph{prueba de seguridad}.
-
-
-

@@ -573,7 +573,7 @@ Por lo tanto, el modelo de análisis supone un puente entre la descripción del 
 \begin{figure}
 	\centering
 	\resizebox{8cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/ModeloAnalisis}}
-	\caption{El modelo de análisis como puente entre los requerimientos y el diseño del software \textit{Fuente:~\cite{Pre10}}}
+	\caption[El modelo de análisis como puente entre los requerimientos y el diseño del software]{El modelo de análisis como puente entre los requerimientos y el diseño del software \textit{Fuente:~\cite{Pre10}}}
 	\label{fig:modeloAnalisis}
 \end{figure}
 
@@ -999,14 +999,16 @@ Cada una de las tres Reglas anteriores supone una agrupación de reglas más esp
 
 Con la base anterior establecida, se ha de tener en cuenta que la IU se presentará sobre dispositivos móviles con sistema operativo Android, que presenta numerosa documentación oficial acerca del adecuado diseño de IUs\footnote{La documentación puede ser consultada en \url{https://developer.android.com/design/index.html}, a partir de~\cite{AnDev}.}. Se hace necesario, por tanto, hacer un seguimiento de estos principios específicos para lograr una IU adecuada a la naturaleza del dispositivo sobre el que se despliega el sistema.
 
-Una vez considerados los principios generales y los específicos para los elementos específicos de Android, la decisión de mayor relevancia en el diseño de IU en Android es la utilización de los llamados \emph{Fragments} (o Fragmentos). Un Fragmento representa un comportamiento específico de una porción de la IU en una \emph{Actividad}\footnote{Una Actividad es uno de los elementos básicos de cualquier aplicación Android. Sin entrar en detalles y por dar una primera aproximación, cada una de las pantallas o vistas de una aplicación suponen una Actividad. Más detalles en \url{https://developer.android.com/reference/android/app/Activity.html}, a partir de~\cite{AnDev}.}; es decir, agrupa elementos de una interfaz (tanto el diseño gráfico como sus controles lógicos asociados) de modo que estos sean reutilizables entre diversos tamaños u orientaciones de pantalla.
+Adicionalmente, la aplicación deberá soportar la ejecución en diferentes idiomas, dependiendo del lenguaje configurado en el dispositivo utilizado. Android ofrece la posibilidad de localizar todos los textos del sistema en diferentes ficheros XML, uno por idioma soportado, de modo que a la hora de ejecutar la aplicación carga aquél que se corresponde con el lenguaje del dispositivo. En caso de que no se disponga de uno, quedaría cargado el lenguaje establecido como estándar\footnote{Más detalles al respecto en \url{https://developer.android.com/training/basics/supporting-devices/languages.html} a partir de~\cite{AnDev}}. Para la aplicación descrita en este documento se consideran dos idiomas: inglés como estándar y español.
+
+Una vez considerados los principios generales y los específicos para los elementos particulares de Android, la decisión de mayor relevancia en el diseño de IU en Android es la utilización de los llamados \emph{Fragments} (o Fragmentos). Un Fragmento representa un comportamiento específico de una porción de la IU en una \emph{Actividad}\footnote{Una Actividad es uno de los elementos básicos de cualquier aplicación Android. Sin entrar en detalles y por dar una primera aproximación, cada una de las pantallas o vistas de una aplicación suponen una Actividad. Más detalles en \url{https://developer.android.com/reference/android/app/Activity.html}, a partir de~\cite{AnDev}.}; es decir, agrupa elementos de una interfaz (tanto el diseño gráfico como sus controles lógicos asociados) de modo que estos sean reutilizables entre diversos tamaños u orientaciones de pantalla.
 
 En la figura~\ref{fig:fragmentsAndroid} se aporta un esquema gráfico de la utilidad de estos elementos de diseño para una mejor comprensión.
 
 \begin{figure} [!htb]
 	\centering
 	\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/FragmentsAndroid}
-	\caption{Fragmentos en el diseño de IUs \textit{Fuente:~\cite{AnDev}}}
+	\caption[Fragmentos en el diseño de IUs]{Fragmentos en el diseño de IUs \textit{Fuente:~\cite{AnDev}}}
 	\label{fig:fragmentsAndroid}
 \end{figure}
 
@@ -1025,14 +1027,13 @@ Estas decisiones regirán la construcción de la futura interfaz gráfica, proce
 \begin{figure} [!htb]
 	\centering
 	\resizebox{11cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/disenoIU}}
-	\caption{Proceso de diseño y construcción de una IU \textit{Fuente:~\cite{Pre10}}}
+	\caption[Proceso de diseño y construcción de una IU]{Proceso de diseño y construcción de una IU \textit{Fuente:~\cite{Pre10}}}
 	\label{fig:disenoIU}
 \end{figure}
 
 El \emph{análisis de la interfaz} se centra en el perfil de los usuarios que interactuarán con el sistema; es decir, se trabaja para entender la percepción del sistema para cada clase de usuarios.
 
-La meta \emph{del diseño de la interfaz} es definir un conjunto de objetos y acciones de ésta (y sus
-representaciones en la pantalla) que permitan al usuario efectuar todas las tareas definidas cumpliendo con los requisitos de usabilidad y diseño básicos..
+La meta \emph{del diseño de la interfaz} es definir un conjunto de objetos y acciones de ésta (y sus representaciones en la pantalla) que permitan al usuario efectuar todas las tareas definidas cumpliendo con los requisitos de usabilidad y diseño básicos.
 
 La \emph{construcción de la interfaz} comienza por lo general con la creación de un prototipo que
 permite evaluar los escenarios de uso.
