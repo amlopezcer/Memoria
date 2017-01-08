@@ -60,6 +60,6 @@
 \contentsline {subsubsection}{Especificaci\IeC {\'o}n de pruebas}{63}{section*.96}
 \contentsline {subsection}{\numberline {4.2.4}Pruebas de sistema}{70}{subsection.4.2.4}
 \contentsline {chapter}{\numberline {5}Conclusiones}{73}{chapter.5}
-\contentsline {section}{\numberline {5.1}L\IeC {\'\i }neas futuras}{73}{section.5.1}
-\contentsline {chapter}{\numberline {A}Resultados de las pruebas de validaci\IeC {\'o}n}{75}{appendix.Alph1}
-\contentsline {chapter}{\numberline {B}Manual de usuario}{79}{appendix.Alph2}
+\contentsline {section}{\numberline {5.1}L\IeC {\'\i }neas futuras}{74}{section.5.1}
+\contentsline {chapter}{\numberline {A}Resultados de las pruebas de validaci\IeC {\'o}n}{77}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}Manual de usuario}{81}{appendix.Alph2}
