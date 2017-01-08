@@ -227,7 +227,7 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 			1. Seleccionar borrar perfil &\\ \hline
 			& 2. Solicitar confirmación\\ \hline
 			3. Confirmar operación &\\ \hline
-			& 4. Devolver saldo y eliminar posibles reservas \\ \hline
+			& 4. Devolver saldo y eliminar reservas \\ \hline
 			& 5. Borrar registro \\ \hline
 		\end{tabular}
 		\caption{Descripción textual de RF04: Borrar perfil}
@@ -990,16 +990,16 @@ Este apartado está dedicado, por tanto, a desarrollar brevemente la decisiones 
 En primer término, el diseño general de cualquier IU se ha de basar en las conocidas como \emph{Reglas de Oro} establecidas por Mandel~\cite{Man97}:
 
 \begin{enumerate}
-	\item{\textit{Dejar el control al usuario}}.
-	\item{\textit{Reducir la carga de memoria del usuario}}.
-	\item{\textit{Hacer que la interfaz sea consistente}}.
+	\item \textit{Dejar el control al usuario}.
+	\item \textit{Reducir la carga de memoria del usuario}.
+	\item \textit{Hacer que la interfaz sea consistente}.
 \end{enumerate}
 
 Cada una de las tres Reglas anteriores supone una agrupación de reglas más específicas y su estudio teórico queda fuera del alcance de este documento, que se limita a su nombrado para su aplicación práctica\footnote{El detalle de cada regla se puede consultar en el manual de Theo Mandel al respecto en~\cite{Man97}.}.
 
 Con la base anterior establecida, se ha de tener en cuenta que la IU se presentará sobre dispositivos móviles con sistema operativo Android, que presenta numerosa documentación oficial acerca del adecuado diseño de IUs\footnote{La documentación puede ser consultada en \url{https://developer.android.com/design/index.html}, a partir de~\cite{AnDev}.}. Se hace necesario, por tanto, hacer un seguimiento de estos principios específicos para lograr una IU adecuada a la naturaleza del dispositivo sobre el que se despliega el sistema.
 
-Adicionalmente, la aplicación deberá soportar la ejecución en diferentes idiomas, dependiendo del lenguaje configurado en el dispositivo utilizado. Android ofrece la posibilidad de localizar todos los textos del sistema en diferentes ficheros XML, uno por idioma soportado, de modo que a la hora de ejecutar la aplicación carga aquél que se corresponde con el lenguaje del dispositivo. En caso de que no se disponga de uno, quedaría cargado el lenguaje establecido como estándar\footnote{Más detalles al respecto en \url{https://developer.android.com/training/basics/supporting-devices/languages.html} a partir de~\cite{AnDev}}. Para la aplicación descrita en este documento se consideran dos idiomas: inglés como estándar y español.
+Adicionalmente, la aplicación deberá soportar la ejecución en diferentes idiomas, dependiendo del lenguaje configurado en el dispositivo utilizado. Android ofrece la posibilidad de localizar todos los textos del sistema en diferentes ficheros XML, uno por idioma soportado. A la hora de ejecutar la aplicación, carga el correspondiente con el lenguaje del dispositivo. En caso de que no se disponga de uno, quedaría cargado el lenguaje establecido como estándar\footnote{Para más detalles al respecto, consultar \url{https://developer.android.com/training/basics/supporting-devices/languages.html} a partir de~\cite{AnDev}}. Para la aplicación descrita en este documento se consideran dos idiomas: inglés (como estándar) y español.
 
 Una vez considerados los principios generales y los específicos para los elementos particulares de Android, la decisión de mayor relevancia en el diseño de IU en Android es la utilización de los llamados \emph{Fragments} (o Fragmentos). Un Fragmento representa un comportamiento específico de una porción de la IU en una \emph{Actividad}\footnote{Una Actividad es uno de los elementos básicos de cualquier aplicación Android. Sin entrar en detalles y por dar una primera aproximación, cada una de las pantallas o vistas de una aplicación suponen una Actividad. Más detalles en \url{https://developer.android.com/reference/android/app/Activity.html}, a partir de~\cite{AnDev}.}; es decir, agrupa elementos de una interfaz (tanto el diseño gráfico como sus controles lógicos asociados) de modo que estos sean reutilizables entre diversos tamaños u orientaciones de pantalla.
 
@@ -1109,9 +1109,9 @@ La capa intermedia del sistema queda soportado por el servidor de software libre
 Capa de datos de la aplicación, implementada sobre un sistema MySQL y apoyado por el entorno MySQL Workbench.
 
 \begin{itemize}
-	\item{\textbf{MySQL Server}. MySQL es un sistema de gestión de bases de datos relacional y de código abierto. Tradicionalmente se ha enfocado a aplicaciones web donde la principal preocupación es la optimización de consultas sencillas, aspecto compartido por la aplicación en desarrollo}.	
+	\item \textbf{MySQL Server}. MySQL es un sistema de gestión de bases de datos relacional y de código abierto. Tradicionalmente se ha enfocado a aplicaciones web donde la principal preocupación es la optimización de consultas sencillas, aspecto compartido por la aplicación en desarrollo.	
 	
-	\item{\textbf{MySQL Workbench}. MySQL Workbench es una herramienta visual de diseño de bases de datos que integra un conjunto de funcionalidades para facilitar la gestión de bases de datos MySQL}.
+	\item \textbf{MySQL Workbench}. MySQL Workbench es una herramienta visual de diseño de bases de datos que integra un conjunto de funcionalidades para facilitar la gestión de bases de datos MySQL.
 \end{itemize}
 
 \subsubsection{Comunicación}
@@ -1119,9 +1119,9 @@ Capa de datos de la aplicación, implementada sobre un sistema MySQL y apoyado p
 Dado su carácter transversal, se ha decidido crear un grupo separado de tecnologías relativas a la comunicación entre capas de datos, si bien cada una puede quedar implementada en una u otra capa de la arquitectura.
 
 \begin{itemize}
-	\item{\textbf{Jackson}. Librería implementada en la capa cliente para la traducción de cadenas JSON a objetos Java y viceversa. El empleo de esta librería frente a otras es debido fundamentalmente a que esta librería suele dar mejores índices de rendimiento a medida que los ficheros a traducir van creciendo, aspecto potencialmente preferible\footnote{En Internet se pueden identificar numerosos estudios de rendimiento al respecto, todos con las mismas conclusiones mencionadas, se aporta uno de ellos: \url{https://dzone.com/articles/compare-json-api}}.}.
+	\item \textbf{Jackson}. Librería implementada en la capa cliente para la traducción de cadenas JSON a objetos Java y viceversa. El empleo de esta librería frente a otras es debido fundamentalmente a que esta librería suele dar mejores índices de rendimiento a medida que los ficheros a traducir van creciendo, aspecto potencialmente preferible\footnote{En Internet se pueden identificar numerosos estudios de rendimiento al respecto, todos con las mismas conclusiones mencionadas, se aporta uno de ellos: \url{https://dzone.com/articles/compare-json-api}.}.
 	
-	\item{\textbf{RESTful}. Servicios web basados en la arquitectura REST\footnote{Arquitectura que, haciendo uso del protocolo HTTP, proporciona una API que utiliza cada uno de sus métodos (GET, POST, PUT, DELETE, etc.) para poder realizar diferentes operaciones entre la aplicación que ofrece el servicio web y el cliente. Una introducción teórica se puede encontrar en \url{https://es.wikipedia.org/wiki/Transferencia_de_Estado_Representacional.}} utilizados para el intercambio de datos entre el cliente y el servidor.
+	\item \textbf{RESTful}. Servicios web basados en la arquitectura REST\footnote{Arquitectura que, haciendo uso del protocolo HTTP, proporciona una API que utiliza cada uno de sus métodos (GET, POST, PUT, DELETE, etc.) para poder realizar diferentes operaciones entre la aplicación que ofrece el servicio web y el cliente. Una introducción teórica se puede encontrar en~\cite{WREST}.} utilizados para el intercambio de datos entre el cliente y el servidor.
 		
 	Se ha decidido utilizar este tipo de servicios web frente a otros como SOAP por varias razones:
 	\begin{itemize}
@@ -1129,11 +1129,16 @@ Dado su carácter transversal, se ha decidido crear un grupo separado de tecnolo
 		\item \textit{Amplitud de formatos}. REST permite multitud de formatos, mientras que SOAP sólo acepta XML. Aspecto de relevancia considerando, además, que JSON es más eficiente y sencillo que XML para el sistema en desarrollo, como ya se comentó en el apartado~\ref{subsec:disenoInterfaces}.
 		\item \textit{Rendimiento y escalabilidad}. REST presenta mejores métricas de rendimiento y escalabilidad respecto a SOAP.
 	\end{itemize}
-	Las características anteriores han hecho que REST se imponga a SOAP como servicio web dominante. De hecho, compañías como Yahoo o Google hacen uso de REST para todos sus servicios.}
+	Las características anteriores han hecho que REST se imponga a SOAP como servicio web dominante. De hecho, compañías como Yahoo o Google hacen uso de REST para todos sus servicios.
 
-	\item{\textbf{MySQL Connector / JDBC}. Conector estándar para la comunicación entre el servidor y la base de datos utilizando la API \emph{Java Database Connectivity} (JDBC)\footnote{API que permite la ejecución de operaciones sobre bases de datos desde el lenguaje de programación Java utilizando el dialecto SQL, más detalles en~\cite{OraDB}.}.}
-
+	\item \textbf{MySQL Connector / JDBC}. Conector estándar para la comunicación entre el servidor y la base de datos utilizando la API \emph{Java Database Connectivity} (JDBC)\footnote{API que permite la ejecución de operaciones sobre bases de datos desde el lenguaje de programación Java utilizando el dialecto SQL, más detalles en~\cite{OraDB}.}.
 \end{itemize}
+
+\subsubsection{Controlador de Versiones}
+
+Si bien no se trata de una herramienta directamente relacionada con el desarrollo de la aplicación, los controladores de versiones suponen un software imprescindible para cualquier desarrollo mínimamente complejo.
+
+El software seleccionado ha sido \emph{Git}, un CVS seleccionado por su eficiencia, sencillez y por su ampliación en la plataforma \emph{Github}, una plataforma colaborativa ampliamente extendida y utilizada\footnote{En este documento no se busca entrar en más detalles sobre estas soluciones, para más detalles se puede consultar~\cite{Git} y~\cite{GitHb}.}.
 
 \subsection{Distribución física}
 
@@ -1149,7 +1154,7 @@ En la figura ~\ref{fig:diagramaDespliegue} se esquematiza la distribución menci
 \end{figure}
 
 \begin{itemize}
-	\item{\textbf{Nodo Cliente}. Representa la capa de presentación del sistema, implementado en el dispositivo Android. Este nodo recoge la arquitectura de la aplicación modelada anteriormente en la figura ~\ref{fig:diagramaClasesDisenoCliente} y es el utilizado por el usuario para interactuar}.	
-	\item{\textbf{Nodo Servidor}. La capa intermedia de la arquitectura, desplegada sobre GlassFish. Recoge la arquitectura del servidor modelada en la figura~\ref{fig:diagramaClasesDisenoServidor} y supone la capa que comunica la capa de presentación con la de datos. La comunicación con el cliente se realiza mediante el protocolo HTTP con los servicios web RESTful y el lenguaje JSON}.
-	\item{\textbf{Nodo Base de Datos}. La capa de datos soportada por el sistema gestor MySQL. La comunicación con el servidor se realiza mediante los conectores estándar MySQL Connector y la API JDBC}.
+	\item \textbf{Nodo Cliente}. Representa la capa de presentación del sistema, implementado en el dispositivo Android. Este nodo recoge la arquitectura de la aplicación modelada anteriormente en la figura ~\ref{fig:diagramaClasesDisenoCliente} y es el utilizado por el usuario para interactuar.	
+	\item \textbf{Nodo Servidor}. La capa intermedia de la arquitectura, desplegada sobre GlassFish. Recoge la arquitectura del servidor modelada en la figura~\ref{fig:diagramaClasesDisenoServidor} y supone la capa que comunica la capa de presentación con la de datos. La comunicación con el cliente se realiza mediante el protocolo HTTP con los servicios web RESTful y el lenguaje JSON.
+	\item \textbf{Nodo Base de Datos}. La capa de datos soportada por el sistema gestor MySQL. La comunicación con el servidor se realiza mediante los conectores estándar MySQL Connector y la API JDBC.
 \end{itemize}

@@ -46,18 +46,19 @@
 \contentsline {subsubsection}{Servidor}{53}{section*.85}
 \contentsline {subsubsection}{Base de datos}{54}{section*.86}
 \contentsline {subsubsection}{Comunicaci\IeC {\'o}n}{54}{section*.87}
-\contentsline {subsection}{\numberline {3.4.3}Distribuci\IeC {\'o}n f\IeC {\'\i }sica}{55}{subsection.3.4.3}
+\contentsline {subsubsection}{Controlador de Versiones}{55}{section*.88}
+\contentsline {subsection}{\numberline {3.4.3}Distribuci\IeC {\'o}n f\IeC {\'\i }sica}{56}{subsection.3.4.3}
 \contentsline {chapter}{\numberline {4}Pruebas}{57}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introducci\IeC {\'o}n}{57}{section.4.1}
 \contentsline {section}{\numberline {4.2}Estrategia de pruebas}{58}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Pruebas de unidad}{59}{subsection.4.2.1}
-\contentsline {subsubsection}{Cliente - Android}{59}{section*.90}
-\contentsline {subsubsection}{Servidor - GlassFish}{60}{section*.92}
-\contentsline {subsubsection}{Base de datos - MySQL}{61}{section*.94}
+\contentsline {subsubsection}{Cliente - Android}{59}{section*.91}
+\contentsline {subsubsection}{Servidor - GlassFish}{60}{section*.93}
+\contentsline {subsubsection}{Base de datos - MySQL}{61}{section*.95}
 \contentsline {subsection}{\numberline {4.2.2}Pruebas de integraci\IeC {\'o}n}{62}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Pruebas de validaci\IeC {\'o}n}{62}{subsection.4.2.3}
-\contentsline {subsubsection}{Entorno de pruebas}{62}{section*.95}
-\contentsline {subsubsection}{Especificaci\IeC {\'o}n de pruebas}{63}{section*.96}
+\contentsline {subsubsection}{Entorno de pruebas}{62}{section*.96}
+\contentsline {subsubsection}{Especificaci\IeC {\'o}n de pruebas}{63}{section*.97}
 \contentsline {subsection}{\numberline {4.2.4}Pruebas de sistema}{70}{subsection.4.2.4}
 \contentsline {chapter}{\numberline {5}Conclusiones}{73}{chapter.5}
 \contentsline {section}{\numberline {5.1}L\IeC {\'\i }neas futuras}{74}{section.5.1}
