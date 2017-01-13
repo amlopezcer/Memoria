@@ -348,14 +348,10 @@ A continuación se listan las pruebas planteadas por cada requisito funcional de
 	\begin{enumerate}
 		\item \textit{Prueba 1. Pago satisfactorio}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item La aplicación confirma con el usuario la realización del pago.
-			\item La aplicación informa al usuario de la realización de la operación.
-			\item El usuario se actualiza convenientemente, tanto en la base de datos como en la aplicación.
+			\item El saldo disponible del usuario se actualiza convenientemente, tanto en la base de datos como en la aplicación.
 		\end{itemize}
-		\item \textit{Prueba 2. Pago fallido. Operación cancelada}. Condiciones para superar la prueba:
-		\begin{itemize}
-			\item El sistema vuelve a su estado anterior sin cambios (se cancela la toma de bicicleta).
-		\end{itemize}
+		
+		Dado el carácter académico de la aplicación, el \emph{pago} sólo implica la actualización del saldo disponible para el usuario dentro del sistema, con lo que no se considera la posibilidad de que éste no se realice correctamente.
 	\end{enumerate}
 		
 	\item \textbf{RF11: Actualizar}
