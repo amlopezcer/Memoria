@@ -1,3 +1,201 @@
 \chapter{Manual de usuario}
 
-% Aquí podemos poner un manual de usuario. Ponerlo por requisito funcional y finalmente meter una sección de cosas adicionales: vistas de lista y gráfico, configuración de conexiones, superusuario.
+\subsubsection{Configuración inicial y pantalla inicial}
+
+Si acabas de instalar la aplicación, se solicitará automáticamente la dirección del servidor para poder conectarse (esta información puede modificarse posteriormente):
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{12cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoManual/01_inicio_01_conexion}}
+	\caption{Configuración inicial de la conexión}
+	\label{fig:confIniCon}
+\end{figure}
+
+A partir de este punto, tendrás acceso a la pantalla inicial de la aplicación, desde la que podrás registrar un nuevo usuario o iniciar sesión con uno existente.
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoManual/01_inicio_02_completa}}
+	\caption{Pantalla inicial de la aplicación}
+	\label{fig:pantallaInicial}
+\end{figure}
+
+\FloatBarrier
+\subsubsection{Registro de usuarios}
+
+Mediante el botón ``Registrarse'' puedes acceder al registro de nuevos usuarios, donde se solicitarán una serie de datos de obligada cumplimentación. Una vez completo el registro, recibirás un pequeño regalo...\smiley:
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{14.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoManual/02_registro_01_completo}}
+	\caption{Registro de nuevos usuarios}
+	\label{fig:registroUsuarios}
+\end{figure}
+
+A partir de este punto, tendrás acceso a operar con la aplicación.
+
+\FloatBarrier
+\subsubsection{Inicio de sesión}
+
+Mediante el botón ``Iniciar Sesión'' los usuarios registrados pueden acceder a la aplicación, se solicitará el nombre de usuario y la contraseña seleccionados en la etapa de registro:
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{12cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoManual/03_inicioSesion_01_completo}}
+	\caption{Inicio de sesión}
+	\label{fig:inicioSesion}
+\end{figure}
+
+\FloatBarrier
+\subsubsection{Pantalla principal de la aplicación: vistas y opciones adicionales}
+
+Una vez iniciada sesión, se accede a la pantalla principal de la aplicación: el mapa con la estaciones disponibles, que presentan cuatro códigos de colores posibles:
+
+\begin{itemize}
+	\item \textbf{\color{red} Rojo}. No quedan bicicletas disponibles en la estación.
+	\item \textbf{\color{yellow} Amarillo}. Quedan menos del 50\% de bicicletas disponibles en la estación. En las estaciones con este nivel de disponibilidad la tarifa es el doble de lo habitual.
+	\item \textbf{\color{green} Verde}. Quedan más del 50\% de bicicletas disponibles en la estación.
+	\item \textbf{\color{blue} Azul}. Tienes una reserva en esta estación.
+\end{itemize}
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{7cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoManual/04_pantallaPrincipal_01_completo}}
+	\caption{Pantalla principal de la aplicación}
+	\label{fig:pantallaPrincipal}
+\end{figure}
+
+\FloatBarrier
+El estado concreto de una estación (bicis y anclajes disponibles y tarifa actual) se puede consultar mediante su selección:
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{7cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoManual/04_pantallaPrincipal_02_detalleEstacion}}
+	\caption{Detalle de una estación}
+	\label{fig:detalleEstacion}
+\end{figure}
+
+Mediante los botones superiores se tiene acceso a otras vistas del parque de bicicletas y a opciones adicionales:
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{7.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoManual/04_pantallaPrincipal_03_actionBar}}
+	\caption{Diferentes vistas y opciones}
+	\label{fig:vistasActionBar}
+\end{figure}
+
+El primero ofrece un listado desplegable con el detalle de cada estación. Aporta una vista diferente del conjunto de bicicletas que permite una búsqueda más sencilla y una visión más completa y detallada de cada una.
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoManual/05_pantallaListado_01_completo}}
+	\caption{Listado detallado del conjunto de estaciones}
+	\label{fig:listadoEstaciones}
+\end{figure}
+
+El gráfico permite conocer el estado global del parque de estaciones, tanto para las bicicletas como para los anclajes, mostrando el porcentaje sobre el total de recursos disponibles, ocupados o reservados.
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{13cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoManual/06_pantallaGrafico_01_completo}}
+	\caption{Estado global del parque de estaciones}
+	\label{fig:graficoEstadoGlobal}
+\end{figure}
+
+\FloatBarrier
+Finalmente, el menú desplegable incluye las siguiente opciones adicionales:
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{7cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoManual/04_pantallaPrincipal_04_actionBarDesplegable}}
+	\caption{Menú desplegable y opciones adicionales}
+	\label{fig:menuDesplegable}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Actualizar}. Actualiza el estado global del parque de estaciones. Si bien la aplicación se actualiza automáticamente con cada operación, esta opción habilita una actualización explícita. Señalar que las operaciones de actualización sobre las pantallas del listado de estaciones y el gráfico son análogas a esta.
+	\item \textbf{Cuenta}. Acceso a la cuenta de usuario. Supone una opción adicional al acceso directo mostrado en la figura~\ref{fig:pantallaPrincipal}.
+	\item \textbf{Configuración}. Acceso a diferentes configuraciones del sistema, más adelante en este manual se comenta esta opción en mayor detalle.
+	\item \textbf{Cerrar sesión}. Mediante una confirmación adicional por parte del usuario, se cierra la sesión y se vuelve a la pantalla de inicio de sesión.
+\end{itemize}
+
+\subsubsection{Operar con bicicletas y anclajes}
+
+Mediante la selección de una estación se muestra su estado en ese momento y se habilitan las diferentes opciones sobre la misma: coger una bicicleta, dejar una bicicleta y reservar una bicicleta y/o un anclaje.
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{6cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoManual/07_pantallaOperaciones_01_opciones}}
+	\caption{Opciones a la hora de operar con una estación}
+	\label{fig:opcionesEstacion}
+\end{figure}
+
+De este modo, si cogemos una bici, se actualizará nuestra barra de estado, además del saldo disponible:
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{6cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoManual/07_pantallaOperaciones_02_biciCogida}}
+	\caption{Actualización de la barra de estado al coger una bici}
+	\label{fig:barraEstadoBiciCogida}
+\end{figure}
+
+\FloatBarrier
+Barra de estado que volverá a su estado inicial cuando dejemos la bicicleta.
+
+Por su parte, al seleccionar la reserva de recursos, se habilitará un diálogo que permitirá seleccionar el elemento que queramos reservar (sólo aparecerán habilitadas para su selección las opciones posibles para el usuario dadas las restricciones consideradas en esta operación, ver la especificación del requisito \emph{RF08 - Reservar} de la sección~\ref{sec:secERS} para más detalles). Una vez completemos la reserva, la estación afectada quedará marcada en color azul, para una mejor identificación.
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{12cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoManual/07_pantallaOperaciones_03_reserva}}
+	\caption{Reserva de bicicleta y anclajes}
+	\label{fig:reservaBicisAnclajes}
+\end{figure}
+
+\subsubsection{Cuenta de usuario}
+
+Una vez hayamos accedido a la cuenta de usuario mediante alguna de las opciones mencionada, se habilitan las siguientes opciones:
+
+\begin{itemize}
+	\item \textbf{Consulta y cancelación de reservas}. La cancelación requiere de una confirmación adicional por parte del usuario.
+	\item \textbf{Consulta e ingreso de saldo}.
+	\item \textbf{Consulta, edición y borrado del perfil de usuario}. La edición de perfil supone una actividad similar al registro de usuario, mientras que el borrado de la cuenta requiere de una confirmación adicional por parte del usuario.
+\end{itemize}
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{12cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoManual/08_pantallaCuenta_01_completa}}
+	\caption{Cuenta de usuario}
+	\label{fig:cuentaUsuario}
+\end{figure}
+
+\subsubsection{Configuración}
+
+Mediante el acceso a esta pantalla a través del menú de opciones adicionales comentado antes, se habilitan las siguientes opciones:
+
+\begin{itemize}
+	\item \textbf{Cambiar los datos de conexión con el servidor}. Análogo al procedimiento comentado al inicio de este manual.
+	\item \textbf{Habilitar el modo ``superusuario''}. Mediante la activación de este modo no se comprueban restricciones de usuario a la hora de coger o dejar bicis (se siguen comprobando las restricciones habituales para la reserva de recursos y las relativas a las estaciones, es decir, si una estación no tiene bicis, no se pueden coger). El objetivo de esta opción es el desarrollo de pruebas sobre el software de un modo más ágil.
+\end{itemize}
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{6cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoManual/09_Configuraciones_01_completa}}
+	\caption{Configuraciones posibles}
+	\label{fig:configuracionesPosibles}
+\end{figure}
+
+En el caso de activar el modo ``superusuario'', la barra de estado informará de ello:
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{6cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoManual/09_Configuraciones_02_super}}
+	\caption{``Superusuario'' activado}
+	\label{fig:superusuarioActivado}
+\end{figure}
+
+En el Anexo~\ref{app:faq} se recoge un conjunto de incidencias comunes a la hora de operar con la aplicación que complementan este documento.
+
+
+
+
+

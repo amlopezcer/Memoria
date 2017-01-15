@@ -1,0 +1,43 @@
+\chapter{FAQs}
+\label{app:faq}
+
+Se recoge un conjunto de incidencias comunes en el uso básico de la aplicación con su posible resolución, partiendo del supuesto que los servidores de aplicación y base de datos están correctamente configurados y conectados entre sí, aunque se aporta un apunte al respecto.
+
+\begin{itemize}
+	\item \textit{Si bien antes no había problema, ahora no soy capaz de conectar el servidor de aplicación con la base de datos, no siendo posible desplegar el proyecto sobre GlassFish}. Es posible que se haya realizado un cambio de configuración o seguridad sobre la base de datos o sobre los datos de conexión del servidor sobre ella. Este error es típico si se ha realizado un cambio de contraseña para el acceso a la base de datos. Asegura los siguientes puntos:
+	
+	\begin{itemize}
+		\item Que el servidor de base de datos está ejecutándose.
+		\item Asegurar que los datos de conexión con la base de datos configurados (IP (localhost si están el mismo equipo), puerto (3306 típicamente para MySQL), contraseña (la utilizada para el acceso a la base), etc.) están correctamente establecidos, tanto en GlassFish como en el fichero \emph{glassfish-resources.xml} del proyecto desplegado sobre el servidor. 
+		
+		Es importante, por tanto, notar que ante un cambio en la contraseña para el acceso a la base de datos, se ha de modificar este dato tanto en la conexión establecida en GlassFish con la base como en el fichero mencionado del proyecto que se quiera desplegar sobre el servidor. El cambio es doble, si se omite uno de ellos, no se producirá la conexión.
+	\end{itemize}
+	
+	
+	\item \textit{Una vez introducidos los datos de conexión, no puedo operar con la aplicación, que me informa de que no se ha podido establecer la conexión con el servidor}.
+	
+	Es posible que no se esté efectuando correctamente la conexión entre la aplicación y el servidor, asegura los siguientes puntos:
+	\begin{itemize}
+		\item Que la IP y el puerto son correctos, es decir, se corresponden con los utilizados por el servidor de aplicación GlassFish.
+		\item Que el servidor de aplicación está ejecutándose.
+		\item Que el firewall de tu equipo no está bloqueando la conexión. En tal caso, añade una excepción, tanto de entrada como de salida, para GlassFish en el puerto en el que esté escuchando (típicamente el 8080).
+	\end{itemize}
+	
+	\item \textit{Al registrar un usuario, la aplicación no me deja porque el nombre de usuario o dirección de correo no están disponibles}. Hay otro usuario registrado con ese nombre de usuario o dirección de correo, debes introducir uno diferente.
+	
+	\item \textit{Al iniciar sesión, la aplicación no me lo permite por no encontrar el usuario o por contraseña incorrecta}. Asegúrate de que el nombre de usuario y contraseña introducidos para el inicio de sesión coinciden con los registrados.
+	
+	\item \textit{A pesar de estar correctamente conectado, no puedo coger una bici}. Es posible que estés incurriendo en alguna de las restricciones impuestas para esta operación, ver la especificación del requisito \emph{RF06 - Coger bicicleta} de la sección~\ref{sec:secERS} para más detalles.
+	
+	\item \textit{A pesar de estar correctamente conectado, no puedo dejar una bici}. Es posible que estés incurriendo en alguna de las restricciones impuestas para esta operación, ver la especificación del requisito \emph{RF07 - Dejar bicicleta} de la sección~\ref{sec:secERS} para más detalles.
+	
+	\item \textit{A pesar de estar correctamente conectado, no puedo reservar una bicicleta y/o anclaje}. Es posible que estés incurriendo en alguna de las restricciones impuestas para esta operación, ver la especificación del requisito \emph{RF08 - Reservar} de la sección~\ref{sec:secERS} para más detalles.
+	
+	\item \textit{Tenía una reserva que no he cancelado y ha desaparecido a pesar de que no he hecho uso de ella}. Posiblemente habrán pasado más de 30 minutos desde la reserva. Este tiempo es el máximo establecido para hacer uso de la reserva, una vez superado se cancela automáticamente.
+	
+	\item \textit{No puedo borrar mi perfil}. Es posible que tengas una bicicleta cogida, debes dejarla en una estación antes de borrar el perfil.
+	
+	\item \textit{He borrado mi cuenta, ¿puedo recuperarla?}. No, el borrado de cuenta, una vez confirmado por el usuario, es definitivo, con lo que el acceso a la aplicación sólo se puede realizar registrando uno nuevo.
+	
+\end{itemize}
+

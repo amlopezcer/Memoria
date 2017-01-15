@@ -8,7 +8,7 @@ Las pruebas representan, por tanto, la última oportunidad para valorar la calid
 
 Por tanto, el software se prueba para descubrir errores que se cometieron de manera inadvertida conforme se diseñó y construyó.
 
-Las pruebas de software forman parte de un tema más amplio conocido como verificación y validación. La \emph{verificación} se refiere al conjunto de tareas que garantizan que el software implementa correctamente una función específica. La \emph{validación} es un conjunto diferente de tareas que aseguran que el software que se construye sigue los requerimientos establecidos en las etapas iniciales. La estrategia de pruebas se deberá enfocar a cubrir ambos aspectos: el sistema ha de funcionar adecuadamente de acuerdo a las funciones marcadas en la ERS (sección~\ref{sec:secERS}).
+Las pruebas de software forman parte de un tema más amplio conocido como verificación y validación. La \emph{verificación} se refiere al conjunto de tareas que garantizan que el software implementa correctamente una función específica. La \emph{validación} es un conjunto diferente de tareas que aseguran que el software que se construye sigue los requerimientos establecidos en las etapas iniciales. La estrategia de pruebas, por tanto, se deberá enfocar para cubrir ambos aspectos: el sistema ha de funcionar adecuadamente de acuerdo a las funciones marcadas en la ERS (sección~\ref{sec:secERS}).
 
 \section{Estrategia de pruebas}
 
@@ -23,9 +23,9 @@ Dentro del contexto de la Ingeniería del Software, las pruebas suponen una seri
 	\label{fig:estrategiaPruebas}
 \end{figure}
 
-Inicialmente, las pruebas se enfocan en cada componente de manera individual, son las \emph{pruebas de unidad} y garantizan que todo módulo de software funciona adecuadamente como unidad, de ahí el nombre. A continuación, los componentes deben ensamblarse e integrarse para formar el paquete de software completo. La \emph{prueba de integración} aborda los conflictos asociados con los problemas de verificación y construcción de programas. Después de integrar (construir) el software, se realiza una serie de \emph{pruebas de orden superior}, donde se identifican las \emph{pruebas de validación}, que proporcionan la garantía final de que el software cumple con todos los requerimientos funcionales y de compartimento abordados en la fase de requisitos, y las \emph{pruebas del sistema}, para verificar que todos los elementos se mezclan de manera adecuada y que se logra el funcionamiento/rendimiento global del sistema deseado.
+Inicialmente, las pruebas se enfocan en cada componente de manera individual, son las \emph{pruebas de unidad} y garantizan que todo módulo de software funciona adecuadamente como unidad, de ahí el nombre. A continuación, los componentes deben ensamblarse e integrarse para formar el paquete software completo. La \emph{prueba de integración} aborda los conflictos asociados con los problemas de verificación y construcción de programas. Después de integrar (construir) el software, se realiza una serie de \emph{pruebas de orden superior}, donde se identifican las \emph{pruebas de validación}, que proporcionan la garantía final de que el software cumple con todos los requerimientos funcionales y de compartimento abordados en la fase de requisitos, y las \emph{pruebas del sistema}, para verificar que todos los elementos se mezclan de manera adecuada y que se logra el funcionamiento/rendimiento global del sistema deseado.
 
-En este punto, cabe mencionar los atributos con que cuenta una ``buena'' prueba~\cite{Kan99}:
+En este punto, cabe mencionar los atributos con que cuenta una ``buena'' prueba de software~\cite{Kan99}:
 
 \begin{itemize}
 	\item \textit{Una buena prueba tiene una alta probabilidad de encontrar un error}. Para ello, es conveniente que el examinador conozca el software para saber dónde podría fallar y probar dichos caminos.
@@ -38,11 +38,11 @@ Considerando el proceso descrito y las características mencionadas, en los apar
 
 \subsection{Pruebas de unidad}
 
-La \emph{prueba de unidad} enfoca los esfuerzos de verificación en la unidad más pequeña del diseño de software: el componente o módulo de software, enfocándose en la lógica de procesamiento interno y de las estructuras de datos dentro de sus límites.
+La \emph{prueba de unidad} centra los esfuerzos de verificación en la unidad más pequeña del diseño de software: el componente o módulo de software, enfocándose en la lógica de procesamiento interno y de las estructuras de datos dentro de sus límites.
 
 Las validaciones se han realizado siguiendo principalmente los métodos de \emph{caja blanca}, filosofía de diseño de casos de prueba que~\cite{Pre10}: 1) garanticen que todas las rutas independientes dentro de un módulo se revisaron al menos una vez, 2) revisen todas las decisiones lógicas en sus lados verdadero y falso, 3) ejecuten todos los bucles en sus fronteras y dentro de sus fronteras operativas y 4) revisen estructuras de datos internas para garantizar su validez.
 
-Sin entras en detalles concretos, a continuación se mencionan las herramientas fundamentales utilizadas para realizar estas pruebas sobre los diferentes elementos del sistema.
+Sin entrar en detalles concretos, a continuación se mencionan las herramientas fundamentales utilizadas para realizar estas pruebas sobre los diferentes elementos del sistema.
 
 \subsubsection{Cliente - Android}
 
@@ -63,7 +63,7 @@ Adicionalmente a Logcat, y desde un punto de vista de abstracción mayor, tambi�
 
 El servidor queda programado en Java y como herramientas básicas de depuración se utilizaron las habituales escrituras en línea de comandos mediante la clase \emph{System} y sus atributos \emph{out} y \emph{err}\footnote{Más detalles en \url{https://docs.oracle.com/javase/7/docs/api/java/lang/System.html}, a partir de~\cite{DocOr}}, de modo que se pudiese hacer un seguimiento paso a paso del estado del elementos contenidos en esta capa de datos.
 
-Adicionalmente, para la prueba de los diferentes módulos implementados en el servidor de manera aislada a la aplicación móvil, se ha recurrido a un complemento del navegador web llamado \emph{RESTClient}, un depurador para servicios web RESTful que permite realizar consultas tal y como las haría la aplicación. En la figura~\ref{fig:RESTClient} se aporta una captura de pantalla del depurador.
+Adicionalmente, para la prueba de los diferentes módulos implementados en el servidor de manera aislada a la aplicación móvil, se ha recurrido a un complemento del navegador web Mozilla Firefox llamado \emph{RESTClient}, un depurador para servicios web RESTful que permite realizar consultas tal y como las haría la aplicación. En la figura~\ref{fig:RESTClient} se aporta una captura de pantalla del depurador.
 
 \begin{figure}
 	\centering
@@ -78,20 +78,20 @@ Este tipo de prueba se podría considerar una prueba de mayor nivel al incluir t
 
 De manera individual, sobre la base de datos se han realizado consultas SQL directas mediante de la herramienta \emph{MySQLWorkbench}, mencionada en la sección~\ref{subsec:herramientasImp}. 
 
-Cabe señalar que este tipo de pruebas sobre la capa de base de datos pueden no tener tanto interés como otras, puesto que dicha capa carece de lógica implementada para ser probada. El objetivo principal es el de probar la precisión y la integridad de los datos para asegurar que se almacenen, actualicen y recuperen de manera adecuada.
+Cabe señalar que este tipo de pruebas sobre la capa de base de datos pueden no tener tanto interés como otras, puesto que dicha capa carece de lógica implementada para ser probada. El objetivo principal es el de ejercitar la precisión y la integridad de los datos para asegurar que se almacenen, actualicen y recuperen de manera adecuada.
 
 \subsection{Pruebas de integración}
 
 El objetivo de las \emph{pruebas de integración} es tomar los componentes probados de manera individual y construir la arquitectura señalada en la etapa de diseño. Dos han sido los enfoques fundamentales que se han seguido durante el desarrollo de este tipo de pruebas:
 
 \begin{enumerate}
-	\item \textbf{Integración ascendente}. Enfoque principal seguido, se comienza por la verificación de módulo atómicos y se van integrando y construyendo hacia niveles superiores.
+	\item \textbf{Integración ascendente}. Enfoque principal, se comienza por la verificación de módulo atómicos y se van integrando y construyendo hacia niveles superiores.
 	\item \textbf{Pruebas de humo}. Enfoque secundario al anterior utilizado para agregados o arreglos no previstos, supone una integración constante según la cual el software se reconstruye (con el agregado de nuevos componentes) y se prueba día a día.
 \end{enumerate}
 
 Los métodos para realizar las verificaciones se han basado principalmente en las técnicas de \emph{caja negra}, enfocadas en los requerimientos funcionales del software. Es decir, las pruebas de caja negra intentan encontrar errores en las categorías siguientes~\cite{Pre10}: 1) funciones incorrectas o faltantes, 2) errores de interfaz, 3) errores en las estructuras de datos o en el acceso a bases de datos externas, 4) errores de comportamiento o rendimiento y 5) errores de inicialización y terminación.
 
-Las herramientas utilizadas para completar este tipo de pruebas son las mismas que las empleadas en las pruebas de unidad, la diferencia está en que esté nivel tiene un enfoque más amplio, considerando los componentes y sus interrelaciones.
+Las herramientas utilizadas para completar este tipo de pruebas son las mismas que las empleadas en las pruebas de unidad, la diferencia radica en que esté nivel tiene un enfoque más amplio, considerando los componentes y sus interrelaciones.
 
 \subsection{Pruebas de validación}
 \label{subsec:pruebasValidacion}
@@ -109,16 +109,16 @@ La batería de pruebas se ha ejecutado sobre varios dispositivos o plataformas d
 \begin{itemize}
 	\item Emulador Android para PC, API 22 (Versión 5.1 - \textit{Lollipop}).
 	\item Dispositivo móvil, API 21 (Versión 5.0 - \textit{Lollipop}).
-	\item Dispositivo móvil, API XX (Versión X.X - \textit{xxxxx}). -> JORGE
+	\item Dispositivo móvil, API 23 (Versión 6.0 - \textit{Marshmallow}).
 \end{itemize}
 
 También se ha involucrado a varios usuarios con diferentes niveles de conocimiento en el ámbito tecnológico para evaluar la adaptación del sistema a cada uno. En este sentido, se han desarrollado tanto \emph{pruebas alfa}, aquellas ejecutadas en un ambiente controlado y en presencia del desarrollador, como \emph{pruebas beta}, ejecutadas sin presencia del desarrollador en un ambiente de ``usuario final''.
 
-Dada el entorno presentado, a continuación se describen las pruebas realizadas y sus resultados; si bien, por simplicidad, no se hará distinción entre dispositivos, usuarios o tipos de prueba, presentando cada una de manera única.
+Dado el entorno presentado, a continuación se describen las pruebas realizadas y sus resultados; si bien, por simplicidad, no se hará distinción entre dispositivos, usuarios o tipos de prueba, presentando cada una de manera única.
 
 \subsubsection{Especificación de pruebas}
 
-A continuación se listan las pruebas planteadas por cada requisito funcional del sistema. Por cada una se describen las condiciones que se han de cumplir para considerar el test como superado.
+Se listan las pruebas planteadas por cada requisito funcional del sistema. Por cada una se describen las condiciones que se han de cumplir para considerar el test como superado.
 
 \begin{itemize}
 	\item \textbf{RF01: Registrar usuario}
@@ -183,7 +183,7 @@ A continuación se listan las pruebas planteadas por cada requisito funcional de
 			\item La aplicación informa del error.
 			\item Se permite la modificación de los campos erróneos sin necesidad de salir del proceso.
 		\end{itemize}
-		\item \textit{Prueba 3. Modificación fallida. Se dejan en blanco campos obligatorios}. Condiciones para superar la prueba:
+		\item \textit{Prueba 3. Modificación fallida. Ausencia de datos obligatorios}. Condiciones para superar la prueba:
 		\begin{itemize}
 			\item El usuario no se modifica ni en la base de datos ni en la aplicación.
 			\item La aplicación informa del error.
@@ -199,7 +199,7 @@ A continuación se listan las pruebas planteadas por cada requisito funcional de
 	\begin{enumerate}
 		\item \textit{Prueba 1. Borrado satisfactorio}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item La aplicación confirma con el usuario el borrado, informando del saldo a devolver.
+			\item La aplicación confirma con el usuario el borrado.
 			\item Las reservas activas del usuario se cancelan automáticamente.
 			\item La aplicación regresa a la pantalla de autenticación.
 			\item El usuario se elimina convenientemente, tanto en la base de datos como en la aplicación.
@@ -223,32 +223,33 @@ A continuación se listan las pruebas planteadas por cada requisito funcional de
 	\begin{enumerate}
 		\item \textit{Prueba 1. Operación satisfactoria (sin reserva de bicicleta previa)}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
-			\item La aplicación informa al usuario de la realización de la operación.
+			\item La aplicación informa al usuario del estado de la estación antes de que pueda completar la operación.
 			\item Se realiza el pago.
+			\item La aplicación informa al usuario de la realización de la operación.
 			\item El sistema se actualiza convenientemente, tanto en la base de datos como en la aplicación. Las entidades afectadas son: el Usuario y la Estación (donde entra la tarifa dependiente de la disponibilidad).
 		\end{itemize}
 		\item \textit{Prueba 2. Operación satisfactoria (con reserva de bicicleta previa)}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa al usuario del estado de la estación antes de que pueda completar la operación.
+			\item Se realiza el pago.
 			\item La aplicación informa al usuario de la realización de la operación.
 			\item El sistema se actualiza convenientemente, tanto en la base de datos como en la aplicación. Las entidades afectadas son: el Usuario, la Estación (donde entra la tarifa dependiente de la disponibilidad) y la Reserva (que se cancela automáticamente).
 		\end{itemize}
 		\item \textit{Prueba 3. Operación errónea. No quedan bicicletas disponibles en la estación}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa al usuario del estado de la estación antes de que pueda completar la operación.
 			\item La aplicación informa del error.
 			\item El sistema vuelve a su estado anterior sin cambios.
 		\end{itemize}
 		\item \textit{Prueba 4. Operación errónea. El usuario no tiene saldo suficiente}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa al usuario del estado de la estación antes de que pueda completar la operación.
 			\item La aplicación informa del error.
 			\item El sistema vuelve a su estado anterior sin cambios.
 		\end{itemize}
 		\item \textit{Prueba 5. Operación errónea. El usuario ya tiene cogida una bici o una reserva de bicicletas en otra estación}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa al usuario del estado de la estación antes de que pueda completar la operación.
 			\item La aplicación informa del error.
 			\item El sistema vuelve a su estado anterior sin cambios.
 		\end{itemize}
@@ -262,25 +263,25 @@ A continuación se listan las pruebas planteadas por cada requisito funcional de
 	\begin{enumerate}
 		\item \textit{Prueba 1. Operación satisfactoria (sin reserva de anclaje previa)}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa al usuario del estado de la estación antes de que pueda completar la operación.
 			\item La aplicación informa al usuario de la realización de la operación.
 			\item El sistema se actualiza convenientemente, tanto en la base de datos como en la aplicación. Las entidades afectadas son: el Usuario, la Estación (donde entra la tarifa dependiente de la disponibilidad).
 		\end{itemize}
 		\item \textit{Prueba 2. Operación satisfactoria (con reserva de anclaje previa)}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa al usuario del estado de la estación antes de que pueda completar la operación.
 			\item La aplicación informa al usuario de la realización de la operación.
 			\item El sistema se actualiza convenientemente, tanto en la base de datos como en la aplicación. Las entidades afectadas son: el Usuario, la Estación (donde entra la tarifa dependiente de la disponibilidad) y la Reserva (que se cancela automáticamente).
 		\end{itemize}
 		\item \textit{Prueba 3. Operación errónea. No quedan anclajes disponibles en la estación}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa al usuario del estado de la estación antes de que pueda completar la operación.
 			\item La aplicación informa del error.
 			\item El sistema vuelve a su estado anterior sin cambios.
 		\end{itemize}
 		\item \textit{Prueba 4. Operación errónea. El usuario no tiene cogida una bici o tiene una reserva de anclajes en otra estación}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa al usuario del estado de la estación antes de que pueda completar la operación.
 			\item La aplicación informa del error.
 			\item El sistema vuelve a su estado anterior sin cambios.
 		\end{itemize}
@@ -294,20 +295,20 @@ A continuación se listan las pruebas planteadas por cada requisito funcional de
 	\begin{enumerate}
 		\item \textit{Prueba 1. Operación satisfactoria (sin distinguir entre reservas de un tipo u otro)}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa al usuario del estado de la estación antes de que pueda completar la operación.
 			\item La aplicación informa al usuario de la realización de la operación.
 			\item La cuenta atrás de tiempo máximo de reserva (30 minutos) se inicia inmediatamente y se habilita la opción de cancelación.
 			\item El sistema se actualiza convenientemente, tanto en la base de datos como en la aplicación. Las entidades afectadas son: el Usuario, la Estación y la Reserva.
 		\end{itemize}
-		\item \textit{Prueba 2. Operación fallida. El usuario trata de coger una segunda reserva del mismo tipo a una que ya tiene}. Condiciones para superar la prueba:
+		\item \textit{Prueba 2. Operación fallida. El usuario trata de coger una segunda reserva del mismo tipo que una que ya tiene}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa al usuario del estado de la estación antes de que pueda completar la operación.
 			\item La aplicación informa del error.
 			\item El sistema vuelve a su estado anterior sin cambios.
 		\end{itemize}
 		\item \textit{Prueba 3. Operación fallida. El usuario trata de reservar una bici con otra cogida}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
+			\item La aplicación informa al usuario del estado de la estación antes de que pueda completar la operación.
 			\item La aplicación informa del error.
 			\item El sistema vuelve a su estado anterior sin cambios.
 		\end{itemize}
@@ -317,54 +318,48 @@ A continuación se listan las pruebas planteadas por cada requisito funcional de
 		\end{itemize}
 	\end{enumerate}
 		
-	\item \textbf{RF08: Reservar}
+	\item \textbf{RF09: Cancelar reserva}
 	\begin{enumerate}
-		\item \textit{Prueba 1. Operación satisfactoria (sin distinguir entre reservas de un tipo u otro)}. Condiciones para superar la prueba:
+		\item \textit{Prueba 1. Operación satisfactoria. Cancelación explícita (sin distinguir entre reservas de un tipo u otro)}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
-			\item La aplicación informa al usuario de la realización de la operación.
-			\item La cuenta atrás de tiempo máximo de reserva (30 minutos) se inicia inmediatamente y se habilita la opción de cancelación.
+			\item La aplicación confirma con el usuario la cancelación.
+			\item La aplicación confirma la realización de la operación.
 			\item El sistema se actualiza convenientemente, tanto en la base de datos como en la aplicación. Las entidades afectadas son: el Usuario, la Estación y la Reserva.
 		\end{itemize}
-		\item \textit{Prueba 2. Operación fallida. El usuario trata de coger una segunda reserva del mismo tipo a una que ya tiene}. Condiciones para superar la prueba:
+		\item \textit{Prueba 2. Operación satisfactoria. Cancelación implícita (sin distinguir entre reservas de un tipo u otro)}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
-			\item La aplicación informa del error.
-			\item El sistema vuelve a su estado anterior sin cambios.
+			\item Una vez superado los 30 minutos establecidos como tiempo máximo, la aplicación cancela automáticamente la reserva..
+			\item El sistema se actualiza convenientemente, tanto en la base de datos como en la aplicación. Las entidades afectadas son: el Usuario, la Estación y la Reserva.
 		\end{itemize}
-		\item \textit{Prueba 3. Operación fallida. El usuario trata de reservar una bici con otra cogida}. Condiciones para superar la prueba:
+		\item \textit{Prueba 3. Operación fallida. Cancelación explícita, el usuario no aprueba la operación}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item La aplicación informa al usuario del estado de la estación antes de que este pueda completar la operación.
-			\item La aplicación informa del error.
 			\item El sistema vuelve a su estado anterior sin cambios.
-		\end{itemize}
-		\item \textit{Prueba 4. Intento de reservar el último elemento de una estación (sin importar el tipo) por parte de dos usuarios diferentes al mismo tiempo}. Condiciones para superar la prueba:
-		\begin{itemize}
-			\item La aplicación concede la reserva al usuario que llegue el primero, informando al segundo del error y actualizando el sistema.
 		\end{itemize}
 	\end{enumerate}
+	
+	Por su parte, las cancelaciones por eliminación de usuarios o por ejercer el derecho sobre las mismas ya se han tratado en pruebas anteriores.
 		
 	\item \textbf{RF10: Pagar}
 	\begin{enumerate}
 		\item \textit{Prueba 1. Pago satisfactorio}. Condiciones para superar la prueba:
 		\begin{itemize}
 			\item El saldo disponible del usuario se actualiza convenientemente, tanto en la base de datos como en la aplicación.
-		\end{itemize}
-		
-		Dado el carácter académico de la aplicación, el \emph{pago} sólo implica la actualización del saldo disponible para el usuario dentro del sistema, con lo que no se considera la posibilidad de que éste no se realice correctamente.
+		\end{itemize}	
 	\end{enumerate}
+	
+	Dado el carácter académico de la aplicación, el \emph{pago} sólo implica la actualización del saldo disponible para el usuario dentro del sistema, con lo que no se considera la posibilidad de que éste no se realice correctamente.
 		
 	\item \textbf{RF11: Actualizar}
 	\begin{enumerate}
 		\item \textit{Prueba 1. Actualización satisfactoria}. Condiciones para superar la prueba:
 		\begin{itemize}
-			\item El sistema se actualiza convenientemente. Lo que implica que se cancelen automáticamente todas as reservas pasadas de otros usuarios (cancelación implícita a los 30 minutos), de modo que dichos recursos queden disponibles.
+			\item El sistema se actualiza convenientemente. Lo que, adicionalmente, implica que se cancelen automáticamente todas las reservas caducadas de otros usuarios (cancelación implícita a los 30 minutos), de modo que dichos recursos queden disponibles.
 			\item La aplicación informa al usuario de la realización de la operación.
 		\end{itemize}
 	\end{enumerate}
 \end{itemize}
 
-Los resultados de cada una se pueden consultar en el apéndice~\ref{app:appPesultadosPruebas}.
+Los resultados de cada una de las pruebas anteriores y los comentarios asociados se pueden consultar en el apéndice~\ref{app:appPesultadosPruebas}.
 
 \subsection{Pruebas de sistema}
 
@@ -378,4 +373,4 @@ La \emph{prueba del sistema} es una serie de diferentes pruebas cuyo propósito 
 	\item \textbf{Pruebas de despliegue o configuración}, para aquellos sistemas destinados a implementarse en varias plataformas, estas pruebas evalúan su desempeño en cada una de ellas.
 \end{itemize}
 
-Dado el tipo de pruebas encuadradas en este epígrafe, y considerando la naturaleza académica del proyecto aquí presentado, las \emph{pruebas de sistema} quedan fuera del alcance de la estrategia de pruebas para la aplicación construida. Algunas de las anteriores, sin embargo, sí se pueden asimilar a ciertas \emph{pruebas de validación} antes mencionadas, como la evaluación del correcto funcionamiento en diferentes plataformas como \emph{prueba de despliegue}, o el impedimento de acceso a un usuario no registrado como \emph{prueba de seguridad}.
+Dado el tipo de pruebas encuadradas en este epígrafe, y considerando la naturaleza académica del proyecto presentado, las \emph{pruebas de sistema} quedan fuera del alcance de la estrategia de pruebas para la aplicación construida. Algunas de las anteriores, sin embargo, sí se pueden asimilar a ciertas \emph{pruebas de validación} antes mencionadas, como la evaluación del correcto funcionamiento en diferentes plataformas como \emph{prueba de despliegue}, o el impedimento de acceso a un usuario no registrado como \emph{prueba de seguridad}.

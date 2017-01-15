@@ -60,7 +60,15 @@
 \contentsline {subsubsection}{Entorno de pruebas}{62}{section*.95}
 \contentsline {subsubsection}{Especificaci\IeC {\'o}n de pruebas}{63}{section*.96}
 \contentsline {subsection}{\numberline {4.2.4}Pruebas de sistema}{70}{subsection.4.2.4}
-\contentsline {chapter}{\numberline {5}Conclusiones}{73}{chapter.5}
-\contentsline {section}{\numberline {5.1}L\IeC {\'\i }neas futuras}{74}{section.5.1}
-\contentsline {chapter}{\numberline {A}Resultados de las pruebas de validaci\IeC {\'o}n}{77}{appendix.Alph1}
-\contentsline {chapter}{\numberline {B}Manual de usuario}{81}{appendix.Alph2}
+\contentsline {chapter}{\numberline {5}Conclusiones}{71}{chapter.5}
+\contentsline {section}{\numberline {5.1}L\IeC {\'\i }neas futuras}{72}{section.5.1}
+\contentsline {chapter}{\numberline {A}Resultados de las pruebas de validaci\IeC {\'o}n}{75}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}Manual de usuario}{79}{appendix.Alph2}
+\contentsline {subsubsection}{Configuraci\IeC {\'o}n inicial y pantalla inicial}{79}{section*.97}
+\contentsline {subsubsection}{Registro de usuarios}{80}{section*.100}
+\contentsline {subsubsection}{Inicio de sesi\IeC {\'o}n}{81}{section*.102}
+\contentsline {subsubsection}{Pantalla principal de la aplicaci\IeC {\'o}n: vistas y opciones adicionales}{81}{section*.104}
+\contentsline {subsubsection}{Operar con bicicletas y anclajes}{85}{section*.111}
+\contentsline {subsubsection}{Cuenta de usuario}{86}{section*.115}
+\contentsline {subsubsection}{Configuraci\IeC {\'o}n}{87}{section*.117}
+\contentsline {chapter}{\numberline {C}FAQs}{89}{appendix.Alph3}

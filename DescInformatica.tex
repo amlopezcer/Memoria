@@ -569,7 +569,7 @@ Por lo tanto, el modelo de análisis supone un puente entre la descripción del 
 \begin{figure}
 	\centering
 	\resizebox{8cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/ModeloAnalisis}}
-	\caption[El modelo de análisis como puente entre los requerimientos y el diseño del software]{El modelo de análisis como puente entre los requerimientos y el diseño del software \textit{Fuente:~\cite{Pre10}}}
+	\caption[El modelo de análisis como puente entre los requerimientos y el diseño del software]{El modelo de análisis como puente entre los requerimientos y el diseño del software. \textit{Fuente:~\cite{Pre10}}}
 	\label{fig:modeloAnalisis}
 \end{figure}
 
@@ -851,7 +851,7 @@ El objetivo es el de componer un análisis adecuado de las posibles operaciones 
 
 \subsection{Introducción}
 
-Sintetizando a Pressman \cite{Pre10}, el diseño del software comienza una vez que se han analizado y modelado los requerimientos (etapas centradas en describir los datos que se necesitan, la función y el comportamiento), es la última acción de la ingeniería de software dentro de la actividad de modelado y prepara la etapa de construcción (generación y prueba de código) proporcionando detalles sobre arquitectura del software, estructuras de datos, interfaces y componentes.
+Sintetizando a Pressman \cite{Pre10}, el diseño del software comienza una vez que se han analizado y modelado los requerimientos, etapas centradas en describir los datos que se necesitan, la función y el comportamiento, es la última acción de la ingeniería de software dentro de la actividad de modelado y prepara la etapa de construcción (generación y prueba de código) proporcionando detalles sobre arquitectura del software, estructuras de datos, interfaces y componentes.
 
 Así, el modelo de diseño que a continuación se desarrolla, se dividirá dos partes principales:
 
@@ -866,7 +866,7 @@ Por su parte, el diseño en el nivel de componentes y despliegue se tratará en 
 
 La \emph{arquitectura del software} supone ``la estructura o estructuras del sistema, lo que comprende a los componentes del software, sus propiedades externas visibles y las relaciones entre ellos'' \cite{Bas03}.
 
-Si bien cabe señalar que la arquitectura no es el software operativo. Es una representación que permite \cite{Pre10}: 1) analizar la efectividad del diseño para cumplir los requerimientos establecidos, 2) considerar alternativas arquitectónicas en una etapa en la que hacer cambios al diseño todavía es relativamente fácil y 3) reducir los riesgos asociados con la construcción del software.
+La arquitectura no es el software operativo, sino una representación que permite \cite{Pre10}: 1) analizar la efectividad del diseño para cumplir los requerimientos establecidos, 2) considerar alternativas arquitectónicas en una etapa en la que hacer cambios al diseño todavía es relativamente fácil y 3) reducir los riesgos asociados con la construcción del software.
 
 La definición previa pone el énfasis en el papel de los ``componentes del software'', que puede ser algo tan simple como un módulo de programa o una clase orientada a objeto, si bien también puede ampliarse a conceptos más extensos y complejos.
 
@@ -909,17 +909,17 @@ Se ha de tener en cuenta que el sistema cuenta tanto con una capa de aplicación
 
 Así, en la figura~\ref{fig:diagramaClasesDisenoCliente} se aporta el diagrama de clases de diseño para la capa del cliente del futuro sistema, si bien cabe señalar que el objetivo del diagrama de clases de diseño es el de modelizar la arquitectura básica del sistema a implementar; con lo que, para mantener la vista de dicha arquitectura útil y clara, no se incluyen clases, atributos o métodos que tengan un carácter accesorio o no aporten de manera directa a la consecución de los requisitos descritos en secciones anteriores. 
 
-De este modo, no se incluyen métodos ligados a inicializaciones de interfaces de usuario o atributos relativos a dichas interfaces, métodos básicos como los \textit{get()} y \textit{set()} o clases accesorias sin implicación directa en los casos de uso, entre otros.
+De este modo, no se incluyen métodos ligados a inicializaciones de interfaces de usuario o atributos relativos a las mismas, métodos básicos como los \textit{get()} y \textit{set()} o clases accesorias sin implicación directa en los casos de uso, entre otros.
 
 Sobre el diagrama presentado, destaca el empleo de dos patrones de diseño:
 
 \begin{enumerate}
-	\item \textbf{Singleton}. Patrón creacional utilizado con el objetivo de asegurarse de que una clase se instancia una única vez. 
+	\item \textbf{Singleton}. Patrón creacional utilizado con el objetivo de asegurar que una clase se instancia una única vez. 
 	
-	Dada la naturaleza de la entidad \emph{Usuario} según la cual una ejecución únicamente puede contar con un usuario activo a la vez (con posibles modificaciones sobre su estado), se considera que este patrón ayuda a forzar dicho objetivo, eliminando posibles errores o fallos futuros.
+	Dada la naturaleza de la entidad \emph{Usuario} según la cual una ejecución en un dispositivo únicamente puede contar con un usuario activo a la vez (con posibles modificaciones sobre su estado), se considera que este patrón ayuda a forzar dicho objetivo, eliminando posibles errores o fallos futuros.
 	\item \textbf{Observer}. Patrón de comportamiento utilizado para implementar la actualización de un objeto (o varios) ante el cambio en el estado de otro.
 	
-	Dado que los datos se almacenan por unas entidades y se muestran por otras, es necesario que cada vez que se produzca una operación con el servidor y éste notifique con el resultado, las clases del cliente que provocaron dicha llamada se actualicen convenientemente mediante la modificación de su estado, mostrando un mensaje de error si aplica, etc. Con ello, dicho patrón se aplica sobre las clases que provocan llamadas directas al servidor y las que gestionan las mismas. La base del patrón es una interfaz a ser implementada por las clases a ser actualizadas y sobre la que se notificarán los cambios o respuestas del servidor por parte de las clases gestoras de las comunicaciones.
+	Dado que los datos se almacenan por unas entidades y se muestran por otras, es necesario que cada vez que se produzca una interacción con el servidor y éste notifique un resultado, las clases del cliente que provocaron dicha llamada se actualicen convenientemente mediante la modificación de su estado. Con ello, dicho patrón se aplica sobre las clases que provocan llamadas directas al servidor y las que gestionan las mismas. La base del patrón es una interfaz a ser implementada por las clases a ser actualizadas y sobre la que se notificarán los cambios o respuestas del servidor por parte de las clases gestoras de las comunicaciones.
 \end{enumerate} 
 
 \begin{landscape}
@@ -961,11 +961,11 @@ Como quedó definido en la sección~\ref{sec:secERS} dedicada a la ERS, la comun
 donde $IP\_SERV$ indica la IP dirección del servidor, $PORT$ indica el puerto donde el servidor se encuentra escuchando y $ENTITY$ indica la entidad (Usuario, Estación o Reserva) que realiza la llamada remota.
 
 A partir de esta URL general se formarán las específicas de la forma siguiente: $$[BASE\_URL]/[METHOD]$$
-donde $BASE\_URL$ es la URL básica indicada más arriba y $METHOD$ indica el método o parámetros que se añaden en la dirección para la llamada del método que sea necesario.
+donde $BASE\_URL$ es la URL básica indicada y $METHOD$ indica el método o parámetros que se añaden en la dirección para la llamada del método que sea necesario.
 
 Una vez un método se ejecuta en el servidor, éste devolverá la cadena resultante al cliente. En caso de que se tenga que indicar si la operación se ha realizado correctamente o no, se enviarán cadenas del estilo $[ENTITY]\_SERVER\_OK$ o $[ENTITY]\_SERVER\_KO$, respectivamente.
 
-Por su parte, las cadenas que se intercambian entre ambas capas seguirán el formato de texto JSON\footnote{Una introducción a este lenguaje se recoge en ~\cite{JSON}.}, la tecnología ha utilizar para la traducción de cadenas se comenta en la siguiente sección~\ref{sec:secModeloImp}.
+Por su parte, las cadenas que se intercambian entre ambas capas seguirán el formato de texto JSON\footnote{Una introducción a este lenguaje se recoge en~\cite{JSON}.}, la tecnología ha utilizar para la traducción de cadenas se comenta en la siguiente sección~\ref{sec:secModeloImp}.
 
 La selección de este formato en lugar del tradicional XML queda principalmente motivada por el hecho de que el primero es más sencillo a la hora compartir \emph{datos tradicionales} como texto o números, que son los utilizados por el sistema a desarrollar, y no datos estructurados como podrían ser documentos, fotos, vídeos\dots donde XML es más eficiente.
 
@@ -977,7 +977,7 @@ La interfaz de usuario (IU en adelante) se considera como uno de los elementos m
 
 De acuerdo a Pressman~\cite{Pre10}, el diseño de la IU (o diseño de la \emph{usabilidad}) crea un medio eficaz de comunicación entre los seres humanos y la computadora. Siguiendo un conjunto de principios de diseño de la interfaz, se identifican los objetos y acciones de ésta y luego crea una plantilla de pantalla que constituye la base del prototipo de la interfaz de usuario.
 
-Este apartado está dedicado, por tanto, a desarrollar brevemente la decisiones y principios de diseño de IU de mayor relevancia adoptados para alcanzar una IU consistente y adecuada.
+Este apartado está dedicado, por tanto, a desarrollar brevemente la decisiones y principios de diseño de IU de mayor relevancia adoptados para alcanzar una interfaz gráfica consistente y adecuada.
 
 En primer término, el diseño general de cualquier IU se ha de basar en las conocidas como \emph{Reglas de Oro} establecidas por Mandel~\cite{Man97}:
 
@@ -991,16 +991,16 @@ Cada una de las tres Reglas anteriores supone una agrupación de reglas más esp
 
 Con la base anterior establecida, se ha de tener en cuenta que la IU se presentará sobre dispositivos móviles con sistema operativo Android, que presenta numerosa documentación oficial acerca del adecuado diseño de IUs\footnote{La documentación puede ser consultada en \url{https://developer.android.com/design/index.html}, a partir de~\cite{AnDev}.}. Se hace necesario, por tanto, hacer un seguimiento de estos principios específicos para lograr una IU adecuada a la naturaleza del dispositivo sobre el que se despliega el sistema.
 
-Adicionalmente, la aplicación deberá soportar la ejecución en diferentes idiomas, dependiendo del lenguaje configurado en el dispositivo utilizado. Android ofrece la posibilidad de localizar todos los textos del sistema en diferentes ficheros XML, uno por idioma soportado. A la hora de ejecutar la aplicación, carga el correspondiente con el lenguaje del dispositivo. En caso de que no se disponga de uno, quedaría cargado el lenguaje establecido como estándar\footnote{Para más detalles al respecto, consultar \url{https://developer.android.com/training/basics/supporting-devices/languages.html} a partir de~\cite{AnDev}}. Para la aplicación descrita en este documento se consideran dos idiomas: inglés (como estándar) y español.
+Adicionalmente, la aplicación deberá soportar la ejecución en diferentes idiomas, dependiendo del lenguaje configurado en el dispositivo utilizado. Android ofrece la posibilidad de localizar todos los textos del sistema en diferentes ficheros XML, uno por idioma soportado, de modo que a la hora de ejecutar la aplicación, carga el correspondiente al lenguaje del dispositivo. En caso de que no se disponga de uno, quedaría seleccionado el lenguaje establecido como estándar\footnote{Para más detalles al respecto, consultar \url{https://developer.android.com/training/basics/supporting-devices/languages.html} a partir de~\cite{AnDev}}. Para la aplicación descrita en este documento se consideran dos idiomas: inglés (como estándar) y español.
 
-Una vez considerados los principios generales y los específicos para los elementos particulares de Android, la decisión de mayor relevancia en el diseño de IU en Android es la utilización de los llamados \emph{Fragments} (o Fragmentos). Un Fragmento representa un comportamiento específico de una porción de la IU en una \emph{Actividad}\footnote{Una Actividad es uno de los elementos básicos de cualquier aplicación Android. Sin entrar en detalles y por dar una primera aproximación, cada una de las pantallas o vistas de una aplicación suponen una Actividad. Más detalles en \url{https://developer.android.com/reference/android/app/Activity.html}, a partir de~\cite{AnDev}.}; es decir, agrupa elementos de una interfaz (tanto el diseño gráfico como sus controles lógicos asociados) de modo que estos sean reutilizables entre diversos tamaños u orientaciones de pantalla.
+Una vez considerados los principios generales y los específicos para los elementos particulares de Android, la decisión de mayor relevancia en el diseño de IU en este sistema es la utilización de los llamados \emph{Fragments} (o Fragmentos). Un Fragmento representa un comportamiento específico de una porción de la IU en una \emph{Actividad}\footnote{Una Actividad es uno de los elementos básicos de cualquier aplicación Android. Sin entrar en detalles y por dar una primera aproximación, cada una de las pantallas o vistas de una aplicación suponen una Actividad. Más detalles en \url{https://developer.android.com/reference/android/app/Activity.html}, a partir de~\cite{AnDev}.}; es decir, agrupa elementos de una interfaz (tanto el diseño gráfico como sus controles lógicos asociados) de modo que estos sean reutilizables entre diversos tamaños u orientaciones de pantalla.
 
 En la figura~\ref{fig:fragmentsAndroid} se aporta un esquema gráfico de la utilidad de estos elementos de diseño para una mejor comprensión.
 
 \begin{figure} [!htb]
 	\centering
 	\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/FragmentsAndroid}
-	\caption[Fragmentos en el diseño de IUs]{Fragmentos en el diseño de IUs \textit{Fuente:~\cite{AnDev}}}
+	\caption[Fragmentos en el diseño de IUs]{Fragmentos en el diseño de IUs. \textit{Fuente:~\cite{AnDev}}}
 	\label{fig:fragmentsAndroid}
 \end{figure}
 
@@ -1019,7 +1019,7 @@ Estas decisiones regirán la construcción de la futura interfaz gráfica, proce
 \begin{figure} [!htb]
 	\centering
 	\resizebox{11cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/disenoIU}}
-	\caption[Proceso de diseño y construcción de una IU]{Proceso de diseño y construcción de una IU \textit{Fuente:~\cite{Pre10}}}
+	\caption[Proceso de diseño y construcción de una IU]{Proceso de diseño y construcción de una IU. \textit{Fuente:~\cite{Pre10}}}
 	\label{fig:disenoIU}
 \end{figure}
 
@@ -1055,9 +1055,9 @@ Con el objetivo de desarrollar adecuadamente este modelo, se consideran dos apar
 \subsection{Herramientas utilizadas}
 \label{subsec:herramientasImp}
 
-Dada la arquitectura Cliente/Servidor que soporta el sistema, las herramientas y tecnologías se pueden agrupar en cada una de sus capas (cliente, servidor y base de datos) y en la comunicación entre ellas. 
+Dada la arquitectura Cliente/Servidor que soporta el sistema, las herramientas y tecnologías se pueden agrupar en cada una de sus capas (cliente, servidor y base de datos) y en la comunicación entre ellas. Adicionalmente, se hará referencia al software controlador de versiones (CVS) empleado.
 
-Este apartado no pretende profundizar en detalles técnicos, sino enumerar las tecnologías de mayor relevancia presentes en el sistema para comprender adecuadamente la relación entre la parte lógica y física de la aplicación.
+Este apartado no pretende profundizar en detalles técnicos, sino introducir las tecnologías de mayor relevancia presentes en el sistema y comentar las razones de su elección, de modo que se pueda comprender adecuadamente la relación entre la parte lógica y física de la aplicación.
 
 \subsubsection{Cliente}
 
@@ -1066,12 +1066,12 @@ El cliente del sistema queda pensado, en su primera versión, para ser desplegad
 \begin{itemize}
 	\item{\textbf{Android}. Android es un sistema operativo basado en un núcleo Linux diseñado principalmente para dispositivos móviles con pantalla táctil. Se lanzó inicialmente en 2008 y su versión estable más actual es la 7, \textit{Nougat}\footnote{Tal y como se indicó en la sección de requisitos, Android denomina alfabéticamente y con nombres de postres o dulces a cada una de las versiones de su sistema operativo.}.
 	
-	Las razones para la elección de este sistema, frente a otros como iOS o Windows, son principalmente la cobertura de mercado (en España, superior al 90\% en 2016\footnote{Dato a junio de 2016: \url{http://cincodias.com/cincodias/2016/06/15/tecnologia/1465987235_750846.html}}) y que el desarrollo de aplicaciones sobre esta plataforma es gratuito y queda basado en el lenguaje de programación Java, ampliamente extendido y con un fuerte soporte}.
+	Las razones para la elección de este sistema, frente a otros como iOS o Windows, son principalmente la cobertura de mercado (en España, superior al 90\% en 2016\footnote{Dato a junio de 2016: \url{http://cincodias.com/cincodias/2016/06/15/tecnologia/1465987235_750846.html}}) y que el desarrollo de aplicaciones sobre esta plataforma es gratuito y basado en el lenguaje de programación Java, ampliamente extendido y con un fuerte soporte}.
 	
-	\item{\textbf{Android Studio}. Android Studio es el entorno de desarrollo integrado (IDE) oficial para el desarrollo de aplicaciones Android y se basa en IntelliJ IDEA\footnote{IDE para el desarrollo de sistemas informáticos desarrollado por JetBrains, más detalles en \url{https://www.jetbrains.com/idea/}.}. Además del editor de códigos y las herramientas para desarrolladores de IntelliJ, Android Studio ofrece más funciones para la mejora de la productividad durante la compilación de apps para Android\footnote{El detalle sobre estas funciones adicionales se puede consultar en \url{https://developer.android.com/studio/intro/index.html}, a partir de~\cite{AnDev}.}}.
+	\item{\textbf{Android Studio}. Android Studio, basado en IntelliJ IDEA\footnote{IDE para el desarrollo de sistemas informáticos desarrollado por JetBrains, más detalles en \url{https://www.jetbrains.com/idea/}.}, es el entorno de desarrollo integrado (IDE) oficial para el desarrollo de aplicaciones Android. Además del editor de códigos y las herramientas para desarrolladores de IntelliJ, Android Studio ofrece más funciones para la mejora de la productividad durante la compilación de apps para Android\footnote{El detalle sobre estas funciones adicionales se puede consultar en \url{https://developer.android.com/studio/intro/index.html}, a partir de~\cite{AnDev}.}}.
 \end{itemize}
 
-Como se ha comentado, Android actualmente tiene desplegada la versión 7. Cada una de estas nuevas versiones incorpora nuevas funcionalidades y desestima o sustituye otras de versiones previas. Esto provoca que, a la hora de desarrollar una aplicación, se tenga que tener en cuenta el grado de compatibilidad de la misma con las versiones previas para lograr un alcance y cobertura suficientes. Para ello, Android prevé la utilización de numerosas \emph{librerías de compatibilidad}, que posibilitan la utilización de nuevos componentes o funcionalidades en versiones anteriores que, originalmente, no contaban con ellos. Del mismo modo, a la hora de crear una aplicación Android, se ha de dejar especificado la API mínima (y máxima) sobre la que dicha aplicación puede ser ejecutada (de modo que GooglePlay ofrezca aplicaciones adaptadas a la versión de cada dispositivo).
+Como se ha comentado, Android actualmente tiene desplegada la versión 7. Cada una de estas nuevas versiones incorpora nuevas funcionalidades y desestima o sustituye otras de versiones previas. Esto provoca que, a la hora de desarrollar una aplicación, se tenga que tener en cuenta el grado de compatibilidad de la misma con las versiones previas para lograr un alcance y cobertura razonables. Para ello, Android prevé la utilización de numerosas \emph{librerías de compatibilidad}, que posibilitan la utilización de nuevos componentes o funcionalidades en versiones anteriores que, originalmente, no contaban con ellos. Del mismo modo, a la hora de crear una aplicación Android, se ha de dejar especificado la API mínima (y máxima) sobre la que dicha aplicación puede ser ejecutada (de modo que GooglePlay ofrezca aplicaciones adaptadas a la versión de cada dispositivo).
 
 Para la aplicación desarrollada en este documento se ha seleccionado una compatibilidad hasta la versión 4.1 \textit{Jelly Bean} (API 16), que alcanza una cobertura total del 97,5\% respecto al total de dispositivos repartidos por el mercado a nivel global\footnote{Dato a diciembre de 2016, Android actualiza esta información periódicamente en \url{https://developer.android.com/about/dashboards/index.html}, a partir de~\cite{AnDev}.}, tal y como se muestra en la figura~\ref{fig:androidDistribution}.
 
@@ -1087,9 +1087,9 @@ Para la aplicación desarrollada en este documento se ha seleccionado una compat
 La capa intermedia del sistema queda soportado por el servidor de software libre GlassFish. El entorno de desarrollo empleado en este caso es NetBeans.
 
 \begin{itemize}
-	\item{\textbf{GlassFish}. GlassFish es un servidor basado en Apache Tomcat para el desarrollo y ejecución de aplicaciones regidas por la especificación \textit{Java Platform, Enterprise Edition} (Java EE platform)\footnote{Plataforma de programación que incluye varias especificaciones para el desarrollo de aplicaciones distribuidas y empresariales, más detalles en~\cite{OraEE}.} y tecnologías web basadas en Java.
+	\item{\textbf{GlassFish}. GlassFish es un servidor basado en Apache Tomcat para el desarrollo y ejecución de aplicaciones regidas por la especificación \textit{Java Platform Enterprise Edition} (Java EE platform)\footnote{Plataforma de programación que incluye varias especificaciones para el desarrollo de aplicaciones distribuidas y empresariales, más detalles en~\cite{OraEE}.} y tecnologías web basadas en Java.
 	
-	El motivo para la elección de este servidor es su carácter gratuito y de código libre, además del hecho de que, a diferencia de Tomcat, su instalación básica incluye un conjunto amplio de librerías, suficiente para cubrir las necesidades del sistema, sin que con ello se vea afectado su rendimiento de manera perceptible respecto a otras opciones, como el citado Apache Tomcat}.
+	El motivo para la elección de este servidor es su carácter gratuito y de código libre, además del hecho de que, a diferencia de Tomcat, su instalación básica incluye un conjunto amplio de librerías, suficiente para cubrir las necesidades del sistema, sin que con ello se vea afectado su rendimiento de manera perceptible respecto a otras opciones más ligeras, como el citado Apache Tomcat}.
 	
 	\item{\textbf{NetBeans}. NetBeans es el IDE oficial para Java 8, supone un entorno de desarrollo de libre distribución y queda pensado principalmente para el lenguaje de programación Java.
 		
@@ -1111,7 +1111,7 @@ Capa de datos de la aplicación, implementada sobre un sistema MySQL y apoyado p
 Dado su carácter transversal, se ha decidido crear un grupo separado de tecnologías relativas a la comunicación entre capas de datos, si bien cada una puede quedar implementada en una u otra capa de la arquitectura.
 
 \begin{itemize}
-	\item \textbf{Jackson}. Librería implementada en la capa cliente para la traducción de cadenas JSON a objetos Java y viceversa. El empleo de esta librería frente a otras es debido fundamentalmente a que esta librería suele dar mejores índices de rendimiento a medida que los ficheros a traducir van creciendo, aspecto potencialmente preferible\footnote{En Internet se pueden identificar numerosos estudios de rendimiento al respecto, todos con las mismas conclusiones mencionadas, se aporta uno de ellos: \url{https://dzone.com/articles/compare-json-api}.}.
+	\item \textbf{Jackson}. Librería implementada en la capa cliente para la traducción de cadenas JSON a objetos Java y viceversa. El empleo de esta librería frente a otras es debido fundamentalmente a que suele dar mejores índices de rendimiento a medida que los ficheros a traducir van creciendo, aspecto potencialmente preferible\footnote{En Internet se pueden identificar numerosos estudios de rendimiento al respecto, todos con las mismas conclusiones mencionadas, se aporta uno de ellos: \url{https://dzone.com/articles/compare-json-api}.}.
 	
 	\item \textbf{RESTful}. Servicios web basados en la arquitectura REST\footnote{Arquitectura que, haciendo uso del protocolo HTTP, proporciona una API que utiliza cada uno de sus métodos (GET, POST, PUT, DELETE, etc.) para poder realizar diferentes operaciones entre la aplicación que ofrece el servicio web y el cliente. Una introducción teórica se puede encontrar en~\cite{WREST}.} utilizados para el intercambio de datos entre el cliente y el servidor.
 		
@@ -1123,14 +1123,14 @@ Dado su carácter transversal, se ha decidido crear un grupo separado de tecnolo
 	\end{itemize}
 	Las características anteriores han hecho que REST se imponga a SOAP como servicio web dominante. De hecho, compañías como Yahoo o Google hacen uso de REST para todos sus servicios.
 
-	\item \textbf{MySQL Connector / JDBC}. Conector estándar para la comunicación entre el servidor y la base de datos utilizando la API \emph{Java Database Connectivity} (JDBC)\footnote{API que permite la ejecución de operaciones sobre bases de datos desde el lenguaje de programación Java utilizando el dialecto SQL, más detalles en~\cite{OraDB}.}.
+	\item \textbf{MySQL Connector}. Conector estándar para la comunicación entre el servidor y la base de datos utilizando la API \emph{Java Database Connectivity} (JDBC\footnote{API que permite la ejecución de operaciones sobre bases de datos desde el lenguaje de programación Java utilizando el dialecto SQL, más detalles en~\cite{OraDB}.}).
 \end{itemize}
 
 \subsubsection{Controlador de Versiones}
 
 Si bien no se trata de una herramienta directamente relacionada con el desarrollo de la aplicación, los controladores de versiones suponen un software imprescindible para cualquier desarrollo mínimamente complejo.
 
-El software seleccionado ha sido \emph{Git}, un CVS seleccionado por su eficiencia, sencillez y por su ampliación en la plataforma \emph{Github}, una plataforma colaborativa ampliamente extendida y utilizada\footnote{En este documento no se busca entrar en más detalles sobre estas soluciones, para más detalles se puede consultar~\cite{Git} y~\cite{GitHb}.}.
+El software seleccionado ha sido \emph{Git}, un CVS seleccionado por su eficiencia, sencillez y por su ampliación en \emph{Github}, una plataforma colaborativa ampliamente extendida y utilizada\footnote{En este documento no se busca entrar en más detalles sobre estas soluciones, para más detalles se puede consultar~\cite{Git} y~\cite{GitHb}.}.
 
 \subsection{Distribución física}
 
