@@ -2,7 +2,7 @@
 
 \subsubsection{Configuración inicial y pantalla inicial}
 
-Si acabas de instalar la aplicación, se solicitará automáticamente la dirección del servidor para poder conectarse (esta información puede modificarse posteriormente):
+Si se acaba de instalar la aplicación, se solicitará automáticamente la dirección del servidor para poder conectarse (esta información puede modificarse posteriormente):
 
 \begin{figure} [!htb]
 	\centering
@@ -11,7 +11,7 @@ Si acabas de instalar la aplicación, se solicitará automáticamente la direcci
 	\label{fig:confIniCon}
 \end{figure}
 
-A partir de este punto, tendrás acceso a la pantalla inicial de la aplicación, desde la que podrás registrar un nuevo usuario o iniciar sesión con uno existente.
+A partir de este punto, se tiene acceso a la pantalla inicial de la aplicación, desde la que se podrá registrar un nuevo usuario o iniciar sesión con uno existente.
 
 \begin{figure} [!htb]
 	\centering
@@ -23,7 +23,7 @@ A partir de este punto, tendrás acceso a la pantalla inicial de la aplicación,
 \FloatBarrier
 \subsubsection{Registro de usuarios}
 
-Mediante el botón ``Registrarse'' puedes acceder al registro de nuevos usuarios, donde se solicitarán una serie de datos de obligada cumplimentación. Una vez completo el registro, recibirás un pequeño regalo...\smiley:
+Mediante el botón ``Registrarse'' se accede al registro de nuevos usuarios, donde se solicitarán una serie de datos de obligada cumplimentación. Una vez completo el registro, se recibe un pequeño regalo...\smiley:
 
 \begin{figure} [!htb]
 	\centering
@@ -32,7 +32,7 @@ Mediante el botón ``Registrarse'' puedes acceder al registro de nuevos usuarios
 	\label{fig:registroUsuarios}
 \end{figure}
 
-A partir de este punto, tendrás acceso a operar con la aplicación.
+A partir de este punto, se tiene acceso a operar con la aplicación.
 
 \FloatBarrier
 \subsubsection{Inicio de sesión}
@@ -55,7 +55,7 @@ Una vez iniciada sesión, se accede a la pantalla principal de la aplicación: e
 	\item \textbf{\color{red} Rojo}. No quedan bicicletas disponibles en la estación.
 	\item \textbf{\color{yellow} Amarillo}. Quedan menos del 50\% de bicicletas disponibles en la estación. En las estaciones con este nivel de disponibilidad la tarifa es el doble de lo habitual.
 	\item \textbf{\color{green} Verde}. Quedan más del 50\% de bicicletas disponibles en la estación.
-	\item \textbf{\color{blue} Azul}. Tienes una reserva en esta estación.
+	\item \textbf{\color{blue} Azul}. El usuario tiene una reserva en esta estación.
 \end{itemize}
 
 \begin{figure} [!htb]
@@ -130,7 +130,7 @@ Mediante la selección de una estación se muestra su estado en ese momento y se
 	\label{fig:opcionesEstacion}
 \end{figure}
 
-De este modo, si cogemos una bici, se actualizará nuestra barra de estado, además del saldo disponible:
+De este modo, al coger una bici, se actualizará la barra de estado, además del saldo disponible:
 
 \begin{figure} [!htb]
 	\centering
@@ -140,9 +140,9 @@ De este modo, si cogemos una bici, se actualizará nuestra barra de estado, adem
 \end{figure}
 
 \FloatBarrier
-Barra de estado que volverá a su estado inicial cuando dejemos la bicicleta.
+Barra de estado que volverá a su estado inicial cuando se deje la bicicleta.
 
-Por su parte, al seleccionar la reserva de recursos, se habilitará un diálogo que permitirá seleccionar el elemento que queramos reservar (sólo aparecerán habilitadas para su selección las opciones posibles para el usuario dadas las restricciones consideradas en esta operación, ver la especificación del requisito \emph{RF08 - Reservar} de la sección~\ref{sec:secERS} para más detalles). Una vez completemos la reserva, la estación afectada quedará marcada en color azul, para una mejor identificación.
+Por su parte, al seleccionar la reserva de recursos, se habilitará un diálogo que permitirá seleccionar el elemento que queramos reservar (sólo aparecerán habilitadas para su selección las opciones posibles para el usuario dadas las restricciones consideradas en esta operación, ver la especificación del requisito \emph{RF08 - Reservar} de la sección~\ref{sec:secERS} para más detalles). Una vez completada la reserva, la estación afectada quedará marcada en color azul, para una mejor identificación.
 
 \begin{figure} [!htb]
 	\centering
@@ -153,7 +153,7 @@ Por su parte, al seleccionar la reserva de recursos, se habilitará un diálogo 
 
 \subsubsection{Cuenta de usuario}
 
-Una vez hayamos accedido a la cuenta de usuario mediante alguna de las opciones mencionada, se habilitan las siguientes opciones:
+Una vez se haya accedido a la cuenta de usuario mediante alguna de las opciones mencionada, se habilitan las siguientes opciones:
 
 \begin{itemize}
 	\item \textbf{Consulta y cancelación de reservas}. La cancelación requiere de una confirmación adicional por parte del usuario.
@@ -193,7 +193,29 @@ En el caso de activar el modo ``superusuario'', la barra de estado informará de
 	\label{fig:superusuarioActivado}
 \end{figure}
 
-En el Anexo~\ref{app:faq} se recoge un conjunto de incidencias comunes a la hora de operar con la aplicación que complementan este documento.
+\subsubsection{FAQs}
+
+Se recoge un conjunto de incidencias comunes en el uso básico de la aplicación con su posible resolución, partiendo del supuesto que los servidores de aplicación y base de datos están correctamente configurados y conectados entre sí.
+
+\begin{itemize}
+	
+	\item \textit{Al registrar un usuario, la aplicación no me deja porque el nombre de usuario o dirección de correo no están disponibles}. Hay otro usuario registrado con ese nombre de usuario o dirección de correo, debes introducir uno diferente.
+	
+	\item \textit{Al iniciar sesión, la aplicación no me lo permite por no encontrar el usuario o por contraseña incorrecta}. Asegúrate de que el nombre de usuario y contraseña introducidos para el inicio de sesión coinciden con los registrados.
+	
+	\item \textit{A pesar de estar correctamente conectado, no puedo coger una bici}. Es posible que estés incurriendo en alguna de las restricciones impuestas para esta operación, ver la especificación del requisito \emph{RF06 - Coger bicicleta} de la sección~\ref{sec:secERS} para más detalles.
+	
+	\item \textit{A pesar de estar correctamente conectado, no puedo dejar una bici}. Es posible que estés incurriendo en alguna de las restricciones impuestas para esta operación, ver la especificación del requisito \emph{RF07 - Dejar bicicleta} de la sección~\ref{sec:secERS} para más detalles.
+	
+	\item \textit{A pesar de estar correctamente conectado, no puedo reservar una bicicleta y/o anclaje}. Es posible que estés incurriendo en alguna de las restricciones impuestas para esta operación, ver la especificación del requisito \emph{RF08 - Reservar} de la sección~\ref{sec:secERS} para más detalles.
+	
+	\item \textit{Tenía una reserva que no he cancelado y ha desaparecido a pesar de que no he hecho uso de ella}. Posiblemente habrán pasado más de 30 minutos desde la reserva. Este tiempo es el máximo establecido para hacer uso de la reserva, una vez superado se cancela automáticamente.
+	
+	\item \textit{No puedo borrar mi perfil}. Es posible que tengas una bicicleta cogida, debes dejarla en una estación antes de borrar el perfil.
+	
+	\item \textit{He borrado mi cuenta, ¿puedo recuperarla?}. No, el borrado de cuenta, una vez confirmado por el usuario, es definitivo, con lo que el acceso a la aplicación sólo se puede realizar registrando uno nuevo.
+	
+\end{itemize}
 
 
 

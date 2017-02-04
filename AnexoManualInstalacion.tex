@@ -1,0 +1,178 @@
+\chapter{Manual de instalación}
+
+Se aporta un manual de instalación del sistema, de modo que se pueda desplegar en otros equipos con facilidad. Cabe señalar que las instrucciones están redactadas siguiendo un entorno Windows, el despliegue en entornos iOS o Unix pueden acarrear, por tanto, ciertas diferencias.
+
+\subsubsection{Base de datos}
+
+\begin{enumerate}
+	\item Descargar e instalar MySQL Installer desde \url{http://dev.mysql.com/downloads/windows/installer/}.
+	\item Durante la instalación, es posible que la aplicación trate de instalar o actualizar otros productos MySQL. Se recomienda ignorar estos procesos durante la instalación y dejarlos una vez MySQL Installer esté listo para ser ejecutado en nuestro equipo puesto que son susceptibles de fallar.
+	\item Al ejecutar MySQL Installer, aparecerán los productos MySQL actualizables o instalables, se deben añadir:
+	\begin{enumerate}
+		\item El servidor MySQL Server.
+		\item El conector Connector/J.
+		\item El entorno MySQL Workbench.
+	\end{enumerate}
+	En caso de que se quiera reiniciar algún componente, desde esta herramienta se puede eliminar para volverlo a instalar a continuación. En la siguiente imagen falta por añadir el servidor, mientras que el conector y el Workbench están al día:
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoInstalacion/mySQLInstallerMain}}
+		\caption{Pantalla principal de MySQL Installer}
+		\label{fig:mySQLInstallerMain}
+	\end{figure}
+	\FloatBarrier
+	\item Al instalar el servidor, se pedirá la confirmación de una serie de parámetros de instalación. Se puede mantener la configuración que aparece por defecto:
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoInstalacion/mySQLInstallerServer_1}}
+		\caption{Instalación de MySQL Server}
+		\label{fig:mySQLInstallerServer_1}
+	\end{figure}
+	\FloatBarrier
+	\item A continuación se pedirá la contraseña para el usuario \emph{root}, no es necesario añadir usuarios. \textbf{Importante recordar esta contraseña}, puesto que se necesitará más adelante para configurar el servidor.
+	\item El resto de pasos se pueden pasar sin realizar modificaciones, hasta el paso final donde se ha de ejecutar una secuencia de acciones que da por finalizada la instalación:
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoInstalacion/mySQLInstallerServer_2}}
+		\caption{Instalación de MySQL Server}
+		\label{fig:mySQLInstallerServer_2}
+	\end{figure}
+	\FloatBarrier
+	\item Abrir MySQL Workbench y pulsar en la pestaña superior derecha de la conexión que aparece configurada por defecto (localhost:3306) para testearla. En caso de que pida \textbf{contraseña, introducir la misma que la seleccionada para el servidor MySQL Server anterior}.
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{11cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoInstalacion/mySQLWorkbench_1}}
+		\caption{Configuración de la conexión en MySQL Workbench}
+		\label{fig:mySQLWorkbench_1}
+	\end{figure}
+	\FloatBarrier
+	\item Doble click en la conexión para acceder.
+	\item Cargar y ejecutar las consultas SQL del fichero ``bikesmanager\_db\_queries.sql'':
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoInstalacion/mySQLWorkbench_2}}
+		\caption{Ejecución de consultas SQL}
+		\label{fig:mySQLWorkbench_2}
+	\end{figure}
+	\FloatBarrier
+	 En caso de que no se actualice el menú izquierdo referente a los esquemas: click derecho sobre el menú y ``Refresh All''.
+	\item Para cargar los datos de bicis, utilizar el fichero ``bikesmanager\_db\_bicis.csv'' (los usuarios y las reservas se crean durante la ejecución) pulsando sobre el botón de ejecución de consultas sobre la tabla ``bikestation'' (aparece al pasar el ratón por encima). \textbf{Eliminar la primera fila que se carga con las cabeceras} (botón derecho y ``Delete rows'') y, finalmente, pulsar en ``Apply''.
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{11cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoInstalacion/mySQLWorkbench_3}}
+		\caption{Carga de datos en MySQL Workbench}
+		\label{fig:mySQLWorkbench_3}
+	\end{figure}
+	\FloatBarrier
+\end{enumerate}
+
+\subsubsection{Servidor}
+
+\begin{enumerate}
+	\item Descargar NetBeans IDE desde \url{https://netbeans.org/downloads/}. Se recomienda descargar la versión completa, de 221MB.
+	\item Aceptar la instalación por defecto, que ya incluye GlassFish.
+	\item Copiar (sustituyendo el existente) el fichero``org.eclipse.persistence.moxy'' en el directorio ``modules'' de GlassFish. Típicamente este fichero se encuentra en la ruta ``\dots\textbackslash glassfish-4.1.1\textbackslash glassfish\textbackslash modules''. El motivo es que GlassFish cuenta con un fallo no resuelto a fecha de redacción del documento sobre la producción de cadenas JSON que se soluciona con la sustitución anterior.
+	\item Ahora se debe configurar la conexión con la base de datos en GlassFish (es importante asegurar MySQL Server está corriendo, se recomienda acceder primero con MySQL Workbench a la base para asegurarse de ello). La ruta en NetBeans sería: Services - Databases - Drivers. Click derecho sobre ``MySQL (Connector/J Driver)'' y ``Connect Using\dots'':
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoInstalacion/server_1}}
+		\caption{Conexión del Connector/J}
+		\label{fig:server_1}
+	\end{figure}
+	\FloatBarrier
+	\item Se introduce el nombre de la Base de datos (``bikesmanager'') y \textbf{la contraseña elegida al configurar MySQL Server para el usuario \emph{root}} (y que también se utilizó para acceder a MySQL Workbench). Se recomienda dejarla recordada. El resto de parámetros se mantienen por defecto (localhost:3306). Pulsar en ``Test Connection'' para confirmar la conexión.
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoInstalacion/server_2}}
+		\caption{Configuración de la conexión}
+		\label{fig:server_2}
+	\end{figure}
+	\FloatBarrier
+	\item Pulsar en ``Next'' hasta llegar a la última ventana, donde se pulsa ``Finish''. Ahora desde el IDE NetBeans se tiene acceso a gestionar las tablas (además de con MySQL Workbench).
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoInstalacion/server_3}}
+		\caption{Vista de la base de datos desde NetBeans}
+		\label{fig:server_3}
+	\end{figure}
+	\FloatBarrier
+	\item Finalmente, se debe realizar la conexión a MySQL Server, para ello: botón derecho sobre ``MySQL Server at\dots'' y ``Properties''. Introducir la \textbf{contraseña del servidor MySQL Server} y dejarla recordada:
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{10cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoInstalacion/server_4}}
+		\caption{Conexión base de datos}
+		\label{fig:server_4}
+	\end{figure}
+	\FloatBarrier
+	\item Aceptar y, de nuevo, botón derecho sobre la base y ``Connect''. Se podrá ver el esquema de base de datos una vez hecho esto:
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{6cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoInstalacion/server_5}}
+		\caption{Conexión base de datos}
+		\label{fig:server_5}
+	\end{figure}
+	\FloatBarrier
+	\item Cargar el proyecto mediante la ruta siguiente: File -- Import Project -- From ZIP\dots:
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoInstalacion/server_6}}
+		\caption{Carga del proyecto}
+		\label{fig:server_6}
+	\end{figure}
+	\FloatBarrier
+	\item Seleccionar ``bikesmanager\_server.zip'' e importar.
+	\item Dentro del proyecto, abrir el fichero ``glassfish-resoruces.xml'' en la carpeta ``Configuration Files'' y poner la \textbf{contraseña del servidor MySQL Server} en el campo correspondiente:
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoInstalacion/server_7}}
+		\caption{Configuración de claves en ``glassfish-resoruces.xml''}
+		\label{fig:server_7}
+	\end{figure}
+	\FloatBarrier	
+	El resto de parámetros se pueden dejar tal y como aparecen puesto que muestran los valores por defecto establecidos anteriormente.
+	\item Compilar el proyecto.
+	\item Si aparece un icono de advertencia sobre el proyecto, es posible que se haya quedado una conexión sin establecer. Se debe pulsar botón derecho sobre el mismo y, a continuación, ``Resolve data source problems'' (en la parte inferior). En el menú que aparece, pulsar ``Add connection''. Esto no supone un problema, pero mejor eliminar las advertencias.
+	\item Encender GlassFish. Adicionalmente, pulsando botón derecho sobre el servidor podemos acceder a sus ``Properties'' para cambiar la IP sobre la que escucha. Por defecto GlassFish escucha en localhost:8080:
+	\begin{figure} [!htb]
+		\centering
+		\resizebox{5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/AnexoInstalacion/server_8}}
+		\caption{Encendiendo GlassFish}
+		\label{fig:server_8}
+	\end{figure}
+	\FloatBarrier
+	\item Desplegar el proyecto. Ahora desde el navegador se puede probar la conexión introduciendo, por ejemplo, la siguiente URL: \url{http://localhost:8080/BikesManager/rest/entities.bikestation} que ha de devolver el conjunto de estaciones en una cadena JSON.
+\end{enumerate}
+
+\subsubsection{Cliente}
+
+\begin{enumerate}
+	\item Guardar el archivo “bikesmanager\_installer.apk” en el dispositivo mediante, por ejemplo, una conexión USB.
+	\item Abrir el archivo en la localización elegida para proceder a su instalación. (NOTA: si se tiene activa alguna app de atenuación de pantalla es posible que el botón de instalación no esté accesible, deshabilitar la app para poder proceder).
+\end{enumerate}
+
+\subsubsection{FAQs}
+
+Se recoge un conjunto de incidencias comunes identificadas en el proceso de instalación.
+
+\begin{itemize}
+	\item \textit{Si bien antes no había problema, ahora no soy capaz de conectar el servidor de aplicación con la base de datos, no siendo posible desplegar el proyecto sobre GlassFish}. Es posible que se haya realizado un cambio de configuración o seguridad sobre la base de datos o sobre los datos de conexión del servidor sobre ella. Este error es típico si se ha realizado un cambio de contraseña para el acceso a la base de datos. Asegura los siguientes puntos:
+	
+	\begin{itemize}
+		\item Que el servidor de base de datos está ejecutándose.
+		\item Asegurar que los datos de conexión con la base de datos configurados (IP (localhost si están el mismo equipo), puerto (3306 típicamente para MySQL), contraseña (la utilizada para el acceso a la base), etc.) están correctamente establecidos, tanto en GlassFish como en el fichero ``glassfish-resoruces.xml'' del proyecto desplegado sobre el servidor. 
+		
+		Es importante, por tanto, notar que ante un cambio en la contraseña para el acceso a la base de datos, se ha de modificar también este dato tanto en la conexión configurada en GlassFish con la base como en el fichero ``glassfish-resoruces.xml'' del proyecto (en el manual de instalación del servidor se pueden consular los elementos que hacen uso de esta clave y que, por tanto, se han de actualizar).
+	\end{itemize}
+	
+	\item \textit{Una vez introducidos los datos de conexión, no puedo operar con la aplicación, que me informa de que no se ha podido establecer la conexión con el servidor}.
+	
+	Es posible que no se esté efectuando correctamente la conexión entre la aplicación y el servidor, asegura los siguientes puntos:
+	\begin{itemize}
+		\item Que la IP y el puerto son correctos, es decir, se corresponden con los utilizados por el servidor de aplicación GlassFish. Si ejecuta en localhost, la IP a utilizar será la asignada a tu equipo en la red a la que esté conectado.
+		\item Que el servidor de aplicación está ejecutándose.
+		\item Que el firewall de tu equipo no está bloqueando la conexión. En tal caso, añade una excepción, tanto de entrada como de salida, para el ejecutable de Java (plataforma sobre la que ejecuta GlassFish) en el puerto en el que esté escuchando el servidor (típicamente el 8080). Otra opción es desconectar el firewall durante el ejecución.
+	\end{itemize}
+	
+	
+\end{itemize}
+

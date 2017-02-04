@@ -11,15 +11,15 @@
 
 \subsubsection{Propósito}
 
-El propósito de esta sección es el de presentar los requisitos de la aplicación acorde al estándar \emph{IEEE Std. 830-1998: Especificación de Requisitos Software} (ERS en adelante), mostrando y esquematizando la funcionalidad básica del software a desarrollar.
+El propósito de esta sección es el de presentar los requisitos de la aplicación acorde al estándar \emph{IEEE Std. 830-1998: Especificación de Requisitos Software} (ERS en adelante), mostrando y esquematizando la funcionalidad básica del software desarrollado.
 
 El documento va principalmente dirigido a futuros usuarios y desarrolladores de la aplicación, de modo que cuenten con una aproximación teórica a la misma y a sus posibilidades.
 
 \subsubsection{Ámbito del Sistema}
 
-El futuro sistema, de nombre \emph{Bikesmanager}, consistirá en una aplicación Android encargada de la gestión de parques públicos de bicicletas a través de usuarios previamente registrados. 
+El sistema, de nombre \emph{Bikesmanager}, consiste en una aplicación Android distribuida encargada de la gestión de parques públicos de bicicletas a través de usuarios previamente registrados.
 
-Se buscará desarrollar una aplicación intuitiva y fácil de usar que cubra las necesidades de manera eficiente y eficaz, proporcionando una adecuada experiencia al usuario final.
+Se ha buscado desarrollar una aplicación intuitiva y fácil de usar que cubra las necesidades de manera eficiente y eficaz, proporcionando una adecuada experiencia al usuario final.
 
 \subsubsection{Definiciones, Acrónimos y Abreviaturas}
 
@@ -29,7 +29,7 @@ Se buscará desarrollar una aplicación intuitiva y fácil de usar que cubra las
 	\item Android: Sistema operativo diseñado principalmente para dispositivos móviles con pantalla táctil.
 	\item Usuario: Persona que hará uso de la aplicación.
 	\item RF: Requerimiento Funcional.
-	\item RNF: Requerimineto No Funcional.
+	\item RNF: Requerimiento No Funcional.
 \end{itemize}
 
 \subsubsection{Referencias}
@@ -40,21 +40,21 @@ Se buscará desarrollar una aplicación intuitiva y fácil de usar que cubra las
 
 \subsubsection{Visión General del Documento}
 
-Una vez realizada la introducción general previa, se aportará a continuación una primera descripción general del sistema a desarrollar para, finalmente, pasar a detallar los requisitos específicos del mismo.
+Una vez realizada la introducción general previa, se aportará a continuación una primera descripción general del sistema desarrollado para, finalmente, pasar a detallar los requisitos específicos del mismo.
 
-En el apartado dedicado a la descripción general, se aporta una visión global de la aplicación, así como de las funciones básicas de la misma. Dichas funciones se detallan en la sección siguiente, junto con otros aspectos como los atributos del sistema sobre los que se implantará el desarrollo.
+En el apartado dedicado a la descripción general, se aporta una visión global de la aplicación, así como de las funciones básicas de la misma. Dichas funciones se detallan en la sección siguiente, junto con otros aspectos como los atributos del sistema sobre los que se implanta el desarrollo.
 
 \subsection{Descripción General}
 
 \subsubsection{Perspectiva del Producto}
 
-La aplicación \emph{Bikesmanager} será un producto diseñado para trabajar sobre dispositivos móviles con sistema operativo Android, donde los datos quedarán almacenados en una base de datos a la que se accederá mediante el servidor de la aplicación. La conexión de la herramienta con el servidor se realizará mediante servicios web.
+La aplicación \emph{Bikesmanager} es un producto diseñado para trabajar sobre dispositivos móviles con sistema operativo Android, donde los datos quedan almacenados en una base de datos a la que se accede mediante el servidor de la aplicación. La conexión de la herramienta con el servidor se realiza mediante servicios web.
 
 \subsubsection{Funciones del Producto}
 
-En la figura~\ref{fig:diagramaCasosUso} se aporta el diagrama de casos de uso que muestra, a grandes rasgos, las funciones del futuro sistema.
+En la figura~\ref{fig:diagramaCasosUso} se aporta el diagrama de casos de uso que muestra, a grandes rasgos, las funciones del sistema.
 
-\begin{figure}[!htb]
+\begin{figure} [!htb]
 	\centering
 	\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/01_CasosDeUso}
 	\caption{Diagrama de casos de uso}
@@ -62,7 +62,7 @@ En la figura~\ref{fig:diagramaCasosUso} se aporta el diagrama de casos de uso qu
 \end{figure}
 
 
-\FloatBarrier % Evita que figuras de secciones previas se cuelen por aquí
+%\FloatBarrier % Evita que figuras de secciones previas se cuelen por aquí
 \subsubsection{Características de los Usuarios}
 
 \begin{itemize}
@@ -80,20 +80,20 @@ En la figura~\ref{fig:diagramaCasosUso} se aporta el diagrama de casos de uso qu
 	\item Limitaciones hardware:
 	\begin{itemize}
 		\item Los servidores han de ser capaces de atender consultas concurrentes.
-		\item Los dispositivos móviles deberán estar gestionados por el sistema operativo Android.
+		\item Los dispositivos móviles han de estar gestionados por el sistema operativo Android.
 	\end{itemize}
-	\item Arquitectura del sistema: Cliente/Servidor de tres capas, con servidor de aplicación GlassFish y MySQL Server de base de datos.
+	\item Arquitectura del sistema: Cliente/Servidor de tres capas con base datos MySQL
 	\item Lenguaje(s) en uso: JAVA, SQL.
 	\item Protocolos de comunicación: 
 	\begin{itemize}
-		\item Aplicación -- Servidor: HTTP (RESTful Web Services - JSON).
-		\item Servidor Aplicación -- Base de Datos: MySQL Connector/JDBC.
+		\item Aplicación -- Servidor: tecnología Web Services.
+		\item Servidor -- Base de Datos: MySQL Connector/JDBC.
 	\end{itemize}
 	\item Consideraciones acerca de la seguridad:
 	\begin{itemize}
-		\item El acceso a la aplicación se realizará mediante el par usuario-contraseña.
-		\item Las claves de usuario deberán almacenarse de manera segura mediante encriptación SHA-1.
-		\item Desde la aplicación, ningún usuario tendrá acceso a la administración interna de la misma, sino que dicha tarea se realizará directamente sobre el servidor o base de datos.
+		\item El acceso a la aplicación se realiza mediante el par usuario-contraseña.
+		\item Las claves de usuario se almacenan de manera segura mediante encriptación SHA-1.
+		\item Desde la aplicación, ningún usuario tiene acceso a la administración interna de la misma, sino que dicha tarea se realiza directamente sobre el servidor o base de datos.
 	\end{itemize}
 \end{itemize}
 
@@ -112,11 +112,11 @@ No se consideran requisitos futuros.
 
 \subsubsection{Interfaces Externas}
 
-La interfaz con el usuario consistirá en un conjunto de pantallas con los controles habituales: botones, campos de texto, listas, etc. sobre la que se deberá asegurar una adecuada experiencia de usuario mediante diseños que sigan las normas Android\footnote{Los detalles al respecto se pueden consultar en \url{https://developer.android.com/design/index.html}, a partir de~\cite{AnDev}.}. Esta interfaz deberá ser construida para el sistema especificado y será visualizada mediante dispositivos móviles. Del mismo modo, el diseño de la interfaz gráfica de usuario deberá fundamentarse en los llamados \emph{fragments} de Android, de modo que pueda ser reutilizable y fácilmente transportable a otras dimensiones u orientaciones de pantalla.
+La interfaz con el usuario consiste en un conjunto de pantallas con los controles habituales: botones, campos de texto, listas, etc. sobre la que se ha tratado de asegurar una adecuada experiencia de usuario mediante diseños que sigan las normas Android\footnote{Los detalles al respecto se pueden consultar en \url{https://developer.android.com/design/index.html}, a partir de~\cite{AnDev}.}. Esta interfaz ha sido construida para ser visualizada mediante dispositivos móviles y su diseño se ha fundamentado en los llamados \emph{fragments} de Android, de modo que pueda ser reutilizable y fácilmente transportable a otras dimensiones u orientaciones de pantalla.
 
-En relación a las interfaces hardware-software, se deberá contar con un dispositivo móvil con conexión a internet y que implemente, como mínimo, la versión 4.1 del sistema Android (llamada \emph{Jelly Bean}\footnote{Android denomina alfabéticamente y con nombres de dulces a cada una de las versiones de su sistema operativo. En el momento de la redacción de este documento, la versión más actualizada es la 7, \textit{Nougat}.}).
+En relación a las interfaces hardware-software, se ha de contar con un dispositivo móvil con conexión a internet y que implemente, como mínimo, la versión 4.1 del sistema Android (llamada \emph{Jelly Bean}\footnote{Android denomina alfabéticamente y con nombres de dulces a cada una de las versiones de su sistema operativo. En el momento de la redacción de este documento, la versión más actualizada es la 7, \textit{Nougat}.}).
 
-Finalmente, acerca de las interfaces de comunicación, la aplicación se comunicará con su servidor mediante el protocolo HTTP haciendo uso de RESTful Web Services y cadenas JSON. La conexión entre el servidor de aplicación y la base de datos se realizará mediante las tecnologías MySQL Connector/JDBC.
+Finalmente, acerca de las interfaces de comunicación, la aplicación se comunica con su servidor mediante el protocolo HTTP haciendo uso de RESTful Web Services y cadenas JSON. La conexión entre el servidor de aplicación y la base de datos se realiza mediante las tecnologías MySQL Connector/JDBC.
 \subsubsection{Funciones}
 
 En esta sección se desarrolla la descripción de los diferentes requisitos funcionales y no funcionales con que deberá contar el sistema. 
@@ -124,7 +124,7 @@ En esta sección se desarrolla la descripción de los diferentes requisitos func
 Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su definición acompañada de una descripción textual y del diagrama de actividad correspondiente, de modo que cada uno quede adecuadamente descrito.
 
 \begin{itemize}
-	\item \textbf{RF01: Registrar usuario}. El sistema deberá permitir el registro de nuevos usuarios. Para ello, se solicitarán el nombre usuario, contraseña, dirección de correo electrónico y nombre y apellidos reales. El nombre de usuario y la dirección de correo han de ser únicos, de modo que no se permita la duplicidad de los mismos en la aplicación. Asimismo, la contraseña ha de ser encriptada a la hora de ser almacenada en la base de datos.
+	\item \textbf{RF01: Registrar usuario}. El sistema debe permitir el registro de nuevos usuarios. Para ello, se solicitan el nombre usuario, contraseña, dirección de correo electrónico y nombre y apellidos reales. El nombre de usuario y la dirección de correo han de ser únicos, de modo que no se permita la duplicidad de los mismos en la aplicación. Asimismo, la contraseña ha de ser encriptada a la hora de ser almacenada en la base de datos.
 	
 	La descripción textual:
 	\begin{table}[h]
@@ -153,7 +153,7 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 		\label{fig:diagramaActividad_RF01}
 	\end{figure}
 	 
-	\item \textbf{RF02: Loguear usuario}. El sistema deberá permitir la autenticación de usuarios para su acceso. Este proceso se realizará mediante el par usuario-contraseña. Señalar que, como se ha especificado en el requisito previo, la contraseña se almacena encriptada, de modo que la introducida por el usuario que trata de acceder ha de ser tratada por el mismo algortimo para poder realizar la comparación.
+	\item \textbf{RF02: Loguear usuario}. El sistema debe permitir la autenticación de usuarios para su acceso. Este proceso se realiza mediante el par usuario-contraseña. Señalar que, como se ha especificado en el requisito previo, la contraseña se almacena encriptada, de modo que la introducida por el usuario que trata de acceder ha de ser tratada por el mismo algortimo para poder realizar la comparación.
 	
 	La descripción textual:
 	\begin{table}[h]
@@ -173,16 +173,17 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 		\label{tab:tablaDescTextualRF02}
 	\end{table}
 	
+	\FloatBarrier
 	Y el diagrama de actividad:
 	\begin{figure}[!htb]
 		\centering
-		\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF02_loguear}}
+		\resizebox{10cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF02_loguear}}
 		\caption{Diagrama de actividad de RF02: Loguear usuario}
 		\label{fig:diagramaActividad_RF02}
 	\end{figure}
 
 	\FloatBarrier
-	\item \textbf{RF03: Modificar perfil}. El sistema deberá permitir la modificación de los datos del perfil de usuario solicitados en el proceso de registro, considerando que el nombre de usuario y la dirección de correo han de ser únicos.
+	\item \textbf{RF03: Modificar perfil}. El sistema debe permitir la modificación de los datos del perfil de usuario solicitados en el proceso de registro, considerando que el nombre de usuario y la dirección de correo han de ser únicos.
 	
 	La descripción textual:
 	\begin{table}[h]
@@ -205,16 +206,17 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 		\label{tab:tablaDescTextualRF03}
 	\end{table}
 	
+	\FloatBarrier
 	Y el diagrama de actividad:
 	\begin{figure}[!htb]
 		\centering
-		\resizebox{8cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF03_modificarPerfil}}
+		\resizebox{10cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF03_modificarPerfil}}
 		\caption{Diagrama de actividad de RF03: Modificar perfil}
 		\label{fig:diagramaActividad_RF03}
 	\end{figure}
 	
 	\FloatBarrier
-	\item \textbf{RF04: Borrar perfil}. El sistema deberá permitir el borrado completo de perfiles. Este proceso requerirá de una confirmación explícita por parte del usuario y, en el momento en que se realice, será irreversible, borrando el registro específico de la base de datos. El dinero ingresado será devuelto y las posibles reservas, canceladas. El proceso no se realizará mientras que el usuario cuente con una bicicleta del conjunto de estaciones en su poder.
+	\item \textbf{RF04: Borrar perfil}. El sistema debe permitir el borrado completo de perfiles. Este proceso requiere de una confirmación explícita por parte del usuario y, en el momento en que se realice, es irreversible, borrando el registro específico de la base de datos. Se devuelve el dinero ingresado y las posibles reservas se cancelan. El proceso no se realiza mientras que el usuario cuente con una bicicleta del conjunto de estaciones en su poder.
 	
 	La descripción textual:
 	\begin{table}[h]
@@ -237,13 +239,13 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	Y el diagrama de actividad:
 	\begin{figure}[!htb]
 		\centering
-		\resizebox{9cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF04_borrarPerfil}}
+		\resizebox{8.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF04_borrarPerfil}}
 		\caption{Diagrama de actividad de RF04: Borrar perfil}
 		\label{fig:diagramaActividad_RF04}
 	\end{figure}
 	
 	\FloatBarrier
-	\item \textbf{RF05: Ingresar saldo}. El sistema deberá permitir el ingreso de dinero, de modo que el usuario cuente con saldo suficiente para que pueda operar con el parque de bicicletas.
+	\item \textbf{RF05: Ingresar saldo}. El sistema debe permitir el ingreso de dinero, de modo que el usuario cuente con saldo suficiente para que pueda operar con el parque de bicicletas.
 	
 	La descripción textual:
 	\begin{table}[h]
@@ -272,14 +274,14 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	\end{figure}
 	
 	\FloatBarrier
-	\item \textbf{RF06: Coger bicicleta}. El sistema deberá permitir coger bicicletas a los usuarios registrados y logueados en el sistema. Se han tener en cuenta las siguientes restricciones:
+	\item \textbf{RF06: Coger bicicleta}. El sistema debe permitir coger bicicletas a los usuarios registrados y logueados en el sistema. Se han tener en cuenta las siguientes restricciones:
 	\begin{itemize}
 		\item El usuario sólo puede tener una bicicleta cogida a la vez.
 		\item El usuario ha de disponer de saldo suficiente para completar la operación.
 		\item En caso de haber reservado previamente, el usuario sólo podrá coger la bicicleta de la estación en la que haya realizado dicha reserva.
-		\item Las bicicletas reservadas por otros usuarios no estarán disponibles.
+		\item Las bicicletas reservadas por otros usuarios no están disponibles.
 	\end{itemize}
-	Señalar, a su vez, que la estación deberá mostrar una tarifa adaptada a la disponibilidad de bicicletas. Es decir, partiendo de una tarifa base, ésta se verá acrecentada a medida que las bicis disponibles se vean reducidas. El objetivo es introducir un primer nivel de adaptación a las condiciones del entorno, de modo que los usuarios tengan alicientes para coger bicicletas de estaciones con una mayor disponibilidad. 
+	Señalar, a su vez, que la estación muestra una tarifa adaptada a la disponibilidad de bicicletas. Es decir, partiendo de una tarifa base, ésta se ve acrecentada a medida que las bicis disponibles se reduzcan. El objetivo es introducir un primer nivel de adaptación a las condiciones del entorno, de modo que los usuarios tengan alicientes para coger bicicletas de estaciones con una mayor disponibilidad. 
 	
 	La descripción textual:
 	\begin{table}[h]
@@ -305,16 +307,16 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	Y el diagrama de actividad:
 	\begin{figure}[!htb]
 		\centering
-		\resizebox{13.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF06_cogerBicicleta}}
+		\resizebox{12cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF06_cogerBicicleta}}
 		\caption{Diagrama de actividad de RF06: Coger bicicleta}
 		\label{fig:diagramaActividad_RF06}
 	\end{figure}
 	
 	\FloatBarrier
-	\item \textbf{RF07: Dejar bicicleta}. El sistema deberá permitir dejar, en estaciones con disponibilidad suficiente, bicicletas previamente cogidas por usuarios. Se han tener en cuenta las siguientes restricciones:
+	\item \textbf{RF07: Dejar bicicleta}. El sistema debe permitir dejar, en estaciones con disponibilidad suficiente, bicicletas previamente cogidas por usuarios. Se han tener en cuenta las siguientes restricciones:
 	\begin{itemize}
-		\item En caso de haber reservado un anclaje previamente, el usuario sólo podrá dejar la bicicleta en la estación en la que haya realizado dicha reserva.
-		\item Los anclajes reservados por otros usuarios no estarán disponibles.
+		\item En caso de haber reservado un anclaje previamente, el usuario sólo puede dejar la bicicleta en la estación en la que haya realizado dicha reserva.
+		\item Los anclajes reservados por otros usuarios no están disponibles.
 	\end{itemize}
 	
 	La descripción textual:
@@ -340,16 +342,16 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	Y el diagrama de actividad:
 	\begin{figure}[!htb]
 		\centering
-		\resizebox{13.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF07_dejarBicicleta}}
+		\resizebox{12cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF07_dejarBicicleta}}
 		\caption{Diagrama de actividad de RF07: Dejar bicicleta}
 		\label{fig:diagramaActividad_RF07}
 	\end{figure}
 	
 	\FloatBarrier
-	\item \textbf{RF08: Reservar}. El sistema deberá permitir la reserva de recursos, que podrán ser de dos tipos: bicicletas o anclajes. Se han tener en cuenta las siguientes restricciones:
+	\item \textbf{RF08: Reservar}. El sistema debe permitir la reserva de recursos, que pueden ser de dos tipos: bicicletas o anclajes. Se han tener en cuenta las siguientes restricciones:
 	\begin{itemize}
-		\item El usuario sólo puede tener una reserva de cada tipo a la vez. Es decir, se permite tener, como mucho, dos reservas simultáneas por usuario: una bicicleta y un anclaje.
-		\item En caso de tener una bicicleta, el usuario no podrá realizar la reserva de otra.
+		\item El usuario sólo puede tener una reserva de cada tipo a la vez. Es decir, se permite tener, como máximo, dos reservas simultáneas por usuario: una bicicleta y un anclaje.
+		\item En caso de tener una bicicleta, el usuario no puede realizar la reserva de otra.
 	\end{itemize}
 	
 	La descripción textual:
@@ -382,7 +384,7 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	\end{figure}
 	
 	\FloatBarrier
-	\item \textbf{RF09: Cancelar reserva}. El sistema deberá permitir la cancelación de reservas, tanto de bicicletas como de anclajes. Esta cancelación se podrá realizar por las siguientes vías:
+	\item \textbf{RF09: Cancelar reserva}. El sistema debe permitir la cancelación de reservas, tanto de bicicletas como de anclajes. Esta cancelación se puede realizar por las siguientes vías:
 	\begin{itemize}
 		\item Cancelación explícita por parte del usuario. Este tipo requiere una confirmación previa.
 		\item Cancelación implícita al cabo de 30 minutos del momento de la reserva.
@@ -410,13 +412,13 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 	Y el diagrama de actividad:
 	\begin{figure}[!htb]
 		\centering
-		\resizebox{10cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF09_cancelarReserva}}
+		\resizebox{10.5cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/02_Actividad_RF09_cancelarReserva}}
 		\caption{Diagrama de actividad de RF09: Cancelar reserva (explícita)}
 		\label{fig:diagramaActividad_RF09}
 	\end{figure}
 	
 	\FloatBarrier
-	\item \textbf{RF10: Pagar}. El sistema deberá permitir realizar el pago de las operaciones desarrolladas por los usuarios.
+	\item \textbf{RF10: Pagar}. El sistema debe permitir realizar el pago de las operaciones desarrolladas por los usuarios.
 	
 	La descripción textual:
 	\begin{table}[h]
@@ -442,7 +444,7 @@ Se comienza por los \emph{Requerimientos Funcionales}, para los que se aporta su
 		\label{fig:diagramaActividad_RF10}
 	\end{figure}
 	
-	\item \textbf{RF11: Actualizar}. El sistema deberá permitir actualizar el estado global tomando la información más reciente almacenada en el servidor. En este sentido, con cada solicitud de actualización, en el proceso se deberá comprobar si existen reservas caducadas, cancelándolas automáticamente de modo que se ofrezca al usuario una visión consistente de la disponibilidad del parque de bicicletas.
+	\item \textbf{RF11: Actualizar}. El sistema debe permitir actualizar el estado global tomando la información más reciente almacenada en el servidor. En este sentido, con cada solicitud de actualización, en el proceso se debe comprobar si existen reservas caducadas, cancelándolas automáticamente para ofrecer al usuario una visión consistente de la disponibilidad del parque de bicicletas.
 	
 	La descripción textual:
 	\begin{table}[h]
@@ -511,7 +513,7 @@ Finalmente, en relación a la cantidad de registros almacenados en la base de da
 
 \subsubsection{Restricciones de Diseño}
 
-Para el diseño de la aplicación se deberán utilizar componentes compatibles con la versión 4.1 de Android. En caso de no estar disponibles, se deberá recurrir a librerías de soporte para dar servicio a dicha versión. Cumpliendo con ella, las restricciones hardware quedan, a su vez, cubiertas.
+Para el diseño de la aplicación se deben utilizar componentes compatibles con la versión 4.1 de Android. En caso de no estar disponibles, se ha de recurrir a librerías de soporte para dar servicio a dicha versión. Cumpliendo con ella, las restricciones hardware quedan, a su vez, cubiertas.
 
 En relación al servidor de aplicación, éste ha de ser capaz de gestionar accesos concurrentes a recursos compartidos, controlando las posibles condiciones de carrera que puedan aparecer y dando una respuesta oportuna al usuario. 
 
@@ -520,19 +522,19 @@ En relación al servidor de aplicación, éste ha de ser capaz de gestionar acce
 \begin{itemize}
 	\item Seguridad.
 	\begin{itemize}
-		\item El acceso a la aplicación se realizará mediante el par usuario-contraseña.
-		\item Las claves de usuario deberán almacenarse de manera segura mediante encriptación SHA-1.
-		\item Desde la aplicación ningún usuario tendrá acceso a la administración interna de la misma, sino que dicha tarea se realizará directamente sobre el servidor o base de datos donde sólo el desarrollador o mantendor de la aplicación podrá acceder.
+		\item El acceso a la aplicación se realiza mediante el par usuario-contraseña.
+		\item Las claves de usuario deben almacenarse de manera segura mediante encriptación SHA-1.
+		\item Desde la aplicación ningún usuario tendrá acceso a la administración interna de la misma, sino que dicha tarea se realizará directamente sobre el servidor o base de datos donde sólo el desarrollador o mantenedor de la aplicación podrá acceder.
 	\end{itemize}
 	\item Fiabilidad.
 	\begin{itemize}
 		\item El sistema ha de quedar adecuadamente testeado previa distribución para obtener una adecuada cobertura de fallos y errores.
-		\item La interfaz de usuario ha de ser sencilla e intuitiva y, en caso de ser necesario, deberá informar con el resultado de las operaciones para una adecuada experiencia en su uso.
+		\item La interfaz de usuario ha de ser sencilla e intuitiva y, en caso de ser necesario, debe informar con el resultado de las operaciones para una adecuada experiencia en su uso.
 	\end{itemize}
 	\item Mantenibilidad.
 	\begin{itemize}
 		\item La aplicación ha de quedar desarrollada siguiendo las buenas prácticas del desarrollo software (código adecuadamente organizado y comentado, utilización de patrones de diseño estandarizados, utilización de \textit{idioms}, etc.).
-		\item La herramienta deberá dejar \textit{logs} internos de las áreas que se consideren más relevantes o susceptibles a fallos, de modo que puedan ser consultados por los desarrolladores para realizar tareas de depuración.
+		\item La herramienta ha de dejar \textit{logs} internos de las áreas que se consideren más relevantes o susceptibles a fallos, de modo que puedan ser consultados por los desarrolladores para realizar tareas de depuración.
 	\end{itemize}
 	\item Portabilidad. 
 	\begin{itemize}
@@ -576,8 +578,8 @@ Por lo tanto, el modelo de análisis supone un puente entre la descripción del 
 Este modelo se desarrollará en dos pasos: 
 
 \begin{enumerate}  
-	\item \textbf{Análisis conceptual del sistema}. Se presentará la vista estática general del sistema mediante un diagrama de clases dé análisis. El objetivo es el de obtener una perspectiva global y con un alto nivel de abstracción del software y sus entidades básicas.
-	\item \textbf{Análisis y desarrollo de requisitos}. Los requisitos descritos en la sección anterior se comenzarán a desarrollar mediante diagramas de colaboración (o comunicación), de modo que se tenga una primera visión de la futura implementación de cada uno y se muestre una primera aproximación a la interacción entre entidades.
+	\item \textbf{Análisis conceptual del sistema}. Se presentará la vista estática general del sistema mediante un diagrama de clases de análisis. El objetivo es el de obtener una perspectiva global y con un alto nivel de abstracción del software y sus entidades básicas.
+	\item \textbf{Análisis y desarrollo de requisitos}. Los requisitos descritos en la sección anterior se comenzarán a desarrollar mediante diagramas de colaboración (o comunicación), de modo que se tenga una primera visión de la implementación de cada uno y se muestre una primera aproximación a la interacción entre entidades.
 \end{enumerate}
 
 Cabe señalar que, en este punto, la atención se centra en el \emph{qué}, no en el \emph{cómo}, con lo no se entrará en detalles técnicos, de diseño o de implementación.
@@ -598,16 +600,16 @@ Para el análisis y representación del modelo conceptual de datos se recurrirá
 Con todo, quedan identificadas las siguientes entidades básicas:
 
 \begin{itemize}
-	\item \textbf{Gestor Conexión Remota}. Desde el momento en el que la aplicación contará con una arquitectura Cliente/Servidor y la comunicación entre ambas entidades se realizará de manera remota, se requiere de una entidad que gestione dicha comunicación y sepa dar respuesta a las operaciones CRUD\footnote{Siglas en inglés de las operaciones básicas para la gestión de datos: Create, Read, Update y Delete}.
-	\item \textbf{Entidad Remota}. La entidad que quedará gestionada por la clase anterior, supone la generalización de alguna de las siguientes entidades:
+	\item \textbf{Gestor Conexión Remota}. Desde el momento en el que la aplicación cuenta con una arquitectura Cliente/Servidor y la comunicación entre ambas entidades se realiza de manera remota, se requiere de una entidad que gestione dicha comunicación y sepa dar respuesta a las operaciones CRUD\footnote{Siglas en inglés de las operaciones básicas para la gestión de datos: Create, Read, Update y Delete}.
+	\item \textbf{Entidad Remota}. La entidad que queda gestionada por la clase anterior, supone la generalización de alguna de las siguientes entidades:
 	\begin{itemize}
-		\item \textbf{Usuario}. Se deberán recoger los atributos básicos para poder realizar el login, como el nombre de usuario y contraseña, datos personales, como el nombre y apellidos, y datos operativos, como el saldo o datos acerca de si se tiene una reserva o bicicleta. Del mismo modo, el usuario deberá ser capaz de interactuar con las estaciones de bicicletas, cogiendo y dejando las mismas o gestionando reservas.
-		\item \textbf{Estación}. La estación de bicicletas deberá contar con datos identificativos, como la dirección donde se encuentre ubicada, y con datos operativos, referidos al total de bicicletas o anclajes disponibles, reservados, etc., así como la tarifa base. La estación deberá poder gestionar las operaciones comenzadas por los usuarios y mostrar su estado convenientemente actualizado.
-		\item \textbf{Reserva}. Se considera relevante contar con una clase para almacenar las reservas de usuarios, de modo que su gestión global sea más sencilla. Esta entidad deberá contar con los datos de la reserva (tipo (anclaje o bicicleta), nombre de usuario, fecha y estación) y con la constante que defina el tiempo máximo por reserva (30 minutos, de acuerdo a los requisitos).
+		\item \textbf{Usuario}. Se deben recoger los atributos básicos para poder realizar el login, como el nombre de usuario y contraseña, datos personales, como el nombre y apellidos, y datos operativos, como el saldo o datos acerca de si se tiene una reserva o bicicleta. Del mismo modo, el usuario ha de ser capaz de interactuar con las estaciones de bicicletas, cogiendo y dejando las mismas o gestionando reservas.
+		\item \textbf{Estación}. La estación de bicicletas debe contar con datos identificativos, como la dirección donde se encuentre ubicada, y con datos operativos, referidos al total de bicicletas o anclajes disponibles, reservados, etc., así como la tarifa base. La estación ha de poder gestionar las operaciones comenzadas por los usuarios y mostrar su estado convenientemente actualizado.
+		\item \textbf{Reserva}. Se considera relevante contar con una clase para almacenar las reservas de usuarios, de modo que su gestión global sea más sencilla. Esta entidad debe contar con los datos de la reserva (tipo (anclaje o bicicleta), nombre de usuario, fecha y estación) y con la constante que defina el tiempo máximo por reserva (30 minutos, de acuerdo a los requisitos).
 	\end{itemize}
 \end{itemize}
 
-De este modo, el \emph{Gestor de Conexión Remota} será el encargado de enviar y recibir datos para las entidades, sin necesidad de diferenciar entre ninguna de ellas por atender directamente la \emph{Entidad Remota} general .
+De este modo, el \emph{Gestor de Conexión Remota} es el encargado de enviar y recibir datos para las entidades, sin necesidad de diferenciar entre ninguna de ellas por atender directamente la \emph{Entidad Remota} general .
 
 Este conjunto de entidades básicas, junto con sus potenciales atributos y operaciones básicas, queda modelizado en la figura~\ref{fig:diagramaClasesAnalisis}.
 
@@ -872,7 +874,7 @@ La definición previa pone el énfasis en el papel de los ``componentes del soft
 
 \subsubsection{Estilo arquitectónico}
 
-Considerando los conceptos anteriores y con base en las especificación de requisitos previa, el estilo arquitectónico sobre el que se sustentará el sistema es el \emph{Cliente/Servidor} en su variación de tres capas, tal y como se muestra en la figura~\ref{fig:arqClienteServ3Cap}:
+Considerando los conceptos anteriores y con base en las especificación de requisitos previa, el estilo arquitectónico sobre el que se sustenta el sistema es el \emph{Cliente/Servidor} en su variación de tres capas, tal y como se muestra en la figura~\ref{fig:arqClienteServ3Cap}:
 
 \begin{figure}
 	\centering
@@ -907,7 +909,7 @@ A la hora de realizar este refinamiento, se han de tener en cuenta una serie de 
 
 Se ha de tener en cuenta que el sistema cuenta tanto con una capa de aplicación como con otra de servidor, con lo que se ha de modelizar la arquitectura de ambas capas.
 
-Así, en la figura~\ref{fig:diagramaClasesDisenoCliente} se aporta el diagrama de clases de diseño para la capa del cliente del futuro sistema, si bien cabe señalar que el objetivo del diagrama de clases de diseño es el de modelizar la arquitectura básica del sistema a implementar; con lo que, para mantener la vista de dicha arquitectura útil y clara, no se incluyen clases, atributos o métodos que tengan un carácter accesorio o no aporten de manera directa a la consecución de los requisitos descritos en secciones anteriores. 
+Así, en la figura~\ref{fig:diagramaClasesDisenoCliente} se aporta el diagrama de clases de diseño para la capa del cliente del sistema, si bien cabe señalar que el objetivo del diagrama de clases de diseño es el de modelizar la arquitectura básica del sistema a implementar; con lo que, para mantener la vista de dicha arquitectura útil y clara, no se incluyen clases, atributos o métodos que tengan un carácter accesorio o no aporten de manera directa a la consecución de los requisitos descritos en secciones anteriores. 
 
 De este modo, no se incluyen métodos ligados a inicializaciones de interfaces de usuario o atributos relativos a las mismas, métodos básicos como los \textit{get()} y \textit{set()} o clases accesorias sin implicación directa en los casos de uso, entre otros.
 
@@ -942,7 +944,7 @@ Por su parte, en la figura~\ref{fig:diagramaClasesDisenoServidor} queda esquemat
 
 En este caso, se identifica el patrón \emph{Facade}, un patrón estructural utilizado para simplificar las interfaces o comunicaciones entre subsistemas.
 
-Dado que el servidor supone la capa intermedia entre el cliente y la base de datos, este patrón ayuda a facilitar la comunicación entre ellos. El patrón se implementará partiendo de un clase abstracta de la que heredan las \emph{fachadas} específicas de cada entidad, siendo estas especificaciones las que recibirán las llamadas remotas. Todas ellas contarán con los métodos CRUD básicos implementados en la fachada padre, que es la que finalmente realiza la conexión con la base de datos. Esta clase padre será la que implementará, a su vez, los métodos de control para todas las entidades, de modo que las fachadas hijas sólo se dedican a recibir llamadas y e invocar el método de la clase padre oportuno.
+Dado que el servidor supone la capa intermedia entre el cliente y la base de datos, este patrón ayuda a facilitar la comunicación entre ellos. El patrón se implementa partiendo de un clase abstracta de la que heredan las \emph{fachadas} específicas de cada entidad, siendo estas especificaciones las que reciben las llamadas remotas. Todas ellas cuentan con los métodos CRUD básicos implementados en la fachada padre, que es la que finalmente realiza la conexión con la base de datos. Esta clase padre es la que implementa, a su vez, los métodos de control para todas las entidades, de modo que las fachadas hijas sólo se dedican a recibir llamadas e invocar el método de la clase padre oportuno.
 
 Por claridad en el esquema, en las fachadas hijas no se han incluido los métodos de comunicación básicos por tratarse de llamadas al método CRUD específico de la clase padre. Asimismo, en esta fachada padre se apuntan dichos métodos CRUD sin entrar en posibles adecuaciones a cada entidad, además de métodos operativos necesarios para la funcionalidad del sistema.
 
@@ -951,7 +953,7 @@ Se observa, a su vez, que la fachada padre ha de incluir dos mensajes estándar 
 \subsection{Diseño de las interfaces}
 \label{subsec:disenoInterfaces}
 
-Una vez establecida la arquitectura básica sobre la que se fundamentará el sistema, el segundo apartado a definir en el modelo de diseño son las interfaces de comunicación y de usuario. Estos elementos permiten que el software se comunique externamente y permita la comunicación y colaboración internas entre los componentes que constituyen la arquitectura del software.
+Una vez establecida la arquitectura básica sobre la que se fundamenta el sistema, el segundo apartado a definir en el modelo de diseño son las interfaces de comunicación y de usuario. Estos elementos permiten que el software se comunique externamente y permita la comunicación y colaboración internas entre los componentes que constituyen la arquitectura del software.
 
 \subsubsection{Interfaces de comunicación}
 
@@ -960,14 +962,14 @@ Dentro de la arquitectura Cliente/Servidor se hace necesario definir la comunica
 Como quedó definido en la sección~\ref{sec:secERS} dedicada a la ERS, la comunicación Cliente/Servidor se ha de regir de acuerdo a la tecnología RESTful Web Services, que se comentará más adelante. Esta tecnología parte de comunicaciones HTTP y alcanzan los diferentes métodos remotos mediante URLs diferenciadas. Así, se hace necesario definir una URL estándar que sirva de base para todas las concretas de cada método a ejecutar en el servidor. Se considera la siguiente plantilla: $$http://[IP\_SERV]:[PORT]/BikesManager/rest/entities.[ENTITY]$$
 donde $IP\_SERV$ indica la IP dirección del servidor, $PORT$ indica el puerto donde el servidor se encuentra escuchando y $ENTITY$ indica la entidad (Usuario, Estación o Reserva) que realiza la llamada remota.
 
-A partir de esta URL general se formarán las específicas de la forma siguiente: $$[BASE\_URL]/[METHOD]$$
+A partir de esta URL general se forman las específicas de la forma siguiente: $$[BASE\_URL]/[METHOD]$$
 donde $BASE\_URL$ es la URL básica indicada y $METHOD$ indica el método o parámetros que se añaden en la dirección para la llamada del método que sea necesario.
 
-Una vez un método se ejecuta en el servidor, éste devolverá la cadena resultante al cliente. En caso de que se tenga que indicar si la operación se ha realizado correctamente o no, se enviarán cadenas del estilo $[ENTITY]\_SERVER\_OK$ o $[ENTITY]\_SERVER\_KO$, respectivamente.
+Una vez un método se ejecuta en el servidor, éste devuelve la cadena resultante al cliente. En caso de que se tenga que indicar si la operación se ha realizado correctamente o no, se envían cadenas del estilo $[ENTITY]\_SERVER\_OK$ o $[ENTITY]\_SERVER\_KO$, respectivamente.
 
-Por su parte, las cadenas que se intercambian entre ambas capas seguirán el formato de texto JSON\footnote{Una introducción a este lenguaje se recoge en~\cite{JSON}.}, la tecnología ha utilizar para la traducción de cadenas se comenta en la siguiente sección~\ref{sec:secModeloImp}.
+Por su parte, las cadenas que se intercambian entre ambas capas siguen el formato de texto JSON\footnote{Una introducción a este lenguaje se recoge en~\cite{JSON}.}, la tecnología ha utilizar para la traducción de cadenas se comenta en la siguiente sección~\ref{sec:secModeloImp}.
 
-La selección de este formato en lugar del tradicional XML queda principalmente motivada por el hecho de que el primero es más sencillo a la hora compartir \emph{datos tradicionales} como texto o números, que son los utilizados por el sistema a desarrollar, y no datos estructurados como podrían ser documentos, fotos, vídeos\dots donde XML es más eficiente.
+La selección de este formato en lugar del tradicional XML queda principalmente motivada por el hecho de que el primero es más sencillo a la hora compartir \emph{datos tradicionales} como texto o números, que son los utilizados por el sistema desarrollado, y no datos estructurados como podrían ser documentos, fotos, vídeos\dots donde XML es más eficiente.
 
 Finalmente, comentar la utilización de los patrones \emph{Observer} y \emph{Facade} para mejorar y estandarizar la comunicación entre componentes ante las problemáticas específicas apuntadas anteriormente.
 
@@ -977,7 +979,7 @@ La interfaz de usuario (IU en adelante) se considera como uno de los elementos m
 
 De acuerdo a Pressman~\cite{Pre10}, el diseño de la IU (o diseño de la \emph{usabilidad}) crea un medio eficaz de comunicación entre los seres humanos y la computadora. Siguiendo un conjunto de principios de diseño de la interfaz, se identifican los objetos y acciones de ésta y luego crea una plantilla de pantalla que constituye la base del prototipo de la interfaz de usuario.
 
-Este apartado está dedicado, por tanto, a desarrollar brevemente la decisiones y principios de diseño de IU de mayor relevancia adoptados para alcanzar una interfaz gráfica consistente y adecuada.
+Este apartado está dedicado, por tanto, a desarrollar brevemente la decisiones y principios de diseño de IU de mayor relevancia adoptados para alcanzar una interfaz gráfica consistente y adecuada en el sistema desarrollado.
 
 En primer término, el diseño general de cualquier IU se ha de basar en las conocidas como \emph{Reglas de Oro} establecidas por Mandel~\cite{Man97}:
 
@@ -989,9 +991,9 @@ En primer término, el diseño general de cualquier IU se ha de basar en las con
 
 Cada una de las tres Reglas anteriores supone una agrupación de reglas más específicas y su estudio teórico queda fuera del alcance de este documento, que se limita a su nombrado para su aplicación práctica\footnote{El detalle de cada regla se puede consultar en el manual de Theo Mandel al respecto en~\cite{Man97}.}.
 
-Con la base anterior establecida, se ha de tener en cuenta que la IU se presentará sobre dispositivos móviles con sistema operativo Android, que presenta numerosa documentación oficial acerca del adecuado diseño de IUs\footnote{La documentación puede ser consultada en \url{https://developer.android.com/design/index.html}, a partir de~\cite{AnDev}.}. Se hace necesario, por tanto, hacer un seguimiento de estos principios específicos para lograr una IU adecuada a la naturaleza del dispositivo sobre el que se despliega el sistema.
+Con la base anterior establecida, se ha de tener en cuenta que la IU se presenta sobre dispositivos móviles con sistema operativo Android, que aporta numerosa documentación oficial acerca del adecuado diseño de IUs\footnote{La documentación puede ser consultada en \url{https://developer.android.com/design/index.html}, a partir de~\cite{AnDev}.}. Se hace necesario, por tanto, hacer un seguimiento de estos principios específicos para lograr una IU adecuada a la naturaleza del dispositivo sobre el que se despliega el sistema.
 
-Adicionalmente, la aplicación deberá soportar la ejecución en diferentes idiomas, dependiendo del lenguaje configurado en el dispositivo utilizado. Android ofrece la posibilidad de localizar todos los textos del sistema en diferentes ficheros XML, uno por idioma soportado, de modo que a la hora de ejecutar la aplicación, carga el correspondiente al lenguaje del dispositivo. En caso de que no se disponga de uno, quedaría seleccionado el lenguaje establecido como estándar\footnote{Para más detalles al respecto, consultar \url{https://developer.android.com/training/basics/supporting-devices/languages.html} a partir de~\cite{AnDev}}. Para la aplicación descrita en este documento se consideran dos idiomas: inglés (como estándar) y español.
+Adicionalmente, la aplicación debe soportar la ejecución en diferentes idiomas, dependiendo del lenguaje configurado en el dispositivo utilizado. Android ofrece la posibilidad de localizar todos los textos del sistema en diferentes ficheros XML, uno por idioma soportado, de modo que a la hora de ejecutar la aplicación, carga el correspondiente al lenguaje del dispositivo. En caso de que no se disponga de uno, quedaría seleccionado el lenguaje establecido como estándar\footnote{Para más detalles al respecto, consultar \url{https://developer.android.com/training/basics/supporting-devices/languages.html} a partir de~\cite{AnDev}}. Para la aplicación descrita en este documento se consideran dos idiomas: inglés (como estándar) y español.
 
 Una vez considerados los principios generales y los específicos para los elementos particulares de Android, la decisión de mayor relevancia en el diseño de IU en este sistema es la utilización de los llamados \emph{Fragments} (o Fragmentos). Un Fragmento representa un comportamiento específico de una porción de la IU en una \emph{Actividad}\footnote{Una Actividad es uno de los elementos básicos de cualquier aplicación Android. Sin entrar en detalles y por dar una primera aproximación, cada una de las pantallas o vistas de una aplicación suponen una Actividad. Más detalles en \url{https://developer.android.com/reference/android/app/Activity.html}, a partir de~\cite{AnDev}.}; es decir, agrupa elementos de una interfaz (tanto el diseño gráfico como sus controles lógicos asociados) de modo que estos sean reutilizables entre diversos tamaños u orientaciones de pantalla.
 
@@ -1004,17 +1006,17 @@ En la figura~\ref{fig:fragmentsAndroid} se aporta un esquema gráfico de la util
 	\label{fig:fragmentsAndroid}
 \end{figure}
 
-De este modo, si bien el sistema se desarrollará para dispositivos móviles, la utilización de Fragmentos posibilitará su adaptación a otros tamaños de pantalla de manera sencilla y simple.
+De este modo, si bien el sistema se ha desarrollado para dispositivos móviles, la utilización de Fragmentos posibilita su adaptación a otros tamaños de pantalla de manera sencilla y simple.
 
 Con todo, a modo de resumen, las decisiones o principios de diseño de IU adoptados son tres:
 
 \begin{enumerate}
 	\item{Las Reglas de Oro establecidas por Mandel}.
 	\item{Las normas de diseño Android para cada uno de sus componentes y elementos gráficos}.
-	\item{El empleo de Fragmentos para la agrupación y reutilización de elementos de IU entre diveros tamaños u operaciones de pantalla}.
+	\item{El empleo de Fragmentos para la agrupación y reutilización de elementos de IU entre diversos tamaños u operaciones de pantalla}.
 \end{enumerate}
 
-Estas decisiones regirán la construcción de la futura interfaz gráfica, proceso iterativo que consta de cuatro actividades estructurales~\cite{Man97}: 1) análisis y modelado, 2) diseño, 3) construcción y 4) validación.
+Estas decisiones han regido la construcción de la interfaz gráfica, proceso iterativo que consta de cuatro actividades estructurales~\cite{Man97}: 1) análisis y modelado, 2) diseño, 3) construcción y 4) validación.
 
 \begin{figure} [!htb]
 	\centering
@@ -1071,7 +1073,7 @@ El cliente del sistema queda pensado, en su primera versión, para ser desplegad
 	\item{\textbf{Android Studio}. Android Studio, basado en IntelliJ IDEA\footnote{IDE para el desarrollo de sistemas informáticos desarrollado por JetBrains, más detalles en \url{https://www.jetbrains.com/idea/}.}, es el entorno de desarrollo integrado (IDE) oficial para el desarrollo de aplicaciones Android. Además del editor de códigos y las herramientas para desarrolladores de IntelliJ, Android Studio ofrece más funciones para la mejora de la productividad durante la compilación de apps para Android\footnote{El detalle sobre estas funciones adicionales se puede consultar en \url{https://developer.android.com/studio/intro/index.html}, a partir de~\cite{AnDev}.}}.
 \end{itemize}
 
-Como se ha comentado, Android actualmente tiene desplegada la versión 7. Cada una de estas nuevas versiones incorpora nuevas funcionalidades y desestima o sustituye otras de versiones previas. Esto provoca que, a la hora de desarrollar una aplicación, se tenga que tener en cuenta el grado de compatibilidad de la misma con las versiones previas para lograr un alcance y cobertura razonables. Para ello, Android prevé la utilización de numerosas \emph{librerías de compatibilidad}, que posibilitan la utilización de nuevos componentes o funcionalidades en versiones anteriores que, originalmente, no contaban con ellos. Del mismo modo, a la hora de crear una aplicación Android, se ha de dejar especificado la API mínima (y máxima) sobre la que dicha aplicación puede ser ejecutada (de modo que GooglePlay ofrezca aplicaciones adaptadas a la versión de cada dispositivo).
+Como se ha comentado, Android actualmente tiene desplegada la versión 7. Cada una de estas nuevas versiones incorpora nuevas funcionalidades y desestima o sustituye otras de versiones previas. Esto provoca que, a la hora de desarrollar una aplicación, se tenga que tener en cuenta el grado de compatibilidad de la misma con las versiones previas para lograr un alcance y cobertura razonables. Para ello, Android prevé la utilización de numerosas \emph{librerías de compatibilidad}, que posibilitan la utilización de nuevos componentes o funcionalidades en versiones anteriores que, originalmente, no contaban con ellos. Del mismo modo, a la hora de crear una aplicación Android, se ha de dejar especificada la API mínima (y máxima) sobre la que dicha aplicación puede ser ejecutada (de modo que GooglePlay ofrezca aplicaciones adaptadas a la versión de cada dispositivo).
 
 Para la aplicación desarrollada en este documento se ha seleccionado una compatibilidad hasta la versión 4.1 \textit{Jelly Bean} (API 16), que alcanza una cobertura total del 97,5\% respecto al total de dispositivos repartidos por el mercado a nivel global\footnote{Dato a diciembre de 2016, Android actualiza esta información periódicamente en \url{https://developer.android.com/about/dashboards/index.html}, a partir de~\cite{AnDev}.}, tal y como se muestra en la figura~\ref{fig:androidDistribution}.
 
@@ -1089,7 +1091,7 @@ La capa intermedia del sistema queda soportado por el servidor de software libre
 \begin{itemize}
 	\item{\textbf{GlassFish}. GlassFish es un servidor basado en Apache Tomcat para el desarrollo y ejecución de aplicaciones regidas por la especificación \textit{Java Platform Enterprise Edition} (Java EE platform)\footnote{Plataforma de programación que incluye varias especificaciones para el desarrollo de aplicaciones distribuidas y empresariales, más detalles en~\cite{OraEE}.} y tecnologías web basadas en Java.
 	
-	El motivo para la elección de este servidor es su carácter gratuito y de código libre, además del hecho de que, a diferencia de Tomcat, su instalación básica incluye un conjunto amplio de librerías, suficiente para cubrir las necesidades del sistema, sin que con ello se vea afectado su rendimiento de manera perceptible respecto a otras opciones más ligeras, como el citado Apache Tomcat}.
+	El motivo para la elección de este servidor es su carácter gratuito y de código libre; además del hecho de que, a diferencia de Tomcat, su instalación básica incluye un conjunto amplio de librerías, suficiente para cubrir las necesidades del sistema, sin que con ello se vea afectado su rendimiento de manera perceptible respecto a otras opciones más ligeras, como el citado Apache Tomcat}.
 	
 	\item{\textbf{NetBeans}. NetBeans es el IDE oficial para Java 8, supone un entorno de desarrollo de libre distribución y queda pensado principalmente para el lenguaje de programación Java.
 		
@@ -1138,7 +1140,7 @@ Una vez definidas las principales tecnologías utilizadas para la implementació
 
 En la figura ~\ref{fig:diagramaDespliegue} se esquematiza la distribución mencionada. Se identifican tres nodos, distribución acorde a la arquitectura Cliente/Servidor utilizada:
 
-\begin{figure}
+\begin{figure} [!htb]
 	\centering
 	{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/Diagramas/09_DiagramaDeDespliegue}}
 	\caption{Diagrama de despliegue del sistema}
@@ -1146,7 +1148,17 @@ En la figura ~\ref{fig:diagramaDespliegue} se esquematiza la distribución menci
 \end{figure}
 
 \begin{itemize}
-	\item \textbf{Nodo Cliente}. Representa la capa de presentación del sistema, implementado en el dispositivo Android. Este nodo recoge la arquitectura de la aplicación modelada anteriormente en la figura ~\ref{fig:diagramaClasesDisenoCliente} y es el utilizado por el usuario para interactuar.	
-	\item \textbf{Nodo Servidor}. La capa intermedia de la arquitectura, desplegada sobre GlassFish. Recoge la arquitectura del servidor modelada en la figura~\ref{fig:diagramaClasesDisenoServidor} y supone la capa que comunica la capa de presentación con la de datos. La comunicación con el cliente se realiza mediante el protocolo HTTP con los servicios web RESTful y el lenguaje JSON.
+	\item \textbf{Nodo Cliente}. Representa la capa de presentación del sistema, implementado en el dispositivo Android. Este nodo recoge la arquitectura de la aplicación modelada anteriormente en la figura~\ref{fig:diagramaClasesDisenoCliente} y es el utilizado por el usuario para interactuar. Los paquetes de clases utilizados para organizar el código son los siguientes:
+	\begin{enumerate}
+		\item \textbf{bikesmanager}. Paquete general donde se encuentran las clases que contienen la lógica de las interfaces de usuario (las \emph{Activity} y sus \emph{Fragment}).
+		\item \textbf{bikesmanager.entity}. Paquete que contiene las clases de entidad de la aplicación.
+		\item \textbf{bikesmanager.net}. Paquete que contiene las clases encargadas de la gestión de las conexiones HTTP con el servidor.
+		\item \textbf{bikesmanager.util}. Paquete auxiliar con clases de apoyo o utilidad a algunas de las anteriores. Contiene, por ejemplo, adaptadores de listas desplegables.
+	\end{enumerate}
+	\item \textbf{Nodo Servidor}. La capa intermedia de la arquitectura, desplegada sobre GlassFish. Recoge la arquitectura del servidor modelada en la figura~\ref{fig:diagramaClasesDisenoServidor} y supone la capa que comunica la capa de presentación con la de datos. La comunicación con el cliente se realiza mediante el protocolo HTTP con los servicios web RESTful y el lenguaje JSON.Los paquetes de clases utilizados para organizar el código son los siguientes:
+	\begin{enumerate}
+		\item \textbf{services}. Paquete que contiene las clases encargadas de la gestión de los servicios web; es decir, las \emph{Fachadas} del diagrama~\ref{fig:diagramaClasesDisenoServidor}.
+		\item \textbf{entities}. Paquete que contiene las clases de entidad de la aplicación.
+	\end{enumerate}
 	\item \textbf{Nodo Base de Datos}. La capa de datos soportada por el sistema gestor MySQL. La comunicación con el servidor se realiza mediante los conectores estándar MySQL Connector y la API JDBC.
 \end{itemize}
