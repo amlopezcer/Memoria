@@ -965,13 +965,150 @@ donde $IP\_SERV$ indica la IP dirección del servidor, $PORT$ indica el puerto d
 A partir de esta URL general se forman las específicas de la forma siguiente: $$[BASE\_URL]/[METHOD]$$
 donde $BASE\_URL$ es la URL básica indicada y $METHOD$ indica el método o parámetros que se añaden en la dirección para la llamada del método que sea necesario.
 
-Una vez un método se ejecuta en el servidor, éste devuelve la cadena resultante al cliente. En caso de que se tenga que indicar si la operación se ha realizado correctamente o no, se envían cadenas del estilo $[ENTITY]\_SERVER\_OK$ o $[ENTITY]\_SERVER\_KO$, respectivamente.
+Una vez un método se ejecuta en el servidor, éste devuelve la cadena resultante al cliente. En caso de que se tenga que indicar si la operación se ha realizado correctamente o no, se envían cadenas del estilo $[ENTITY]\_SERVER\_OK$ o $[ENTITY]\_SERVER\_KO$, respectivamente. 
 
 Por su parte, las cadenas que se intercambian entre ambas capas siguen el formato de texto JSON\footnote{Una introducción a este lenguaje se recoge en~\cite{JSON}.}, la tecnología ha utilizar para la traducción de cadenas se comenta en la siguiente sección~\ref{sec:secModeloImp}.
 
 La selección de este formato en lugar del tradicional XML queda principalmente motivada por el hecho de que el primero es más sencillo a la hora compartir \emph{datos tradicionales} como texto o números, que son los utilizados por el sistema desarrollado, y no datos estructurados como podrían ser documentos, fotos, vídeos\dots donde XML es más eficiente.
 
 Finalmente, comentar la utilización de los patrones \emph{Observer} y \emph{Facade} para mejorar y estandarizar la comunicación entre componentes ante las problemáticas específicas apuntadas anteriormente.
+
+Para una mejor comprensión, a continuación se aporta, por entidad, una descripción de la API implementada en el servidor a nivel de las diferentes URLs. Señalar que todas las salidas contempladas se describen suponiendo un mensaje de respuesta HTTP 200 (ejecución correcta del método).
+
+\newcolumntype{A}[1]{>{\arraybackslash}m{#1}} %Sin la definción de una columna propia (A), la sección de comentarios no se ajusta bien a la página
+\begin{itemize}
+	\item \textbf{Estación}
+	
+	\begin{center}
+		{\tiny
+			\begin{longtable}{|c|c|A{1.2cm}|A{2cm}|A{2cm}|A{2cm}|A{2.7cm}|}
+				\hline
+				
+				\multicolumn{1}{|c|}{\textbf{ID}}	& \textbf{Método}	& \textbf{Ruta}	& \textbf{Entrada} & \textbf{Salida}	& \textbf{Ejemplo} & \textbf{Comentarios} \\ 	\hline
+				\endfirsthead
+				
+				\multicolumn{7}{c}{{\bfseries \tablename\ \thetable{} -- Continúa desde la página anterior}} 			\\	\hline
+				\multicolumn{1}{|c|}{\textbf{ID}}	& \textbf{Método}	& \textbf{Ruta}	& \textbf{Entrada} & \textbf{Salida}	& \textbf{Ejemplo} & \textbf{Comentarios} \\ 	\hline
+				\endhead
+				
+				\hline \multicolumn{7}{|r|}{{\textit{Continúa en la página siguiente}}} \\ \hline
+				\endfoot
+				
+				\endlastfoot
+				
+				\multirow{1}{*}{1}	& POST	& -	& -	& -	& \url{http://localhost:8080/BikesManager/rest/entities.bikestation}	& La petición ha de venir acompañada de una cadena JSON con la entidad a crear, si bien este método no se ha utilizado en la aplicación desarrollada puesto que las estaciones se gestionan directamente en base de datos.	\\ \hline
+				
+				\multirow{1}{*}{2}	& PUT	& \{id\}	& \textbf{id}: \emph{Integer} con el ID de la estación a actualizar. & JSON: mensaje \emph{en\-ti\-ty\-\_bi\-ke\-sta\-tion\-\_SER\-VER\-\_OK}. & \url{http://localhost:8080/BikesManager/rest/entities.bikestation/1}	& La petición ha de venir acompañada de una cadena JSON con la entidad a actualizar. Este método supone la actualización básica de la entidad, sin necesidad de realizar comprobaciones previas para ello, con lo que siempre devolverá SERVER\_OK una vez ejecutada. \\ \hline
+				
+				\multirow{1}{*}{3}	& PUT	& \{operation\} / \{id\}	& \textbf{operation}: \emph{String} con la operación a realizar sobre la estación (\textit{take}, \textit{leave}, \textit{book\_bike} o \textit{book\_moorings}); \textbf{id}: \emph{Integer} con el ID de la estación a actualizar. & JSON: mensaje \emph{en\-ti\-ty\-\_bi\-ke\-sta\-tion\-\_SER\-VER\-\_OK} o \emph{en\-ti\-ty\-\_bi\-ke\-sta\-tion\-\_SER\-VER\-\_KO}.  & \url{http://localhost:8080/BikesManager/rest/entities.bikestation/take/1}	& La petición ha de venir acompañada de una cadena JSON con la entidad a actualizar. Este método es el utilizado para actualizar la estación cuando se opera con ella, de modo que se devuelve SERVER\_OK si la operación ha sido posible basándose en condiciones de disponibilidad de la estación y SERVER\_KO en caso contrario. \\ \hline
+				
+				\multirow{1}{*}{4}	& DELETE	& \{id\}	& \textbf{id}: \emph{Integer} con el ID de la estación a eliminar.  & -	& \url{http://localhost:8080/BikesManager/rest/entities.bikestation/1}	& Este método no se ha utilizado en la aplicación desarrollada puesto que las estaciones se gestionan directamente en base de datos. \\ \hline
+				
+				\multirow{1}{*}{5}	& GET	& \{id\}	& \textbf{id}: \emph{Integer} con el ID de la estación a buscar.	& JSON: estación buscada.	& \url{http://localhost:8080/BikesManager/rest/entities.bikestation/1}	&  Este método no se ha utilizado en la aplicación desarrollada, puesto que las búsquedas individuales se realizan sobre la dirección, no sobre el ID. \\ \hline
+				
+				\multirow{1}{*}{6}	& GET	& sta\-tion\-Ad\-dress / \{ad\-dress\}	& \textbf{address}: \emph{String} con la dirección de la estación a buscar.  & JSON: estación buscada.	& \url{http://localhost:8080/BikesManager/rest/entities.bikestation/stationAddress/Plaza_de_la_Puerta_del_Sol}	& Los elementos de la dirección han de venir separados por ``\_'' y no por espacios en blanco en la URL. \\ \hline
+				
+				\multirow{1}{*}{7}	& GET	& -	& -	& JSON: listado completo de estaciones.	& \url{http://localhost:8080/BikesManager/rest/entities.bikestation}	& Este método, antes de devolver el listado de estaciones completo, actualiza las posibles reservas caducadas. Es el utilizado cuando se actualiza el estado global del sistema.  \\ \hline
+				
+				\multirow{1}{*}{8}	& GET	& \{from\} / \{to\}	& \textbf{from}: \emph{Integer} con el ID de la estación desde la que se parte para la búsqueda; \textbf{to}: \emph{Integer} con el número de estaciones a obtener.  & JSON: rango de estaciones buscado.	& \url{http://localhost:8080/BikesManager/rest/entities.bikestation/1/5}	& Este método no se ha utilizado en la aplicación desarrollada. \\ \hline
+				
+				
+				\multirow{1}{*}{9}	& GET	& count	& -	& PLAIN: número de entidades creadas en la base de datos.	& \url{http://localhost:8080/BikesManager/rest/entities.bikestation/count}	& Este método no se ha utilizado en la aplicación desarrollada. \\ \hline
+							
+				\caption{API para la entidad Estación}
+				\label{tab:apiEstacion}
+			\end{longtable}
+		}
+	\end{center}
+	
+	\item \textbf{Usuario}
+	
+	\begin{center}
+		{\tiny
+			\begin{longtable}{|c|c|A{1.2cm}|A{2cm}|A{2cm}|A{2cm}|A{2.7cm}|}
+				\hline
+				
+				\multicolumn{1}{|c|}{\textbf{ID}}	& \textbf{Método}	& \textbf{Ruta}	& \textbf{Entrada} & \textbf{Salida}	& \textbf{Ejemplo} & \textbf{Comentarios} \\ 	\hline
+				\endfirsthead
+				
+				\multicolumn{7}{c}{{\bfseries \tablename\ \thetable{} -- Continúa desde la página anterior}} 			\\	\hline
+				\multicolumn{1}{|c|}{\textbf{ID}}	& \textbf{Método}	& \textbf{Ruta}	& \textbf{Entrada} & \textbf{Salida}	& \textbf{Ejemplo} & \textbf{Comentarios} \\ 	\hline
+				\endhead
+				
+				\hline \multicolumn{7}{|r|}{{\textit{Continúa en la página siguiente}}} \\ \hline
+				\endfoot
+				
+				\endlastfoot
+				
+				\multirow{1}{*}{1}	& POST	& -	& -	& JSON: mensaje \emph{en\-ti\-ty\-\_bi\-ke\-u\-ser\-\_SER\-VER\-\_OK} o \emph{en\-ti\-ty\-\_bi\-ke\-u\-ser\-\_SER\-VER\-\_KO}.	& \url{http://localhost:8080/BikesManager/rest/entities.bikeuser}	& La petición ha de venir acompañada de una cadena JSON con la entidad a crear. Este método comprueba la disponibilidad del nombre de usuario y correo electrónico, de modo que devuelve un SERVER\_OK (crea el usuario) si no hay coincidencias o un SERVER\_KO (no se crea el usuario) en caso contrario.	\\ \hline
+				
+				\multirow{1}{*}{2}	& PUT	& \{id\}	& \textbf{id}: \emph{Integer} con el ID del usuario a actualizar. & JSON: mensaje \emph{en\-ti\-ty\-\_bi\-ke\-u\-ser\-\_SER\-VER\-\_OK}. & \url{http://localhost:8080/BikesManager/rest/entities.bikeuser/1}	& La petición ha de venir acompañada de una cadena JSON con la entidad a actualizar. Este método supone la actualización básica de la entidad, sin necesidad de realizar comprobaciones previas para ello, con lo que siempre devolverá SERVER\_OK una vez ejecutada. \\ \hline
+				
+				\multirow{1}{*}{3}	& PUT	& ba\-sic\-da\-ta / \{id\}	& \textbf{id}: \emph{Integer} con el ID del usuario a actualizar. & JSON: mensaje \emph{en\-ti\-ty\-\_bi\-ke\-u\-ser\-\_SER\-VER\-\_OK} o \emph{en\-ti\-ty\-\_bi\-ke\-u\-ser\-\_SER\-VER\-\_KO}.  & \url{http://localhost:8080/BikesManager/rest/entities.bikeuser/basicdata/1}	& La petición ha de venir acompañada de una cadena JSON con la entidad a actualizar. Este método es el utilizado para actualizar el usuario cuando se quieren modificar el nombre de usuario o la dirección de correo electrónico, devolviendo SERVER\_OK o SERVER\_KO dependiendo de la disponibilidad de los nuevos datos introducidos. \\ \hline
+				
+				\multirow{1}{*}{4}	& DELETE	& \{id\}	& \textbf{id}: \emph{Integer} con el ID del usuario a eliminar.  & JSON: mensaje \emph{en\-ti\-ty\-\_bi\-ke\-u\-ser\-\_SER\-VER\-\_OK}.	& \url{http://localhost:8080/BikesManager/rest/entities.bikeuser/1}	& Este método es el utilizado para eliminar usuarios. Como la petición siempre parte del propio usuario que quiere eliminar su cuenta, no hay posibilidad de error, devolviendo siempre un SERVER\_OK. \\ \hline
+				
+				\multirow{1}{*}{5}	& GET	& \{id\}	& \textbf{id}: \emph{Integer} con el ID del usuario a buscar.	& JSON: usuario buscado.	& \url{http://localhost:8080/BikesManager/rest/entities.bikeuser/1}	&  Este método no se ha utilizado en la aplicación desarrollada, puesto que las búsquedas individuales se realizan sobre el nombre de usuario, no sobre el ID. \\ \hline
+				
+				\multirow{1}{*}{6}	& GET	& u\-ser / \{u\-ser\-na\-me\}	& \textbf{username}: \emph{String} con el nombre de usuario a buscar.  & JSON: usuario buscado.	& \url{http://localhost:8080/BikesManager/rest/entities.bikeuser/user/usuario1}	& -	\\ \hline
+				
+				\multirow{1}{*}{7}	& GET	& -	& -	& JSON: listado completo de usuarios.	& \url{http://localhost:8080/BikesManager/rest/entities.bikeuser}	& Método no utilizado puesto que sólo se realizan consultas de usuarios individuales desde la aplicación.  \\ \hline
+				
+				\multirow{1}{*}{8}	& GET	& \{from\} / \{to\}	& \textbf{from}: \emph{Integer} con el ID del usuario desde el que se parte para la búsqueda; \textbf{to}: \emph{Integer} con el número de usuarios a obtener.  & JSON: rango de usuarios buscado.	& \url{http://localhost:8080/BikesManager/rest/entities.bikeuser/1/5}	& Este método no se ha utilizado en la aplicación desarrollada. \\ \hline
+				
+				
+				\multirow{1}{*}{9}	& GET	& count	& -	& PLAIN: número de entidades creadas en la base de datos.	& \url{http://localhost:8080/BikesManager/rest/entities.bikeuser/count}	& Este método no se ha utilizado en la aplicación desarrollada. \\ \hline
+				
+				\caption{API para la entidad Usuario}
+				\label{tab:apiUsuario}
+			\end{longtable}
+		}
+	\end{center}
+	
+	\item \textbf{Reserva}
+	
+	\begin{center}
+		{\tiny
+			\begin{longtable}{|c|c|A{1.2cm}|A{2cm}|A{2cm}|A{2cm}|A{2.7cm}|}
+				\hline
+				
+				\multicolumn{1}{|c|}{\textbf{ID}}	& \textbf{Método}	& \textbf{Ruta}	& \textbf{Entrada} & \textbf{Salida}	& \textbf{Ejemplo} & \textbf{Comentarios} \\	\hline
+				\endfirsthead
+				
+				\multicolumn{7}{c}{{\bfseries \tablename\ \thetable{} -- Continúa desde la página anterior}}	\\	\hline
+				\multicolumn{1}{|c|}{\textbf{ID}}	& \textbf{Método}	& \textbf{Ruta}	& \textbf{Entrada} & \textbf{Salida}	& \textbf{Ejemplo} & \textbf{Comentarios} \\ 	\hline
+				\endhead
+				
+				\hline \multicolumn{7}{|r|}{{\textit{Continúa en la página siguiente}}} \\ \hline
+				\endfoot
+				
+				\endlastfoot
+				
+				\multirow{1}{*}{1}	& POST	& -	& -	& JSON: mensaje \emph{en\-ti\-ty\-\_book\-ing\-\_SER\-VER\-\_OK}.	& \url{http://localhost:8080/BikesManager/rest/entities.booking}	& La petición ha de venir acompañada de una cadena JSON con la entidad a crear. Este método se ejecuta únicamente cuando la reserva puede ser verdaderamente creada por condiciones de disponibilidad, con lo que siempre devuelve SERVER\_OK.	\\ \hline
+				
+				\multirow{1}{*}{2}	& PUT	& \{id\}	& \textbf{id}: \emph{Integer} con el ID de la reserva a actualizar. & -	& \url{http://localhost:8080/BikesManager/rest/entities.booking/1}	& La petición ha de venir acompañada de una cadena JSON con la entidad a actualizar, si bien este método no se ha utilizado puesto que las reservas sólo se crean o borran, en ningún caso se actualizan. \\ \hline
+				
+				\multirow{1}{*}{3}	& DELETE	& \{id\}	& \textbf{id}: \emph{Integer} con el ID de la reserva a eliminar.  & -	& \url{http://localhost:8080/BikesManager/rest/entities.booking/1}	& Este método no se ha utilizado en la aplicación desarrollada, las reservas se eliminan mediante una búsqueda por el nombre de usuario que la realizó, no por el ID de la misma. \\ \hline
+				
+				\multirow{1}{*}{4}	& DELETE	& \{{u\-ser\-na\-me}\} / \{{book\-ing\-ty\-pe}\}	& \textbf{{u\-ser\-na\-me}}: \emph{String} con el nombre de usuario que solicita la eliminación de la reserva; \textbf{{book\-ing\-ty\-pe}}: \emph{Integer} con el tipo de reserva a cancelar (1 para las bicis y 2 para los anclajes).  & JSON: mensaje \emph{en\-ti\-ty\-\_book\-ing\-\_SER\-VER\-\_OK}.	& \url{http://localhost:8080/BikesManager/rest/entities.booking/usuario1/1}	&  Este método lo ejecuta el usuario sobre sus propias reservas, no hay posibilidad de error, devolviendo siempre SERVER\_OK.	\\ \hline
+				
+				\multirow{1}{*}{5}	& GET	& \{id\}	& \textbf{id}: \emph{Integer} con el ID de la reserva a buscar.	& JSON: reserva buscado.	& \url{http://localhost:8080/BikesManager/rest/entities.booking/1}	&  Este método no se ha utilizado en la aplicación desarrollada. \\ \hline
+				
+				\multirow{1}{*}{6}	& GET	& -	& -	& JSON: listado completo de reservas.	& \url{http://localhost:8080/BikesManager/rest/entities.booking}	& Este método no se ha utilizado en la aplicación desarrollada.  \\ \hline
+				
+				\multirow{1}{*}{7}	& GET	& \{from\} / \{to\}	& \textbf{from}: \emph{Integer} con el ID de la reserva desde la que se parte para la búsqueda; \textbf{to}: \emph{Integer} con el número de reservas a obtener.  & JSON: rango de reservas buscado.	& \url{http://localhost:8080/BikesManager/rest/entities.booking/1/5}	& Este método no se ha utilizado en la aplicación desarrollada. \\ \hline
+			
+				\multirow{1}{*}{8}	& GET	& count	& -	& PLAIN: número de entidades creadas en la base de datos.	& \url{http://localhost:8080/BikesManager/rest/entities.booking/count}	& Este método no se ha utilizado en la aplicación desarrollada. \\ \hline
+				
+				\caption{API para la entidad Reserva}
+				\label{tab:apiReserva}
+			\end{longtable}
+		}
+	\end{center}
+	
+\end{itemize}
+
+Para conocer el formato de las cadenas JSON a introducir o a obtener, basta con ejecutar cualquiera de los GET directamente sobre un navegador.
 
 \subsubsection{Interfaces de usuario}
 
@@ -1035,11 +1172,21 @@ permite evaluar los escenarios de uso.
 La \emph{validación de la interfaz} se centra en: 1) la capacidad de la interfaz para implementar
 correctamente todas las tareas y requerimientos del usuario; 2) el grado en el que la interfaz es fácil de usar y de aprender y 3) la aceptación que tiene por parte del usuario.
 
+Finalmente, a continuación se presenta una relación de las pantallas fundamentales implementadas y de los requisitos funcionales que recoge cada una. Mencionar que este esquema no recoge todas las interfaces de usuario creadas, sino sólo aquellas que tienen implicación directa sobre alguno de los requisitos funcionales presentados en la sección~\ref{sec:secERS}. En cualquier caso, en el manual de usuario incluido en del apéndice~\ref{app:appManualUsuario} se puede observar la implementación y variedad final de las mismas.
+
+\begin{figure} [!htb]
+	\centering
+	\resizebox{12cm}{!}{\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/guiYrf}}
+	\caption{Relación de interfaces de usuario y requisitos funcionales}
+	\label{fig:guiYrf}
+\end{figure}
+
 
 % ------------------------------
 % -- Modelo de implementación --
 % ------------------------------
 
+\FloatBarrier
 \section{Implementación}
 \label{sec:secModeloImp}
 
