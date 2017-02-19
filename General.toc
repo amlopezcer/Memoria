@@ -62,18 +62,19 @@
 \contentsline {subsection}{\numberline {3.2.4}Pruebas de sistema}{74}{subsection.3.2.4}
 \contentsline {chapter}{\numberline {4}Conclusiones}{75}{chapter.4}
 \contentsline {section}{\numberline {4.1}L\IeC {\'\i }neas futuras}{76}{section.4.1}
-\contentsline {chapter}{\numberline {A}Resultados de las pruebas de validaci\IeC {\'o}n}{79}{appendix.Alph1}
-\contentsline {chapter}{\numberline {B}Manual de usuario}{83}{appendix.Alph2}
-\contentsline {subsubsection}{Configuraci\IeC {\'o}n inicial y pantalla inicial}{83}{section*.98}
-\contentsline {subsubsection}{Registro de usuarios}{84}{section*.101}
-\contentsline {subsubsection}{Inicio de sesi\IeC {\'o}n}{85}{section*.103}
-\contentsline {subsubsection}{Pantalla principal de la aplicaci\IeC {\'o}n: vistas y opciones adicionales}{85}{section*.105}
-\contentsline {subsubsection}{Operar con bicicletas y anclajes}{89}{section*.112}
-\contentsline {subsubsection}{Cuenta de usuario}{90}{section*.116}
-\contentsline {subsubsection}{Configuraci\IeC {\'o}n}{91}{section*.118}
-\contentsline {subsubsection}{FAQs}{93}{section*.121}
-\contentsline {chapter}{\numberline {C}Manual de instalaci\IeC {\'o}n}{95}{appendix.Alph3}
-\contentsline {subsubsection}{Base de datos}{95}{section*.122}
-\contentsline {subsubsection}{Servidor}{100}{section*.129}
-\contentsline {subsubsection}{Cliente}{104}{section*.138}
-\contentsline {subsubsection}{FAQs}{104}{section*.139}
+\contentsline {chapter}{\numberline {A}Detalle de la API implementada}{79}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}Resultados de las pruebas de validaci\IeC {\'o}n}{85}{appendix.Alph2}
+\contentsline {chapter}{\numberline {C}Manual de usuario}{89}{appendix.Alph3}
+\contentsline {subsubsection}{Configuraci\IeC {\'o}n inicial y pantalla inicial}{89}{section*.98}
+\contentsline {subsubsection}{Registro de usuarios}{90}{section*.101}
+\contentsline {subsubsection}{Inicio de sesi\IeC {\'o}n}{91}{section*.103}
+\contentsline {subsubsection}{Pantalla principal de la aplicaci\IeC {\'o}n: vistas y opciones adicionales}{91}{section*.105}
+\contentsline {subsubsection}{Operar con bicicletas y anclajes}{95}{section*.112}
+\contentsline {subsubsection}{Cuenta de usuario}{96}{section*.116}
+\contentsline {subsubsection}{Configuraci\IeC {\'o}n}{97}{section*.118}
+\contentsline {subsubsection}{FAQs}{99}{section*.121}
+\contentsline {chapter}{\numberline {D}Manual de instalaci\IeC {\'o}n}{101}{appendix.Alph4}
+\contentsline {subsubsection}{Base de datos}{101}{section*.122}
+\contentsline {subsubsection}{Servidor}{106}{section*.129}
+\contentsline {subsubsection}{Cliente}{110}{section*.138}
+\contentsline {subsubsection}{FAQs}{110}{section*.139}

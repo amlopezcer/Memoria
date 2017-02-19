@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.25)  12 FEB 2017 20:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.25)  19 FEB 2017 17:48
 entering extended mode
 **./General.tex
 (General.tex
@@ -634,8 +634,8 @@ LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
  (Agradecimientos.aux) (Resumen.aux)
 (Introduccion.aux) (DescInformatica.aux) (Pruebas.aux) (Conclusiones.aux)
-(AnexoResPruebasVal.aux) (AnexoManualUsuario.aux) (AnexoManualInstalacion.aux)
-(Bibliografia.aux))
+(AnexoAPI.aux) (AnexoResPruebasVal.aux) (AnexoManualUsuario.aux)
+(AnexoManualInstalacion.aux) (Bibliografia.aux))
 \openout1 = `General.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -739,7 +739,7 @@ Package caption Info: End \AtBeginDocument code.
 \openout2 = `Portada.aux'.
 
  (Portada.tex
-<Images/urjc_escudo.jpg, id=143, 266.9975pt x 327.2225pt>
+<Images/urjc_escudo.jpg, id=147, 266.9975pt x 327.2225pt>
 File: Images/urjc_escudo.jpg Graphic file (type jpg)
 
 <use Images/urjc_escudo.jpg>
@@ -1071,33 +1071,58 @@ Package babel Info: Redefining spanish shorthand "?
 
 
 ]
-LaTeX Info: Redefining \. on input line 78.
-LaTeX Info: Redefining \% on input line 78.
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 78.
- [10])
+(babel)             in language  on input line 79.
+ [10]
+Overfull \hbox (0.22636pt too wide) detected at line 86
+\OT1/cmr/m/n/12 D.10. 
+ []
+
+
+Overfull \hbox (0.22636pt too wide) detected at line 87
+\OT1/cmr/m/n/12 D.11. 
+ []
+
+
+Overfull \hbox (0.22636pt too wide) detected at line 88
+\OT1/cmr/m/n/12 D.12. 
+ []
+
+
+Overfull \hbox (0.22636pt too wide) detected at line 89
+\OT1/cmr/m/n/12 D.13. 
+ []
+
+
+Overfull \hbox (0.22636pt too wide) detected at line 90
+\OT1/cmr/m/n/12 D.14. 
+ []
+
+)
 \tf@lof=\write5
 \openout5 = `General.lof'.
 
@@ -1296,7 +1321,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 31.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 31.
- <Images/ModeloIncremental.png, id=442, 484.05844pt x 277.035pt>
+ <Images/ModeloIncremental.png, id=453, 484.05844pt x 277.035pt>
 File: Images/ModeloIncremental.png Graphic file (type png)
 
 <use Images/ModeloIncremental.png>
@@ -1465,7 +1490,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 47.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 47.
- <Images/Diagramas/01_CasosDeUso.png, id=475, 543.53062pt x 536.75531pt>
+ <Images/Diagramas/01_CasosDeUso.png, id=486, 543.53062pt x 536.75531pt>
 File: Images/Diagramas/01_CasosDeUso.png Graphic file (type png)
 
 <use Images/Diagramas/01_CasosDeUso.png>
@@ -1572,7 +1597,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 119.
  [8]
-<Images/Diagramas/02_Actividad_RF01_registrarUsuario.png, id=510, 376.40625pt x
+<Images/Diagramas/02_Actividad_RF01_registrarUsuario.png, id=521, 376.40625pt x
  399.74344pt>
 File: Images/Diagramas/02_Actividad_RF01_registrarUsuario.png Graphic file (typ
 e png)
@@ -1638,7 +1663,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 176.
 [10 <./Images/Diagramas/02_Actividad_RF01_registrarUsuario.png>]
-<Images/Diagramas/02_Actividad_RF02_loguear.png, id=522, 377.15906pt x 359.0915
+<Images/Diagramas/02_Actividad_RF02_loguear.png, id=533, 377.15906pt x 359.0915
 7pt>
 File: Images/Diagramas/02_Actividad_RF02_loguear.png Graphic file (type png)
  <use Images/Diagramas/02_Actividad_RF02_loguear.png>
@@ -1676,7 +1701,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 209.
 [11 <./Images/Diagramas/02_Actividad_RF02_loguear.png>]
-<Images/Diagramas/02_Actividad_RF03_modificarPerfil.png, id=528, 397.485pt x 44
+<Images/Diagramas/02_Actividad_RF03_modificarPerfil.png, id=539, 397.485pt x 44
 3.40656pt>
 File: Images/Diagramas/02_Actividad_RF03_modificarPerfil.png Graphic file (type
  png)
@@ -1712,7 +1737,7 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 220.
 
 [12 <./Images/Diagramas/02_Actividad_RF03_modificarPerfil.png>]
-<Images/Diagramas/02_Actividad_RF04_borrarPerfil.png, id=533, 350.05782pt x 362
+<Images/Diagramas/02_Actividad_RF04_borrarPerfil.png, id=544, 350.05782pt x 362
 .10281pt>
 File: Images/Diagramas/02_Actividad_RF04_borrarPerfil.png Graphic file (type pn
 g)
@@ -1747,7 +1772,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 249.
  [13 <./Images/Diagramas/02_Actividad_RF04_borrarPerfil.png>]
-<Images/Diagramas/02_Actividad_RF05_ingresarSaldo.png, id=538, 347.79938pt x 34
+<Images/Diagramas/02_Actividad_RF05_ingresarSaldo.png, id=549, 347.79938pt x 34
 1.77687pt>
 File: Images/Diagramas/02_Actividad_RF05_ingresarSaldo.png Graphic file (type p
 ng)
@@ -1782,7 +1807,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 278.
  [14 <./Images/Diagramas/02_Actividad_RF05_ingresarSaldo.png>]
-<Images/Diagramas/02_Actividad_RF06_cogerBicicleta.png, id=543, 392.21532pt x 4
+<Images/Diagramas/02_Actividad_RF06_cogerBicicleta.png, id=554, 392.21532pt x 4
 02.00188pt>
 File: Images/Diagramas/02_Actividad_RF06_cogerBicicleta.png Graphic file (type 
 png)
@@ -1848,7 +1873,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 341.
 [16 <./Images/Diagramas/02_Actividad_RF06_cogerBicicleta.png>]
-<Images/Diagramas/02_Actividad_RF07_dejarBicicleta.png, id=552, 400.49625pt x 3
+<Images/Diagramas/02_Actividad_RF07_dejarBicicleta.png, id=563, 400.49625pt x 3
 63.60844pt>
 File: Images/Diagramas/02_Actividad_RF07_dejarBicicleta.png Graphic file (type 
 png)
@@ -1884,7 +1909,7 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 353.
 
 [17 <./Images/Diagramas/02_Actividad_RF07_dejarBicicleta.png>]
-<Images/Diagramas/02_Actividad_RF08_reservar.png, id=558, 384.6872pt x 432.8671
+<Images/Diagramas/02_Actividad_RF08_reservar.png, id=569, 384.6872pt x 432.8671
 9pt>
 File: Images/Diagramas/02_Actividad_RF08_reservar.png Graphic file (type png)
  <use Images/Diagramas/02_Actividad_RF08_reservar.png>
@@ -1945,7 +1970,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 411.
  [19 <./Images/Diagramas/02_Actividad_RF08_reservar.png>]
-<Images/Diagramas/02_Actividad_RF09_cancelarReserva.png, id=567, 349.305pt x 36
+<Images/Diagramas/02_Actividad_RF09_cancelarReserva.png, id=578, 349.305pt x 36
 2.85562pt>
 File: Images/Diagramas/02_Actividad_RF09_cancelarReserva.png Graphic file (type
  png)
@@ -1981,7 +2006,7 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 422.
 
 [20 <./Images/Diagramas/02_Actividad_RF09_cancelarReserva.png>]
-<Images/Diagramas/02_Actividad_RF10_pagar.png, id=572, 335.75438pt x 332.74312p
+<Images/Diagramas/02_Actividad_RF10_pagar.png, id=583, 335.75438pt x 332.74312p
 t>
 File: Images/Diagramas/02_Actividad_RF10_pagar.png Graphic file (type png)
  <use Images/Diagramas/02_Actividad_RF10_pagar.png>
@@ -2015,7 +2040,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 448.
  [21 <./Images/Diagramas/02_Actividad_RF10_pagar.png>]
-<Images/Diagramas/02_Actividad_RF11_actualizar.png, id=577, 359.09157pt x 268.0
+<Images/Diagramas/02_Actividad_RF11_actualizar.png, id=588, 359.09157pt x 268.0
 0125pt>
 File: Images/Diagramas/02_Actividad_RF11_actualizar.png Graphic file (type png)
 
@@ -2129,7 +2154,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 563.
 
-<Images/ModeloAnalisis.png, id=601, 308.65312pt x 212.29312pt>
+<Images/ModeloAnalisis.png, id=612, 308.65312pt x 212.29312pt>
 File: Images/ModeloAnalisis.png Graphic file (type png)
 
 <use Images/ModeloAnalisis.png>
@@ -2229,7 +2254,7 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 613.
 
 [27]
-<Images/Diagramas/03_ClasesAnalisis.png, id=630, 520.94624pt x 334.24875pt>
+<Images/Diagramas/03_ClasesAnalisis.png, id=641, 520.94624pt x 334.24875pt>
 File: Images/Diagramas/03_ClasesAnalisis.png Graphic file (type png)
 
 <use Images/Diagramas/03_ClasesAnalisis.png>
@@ -2275,7 +2300,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 633.
  [28 <./Images/Diagramas/03_ClasesAnalisis.png>]
-<Images/Diagramas/04_Colaboracion_RF01_1.png, id=639, 524.71031pt x 153.57375pt
+<Images/Diagramas/04_Colaboracion_RF01_1.png, id=650, 524.71031pt x 153.57375pt
 >
 File: Images/Diagramas/04_Colaboracion_RF01_1.png Graphic file (type png)
  <use Images/Diagramas/04_Colaboracion_RF01_1.png>
@@ -2283,7 +2308,7 @@ Package pdftex.def Info: Images/Diagramas/04_Colaboracion_RF01_1.png used on in
 put line 638.
 (pdftex.def)             Requested size: 418.2636pt x 122.41861pt.
 
-<Images/Diagramas/04_Colaboracion_RF01_2.png, id=640, 494.59781pt x 179.16937pt
+<Images/Diagramas/04_Colaboracion_RF01_2.png, id=651, 494.59781pt x 179.16937pt
 >
 File: Images/Diagramas/04_Colaboracion_RF01_2.png Graphic file (type png)
  <use Images/Diagramas/04_Colaboracion_RF01_2.png>
@@ -2291,7 +2316,7 @@ Package pdftex.def Info: Images/Diagramas/04_Colaboracion_RF01_2.png used on in
 put line 644.
 (pdftex.def)             Requested size: 418.25168pt x 151.51279pt.
 
-<Images/Diagramas/04_Colaboracion_RF01_3.png, id=641, 473.51906pt x 173.89969pt
+<Images/Diagramas/04_Colaboracion_RF01_3.png, id=652, 473.51906pt x 173.89969pt
 >
 File: Images/Diagramas/04_Colaboracion_RF01_3.png Graphic file (type png)
  <use Images/Diagramas/04_Colaboracion_RF01_3.png>
@@ -2326,14 +2351,14 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 655.
  [29 <./Images/Diagramas/04_Colaboracion_RF01_1.png> <./Images/Diagramas/04_Col
 aboracion_RF01_2.png>]
-<Images/Diagramas/04_Colaboracion_RF02_1.png, id=653, 452.4403pt x 143.78719pt>
+<Images/Diagramas/04_Colaboracion_RF02_1.png, id=664, 452.4403pt x 143.78719pt>
 File: Images/Diagramas/04_Colaboracion_RF02_1.png Graphic file (type png)
 <use Images/Diagramas/04_Colaboracion_RF02_1.png>
 Package pdftex.def Info: Images/Diagramas/04_Colaboracion_RF02_1.png used on in
 put line 664.
 (pdftex.def)             Requested size: 418.25221pt x 132.92207pt.
 
-<Images/Diagramas/04_Colaboracion_RF02_2.png, id=654, 457.71pt x 156.585pt>
+<Images/Diagramas/04_Colaboracion_RF02_2.png, id=665, 457.71pt x 156.585pt>
 File: Images/Diagramas/04_Colaboracion_RF02_2.png Graphic file (type png)
 
 <use Images/Diagramas/04_Colaboracion_RF02_2.png>
@@ -2341,7 +2366,7 @@ Package pdftex.def Info: Images/Diagramas/04_Colaboracion_RF02_2.png used on in
 put line 670.
 (pdftex.def)             Requested size: 418.26976pt x 143.09227pt.
 
-<Images/Diagramas/04_Colaboracion_RF02_3.png, id=655, 457.71pt x 172.39406pt>
+<Images/Diagramas/04_Colaboracion_RF02_3.png, id=666, 457.71pt x 172.39406pt>
 File: Images/Diagramas/04_Colaboracion_RF02_3.png Graphic file (type png)
 
 <use Images/Diagramas/04_Colaboracion_RF02_3.png>
@@ -2376,7 +2401,7 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 681.
  [30 <./Images/Diagramas/04_Colaboracion_RF01_3.png> <./Images/Diagramas/04_Col
 aboracion_RF02_1.png>]
-<Images/Diagramas/04_Colaboracion_RF03_1.png, id=666, 486.31688pt x 273.27094pt
+<Images/Diagramas/04_Colaboracion_RF03_1.png, id=677, 486.31688pt x 273.27094pt
 >
 File: Images/Diagramas/04_Colaboracion_RF03_1.png Graphic file (type png)
  <use Images/Diagramas/04_Colaboracion_RF03_1.png>
@@ -2384,14 +2409,14 @@ Package pdftex.def Info: Images/Diagramas/04_Colaboracion_RF03_1.png used on in
 put line 690.
 (pdftex.def)             Requested size: 418.25404pt x 235.02509pt.
 
-<Images/Diagramas/04_Colaboracion_RF03_2.png, id=667, 487.8225pt x 214.55156pt>
+<Images/Diagramas/04_Colaboracion_RF03_2.png, id=678, 487.8225pt x 214.55156pt>
 File: Images/Diagramas/04_Colaboracion_RF03_2.png Graphic file (type png)
 <use Images/Diagramas/04_Colaboracion_RF03_2.png>
 Package pdftex.def Info: Images/Diagramas/04_Colaboracion_RF03_2.png used on in
 put line 696.
 (pdftex.def)             Requested size: 418.2612pt x 183.95746pt.
 
-<Images/Diagramas/04_Colaboracion_RF03_3.png, id=668, 487.8225pt x 246.1697pt>
+<Images/Diagramas/04_Colaboracion_RF03_3.png, id=679, 487.8225pt x 246.1697pt>
 File: Images/Diagramas/04_Colaboracion_RF03_3.png Graphic file (type png)
 
 <use Images/Diagramas/04_Colaboracion_RF03_3.png>
@@ -2457,14 +2482,14 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 707.
 [32 <./Images/Diagramas/04_Colaboracion_RF03_1.png> <./Images/Diagramas/04_Cola
 boracion_RF03_2.png> <./Images/Diagramas/04_Colaboracion_RF03_3.png>]
-<Images/Diagramas/04_Colaboracion_RF04_1.png, id=682, 506.6428pt x 179.92218pt>
+<Images/Diagramas/04_Colaboracion_RF04_1.png, id=693, 506.6428pt x 179.92218pt>
 File: Images/Diagramas/04_Colaboracion_RF04_1.png Graphic file (type png)
 <use Images/Diagramas/04_Colaboracion_RF04_1.png>
 Package pdftex.def Info: Images/Diagramas/04_Colaboracion_RF04_1.png used on in
 put line 715.
 (pdftex.def)             Requested size: 418.26378pt x 148.53645pt.
 
-<Images/Diagramas/04_Colaboracion_RF04_2.png, id=683, 478.78876pt x 181.42781pt
+<Images/Diagramas/04_Colaboracion_RF04_2.png, id=694, 478.78876pt x 181.42781pt
 >
 File: Images/Diagramas/04_Colaboracion_RF04_2.png Graphic file (type png)
  <use Images/Diagramas/04_Colaboracion_RF04_2.png>
@@ -2472,7 +2497,7 @@ Package pdftex.def Info: Images/Diagramas/04_Colaboracion_RF04_2.png used on in
 put line 721.
 (pdftex.def)             Requested size: 418.2524pt x 158.48871pt.
 
-<Images/Diagramas/04_Colaboracion_RF05_1.png, id=685, 493.0922pt x 219.06844pt>
+<Images/Diagramas/04_Colaboracion_RF05_1.png, id=696, 493.0922pt x 219.06844pt>
 File: Images/Diagramas/04_Colaboracion_RF05_1.png Graphic file (type png)
 <use Images/Diagramas/04_Colaboracion_RF05_1.png>
 Package pdftex.def Info: Images/Diagramas/04_Colaboracion_RF05_1.png used on in
@@ -2506,7 +2531,7 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 735.
  [33 <./Images/Diagramas/04_Colaboracion_RF04_1.png> <./Images/Diagramas/04_Col
 aboracion_RF04_2.png>]
-<Images/Diagramas/04_Colaboracion_RF06_1.png, id=694, 439.6425pt x 271.0125pt>
+<Images/Diagramas/04_Colaboracion_RF06_1.png, id=705, 439.6425pt x 271.0125pt>
 File: Images/Diagramas/04_Colaboracion_RF06_1.png Graphic file (type png)
 
 <use Images/Diagramas/04_Colaboracion_RF06_1.png>
@@ -2514,7 +2539,7 @@ Package pdftex.def Info: Images/Diagramas/04_Colaboracion_RF06_1.png used on in
 put line 743.
 (pdftex.def)             Requested size: 418.26846pt x 257.83672pt.
 
-<Images/Diagramas/04_Colaboracion_RF06_2.png, id=695, 434.37282pt x 218.31563pt
+<Images/Diagramas/04_Colaboracion_RF06_2.png, id=706, 434.37282pt x 218.31563pt
 >
 File: Images/Diagramas/04_Colaboracion_RF06_2.png Graphic file (type png)
  <use Images/Diagramas/04_Colaboracion_RF06_2.png>
@@ -2549,7 +2574,7 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 754.
  [34 <./Images/Diagramas/04_Colaboracion_RF05_1.png> <./Images/Diagramas/04_Col
 aboracion_RF06_1.png>]
-<Images/Diagramas/04_Colaboracion_RF07_1.png, id=704, 434.37282pt x 216.81pt>
+<Images/Diagramas/04_Colaboracion_RF07_1.png, id=715, 434.37282pt x 216.81pt>
 File: Images/Diagramas/04_Colaboracion_RF07_1.png Graphic file (type png)
 
 <use Images/Diagramas/04_Colaboracion_RF07_1.png>
@@ -2557,7 +2582,7 @@ Package pdftex.def Info: Images/Diagramas/04_Colaboracion_RF07_1.png used on in
 put line 762.
 (pdftex.def)             Requested size: 418.27899pt x 208.77702pt.
 
-<Images/Diagramas/04_Colaboracion_RF07_2.png, id=705, 460.72125pt x 265.74281pt
+<Images/Diagramas/04_Colaboracion_RF07_2.png, id=716, 460.72125pt x 265.74281pt
 >
 File: Images/Diagramas/04_Colaboracion_RF07_2.png Graphic file (type png)
  <use Images/Diagramas/04_Colaboracion_RF07_2.png>
@@ -2592,7 +2617,7 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 773.
  [35 <./Images/Diagramas/04_Colaboracion_RF06_2.png> <./Images/Diagramas/04_Col
 aboracion_RF07_1.png>]
-<Images/Diagramas/04_Colaboracion_RF08_1.png, id=715, 465.99094pt x 297.36093pt
+<Images/Diagramas/04_Colaboracion_RF08_1.png, id=726, 465.99094pt x 297.36093pt
 >
 File: Images/Diagramas/04_Colaboracion_RF08_1.png Graphic file (type png)
  <use Images/Diagramas/04_Colaboracion_RF08_1.png>
@@ -2600,7 +2625,7 @@ Package pdftex.def Info: Images/Diagramas/04_Colaboracion_RF08_1.png used on in
 put line 781.
 (pdftex.def)             Requested size: 418.27162pt x 266.90999pt.
 
-<Images/Diagramas/04_Colaboracion_RF08_2.png, id=716, 465.99094pt x 271.0125pt>
+<Images/Diagramas/04_Colaboracion_RF08_2.png, id=727, 465.99094pt x 271.0125pt>
 File: Images/Diagramas/04_Colaboracion_RF08_2.png Graphic file (type png)
 <use Images/Diagramas/04_Colaboracion_RF08_2.png>
 Package pdftex.def Info: Images/Diagramas/04_Colaboracion_RF08_2.png used on in
@@ -2633,7 +2658,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 792.
  [36 <./Images/Diagramas/04_Colaboracion_RF07_2.png>]
-<Images/Diagramas/04_Colaboracion_RF09_1.png, id=725, 453.94594pt x 225.84375pt
+<Images/Diagramas/04_Colaboracion_RF09_1.png, id=736, 453.94594pt x 225.84375pt
 >
 File: Images/Diagramas/04_Colaboracion_RF09_1.png Graphic file (type png)
  <use Images/Diagramas/04_Colaboracion_RF09_1.png>
@@ -2641,7 +2666,7 @@ Package pdftex.def Info: Images/Diagramas/04_Colaboracion_RF09_1.png used on in
 put line 800.
 (pdftex.def)             Requested size: 418.25873pt x 208.0889pt.
 
-<Images/Diagramas/04_Colaboracion_RF09_2.png, id=726, 409.53pt x 202.50656pt>
+<Images/Diagramas/04_Colaboracion_RF09_2.png, id=737, 409.53pt x 202.50656pt>
 File: Images/Diagramas/04_Colaboracion_RF09_2.png Graphic file (type png)
 
 <use Images/Diagramas/04_Colaboracion_RF09_2.png>
@@ -2676,7 +2701,7 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 811.
  [37 <./Images/Diagramas/04_Colaboracion_RF08_1.png> <./Images/Diagramas/04_Col
 aboracion_RF08_2.png>]
-<Images/Diagramas/04_Colaboracion_RF10_1.png, id=734, 456.20438pt x 158.84344pt
+<Images/Diagramas/04_Colaboracion_RF10_1.png, id=745, 456.20438pt x 158.84344pt
 >
 File: Images/Diagramas/04_Colaboracion_RF10_1.png Graphic file (type png)
  <use Images/Diagramas/04_Colaboracion_RF10_1.png>
@@ -2711,7 +2736,7 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 825.
  [38 <./Images/Diagramas/04_Colaboracion_RF09_1.png> <./Images/Diagramas/04_Col
 aboracion_RF09_2.png>]
-<Images/Diagramas/04_Colaboracion_RF11_1.png, id=742, 553.31718pt x 194.22563pt
+<Images/Diagramas/04_Colaboracion_RF11_1.png, id=753, 553.31718pt x 194.22563pt
 >
 File: Images/Diagramas/04_Colaboracion_RF11_1.png Graphic file (type png)
  <use Images/Diagramas/04_Colaboracion_RF11_1.png>
@@ -2719,7 +2744,7 @@ Package pdftex.def Info: Images/Diagramas/04_Colaboracion_RF11_1.png used on in
 put line 833.
 (pdftex.def)             Requested size: 418.25427pt x 146.81578pt.
 
-<Images/Diagramas/04_Colaboracion_RF11_2.png, id=743, 542.77782pt x 170.88844pt
+<Images/Diagramas/04_Colaboracion_RF11_2.png, id=754, 542.77782pt x 170.88844pt
 >
 File: Images/Diagramas/04_Colaboracion_RF11_2.png Graphic file (type png)
  <use Images/Diagramas/04_Colaboracion_RF11_2.png>
@@ -2818,7 +2843,7 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 872.
 
 [40 <./Images/Diagramas/04_Colaboracion_RF11_2.png>]
-<Images/ArqClienteServ3Cap.png, id=762, 753.5653pt x 297.36093pt>
+<Images/ArqClienteServ3Cap.png, id=773, 753.5653pt x 297.36093pt>
 File: Images/ArqClienteServ3Cap.png Graphic file (type png)
 
 <use Images/ArqClienteServ3Cap.png>
@@ -2906,7 +2931,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 927.
  [43]
-<Images/Diagramas/05_ClasesDiseno_App.png, id=793, 1375.38844pt x 700.86844pt>
+<Images/Diagramas/05_ClasesDiseno_App.png, id=804, 1375.38844pt x 700.86844pt>
 File: Images/Diagramas/05_ClasesDiseno_App.png Graphic file (type png)
 
 <use Images/Diagramas/05_ClasesDiseno_App.png>
@@ -2940,7 +2965,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 934.
  [44 <./Images/Diagramas/05_ClasesDiseno_App.png>]
-<Images/Diagramas/05_ClasesDiseno_Server.png, id=799, 465.23813pt x 444.91219pt
+<Images/Diagramas/05_ClasesDiseno_Server.png, id=810, 465.23813pt x 444.91219pt
 >
 File: Images/Diagramas/05_ClasesDiseno_Server.png Graphic file (type png)
  <use Images/Diagramas/05_ClasesDiseno_Server.png>
@@ -3016,393 +3041,6 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 973.
  [46]
-Underfull \hbox (badness 10000) in paragraph at lines 999--999
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 999--999
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 999--999
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 999--999
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1001.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1001--1001
-[]|\OT1/cmr/m/n/6 JSON: men-sa-je
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1001--1001
-\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-sta-tion-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1001--1001
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1001--1001
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1001--1001
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1001--1001
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 3439) in paragraph at lines 1001--1001
-\OT1/cmr/m/n/6 te meto-do su-po-ne la
- []
-
-
-Underfull \hbox (badness 3612) in paragraph at lines 1001--1001
-\OT1/cmr/m/n/6 ba-cio-nes pre-vias pa-ra
- []
-
-
-Overfull \hbox (3.99522pt too wide) in paragraph at lines 1003--1003
-[]|\OMS/cmsy/m/n/6 f\OT1/cmr/m/n/6 operation\OMS/cmsy/m/n/6 g
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
-[]|\OT1/cmr/bx/n/6 operation\OT1/cmr/m/n/6 :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
-\OT1/cmr/m/it/6 String \OT1/cmr/m/n/6 con la
- []
-
-
-Underfull \hbox (badness 1009) in paragraph at lines 1003--1003
-\OT1/cmr/m/n/6 ope-ra-cion a rea-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
-\OT1/cmr/m/n/6 li-zar so-bre la
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
-\OT1/cmr/m/n/6 es-ta-cion (\OT1/cmr/m/it/6 ta-ke\OT1/cmr/m/n/6 ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
-\OT1/cmr/m/it/6 book[]moorings\OT1/cmr/m/n/6 );
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
-[]|\OT1/cmr/m/n/6 JSON: men-sa-je
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
-\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-sta-tion-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
-[]\OT1/cmr/m/it/6 SER-VER-[]OK \OT1/cmr/m/n/6 o
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
-\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-sta-tion-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1003
-\OT1/cmtt/m/n/6 bikestation / take /
- []
-
-
-Underfull \hbox (badness 1331) in paragraph at lines 1003--1003
-\OT1/cmr/m/n/6 ra con ella, de mo-do
- []
-
-
-Underfull \hbox (badness 1009) in paragraph at lines 1003--1003
-\OT1/cmr/m/n/6 que se de-vuel-ve SER-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1005--1005
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1005--1005
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1005--1005
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1005--1005
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 1024) in paragraph at lines 1005--1005
-\OT1/cmr/m/n/6 ges-tio-nan di-rec-ta-men-te
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1007--1007
-[]|\OT1/cmr/m/n/6 JSON: es-ta-cion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1007--1007
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1007--1007
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1007--1007
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1007--1007
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 2318) in paragraph at lines 1007--1007
-\OT1/cmr/m/n/6 to que las busque-das
- []
-
-
-Underfull \hbox (badness 1270) in paragraph at lines 1007--1007
-\OT1/cmr/m/n/6 so-bre la di-rec-cion, no
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1009
-[]|\OT1/cmr/m/n/6 sta-tion-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1009
-[]|\OT1/cmr/bx/n/6 address\OT1/cmr/m/n/6 : \OT1/cmr/m/it/6 String
- []
-
-
-Underfull \hbox (badness 2065) in paragraph at lines 1009--1009
-\OT1/cmr/m/n/6 con la di-rec-cion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1009
-[]|\OT1/cmr/m/n/6 JSON: es-ta-cion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1009
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1009
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1009
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1009
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1009
-\OT1/cmtt/m/n/6 bikestation /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1009
-\OT1/cmtt/m/n/6 stationAddress /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1009
-\OT1/cmtt/m/n/6 Plaza _ de _ la _
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1011--1011
-[]|\OT1/cmr/m/n/6 JSON: lis-ta-do
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1011--1011
-\OT1/cmr/m/n/6 com-ple-to de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1011--1011
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1011--1011
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1011--1011
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1011--1011
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 1270) in paragraph at lines 1011--1011
-\OT1/cmr/m/n/6 ta-cio-nes com-ple-to, ac-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1013
-[]|\OMS/cmsy/m/n/6 f\OT1/cmr/m/n/6 from\OMS/cmsy/m/n/6 g \OT1/cmr/m/n/6 /
- []
-
-
-Underfull \hbox (badness 1515) in paragraph at lines 1013--1013
-\OT1/cmr/m/n/6 el ID de la es-
- []
-
-
-Underfull \hbox (badness 5475) in paragraph at lines 1013--1013
-\OT1/cmr/m/n/6 ta-cion des-de la
- []
-
-
-Underfull \hbox (badness 3323) in paragraph at lines 1013--1013
-\OT1/cmr/m/n/6 ra la busque-da;
- []
-
-
-Underfull \hbox (badness 1215) in paragraph at lines 1013--1013
-\OT1/cmr/m/n/6 nume-ro de es-ta-
- []
-
-
-Underfull \hbox (badness 1478) in paragraph at lines 1013--1013
-[]|\OT1/cmr/m/n/6 JSON: ran-go de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1013
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1013
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1013
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1013
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1016--1016
-[]|\OT1/cmr/m/n/6 PLAIN: nume-ro
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1016--1016
-\OT1/cmr/m/n/6 de en-ti-da-des
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1016--1016
-\OT1/cmr/m/n/6 crea-das en la
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1016--1016
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1016--1016
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1016--1016
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1016--1016
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
 LaTeX Info: Redefining \. on input line 1020.
 LaTeX Info: Redefining \% on input line 1020.
 Package babel Info: Redefining spanish shorthand <<
@@ -3429,1236 +3067,427 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 1020.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 1020.
-[47]
-Underfull \hbox (badness 10000) in paragraph at lines 1043--1043
-[]|\OT1/cmr/m/n/6 JSON: men-sa-je
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1043--1043
-\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-u-ser-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1043--1043
-[]\OT1/cmr/m/it/6 SER-VER-[]OK \OT1/cmr/m/n/6 o
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1043--1043
-\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-u-ser-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1043--1043
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1043--1043
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1043--1043
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1043--1043
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 3780) in paragraph at lines 1043--1043
-\OT1/cmr/m/n/6 ca-de-na JSON con la
- []
-
-
-Underfull \hbox (badness 2073) in paragraph at lines 1043--1043
-\OT1/cmr/m/n/6 en-ti-dad a crear. Es-te
- []
-
-
-Underfull \hbox (badness 3118) in paragraph at lines 1043--1043
-\OT1/cmr/m/n/6 meto-do com-prue-ba la
- []
-
-
-Underfull \hbox (badness 1960) in paragraph at lines 1043--1043
-\OT1/cmr/m/n/6 bre de usua-rio y co-
- []
-
-
-Underfull \hbox (badness 7415) in paragraph at lines 1043--1043
-\OT1/cmr/m/n/6 do que de-vuel-ve un
- []
-
-
-Underfull \hbox (badness 3364) in paragraph at lines 1043--1043
-\OT1/cmr/m/n/6 SER-VER[]OK (crea el
- []
-
-
-Underfull \hbox (badness 4036) in paragraph at lines 1043--1043
-\OT1/cmr/m/n/6 ci-den-cias o un SER-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1045--1045
-[]|\OT1/cmr/m/n/6 JSON: men-sa-je
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1045--1045
-\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-u-ser-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1045--1045
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1045--1045
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1045--1045
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1045--1045
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 3439) in paragraph at lines 1045--1045
-\OT1/cmr/m/n/6 te meto-do su-po-ne la
- []
-
-
-Underfull \hbox (badness 3612) in paragraph at lines 1045--1045
-\OT1/cmr/m/n/6 ba-cio-nes pre-vias pa-ra
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1047
-[]|\OT1/cmr/m/n/6 ba-sic-da-ta
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1047
-[]|\OT1/cmr/m/n/6 JSON: men-sa-je
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1047
-\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-u-ser-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1047
-[]\OT1/cmr/m/it/6 SER-VER-[]OK \OT1/cmr/m/n/6 o
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1047
-\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-u-ser-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1047
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1047
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1047
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1047
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1047
-\OT1/cmtt/m/n/6 bikeuser /
- []
-
-
-Underfull \hbox (badness 1259) in paragraph at lines 1047--1047
-\OT1/cmr/m/n/6 rio cuan-do se quie-ren
- []
-
-
-Underfull \hbox (badness 1466) in paragraph at lines 1047--1047
-\OT1/cmr/m/n/6 co-rreo electroni-co, de-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
-[]|\OT1/cmr/m/n/6 JSON: men-sa-je
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
-\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-u-ser-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
-[]|\OT1/cmr/m/n/6 Este meto-do es el
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
-\OT1/cmr/m/n/6 uti-li-za-do pa-ra eli-mi-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
-\OT1/cmr/m/n/6 nar usua-rios. Co-mo
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
-\OT1/cmr/m/n/6 la pe-ti-cion siem-pre
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
-\OT1/cmr/m/n/6 que quie-re eli-mi-nar
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
-\OT1/cmr/m/n/6 su cuen-ta, no hay
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1049
-\OT1/cmr/m/n/6 po-si-bi-li-dad de error,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
-[]|\OT1/cmr/m/n/6 JSON: usua-rio
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 6157) in paragraph at lines 1051--1051
-\OT1/cmr/m/n/6 uti-li-za-do en la apli-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
-\OT1/cmr/m/n/6 ca-cion desa-rro-lla-da,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1051--1051
-\OT1/cmr/m/n/6 das in-di-vi-dua-les se
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1053--1053
-[]|\OT1/cmr/bx/n/6 username\OT1/cmr/m/n/6 :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1053--1053
-\OT1/cmr/m/it/6 String \OT1/cmr/m/n/6 con el
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1053--1053
-[]|\OT1/cmr/m/n/6 JSON: usua-rio
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1053--1053
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1053--1053
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1053--1053
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1053--1053
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1053--1053
-\OT1/cmtt/m/n/6 bikeuser / user /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
-[]|\OT1/cmr/m/n/6 JSON: lis-ta-do
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
-\OT1/cmr/m/n/6 com-ple-to de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
-[]|\OT1/cmr/m/n/6 Meto-do no uti-li-za-do
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
-\OT1/cmr/m/n/6 pues-to que solo se
- []
-
-
-Underfull \hbox (badness 7522) in paragraph at lines 1055--1055
-\OT1/cmr/m/n/6 rea-li-zan con-sul-tas de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1055
-\OT1/cmr/m/n/6 usua-rios in-di-vi-dua-les
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
-[]|\OMS/cmsy/m/n/6 f\OT1/cmr/m/n/6 from\OMS/cmsy/m/n/6 g \OT1/cmr/m/n/6 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
-[]|\OT1/cmr/bx/n/6 from\OT1/cmr/m/n/6 : \OT1/cmr/m/it/6 In-te-ger
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
-\OT1/cmr/m/n/6 con el ID del
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
-\OT1/cmr/m/n/6 usua-rio des-de
- []
-
-
-Underfull \hbox (badness 2213) in paragraph at lines 1057--1057
-\OT1/cmr/m/n/6 el que se par-te
- []
-
-
-Underfull \hbox (badness 2828) in paragraph at lines 1057--1057
-\OT1/cmr/m/n/6 pa-ra la busque-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
-\OT1/cmr/m/n/6 da; \OT1/cmr/bx/n/6 to\OT1/cmr/m/n/6 : \OT1/cmr/m/it/6 In-te-ger
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
-\OT1/cmr/m/n/6 con el nume-ro
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
-\OT1/cmr/m/n/6 de usua-rios a
- []
-
-
-Underfull \hbox (badness 1478) in paragraph at lines 1057--1057
-[]|\OT1/cmr/m/n/6 JSON: ran-go de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1057--1057
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1060--1060
-[]|\OT1/cmr/m/n/6 PLAIN: nume-ro
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1060--1060
-\OT1/cmr/m/n/6 de en-ti-da-des
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1060--1060
-\OT1/cmr/m/n/6 crea-das en la
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1060--1060
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1060--1060
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1060--1060
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1060--1060
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-LaTeX Info: Redefining \. on input line 1064.
-LaTeX Info: Redefining \% on input line 1064.
+ [47]
+LaTeX Info: Redefining \. on input line 1062.
+LaTeX Info: Redefining \% on input line 1062.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1064.
+(babel)             in language  on input line 1062.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1064.
+(babel)             in language  on input line 1062.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1064.
+(babel)             in language  on input line 1062.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1064.
+(babel)             in language  on input line 1062.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1064.
+(babel)             in language  on input line 1062.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1064.
+(babel)             in language  on input line 1062.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1064.
+(babel)             in language  on input line 1062.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1064.
+(babel)             in language  on input line 1062.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1064.
+(babel)             in language  on input line 1062.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1064.
+(babel)             in language  on input line 1062.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1064.
+(babel)             in language  on input line 1062.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1064.
-[48]
-Underfull \hbox (badness 10000) in paragraph at lines 1087--1087
-[]|\OT1/cmr/m/n/6 JSON: men-sa-je
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1087--1087
-\OT1/cmr/m/it/6 en-ti-ty-[]book-ing-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1087--1087
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1087--1087
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1087--1087
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1087--1087
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 3780) in paragraph at lines 1087--1087
-\OT1/cmr/m/n/6 ca-de-na JSON con la
- []
-
-
-Underfull \hbox (badness 2073) in paragraph at lines 1087--1087
-\OT1/cmr/m/n/6 en-ti-dad a crear. Es-te
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1089--1089
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1089--1089
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1089--1089
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1089--1089
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1091--1091
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1091--1091
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1091--1091
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1091--1091
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 5563) in paragraph at lines 1091--1091
-\OT1/cmr/m/n/6 cion desa-rro-lla-da, las
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1091--1091
-\OT1/cmr/m/n/6 re-ser-vas se eli-mi-nan
- []
-
-
-Underfull \hbox (badness 1087) in paragraph at lines 1091--1091
-\OT1/cmr/m/n/6 rio que la realizo, no
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
-[]|\OMS/cmsy/m/n/6 f\OT1/cmr/m/n/6 u-ser-na-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
-\OT1/cmr/m/n/6 me\OMS/cmsy/m/n/6 g \OT1/cmr/m/n/6 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
-\OMS/cmsy/m/n/6 f\OT1/cmr/m/n/6 book-ing-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
-[]|\OT1/cmr/bx/n/6 u-ser-na-me\OT1/cmr/m/n/6 :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
-\OT1/cmr/m/it/6 String \OT1/cmr/m/n/6 con el
- []
-
-
-Underfull \hbox (badness 6284) in paragraph at lines 1093--1093
-\OT1/cmr/m/n/6 rio que so-li-ci-ta
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
-\OT1/cmr/m/n/6 la eli-mi-na-cion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
-\OT1/cmr/m/n/6 de la re-ser-va;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
-\OT1/cmr/bx/n/6 book-ing-ty-pe\OT1/cmr/m/n/6 :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
-\OT1/cmr/m/it/6 In-te-ger \OT1/cmr/m/n/6 con el
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
-[]|\OT1/cmr/m/n/6 JSON: men-sa-je
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
-\OT1/cmr/m/it/6 en-ti-ty-[]book-ing-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1093
-\OT1/cmtt/m/n/6 booking / usuario1 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1095--1095
-[]|\OT1/cmr/m/n/6 JSON: re-ser-va
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1095--1095
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1095--1095
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1095--1095
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1095--1095
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1097--1097
-[]|\OT1/cmr/m/n/6 JSON: lis-ta-do
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1097--1097
-\OT1/cmr/m/n/6 com-ple-to de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1097--1097
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1097--1097
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1097--1097
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1097--1097
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1099--1099
-[]|\OMS/cmsy/m/n/6 f\OT1/cmr/m/n/6 from\OMS/cmsy/m/n/6 g \OT1/cmr/m/n/6 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1099--1099
-[]|\OT1/cmr/bx/n/6 from\OT1/cmr/m/n/6 : \OT1/cmr/m/it/6 In-te-ger
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1099--1099
-\OT1/cmr/m/n/6 re-ser-va des-de
- []
-
-
-Underfull \hbox (badness 1960) in paragraph at lines 1099--1099
-\OT1/cmr/m/n/6 la que se par-te
- []
-
-
-Underfull \hbox (badness 2828) in paragraph at lines 1099--1099
-\OT1/cmr/m/n/6 pa-ra la busque-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1099--1099
-\OT1/cmr/m/n/6 da; \OT1/cmr/bx/n/6 to\OT1/cmr/m/n/6 : \OT1/cmr/m/it/6 In-te-ger
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1099--1099
-\OT1/cmr/m/n/6 con el nume-ro
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1099--1099
-\OT1/cmr/m/n/6 de re-ser-vas a
- []
-
-
-Underfull \hbox (badness 1478) in paragraph at lines 1099--1099
-[]|\OT1/cmr/m/n/6 JSON: ran-go de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1099--1099
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1099--1099
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1099--1099
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1099--1099
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1101
-[]|\OT1/cmr/m/n/6 PLAIN: nume-ro
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1101
-\OT1/cmr/m/n/6 de en-ti-da-des
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1101
-\OT1/cmr/m/n/6 crea-das en la
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1101
-[]|[]$\OT1/cmtt/m/n/6 http : / /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1101
-\OT1/cmtt/m/n/6 localhost : 8080 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1101
-\OT1/cmtt/m/n/6 BikesManager /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1101
-\OT1/cmtt/m/n/6 rest / entities .
- []
-
-LaTeX Info: Redefining \. on input line 1105.
-LaTeX Info: Redefining \% on input line 1105.
+(babel)             in language  on input line 1062.
+ [48]
+LaTeX Info: Redefining \. on input line 1101.
+LaTeX Info: Redefining \% on input line 1101.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1105.
+(babel)             in language  on input line 1101.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1105.
+(babel)             in language  on input line 1101.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1105.
+(babel)             in language  on input line 1101.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1105.
+(babel)             in language  on input line 1101.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1105.
+(babel)             in language  on input line 1101.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1105.
+(babel)             in language  on input line 1101.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1105.
+(babel)             in language  on input line 1101.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1105.
+(babel)             in language  on input line 1101.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1105.
+(babel)             in language  on input line 1101.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1105.
+(babel)             in language  on input line 1101.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1105.
+(babel)             in language  on input line 1101.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1105.
-[49]
-LaTeX Info: Redefining \. on input line 1116.
-LaTeX Info: Redefining \% on input line 1116.
+(babel)             in language  on input line 1101.
+ [49]
+LaTeX Info: Redefining \. on input line 1110.
+LaTeX Info: Redefining \% on input line 1110.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1116.
+(babel)             in language  on input line 1110.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1116.
+(babel)             in language  on input line 1110.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1116.
+(babel)             in language  on input line 1110.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1116.
+(babel)             in language  on input line 1110.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1116.
+(babel)             in language  on input line 1110.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1116.
+(babel)             in language  on input line 1110.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1116.
+(babel)             in language  on input line 1110.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1116.
+(babel)             in language  on input line 1110.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1116.
+(babel)             in language  on input line 1110.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1116.
+(babel)             in language  on input line 1110.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1116.
+(babel)             in language  on input line 1110.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1116.
+(babel)             in language  on input line 1110.
  [50]
-LaTeX Info: Redefining \. on input line 1134.
-LaTeX Info: Redefining \% on input line 1134.
+LaTeX Info: Redefining \. on input line 1128.
+LaTeX Info: Redefining \% on input line 1128.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1134.
+(babel)             in language  on input line 1128.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1134.
+(babel)             in language  on input line 1128.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1134.
+(babel)             in language  on input line 1128.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1134.
+(babel)             in language  on input line 1128.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1134.
+(babel)             in language  on input line 1128.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1134.
+(babel)             in language  on input line 1128.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1134.
+(babel)             in language  on input line 1128.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1134.
+(babel)             in language  on input line 1128.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1134.
+(babel)             in language  on input line 1128.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1134.
+(babel)             in language  on input line 1128.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1134.
+(babel)             in language  on input line 1128.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1134.
- [51] <Images/FragmentsAndroid.png, id=1002, 529.98pt x 301.8778pt>
+(babel)             in language  on input line 1128.
+ [51]
+<Images/FragmentsAndroid.png, id=872, 529.98pt x 301.8778pt>
 File: Images/FragmentsAndroid.png Graphic file (type png)
 
 <use Images/FragmentsAndroid.png>
-Package pdftex.def Info: Images/FragmentsAndroid.png used on input line 1141.
+Package pdftex.def Info: Images/FragmentsAndroid.png used on input line 1135.
 (pdftex.def)             Requested size: 418.25908pt x 238.24132pt.
-LaTeX Info: Redefining \. on input line 1149.
-LaTeX Info: Redefining \% on input line 1149.
+LaTeX Info: Redefining \. on input line 1143.
+LaTeX Info: Redefining \% on input line 1143.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1149.
+(babel)             in language  on input line 1143.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1149.
+(babel)             in language  on input line 1143.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1149.
+(babel)             in language  on input line 1143.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1149.
+(babel)             in language  on input line 1143.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1149.
+(babel)             in language  on input line 1143.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1149.
+(babel)             in language  on input line 1143.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1149.
+(babel)             in language  on input line 1143.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1149.
+(babel)             in language  on input line 1143.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1149.
+(babel)             in language  on input line 1143.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1149.
+(babel)             in language  on input line 1143.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1149.
+(babel)             in language  on input line 1143.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1149.
+(babel)             in language  on input line 1143.
  [52 <./Images/FragmentsAndroid.png>]
-<Images/disenoIU.png, id=1014, 486.31688pt x 255.95625pt>
+<Images/disenoIU.png, id=884, 486.31688pt x 255.95625pt>
 File: Images/disenoIU.png Graphic file (type png)
 
 <use Images/disenoIU.png>
-Package pdftex.def Info: Images/disenoIU.png used on input line 1160.
+Package pdftex.def Info: Images/disenoIU.png used on input line 1154.
 (pdftex.def)             Requested size: 418.25404pt x 220.1337pt.
-LaTeX Info: Redefining \. on input line 1176.
-LaTeX Info: Redefining \% on input line 1176.
+LaTeX Info: Redefining \. on input line 1170.
+LaTeX Info: Redefining \% on input line 1170.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1176.
+(babel)             in language  on input line 1170.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1176.
+(babel)             in language  on input line 1170.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1176.
+(babel)             in language  on input line 1170.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1176.
+(babel)             in language  on input line 1170.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1176.
+(babel)             in language  on input line 1170.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1176.
+(babel)             in language  on input line 1170.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1176.
+(babel)             in language  on input line 1170.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1176.
+(babel)             in language  on input line 1170.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1176.
+(babel)             in language  on input line 1170.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1176.
+(babel)             in language  on input line 1170.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1176.
+(babel)             in language  on input line 1170.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1176.
+(babel)             in language  on input line 1170.
  [53 <./Images/disenoIU.png>]
-<Images/guiYrf.png, id=1027, 1051.67906pt x 682.04813pt>
+<Images/guiYrf.png, id=897, 1051.67906pt x 682.04813pt>
 File: Images/guiYrf.png Graphic file (type png)
 
 <use Images/guiYrf.png>
-Package pdftex.def Info: Images/guiYrf.png used on input line 1179.
+Package pdftex.def Info: Images/guiYrf.png used on input line 1173.
 (pdftex.def)             Requested size: 418.25708pt x 271.25334pt.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1190.
+(babel)             in language  on input line 1184.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1190.
+(babel)             in language  on input line 1184.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1190.
+(babel)             in language  on input line 1184.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1190.
+(babel)             in language  on input line 1184.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1190.
+(babel)             in language  on input line 1184.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1190.
+(babel)             in language  on input line 1184.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1193.
+(babel)             in language  on input line 1187.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1193.
+(babel)             in language  on input line 1187.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1193.
+(babel)             in language  on input line 1187.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1193.
+(babel)             in language  on input line 1187.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1193.
+(babel)             in language  on input line 1187.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1193.
-LaTeX Info: Redefining \. on input line 1201.
-LaTeX Info: Redefining \% on input line 1201.
+(babel)             in language  on input line 1187.
+LaTeX Info: Redefining \. on input line 1195.
+LaTeX Info: Redefining \% on input line 1195.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1201.
+(babel)             in language  on input line 1195.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1201.
+(babel)             in language  on input line 1195.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1201.
+(babel)             in language  on input line 1195.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1201.
+(babel)             in language  on input line 1195.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1201.
+(babel)             in language  on input line 1195.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1201.
+(babel)             in language  on input line 1195.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1201.
+(babel)             in language  on input line 1195.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1201.
+(babel)             in language  on input line 1195.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1201.
+(babel)             in language  on input line 1195.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1201.
+(babel)             in language  on input line 1195.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1201.
+(babel)             in language  on input line 1195.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1201.
+(babel)             in language  on input line 1195.
  [54 <./Images/guiYrf.png>]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1204.
+(babel)             in language  on input line 1198.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1204.
+(babel)             in language  on input line 1198.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1204.
+(babel)             in language  on input line 1198.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1204.
+(babel)             in language  on input line 1198.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1204.
+(babel)             in language  on input line 1198.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1204.
+(babel)             in language  on input line 1198.
 
-Underfull \hbox (badness 2409) in paragraph at lines 1218--1218
+Underfull \hbox (badness 2409) in paragraph at lines 1212--1212
 [][][]\OT1/cmr/m/n/10 Dato a ju-nio de 2016: []$\OT1/cmtt/m/n/10 http : / / cin
 codias . com / cincodias / 2016 / 06 / 15 / tecnologia /
  []
 
-LaTeX Info: Redefining \. on input line 1221.
-LaTeX Info: Redefining \% on input line 1221.
+LaTeX Info: Redefining \. on input line 1215.
+LaTeX Info: Redefining \% on input line 1215.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1221.
+(babel)             in language  on input line 1215.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1221.
+(babel)             in language  on input line 1215.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1221.
+(babel)             in language  on input line 1215.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1221.
+(babel)             in language  on input line 1215.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1221.
+(babel)             in language  on input line 1215.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1221.
+(babel)             in language  on input line 1215.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1221.
+(babel)             in language  on input line 1215.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1221.
+(babel)             in language  on input line 1215.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1221.
+(babel)             in language  on input line 1215.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1221.
+(babel)             in language  on input line 1215.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1221.
+(babel)             in language  on input line 1215.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1221.
-[55] <Images/androidDistribution.png, id=1057, 746.79pt x 442.65375pt>
+(babel)             in language  on input line 1215.
+[55] <Images/androidDistribution.png, id=927, 746.79pt x 442.65375pt>
 File: Images/androidDistribution.png Graphic file (type png)
 
 <use Images/androidDistribution.png>
-Package pdftex.def Info: Images/androidDistribution.png used on input line 1229
+Package pdftex.def Info: Images/androidDistribution.png used on input line 1223
 .
 (pdftex.def)             Requested size: 418.25652pt x 247.91817pt.
-LaTeX Info: Redefining \. on input line 1246.
-LaTeX Info: Redefining \% on input line 1246.
+LaTeX Info: Redefining \. on input line 1240.
+LaTeX Info: Redefining \% on input line 1240.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1246.
+(babel)             in language  on input line 1240.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1246.
+(babel)             in language  on input line 1240.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1246.
+(babel)             in language  on input line 1240.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1246.
+(babel)             in language  on input line 1240.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1246.
+(babel)             in language  on input line 1240.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1246.
+(babel)             in language  on input line 1240.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1246.
+(babel)             in language  on input line 1240.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1246.
+(babel)             in language  on input line 1240.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1246.
+(babel)             in language  on input line 1240.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1246.
+(babel)             in language  on input line 1240.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1246.
+(babel)             in language  on input line 1240.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1246.
+(babel)             in language  on input line 1240.
  [56]
-LaTeX Info: Redefining \. on input line 1261.
-LaTeX Info: Redefining \% on input line 1261.
+LaTeX Info: Redefining \. on input line 1255.
+LaTeX Info: Redefining \% on input line 1255.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1261.
+(babel)             in language  on input line 1255.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1261.
+(babel)             in language  on input line 1255.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1261.
+(babel)             in language  on input line 1255.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1261.
+(babel)             in language  on input line 1255.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1261.
+(babel)             in language  on input line 1255.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1261.
+(babel)             in language  on input line 1255.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1261.
+(babel)             in language  on input line 1255.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1261.
+(babel)             in language  on input line 1255.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1261.
+(babel)             in language  on input line 1255.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1261.
+(babel)             in language  on input line 1255.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1261.
+(babel)             in language  on input line 1255.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1261.
+(babel)             in language  on input line 1255.
  [57 <./Images/androidDistribution.png>]
-Overfull \hbox (8.31001pt too wide) in paragraph at lines 1270--1271
+Overfull \hbox (8.31001pt too wide) in paragraph at lines 1264--1265
 \OT1/cmr/m/n/12 que SOAP solo acep-ta XML. As-pec-to de re-le-van-cia con-si-d
 e-ran-do, ademas,
  []
 
 
-Overfull \hbox (5.62558pt too wide) in paragraph at lines 1275--1276
+Overfull \hbox (5.62558pt too wide) in paragraph at lines 1269--1270
 \OT1/cmr/m/n/12 dor y la ba-se de da-tos uti-li-zan-do la API \OT1/cmr/m/it/12 
 Ja-va Da-ta-ba-se Con-nec-ti-vity \OT1/cmr/m/n/12 (JDBC[][][]). 
  []
 
-LaTeX Info: Redefining \. on input line 1281.
-LaTeX Info: Redefining \% on input line 1281.
+LaTeX Info: Redefining \. on input line 1275.
+LaTeX Info: Redefining \% on input line 1275.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1281.
+(babel)             in language  on input line 1275.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1281.
+(babel)             in language  on input line 1275.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1281.
+(babel)             in language  on input line 1275.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1281.
+(babel)             in language  on input line 1275.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1281.
+(babel)             in language  on input line 1275.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1281.
+(babel)             in language  on input line 1275.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1281.
+(babel)             in language  on input line 1275.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1281.
+(babel)             in language  on input line 1275.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1281.
+(babel)             in language  on input line 1275.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1281.
+(babel)             in language  on input line 1275.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1281.
+(babel)             in language  on input line 1275.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1281.
+(babel)             in language  on input line 1275.
 [58]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1284.
+(babel)             in language  on input line 1278.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1284.
+(babel)             in language  on input line 1278.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1284.
+(babel)             in language  on input line 1278.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1284.
+(babel)             in language  on input line 1278.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1284.
+(babel)             in language  on input line 1278.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1284.
+(babel)             in language  on input line 1278.
 
-<Images/Diagramas/09_DiagramaDeDespliegue.png, id=1098, 396.7322pt x 235.63031p
-t>
+<Images/Diagramas/09_DiagramaDeDespliegue.png, id=968, 396.7322pt x 235.63031pt
+>
 File: Images/Diagramas/09_DiagramaDeDespliegue.png Graphic file (type png)
  <use Images/Diagramas/09_DiagramaDeDespliegue.png>
 Package pdftex.def Info: Images/Diagramas/09_DiagramaDeDespliegue.png used on i
-nput line 1292.
+nput line 1286.
 (pdftex.def)             Requested size: 418.26399pt x 248.41864pt.
-LaTeX Info: Redefining \. on input line 1299.
-LaTeX Info: Redefining \% on input line 1299.
+LaTeX Info: Redefining \. on input line 1293.
+LaTeX Info: Redefining \% on input line 1293.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1299.
+(babel)             in language  on input line 1293.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1299.
+(babel)             in language  on input line 1293.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1299.
+(babel)             in language  on input line 1293.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1299.
+(babel)             in language  on input line 1293.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1299.
+(babel)             in language  on input line 1293.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1299.
+(babel)             in language  on input line 1293.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1299.
+(babel)             in language  on input line 1293.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1299.
+(babel)             in language  on input line 1293.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1299.
+(babel)             in language  on input line 1293.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1299.
+(babel)             in language  on input line 1293.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1299.
+(babel)             in language  on input line 1293.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1299.
+(babel)             in language  on input line 1293.
  [59 <./Images/Diagramas/09_DiagramaDeDespliegue.png>])
 LaTeX Info: Redefining \. on input line 88.
 LaTeX Info: Redefining \% on input line 88.
@@ -4759,7 +3588,7 @@ Package babel Info: Redefining spanish shorthand "?
 
 
 ]
-<Images/estrategiaPruebas.png, id=1131, 540.51938pt x 271.0125pt>
+<Images/estrategiaPruebas.png, id=1001, 540.51938pt x 271.0125pt>
 File: Images/estrategiaPruebas.png Graphic file (type png)
 
 <use Images/estrategiaPruebas.png>
@@ -4831,7 +3660,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 54.
 
-[63] <Images/ejemploToast.png, id=1155, 577.40718pt x 294.34969pt>
+[63] <Images/ejemploToast.png, id=1025, 577.40718pt x 294.34969pt>
 File: Images/ejemploToast.png Graphic file (type png)
 
 <use Images/ejemploToast.png>
@@ -4843,7 +3672,7 @@ Underfull \hbox (badness 5970) in paragraph at lines 64--64
  oracle . com / javase / 7 / docs / api / java / lang / System .
  []
 
-<Images/RESTClient.png, id=1160, 727.96968pt x 562.35094pt>
+<Images/RESTClient.png, id=1030, 727.96968pt x 562.35094pt>
 File: Images/RESTClient.png Graphic file (type png)
 
 <use Images/RESTClient.png>
@@ -5298,9 +4127,9 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 96.
  [77]
-\openout2 = `AnexoResPruebasVal.aux'.
+\openout2 = `AnexoAPI.aux'.
 
- (AnexoResPruebasVal.tex
+ (AnexoAPI.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 Package babel Info: Redefining spanish shorthand <<
@@ -5345,31 +4174,1371 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 1.
+
+Package array Warning: Column A is already defined on input line 11.
+
+
+Package array Warning: Column B is already defined on input line 12.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\OT1/cmr/m/n/6 JSON: men-sa-je
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-sta-tion-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 3439) in paragraph at lines 35--35
+\OT1/cmr/m/n/6 te meto-do su-po-ne la
+ []
+
+
+Underfull \hbox (badness 3612) in paragraph at lines 35--35
+\OT1/cmr/m/n/6 ba-cio-nes pre-vias pa-ra
+ []
+
+
+Overfull \hbox (3.99522pt too wide) in paragraph at lines 37--37
+ []|\OMS/cmsy/m/n/6 f\OT1/cmr/m/n/6 operation\OMS/cmsy/m/n/6 g 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\OT1/cmr/bx/n/6 operation\OT1/cmr/m/n/6 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\OT1/cmr/m/it/6 String \OT1/cmr/m/n/6 con la
+ []
+
+
+Underfull \hbox (badness 1009) in paragraph at lines 37--37
+\OT1/cmr/m/n/6 ope-ra-cion a rea-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\OT1/cmr/m/n/6 li-zar so-bre la
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\OT1/cmr/m/n/6 es-ta-cion (\OT1/cmr/m/it/6 ta-ke\OT1/cmr/m/n/6 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\OT1/cmr/m/it/6 lea-ve\OT1/cmr/m/n/6 , \OT1/cmr/m/it/6 book[]bike
+ []
+
+
+Underfull \hbox (badness 2875) in paragraph at lines 37--37
+\OT1/cmr/m/n/6 o \OT1/cmr/m/it/6 book[]slot\OT1/cmr/m/n/6 ); \OT1/cmr/bx/n/6 id
+\OT1/cmr/m/n/6 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\OT1/cmr/m/n/6 JSON: men-sa-je
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-sta-tion-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]\OT1/cmr/m/it/6 SER-VER-[]OK \OT1/cmr/m/n/6 o
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-sta-tion-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\OT1/cmtt/m/n/6 bikestation / take /
+ []
+
+
+Underfull \hbox (badness 1019) in paragraph at lines 37--37
+\OT1/cmr/m/n/6 gen o de-jan bi-ci-cle-tas
+ []
+
+
+Underfull \hbox (badness 2521) in paragraph at lines 37--37
+\OT1/cmr/m/n/6 o se re-ser-van bi-ci-cle-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\OT1/cmr/m/n/6 JSON: es-ta-cion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 2318) in paragraph at lines 41--41
+\OT1/cmr/m/n/6 to que las busque-das
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 41--41
+\OT1/cmr/m/n/6 so-bre la di-rec-cion, no
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+[]|\OT1/cmr/bx/n/6 address\OT1/cmr/m/n/6 : \OT1/cmr/m/it/6 String
+ []
+
+
+Underfull \hbox (badness 2065) in paragraph at lines 43--43
+\OT1/cmr/m/n/6 con la di-rec-cion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+[]|\OT1/cmr/m/n/6 JSON: es-ta-cion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+\OT1/cmtt/m/n/6 bikestation /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+\OT1/cmtt/m/n/6 stationAddress /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+\OT1/cmtt/m/n/6 Plaza _ de _ la _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+[]|\OT1/cmr/m/n/6 JSON: lis-ta-do
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+\OT1/cmr/m/n/6 com-ple-to de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 45--45
+\OT1/cmr/m/n/6 ta-cio-nes com-ple-to, ac-
+ []
+
+
+Underfull \hbox (badness 1515) in paragraph at lines 47--47
+\OT1/cmr/m/n/6 el ID de la es-
+ []
+
+
+Underfull \hbox (badness 5475) in paragraph at lines 47--47
+\OT1/cmr/m/n/6 ta-cion des-de la
+ []
+
+
+Underfull \hbox (badness 3323) in paragraph at lines 47--47
+\OT1/cmr/m/n/6 ra la busque-da;
+ []
+
+
+Underfull \hbox (badness 1215) in paragraph at lines 47--47
+\OT1/cmr/m/n/6 nume-ro de es-ta-
+ []
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 47--47
+[]|\OT1/cmr/m/n/6 JSON: ran-go de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+[]|\OT1/cmr/m/n/6 PLAIN: nume-ro
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+\OT1/cmr/m/n/6 de en-ti-da-des
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+\OT1/cmr/m/n/6 crea-das en la
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 54.
 [79]
+LaTeX Info: Redefining \. on input line 58.
+LaTeX Info: Redefining \% on input line 58.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 58.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 58.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 58.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 58.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 58.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 58.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 58.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 58.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 58.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 58.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 58.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 58.
+ [80]
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
+[]|\OT1/cmr/m/n/6 JSON: men-sa-je
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
+\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-u-ser-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
+[]\OT1/cmr/m/it/6 SER-VER-[]OK \OT1/cmr/m/n/6 o
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
+\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-u-ser-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 3780) in paragraph at lines 78--78
+\OT1/cmr/m/n/6 ca-de-na JSON con la
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 78--78
+\OT1/cmr/m/n/6 en-ti-dad a crear. Es-te
+ []
+
+
+Underfull \hbox (badness 3118) in paragraph at lines 78--78
+\OT1/cmr/m/n/6 meto-do com-prue-ba la
+ []
+
+
+Underfull \hbox (badness 1960) in paragraph at lines 78--78
+\OT1/cmr/m/n/6 bre de usua-rio y co-
+ []
+
+
+Underfull \hbox (badness 7415) in paragraph at lines 78--78
+\OT1/cmr/m/n/6 do que de-vuel-ve un
+ []
+
+
+Underfull \hbox (badness 3364) in paragraph at lines 78--78
+\OT1/cmr/m/n/6 SER-VER[]OK (crea el
+ []
+
+
+Underfull \hbox (badness 4036) in paragraph at lines 78--78
+\OT1/cmr/m/n/6 ci-den-cias o un SER-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--80
+[]|\OT1/cmr/m/n/6 JSON: men-sa-je
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--80
+\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-u-ser-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--80
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--80
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--80
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--80
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 3439) in paragraph at lines 80--80
+\OT1/cmr/m/n/6 te meto-do su-po-ne la
+ []
+
+
+Underfull \hbox (badness 3612) in paragraph at lines 80--80
+\OT1/cmr/m/n/6 ba-cio-nes pre-vias pa-ra
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+[]|\OT1/cmr/m/n/6 JSON: men-sa-je
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-u-ser-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+[]\OT1/cmr/m/it/6 SER-VER-[]OK \OT1/cmr/m/n/6 o
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-u-ser-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+\OT1/cmtt/m/n/6 bikeuser /
+ []
+
+
+Underfull \hbox (badness 1259) in paragraph at lines 82--82
+\OT1/cmr/m/n/6 rio cuan-do se quie-ren
+ []
+
+
+Underfull \hbox (badness 1466) in paragraph at lines 82--82
+\OT1/cmr/m/n/6 co-rreo electroni-co, de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+[]|\OT1/cmr/m/n/6 JSON: men-sa-je
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+\OT1/cmr/m/it/6 en-ti-ty-[]bi-ke-u-ser-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+[]|\OT1/cmr/m/n/6 Este meto-do es el
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+\OT1/cmr/m/n/6 uti-li-za-do pa-ra eli-mi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+\OT1/cmr/m/n/6 nar usua-rios. Co-mo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+\OT1/cmr/m/n/6 la pe-ti-cion siem-pre
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+\OT1/cmr/m/n/6 que quie-re eli-mi-nar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+\OT1/cmr/m/n/6 su cuen-ta, no hay
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+\OT1/cmr/m/n/6 po-si-bi-li-dad de error,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
+[]|\OT1/cmr/m/n/6 JSON: usua-rio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 6157) in paragraph at lines 86--86
+\OT1/cmr/m/n/6 uti-li-za-do en la apli-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
+\OT1/cmr/m/n/6 ca-cion desa-rro-lla-da,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--86
+\OT1/cmr/m/n/6 das in-di-vi-dua-les se
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+[]|\OT1/cmr/bx/n/6 username\OT1/cmr/m/n/6 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+\OT1/cmr/m/it/6 String \OT1/cmr/m/n/6 con el
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+[]|\OT1/cmr/m/n/6 JSON: usua-rio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+\OT1/cmtt/m/n/6 bikeuser / user /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+[]|\OT1/cmr/m/n/6 JSON: lis-ta-do
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+\OT1/cmr/m/n/6 com-ple-to de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+[]|\OT1/cmr/m/n/6 Meto-do no uti-li-za-do
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+\OT1/cmr/m/n/6 pues-to que solo se
+ []
+
+
+Underfull \hbox (badness 7522) in paragraph at lines 90--90
+\OT1/cmr/m/n/6 rea-li-zan con-sul-tas de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--90
+\OT1/cmr/m/n/6 usua-rios in-di-vi-dua-les
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+[]|\OT1/cmr/bx/n/6 from\OT1/cmr/m/n/6 : \OT1/cmr/m/it/6 In-te-ger
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+\OT1/cmr/m/n/6 con el ID del
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+\OT1/cmr/m/n/6 usua-rio des-de
+ []
+
+
+Underfull \hbox (badness 2213) in paragraph at lines 92--92
+\OT1/cmr/m/n/6 el que se par-te
+ []
+
+
+Underfull \hbox (badness 2828) in paragraph at lines 92--92
+\OT1/cmr/m/n/6 pa-ra la busque-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+\OT1/cmr/m/n/6 da; \OT1/cmr/bx/n/6 to\OT1/cmr/m/n/6 : \OT1/cmr/m/it/6 In-te-ger
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+\OT1/cmr/m/n/6 con el nume-ro
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+\OT1/cmr/m/n/6 de usua-rios a
+ []
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 92--92
+[]|\OT1/cmr/m/n/6 JSON: ran-go de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+[]|\OT1/cmr/m/n/6 PLAIN: nume-ro
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+\OT1/cmr/m/n/6 de en-ti-da-des
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+\OT1/cmr/m/n/6 crea-das en la
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 99.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 99.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 99.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 99.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 99.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 99.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 99.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 99.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 99.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 99.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 99.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 99.
+[81]
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+[]|\OT1/cmr/m/n/6 JSON: men-sa-je
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+\OT1/cmr/m/it/6 en-ti-ty-[]book-ing-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 3780) in paragraph at lines 122--122
+\OT1/cmr/m/n/6 ca-de-na JSON con la
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 122--122
+\OT1/cmr/m/n/6 en-ti-dad a crear. Es-te
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--124
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--124
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--124
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--124
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--126
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--126
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--126
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--126
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 5563) in paragraph at lines 126--126
+\OT1/cmr/m/n/6 cion desa-rro-lla-da, las
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--126
+\OT1/cmr/m/n/6 re-ser-vas se eli-mi-nan
+ []
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 126--126
+\OT1/cmr/m/n/6 rio que la realizo, no
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+[]|\OT1/cmr/bx/n/6 u-ser-na-me\OT1/cmr/m/n/6 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/cmr/m/it/6 String \OT1/cmr/m/n/6 con el
+ []
+
+
+Underfull \hbox (badness 6284) in paragraph at lines 128--128
+\OT1/cmr/m/n/6 rio que so-li-ci-ta
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/cmr/m/n/6 la eli-mi-na-cion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/cmr/m/n/6 de la re-ser-va;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/cmr/bx/n/6 book-ing-ty-pe\OT1/cmr/m/n/6 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/cmr/m/it/6 In-te-ger \OT1/cmr/m/n/6 con el
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+[]|\OT1/cmr/m/n/6 JSON: men-sa-je
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/cmr/m/it/6 en-ti-ty-[]book-ing-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--128
+\OT1/cmtt/m/n/6 booking / usuario1 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
+[]|\OT1/cmr/m/n/6 JSON: re-ser-va
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+[]|\OT1/cmr/m/n/6 JSON: lis-ta-do
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+\OT1/cmr/m/n/6 com-ple-to de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+[]|\OT1/cmr/bx/n/6 from\OT1/cmr/m/n/6 : \OT1/cmr/m/it/6 In-te-ger
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+\OT1/cmr/m/n/6 re-ser-va des-de
+ []
+
+
+Underfull \hbox (badness 1960) in paragraph at lines 134--134
+\OT1/cmr/m/n/6 la que se par-te
+ []
+
+
+Underfull \hbox (badness 2828) in paragraph at lines 134--134
+\OT1/cmr/m/n/6 pa-ra la busque-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+\OT1/cmr/m/n/6 da; \OT1/cmr/bx/n/6 to\OT1/cmr/m/n/6 : \OT1/cmr/m/it/6 In-te-ger
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+\OT1/cmr/m/n/6 con el nume-ro
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+\OT1/cmr/m/n/6 de re-ser-vas a
+ []
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 134--134
+[]|\OT1/cmr/m/n/6 JSON: ran-go de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+[]|\OT1/cmr/m/n/6 PLAIN: nume-ro
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+\OT1/cmr/m/n/6 de en-ti-da-des
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+\OT1/cmr/m/n/6 crea-das en la
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+[]|[]$\OT1/cmtt/m/n/6 http : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+\OT1/cmtt/m/n/6 localhost : 8080 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+\OT1/cmtt/m/n/6 BikesManager /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+\OT1/cmtt/m/n/6 rest / entities .
+ []
+
+LaTeX Info: Redefining \. on input line 140.
+LaTeX Info: Redefining \% on input line 140.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 140.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 140.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 140.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 140.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 140.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 140.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 140.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 140.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 140.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 140.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 140.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 140.
+[82])
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 101.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 101.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 101.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 101.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 101.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 101.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 101.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 101.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 101.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 101.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 101.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 101.
+ [83]
+\openout2 = `AnexoResPruebasVal.aux'.
+
+ (AnexoResPruebasVal.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1.
+ [84
+
+
+
+]
+Ap\'{e}ndice B.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 70.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 70.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 70.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 70.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 70.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 70.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 70.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 70.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 70.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 70.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 70.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 70.
+[85]
 LaTeX Info: Redefining \. on input line 70.
 LaTeX Info: Redefining \% on input line 70.
 Package babel Info: Redefining spanish shorthand <<
@@ -5396,32 +5565,32 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 70.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 70.
- [80])
+ [86])
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 102.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 102.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 102.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 102.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 102.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 102.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 102.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 102.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 102.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 102.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 101.
+(babel)             in language  on input line 102.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 101.
- [81]
+(babel)             in language  on input line 102.
+ [87]
 \openout2 = `AnexoManualUsuario.aux'.
 
  (AnexoManualUsuario.tex
@@ -5451,12 +5620,12 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 1.
- [82
+ [88
 
 
 
 ]
-Ap\'{e}ndice B.
+Ap\'{e}ndice C.
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand >>
@@ -5470,7 +5639,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 1.
 
-<Images/AnexoManual/01_inicio_01_conexion.png, id=1297, 2516.65219pt x 1799.221
+<Images/AnexoManual/01_inicio_01_conexion.png, id=1335, 2516.65219pt x 1799.221
 88pt>
 File: Images/AnexoManual/01_inicio_01_conexion.png Graphic file (type png)
  <use Images/AnexoManual/01_inicio_01_conexion.png>
@@ -5478,7 +5647,7 @@ Package pdftex.def Info: Images/AnexoManual/01_inicio_01_conexion.png used on i
 nput line 10.
 (pdftex.def)             Requested size: 418.22498pt x 299.0002pt.
 
-<Images/AnexoManual/01_inicio_02_completa.png, id=1298, 1081.79156pt x 1799.221
+<Images/AnexoManual/01_inicio_02_completa.png, id=1336, 1081.79156pt x 1799.221
 88pt>
 File: Images/AnexoManual/01_inicio_02_completa.png Graphic file (type png)
  <use Images/AnexoManual/01_inicio_02_completa.png>
@@ -5509,8 +5678,8 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 24.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 24.
- [83 <./Images/AnexoManual/01_inicio_01_conexion.png>]
-<Images/AnexoManual/02_registro_01_completo.png, id=1306, 3633.07312pt x 1799.2
+ [89 <./Images/AnexoManual/01_inicio_01_conexion.png>]
+<Images/AnexoManual/02_registro_01_completo.png, id=1344, 3633.07312pt x 1799.2
 2188pt>
 File: Images/AnexoManual/02_registro_01_completo.png Graphic file (type png)
  <use Images/AnexoManual/02_registro_01_completo.png>
@@ -5543,9 +5712,9 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 39.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 39.
- [84 <./Images/AnexoManual/01_inicio_02_completa.png> <./Images/AnexoManual/02_
+ [90 <./Images/AnexoManual/01_inicio_02_completa.png> <./Images/AnexoManual/02_
 registro_01_completo.png>]
-<Images/AnexoManual/03_inicioSesion_01_completo.png, id=1315, 2448.89906pt x 17
+<Images/AnexoManual/03_inicioSesion_01_completo.png, id=1353, 2448.89906pt x 17
 99.22188pt>
 File: Images/AnexoManual/03_inicioSesion_01_completo.png Graphic file (type png
 )
@@ -5554,7 +5723,7 @@ Package pdftex.def Info: Images/AnexoManual/03_inicioSesion_01_completo.png use
 d on input line 45.
 (pdftex.def)             Requested size: 418.25043pt x 307.29128pt.
 
-<Images/AnexoManual/04_pantallaPrincipal_01_completo.png, id=1316, 1513.15312pt
+<Images/AnexoManual/04_pantallaPrincipal_01_completo.png, id=1354, 1513.15312pt
  x 1799.22188pt>
 File: Images/AnexoManual/04_pantallaPrincipal_01_completo.png Graphic file (typ
 e png)
@@ -5587,8 +5756,8 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 69.
 
-[85 <./Images/AnexoManual/03_inicioSesion_01_completo.png>]
-<Images/AnexoManual/04_pantallaPrincipal_02_detalleEstacion.png, id=1324, 1554.
+[91 <./Images/AnexoManual/03_inicioSesion_01_completo.png>]
+<Images/AnexoManual/04_pantallaPrincipal_02_detalleEstacion.png, id=1362, 1554.
 55782pt x 1797.71625pt>
 File: Images/AnexoManual/04_pantallaPrincipal_02_detalleEstacion.png Graphic fi
 le (type png)
@@ -5623,9 +5792,9 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 80.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 80.
- [86 <./Images/AnexoManual/04_pantallaPrincipal_01_completo.png> <./Images/Anex
+ [92 <./Images/AnexoManual/04_pantallaPrincipal_01_completo.png> <./Images/Anex
 oManual/04_pantallaPrincipal_02_detalleEstacion.png>]
-<Images/AnexoManual/04_pantallaPrincipal_03_actionBar.png, id=1331, 560.8453pt 
+<Images/AnexoManual/04_pantallaPrincipal_03_actionBar.png, id=1369, 560.8453pt 
 x 176.91093pt>
 File: Images/AnexoManual/04_pantallaPrincipal_03_actionBar.png Graphic file (ty
 pe png)
@@ -5634,7 +5803,7 @@ Package pdftex.def Info: Images/AnexoManual/04_pantallaPrincipal_03_actionBar.p
 ng used on input line 83.
 (pdftex.def)             Requested size: 418.24532pt x 131.92972pt.
 
-<Images/AnexoManual/05_pantallaListado_01_completo.png, id=1332, 1501.86093pt x
+<Images/AnexoManual/05_pantallaListado_01_completo.png, id=1370, 1501.86093pt x
  1799.22188pt>
 File: Images/AnexoManual/05_pantallaListado_01_completo.png Graphic file (type 
 png)
@@ -5643,7 +5812,7 @@ Package pdftex.def Info: Images/AnexoManual/05_pantallaListado_01_completo.png
 used on input line 92.
 (pdftex.def)             Requested size: 418.24947pt x 501.06076pt.
 
-<Images/AnexoManual/06_pantallaGrafico_01_completo.png, id=1333, 2356.30313pt x
+<Images/AnexoManual/06_pantallaGrafico_01_completo.png, id=1371, 2356.30313pt x
  1800.7275pt>
 File: Images/AnexoManual/06_pantallaGrafico_01_completo.png Graphic file (type 
 png)
@@ -5676,9 +5845,9 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 106.
 
-[87 <./Images/AnexoManual/04_pantallaPrincipal_03_actionBar.png> <./Images/Anex
+[93 <./Images/AnexoManual/04_pantallaPrincipal_03_actionBar.png> <./Images/Anex
 oManual/05_pantallaListado_01_completo.png>]
-<Images/AnexoManual/04_pantallaPrincipal_04_actionBarDesplegable.png, id=1340, 
+<Images/AnexoManual/04_pantallaPrincipal_04_actionBarDesplegable.png, id=1378, 
 456.20438pt x 251.43938pt>
 File: Images/AnexoManual/04_pantallaPrincipal_04_actionBarDesplegable.png Graph
 ic file (type png)
@@ -5714,9 +5883,9 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 119.
 
-[88 <./Images/AnexoManual/06_pantallaGrafico_01_completo.png> <./Images/AnexoMa
+[94 <./Images/AnexoManual/06_pantallaGrafico_01_completo.png> <./Images/AnexoMa
 nual/04_pantallaPrincipal_04_actionBarDesplegable.png>]
-<Images/AnexoManual/07_pantallaOperaciones_01_opciones.png, id=1348, 1445.4pt x
+<Images/AnexoManual/07_pantallaOperaciones_01_opciones.png, id=1386, 1445.4pt x
  2400.97pt>
 File: Images/AnexoManual/07_pantallaOperaciones_01_opciones.png Graphic file (t
 ype png)
@@ -5725,7 +5894,7 @@ Package pdftex.def Info: Images/AnexoManual/07_pantallaOperaciones_01_opciones.
 png used on input line 129.
 (pdftex.def)             Requested size: 356.10002pt x 591.52171pt.
 
-<Images/AnexoManual/07_pantallaOperaciones_02_biciCogida.png, id=1349, 452.4403
+<Images/AnexoManual/07_pantallaOperaciones_02_biciCogida.png, id=1387, 452.4403
 pt x 146.04562pt>
 File: Images/AnexoManual/07_pantallaOperaciones_02_biciCogida.png Graphic file 
 (type png)
@@ -5758,8 +5927,8 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 143.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 143.
- [89 <./Images/AnexoManual/07_pantallaOperaciones_01_opciones.png>]
-<Images/AnexoManual/07_pantallaOperaciones_03_reserva.png, id=1358, 2367.5953pt
+ [95 <./Images/AnexoManual/07_pantallaOperaciones_01_opciones.png>]
+<Images/AnexoManual/07_pantallaOperaciones_03_reserva.png, id=1396, 2367.5953pt
  x 1800.7275pt>
 File: Images/AnexoManual/07_pantallaOperaciones_03_reserva.png Graphic file (ty
 pe png)
@@ -5794,9 +5963,9 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 161.
 
-[90 <./Images/AnexoManual/07_pantallaOperaciones_02_biciCogida.png> <./Images/A
+[96 <./Images/AnexoManual/07_pantallaOperaciones_02_biciCogida.png> <./Images/A
 nexoManual/07_pantallaOperaciones_03_reserva.png>]
-<Images/AnexoManual/08_pantallaCuenta_01_completa.png, id=1366, 1927.2pt x 1799
+<Images/AnexoManual/08_pantallaCuenta_01_completa.png, id=1404, 1927.2pt x 1799
 .22188pt>
 File: Images/AnexoManual/08_pantallaCuenta_01_completa.png Graphic file (type p
 ng)
@@ -5828,8 +5997,8 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 179.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 179.
- [91 <./Images/AnexoManual/08_pantallaCuenta_01_completa.png>]
-<Images/AnexoManual/09_Configuraciones_01_completa.png, id=1373, 1445.4pt x 240
+ [97 <./Images/AnexoManual/08_pantallaCuenta_01_completa.png>]
+<Images/AnexoManual/09_Configuraciones_01_completa.png, id=1411, 1445.4pt x 240
 0.97pt>
 File: Images/AnexoManual/09_Configuraciones_01_completa.png Graphic file (type 
 png)
@@ -5838,7 +6007,7 @@ Package pdftex.def Info: Images/AnexoManual/09_Configuraciones_01_completa.png
 used on input line 183.
 (pdftex.def)             Requested size: 356.10002pt x 591.52171pt.
 
-<Images/AnexoManual/09_Configuraciones_02_super.png, id=1374, 407.27156pt x 130
+<Images/AnexoManual/09_Configuraciones_02_super.png, id=1412, 407.27156pt x 130
 .23656pt>
 File: Images/AnexoManual/09_Configuraciones_02_super.png Graphic file (type png
 )
@@ -5872,33 +6041,33 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 200.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 200.
- [92 <./Images/AnexoManual/09_Configuraciones_01_completa.png> <./Images/AnexoM
+ [98 <./Images/AnexoManual/09_Configuraciones_01_completa.png> <./Images/AnexoM
 anual/09_Configuraciones_02_super.png>])
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 102.
+(babel)             in language  on input line 103.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 102.
- [93]
+(babel)             in language  on input line 103.
+ [99]
 \openout2 = `AnexoManualInstalacion.aux'.
 
  (AnexoManualInstalacion.tex
@@ -5928,12 +6097,12 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 1.
- [94
+ [100
 
 
 
 ]
-Ap\'{e}ndice C.
+Ap\'{e}ndice D.
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand >>
@@ -5953,7 +6122,7 @@ m/n/12 http : / / dev . mysql . com / downloads /
  []
 
 
-<Images/AnexoInstalacion/mySQLInstallerMain.png, id=1394, 331.2375pt x 247.6753
+<Images/AnexoInstalacion/mySQLInstallerMain.png, id=1432, 331.2375pt x 247.6753
 1pt>
 File: Images/AnexoInstalacion/mySQLInstallerMain.png Graphic file (type png)
  <use Images/AnexoInstalacion/mySQLInstallerMain.png>
@@ -5984,8 +6153,8 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 23.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 23.
- [95]
-<Images/AnexoInstalacion/mySQLInstallerServer_1.png, id=1409, 339.51843pt x 254
+ [101]
+<Images/AnexoInstalacion/mySQLInstallerServer_1.png, id=1447, 339.51843pt x 254
 .45062pt>
 File: Images/AnexoInstalacion/mySQLInstallerServer_1.png Graphic file (type png
 )
@@ -5994,7 +6163,7 @@ Package pdftex.def Info: Images/AnexoInstalacion/mySQLInstallerServer_1.png use
 d on input line 27.
 (pdftex.def)             Requested size: 418.27348pt x 313.47325pt.
 
-<Images/AnexoInstalacion/mySQLInstallerServer_2.png, id=1410, 339.51843pt x 254
+<Images/AnexoInstalacion/mySQLInstallerServer_2.png, id=1448, 339.51843pt x 254
 .45062pt>
 File: Images/AnexoInstalacion/mySQLInstallerServer_2.png Graphic file (type png
 )
@@ -6028,9 +6197,9 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 40.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 40.
- [96 <./Images/AnexoInstalacion/mySQLInstallerMain.png> <./Images/AnexoInstalac
-ion/mySQLInstallerServer_1.png>]
-<Images/AnexoInstalacion/mySQLWorkbench_1.png, id=1418, 538.26094pt x 557.08125
+ [102 <./Images/AnexoInstalacion/mySQLInstallerMain.png> <./Images/AnexoInstala
+cion/mySQLInstallerServer_1.png>]
+<Images/AnexoInstalacion/mySQLWorkbench_1.png, id=1456, 538.26094pt x 557.08125
 pt>
 File: Images/AnexoInstalacion/mySQLWorkbench_1.png Graphic file (type png)
  <use Images/AnexoInstalacion/mySQLWorkbench_1.png>
@@ -6061,8 +6230,8 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 48.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 48.
- [97 <./Images/AnexoInstalacion/mySQLInstallerServer_2.png>]
-<Images/AnexoInstalacion/mySQLWorkbench_2.png, id=1424, 510.40688pt x 429.85594
+ [103 <./Images/AnexoInstalacion/mySQLInstallerServer_2.png>]
+<Images/AnexoInstalacion/mySQLWorkbench_2.png, id=1462, 510.40688pt x 429.85594
 pt>
 File: Images/AnexoInstalacion/mySQLWorkbench_2.png Graphic file (type png)
  <use Images/AnexoInstalacion/mySQLWorkbench_2.png>
@@ -6101,8 +6270,8 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 57.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 57.
-[98 <./Images/AnexoInstalacion/mySQLWorkbench_1.png>]
-<Images/AnexoInstalacion/mySQLWorkbench_3.png, id=1431, 500.62032pt x 234.1247p
+[104 <./Images/AnexoInstalacion/mySQLWorkbench_1.png>]
+<Images/AnexoInstalacion/mySQLWorkbench_3.png, id=1469, 500.62032pt x 234.1247p
 t>
 File: Images/AnexoInstalacion/mySQLWorkbench_3.png Graphic file (type png)
  <use Images/AnexoInstalacion/mySQLWorkbench_3.png>
@@ -6133,9 +6302,9 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 73.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 73.
- [99 <./Images/AnexoInstalacion/mySQLWorkbench_2.png> <./Images/AnexoInstalacio
-n/mySQLWorkbench_3.png>]
-<Images/AnexoInstalacion/server_1.png, id=1438, 213.04594pt x 144.54pt>
+ [105 <./Images/AnexoInstalacion/mySQLWorkbench_2.png> <./Images/AnexoInstalaci
+on/mySQLWorkbench_3.png>]
+<Images/AnexoInstalacion/server_1.png, id=1476, 213.04594pt x 144.54pt>
 File: Images/AnexoInstalacion/server_1.png Graphic file (type png)
 
 <use Images/AnexoInstalacion/server_1.png>
@@ -6143,7 +6312,7 @@ Package pdftex.def Info: Images/AnexoInstalacion/server_1.png used on input lin
 e 78.
 (pdftex.def)             Requested size: 418.2791pt x 283.77943pt.
 
-<Images/AnexoInstalacion/server_2.png, id=1439, 356.0803pt x 260.47313pt>
+<Images/AnexoInstalacion/server_2.png, id=1477, 356.0803pt x 260.47313pt>
 File: Images/AnexoInstalacion/server_2.png Graphic file (type png)
 
 <use Images/AnexoInstalacion/server_2.png>
@@ -6176,8 +6345,8 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 90.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 90.
- [100 <./Images/AnexoInstalacion/server_1.png>]
-<Images/AnexoInstalacion/server_3.png, id=1451, 426.84468pt x 147.55125pt>
+ [106 <./Images/AnexoInstalacion/server_1.png>]
+<Images/AnexoInstalacion/server_3.png, id=1489, 426.84468pt x 147.55125pt>
 File: Images/AnexoInstalacion/server_3.png Graphic file (type png)
 
 <use Images/AnexoInstalacion/server_3.png>
@@ -6185,7 +6354,7 @@ Package pdftex.def Info: Images/AnexoInstalacion/server_3.png used on input lin
 e 94.
 (pdftex.def)             Requested size: 418.27888pt x 144.59021pt.
 
-<Images/AnexoInstalacion/server_4.png, id=1452, 584.1825pt x 166.37157pt>
+<Images/AnexoInstalacion/server_4.png, id=1490, 584.1825pt x 166.37157pt>
 File: Images/AnexoInstalacion/server_4.png Graphic file (type png)
 
 <use Images/AnexoInstalacion/server_4.png>
@@ -6193,7 +6362,7 @@ Package pdftex.def Info: Images/AnexoInstalacion/server_4.png used on input lin
 e 102.
 (pdftex.def)             Requested size: 418.26671pt x 119.11975pt.
 
-<Images/AnexoInstalacion/server_5.png, id=1453, 225.84375pt x 152.06813pt>
+<Images/AnexoInstalacion/server_5.png, id=1491, 225.84375pt x 152.06813pt>
 File: Images/AnexoInstalacion/server_5.png Graphic file (type png)
 
 <use Images/AnexoInstalacion/server_5.png>
@@ -6224,9 +6393,9 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 114.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 114.
- [101 <./Images/AnexoInstalacion/server_2.png> <./Images/AnexoInstalacion/serve
+ [107 <./Images/AnexoInstalacion/server_2.png> <./Images/AnexoInstalacion/serve
 r_3.png> <./Images/AnexoInstalacion/server_4.png>]
-<Images/AnexoInstalacion/server_6.png, id=1461, 346.29375pt x 279.29344pt>
+<Images/AnexoInstalacion/server_6.png, id=1499, 346.29375pt x 279.29344pt>
 File: Images/AnexoInstalacion/server_6.png Graphic file (type png)
 
 <use Images/AnexoInstalacion/server_6.png>
@@ -6234,7 +6403,7 @@ Package pdftex.def Info: Images/AnexoInstalacion/server_6.png used on input lin
 e 118.
 (pdftex.def)             Requested size: 418.26639pt x 337.34094pt.
 
-<Images/AnexoInstalacion/server_7.png, id=1462, 426.84468pt x 207.77625pt>
+<Images/AnexoInstalacion/server_7.png, id=1500, 426.84468pt x 207.77625pt>
 File: Images/AnexoInstalacion/server_7.png Graphic file (type png)
 
 <use Images/AnexoInstalacion/server_7.png>
@@ -6267,9 +6436,9 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 131.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 131.
- [102 <./Images/AnexoInstalacion/server_5.png> <./Images/AnexoInstalacion/serve
+ [108 <./Images/AnexoInstalacion/server_5.png> <./Images/AnexoInstalacion/serve
 r_6.png>]
-<Images/AnexoInstalacion/server_8.png, id=1471, 170.88844pt x 189.70876pt>
+<Images/AnexoInstalacion/server_8.png, id=1509, 170.88844pt x 189.70876pt>
 File: Images/AnexoInstalacion/server_8.png Graphic file (type png)
 
 <use Images/AnexoInstalacion/server_8.png>
@@ -6300,7 +6469,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 144.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 144.
- [103 <./Images/AnexoInstalacion/server_7.png> <./Images/AnexoInstalacion/serve
+ [109 <./Images/AnexoInstalacion/server_7.png> <./Images/AnexoInstalacion/serve
 r_8.png>]
 LaTeX Info: Redefining \. on input line 170.
 LaTeX Info: Redefining \% on input line 170.
@@ -6328,59 +6497,59 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 170.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 170.
- [104])
+ [110])
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 103.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 103.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 103.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 103.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 103.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 103.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 103.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 103.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 103.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 103.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 103.
+(babel)             in language  on input line 104.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 103.
- [105]
-LaTeX Info: Redefining \. on input line 109.
-LaTeX Info: Redefining \% on input line 109.
+(babel)             in language  on input line 104.
+ [111]
+LaTeX Info: Redefining \. on input line 110.
+LaTeX Info: Redefining \% on input line 110.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 109.
- [106
+(babel)             in language  on input line 110.
+ [112
 
 
 ]
@@ -6423,7 +6592,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 75.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 75.
-[107
+[113
 
 
 ]
@@ -6433,57 +6602,57 @@ kipedia . org / wiki / Web _
  []
 
 )
-LaTeX Info: Redefining \. on input line 113.
-LaTeX Info: Redefining \% on input line 113.
+LaTeX Info: Redefining \. on input line 114.
+LaTeX Info: Redefining \% on input line 114.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 114.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 113.
- [108]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 121.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
+(babel)             in language  on input line 114.
+ [114]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
  (General.aux (Portada.aux)
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
  (Agradecimientos.aux) (Resumen.aux)
 (Introduccion.aux) (DescInformatica.aux) (Pruebas.aux) (Conclusiones.aux)
-(AnexoResPruebasVal.aux) (AnexoManualUsuario.aux) (AnexoManualInstalacion.aux)
-(Bibliografia.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 121.
+(AnexoAPI.aux) (AnexoResPruebasVal.aux) (AnexoManualUsuario.aux)
+(AnexoManualInstalacion.aux) (Bibliografia.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
 Package rerunfilecheck Info: File `General.out' has not changed.
-(rerunfilecheck)             Checksum: E555609E78ED43DADC7C1A8F1D7C9B2F;2401.
+(rerunfilecheck)             Checksum: E18270D4C102F43FAD71F4EAC81B1A49;2473.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 121.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
  ) 
 Here is how much of TeX's memory you used:
- 9779 strings out of 493334
- 153234 string characters out of 3136666
- 282741 words of memory out of 3000000
- 12520 multiletter control sequences out of 15000+200000
+ 9807 strings out of 493334
+ 153560 string characters out of 3136666
+ 276617 words of memory out of 3000000
+ 12531 multiletter control sequences out of 15000+200000
  16855 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,13n,51p,987b,755s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -6511,9 +6680,9 @@ public/amsfonts/cm/cmtt8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
 lic/eurosym/feymr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
 c/wasy/wasy10.pfb>
-Output written on General.pdf (122 pages, 9283866 bytes).
+Output written on General.pdf (128 pages, 9307934 bytes).
 PDF statistics:
- 1717 PDF objects out of 1728 (max. 8388607)
- 477 named destinations out of 1000 (max. 500000)
- 681 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1757 PDF objects out of 2073 (max. 8388607)
+ 487 named destinations out of 1000 (max. 500000)
+ 689 words of extra memory for PDF output out of 10000 (max. 10000000)
 
