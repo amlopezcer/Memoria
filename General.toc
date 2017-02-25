@@ -38,43 +38,45 @@
 \contentsline {subsubsection}{Modelizaci\IeC {\'o}n de la arquitectura}{42}{section*.75}
 \contentsline {subsection}{\numberline {2.3.3}Dise\IeC {\~n}o de las interfaces}{46}{subsection.2.3.3}
 \contentsline {subsubsection}{Interfaces de comunicaci\IeC {\'o}n}{46}{section*.78}
-\contentsline {subsubsection}{Interfaces de usuario}{51}{section*.79}
-\contentsline {section}{\numberline {2.4}Implementaci\IeC {\'o}n}{54}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Introducci\IeC {\'o}n}{54}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Herramientas utilizadas}{55}{subsection.2.4.2}
-\contentsline {subsubsection}{Cliente}{55}{section*.83}
-\contentsline {subsubsection}{Servidor}{56}{section*.85}
-\contentsline {subsubsection}{Base de datos}{57}{section*.86}
-\contentsline {subsubsection}{Comunicaci\IeC {\'o}n}{58}{section*.87}
-\contentsline {subsubsection}{Controlador de Versiones}{59}{section*.88}
-\contentsline {subsection}{\numberline {2.4.3}Distribuci\IeC {\'o}n f\IeC {\'\i }sica}{59}{subsection.2.4.3}
-\contentsline {chapter}{\numberline {3}Pruebas}{61}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introducci\IeC {\'o}n}{61}{section.3.1}
-\contentsline {section}{\numberline {3.2}Estrategia de pruebas}{62}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Pruebas de unidad}{63}{subsection.3.2.1}
-\contentsline {subsubsection}{Cliente - Android}{63}{section*.91}
-\contentsline {subsubsection}{Servidor - GlassFish}{64}{section*.93}
-\contentsline {subsubsection}{Base de datos - MySQL}{65}{section*.95}
-\contentsline {subsection}{\numberline {3.2.2}Pruebas de integraci\IeC {\'o}n}{66}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Pruebas de validaci\IeC {\'o}n}{66}{subsection.3.2.3}
-\contentsline {subsubsection}{Entorno de pruebas}{66}{section*.96}
-\contentsline {subsubsection}{Especificaci\IeC {\'o}n de pruebas}{67}{section*.97}
-\contentsline {subsection}{\numberline {3.2.4}Pruebas de sistema}{74}{subsection.3.2.4}
-\contentsline {chapter}{\numberline {4}Conclusiones}{75}{chapter.4}
-\contentsline {section}{\numberline {4.1}L\IeC {\'\i }neas futuras}{76}{section.4.1}
-\contentsline {chapter}{\numberline {A}Detalle de la API implementada}{79}{appendix.Alph1}
-\contentsline {chapter}{\numberline {B}Resultados de las pruebas de validaci\IeC {\'o}n}{85}{appendix.Alph2}
-\contentsline {chapter}{\numberline {C}Manual de usuario}{89}{appendix.Alph3}
-\contentsline {subsubsection}{Configuraci\IeC {\'o}n inicial y pantalla inicial}{89}{section*.98}
-\contentsline {subsubsection}{Registro de usuarios}{90}{section*.101}
-\contentsline {subsubsection}{Inicio de sesi\IeC {\'o}n}{91}{section*.103}
-\contentsline {subsubsection}{Pantalla principal de la aplicaci\IeC {\'o}n: vistas y opciones adicionales}{91}{section*.105}
-\contentsline {subsubsection}{Operar con bicicletas y anclajes}{95}{section*.112}
-\contentsline {subsubsection}{Cuenta de usuario}{96}{section*.116}
-\contentsline {subsubsection}{Configuraci\IeC {\'o}n}{97}{section*.118}
-\contentsline {subsubsection}{FAQs}{99}{section*.121}
-\contentsline {chapter}{\numberline {D}Manual de instalaci\IeC {\'o}n}{101}{appendix.Alph4}
-\contentsline {subsubsection}{Base de datos}{101}{section*.122}
-\contentsline {subsubsection}{Servidor}{106}{section*.129}
-\contentsline {subsubsection}{Cliente}{110}{section*.138}
-\contentsline {subsubsection}{FAQs}{110}{section*.139}
+\contentsline {subsubsection}{Interfaces de usuario}{47}{section*.79}
+\contentsline {section}{\numberline {2.4}Implementaci\IeC {\'o}n}{51}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Introducci\IeC {\'o}n}{51}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Herramientas utilizadas}{51}{subsection.2.4.2}
+\contentsline {subsubsection}{Cliente}{51}{section*.83}
+\contentsline {subsubsection}{Servidor}{52}{section*.85}
+\contentsline {subsubsection}{Base de datos}{54}{section*.86}
+\contentsline {subsubsection}{Comunicaci\IeC {\'o}n}{54}{section*.87}
+\contentsline {subsubsection}{Controlador de Versiones}{55}{section*.88}
+\contentsline {subsection}{\numberline {2.4.3}Distribuci\IeC {\'o}n f\IeC {\'\i }sica}{55}{subsection.2.4.3}
+\contentsline {chapter}{\numberline {3}Pruebas}{59}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introducci\IeC {\'o}n}{59}{section.3.1}
+\contentsline {section}{\numberline {3.2}Estrategia de pruebas}{60}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Pruebas de unidad}{61}{subsection.3.2.1}
+\contentsline {subsubsection}{Cliente - Android}{61}{section*.91}
+\contentsline {subsubsection}{Servidor - GlassFish}{62}{section*.93}
+\contentsline {subsubsection}{Base de datos - MySQL}{63}{section*.95}
+\contentsline {subsection}{\numberline {3.2.2}Pruebas de integraci\IeC {\'o}n}{64}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Pruebas de validaci\IeC {\'o}n}{64}{subsection.3.2.3}
+\contentsline {subsubsection}{Entorno de pruebas}{64}{section*.96}
+\contentsline {subsubsection}{Especificaci\IeC {\'o}n de pruebas}{65}{section*.97}
+\contentsline {subsection}{\numberline {3.2.4}Pruebas de sistema}{72}{subsection.3.2.4}
+\contentsline {chapter}{\numberline {4}Conclusiones}{73}{chapter.4}
+\contentsline {section}{\numberline {4.1}L\IeC {\'\i }neas futuras}{74}{section.4.1}
+\contentsline {chapter}{\numberline {A}API implementada}{77}{appendix.Alph1}
+\contentsline {subsubsection}{Introducci\IeC {\'o}n a la API}{77}{section*.98}
+\contentsline {subsubsection}{Detalle de la API}{81}{section*.99}
+\contentsline {chapter}{\numberline {B}Resultados de las pruebas de validaci\IeC {\'o}n}{87}{appendix.Alph2}
+\contentsline {chapter}{\numberline {C}Manual de usuario}{91}{appendix.Alph3}
+\contentsline {subsubsection}{Configuraci\IeC {\'o}n inicial y pantalla inicial}{91}{section*.100}
+\contentsline {subsubsection}{Registro de usuarios}{92}{section*.103}
+\contentsline {subsubsection}{Inicio de sesi\IeC {\'o}n}{93}{section*.105}
+\contentsline {subsubsection}{Pantalla principal de la aplicaci\IeC {\'o}n: vistas y opciones adicionales}{93}{section*.107}
+\contentsline {subsubsection}{Operar con bicicletas y anclajes}{97}{section*.114}
+\contentsline {subsubsection}{Cuenta de usuario}{98}{section*.118}
+\contentsline {subsubsection}{Configuraci\IeC {\'o}n}{99}{section*.120}
+\contentsline {subsubsection}{FAQs}{101}{section*.123}
+\contentsline {chapter}{\numberline {D}Manual de instalaci\IeC {\'o}n}{103}{appendix.Alph4}
+\contentsline {subsubsection}{Base de datos}{103}{section*.124}
+\contentsline {subsubsection}{Servidor}{108}{section*.131}
+\contentsline {subsubsection}{Cliente}{112}{section*.140}
+\contentsline {subsubsection}{FAQs}{112}{section*.141}

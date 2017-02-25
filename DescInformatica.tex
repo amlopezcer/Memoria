@@ -973,135 +973,7 @@ La selección de este formato en lugar del tradicional XML queda principalmente 
 
 Finalmente, comentar la utilización de los patrones \emph{Observer} y \emph{Facade} para mejorar y estandarizar la comunicación entre componentes ante las problemáticas específicas apuntadas anteriormente.
 
-Para una mejor comprensión, a continuación se aporta, por entidad, una introducción de la API implementada en el servidor a nivel de las diferentes URLs. Esta introducción pretende describir la funcionalidad general de cada método, dejando el detalle de cada uno descrito en el anexo~\ref{app:appAPI}.
-
-\newcolumntype{A}[1]{>{\arraybackslash}m{#1}} %Sin la definción de una columna propia (A), la sección de comentarios no se ajusta bien a la página
-\newcolumntype{B}[1]{>{\centering\arraybackslash}m{#1}} 
-
-\begin{itemize}
-	\item \textbf{Estación}
-	
-	\begin{center}
-			\begin{longtable}{|c|c|B{2.5cm}|A{8cm}|}
-				\hline
-				
-				\multicolumn{1}{|c|}{\textbf{ID}}	& \textbf{Método}	& \textbf{Ruta}	& \textbf{Objetivo} \\ 	\hline
-				\endfirsthead
-				
-				\multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continúa desde la página anterior}} 			\\	\hline
-				\multicolumn{1}{|c|}{\textbf{ID}}	& \textbf{Método}	& \textbf{Ruta}	& \textbf{Objetivo} \\ 	\hline
-				\endhead
-				
-				\hline \multicolumn{4}{|r|}{{\textit{Continúa en la página siguiente}}} \\ \hline
-				\endfoot
-				
-				\endlastfoot
-				
-				\multirow{1}{*}{1}	& POST	& -	& Método básico para la creación de entidades de tipo Estación en base de datos. Este método, si bien está disponible, no se ha utilizado en la aplicación desarrollada puesto que las estaciones se crean directamente en base de datos. \\ \hline
-				
-				\multirow{1}{*}{2}	& PUT	& \{id\}	& Método básico para la actualización directa (sin comprobaciones) de entidades de tipo Estación en la base de datos. \\ \hline
-				
-				\multirow{1}{*}{3}	& PUT	& \{operation\} / \{id\}	& Método para la actualización de Estaciones cuando se realiza alguna de las siguientes operaciones: coger bicicleta, dejar bicicleta, reservar bicicleta o anclaje. Este método se ha implementado adicionalmente al anterior puesto que las operaciones mencionadas requieren de comprobaciones sobre el servidor para evaluar la disponibilidad de cada estación y ofrecer al usuario un resultado consistente. \\ \hline
-				
-				\multirow{1}{*}{4}	& DELETE	& \{id\}	& Método básico para el borrado de entidades de tipo Estación de la base de datos. Este método no se ha utilizado en la aplicación desarrollada puesto que las estaciones se eliminan directamente en base de datos. \\ \hline
-				
-				\multirow{1}{*}{5}	& GET	& \{id\}	& Método básico para obtener entidades de tipo Estación de la base de datos a partir de su ID.	\\ \hline
-				
-				\multirow{1}{*}{6}	& GET	& sta\-tion\-Ad\-dress / \{ad\-dress\}	& Método adicional al anterior para obtener entidades de tipo Estación de la base de datos a partir de su dirección (campo único). \\ \hline
-				
-				\multirow{1}{*}{7}	& GET	& -	& Método básico para la obtención del listado completo de entidades de tipo Estación creadas en la base de datos. \\ \hline
-				
-				\multirow{1}{*}{8}	& GET	& \{from\} / \{to\}	& Método básico para la obtención de un listado acotado de entidades de tipo Estación creadas en la base de datos. Se obtienen tantas entidades como las indicadas en el parámetro \textit{to} a partir de la estación con el ID más cercano al indicado en el parámetro \textit{from}. \\ \hline
-				
-				\multirow{1}{*}{9}	& GET	& count	& Método básico para conocer el número de entidades de tipo Estación creadas en la base de datos. \\ \hline
-				
-				\caption{Vista general de la API para la entidad Estación}
-				\label{tab:apiEstacionGeneral}
-			\end{longtable}
-	\end{center}
-	
-	\item \textbf{Usuario}
-	
-	\begin{center}
-			\begin{longtable}{|c|c|B{2.5cm}|A{8cm}|}
-				\hline
-				
-				\multicolumn{1}{|c|}{\textbf{ID}}	& \textbf{Método}	& \textbf{Ruta}	& \textbf{Objetivo} \\ 	\hline
-				\endfirsthead
-				
-				\multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continúa desde la página anterior}} 			\\	\hline
-				\multicolumn{1}{|c|}{\textbf{ID}}	& \textbf{Método}	& \textbf{Ruta}	& \textbf{Objetivo} \\ 	\hline
-				\endhead
-				
-				\hline \multicolumn{4}{|r|}{{\textit{Continúa en la página siguiente}}} \\ \hline
-				\endfoot
-				
-				\endlastfoot
-				
-				\multirow{1}{*}{1}	& POST	& -	& Método básico para la creación de entidades de tipo Usuario en la base de datos. Este método comprueba la disponibilidad del nombre de usuario o dirección de correo elegidas, informando al usuario de si la creación ha sido posible o no.	\\ \hline
-				
-				\multirow{1}{*}{2}	& PUT	& \{id\}	& Método básico para la actualización directa (sin comprobaciones) de entidades de tipo Usuario en la base de datos. \\ \hline
-				
-				\multirow{1}{*}{3}	& PUT	& ba\-sic\-da\-ta / \{id\}	& Método adicional al anterior para actualizar Usuarios cuando se quiere modificar el nombre de usuario o dirección de correo, modificación que requieren de comprobaciones de disponibilidad adicionales. \\ \hline
-				
-				\multirow{1}{*}{4}	& DELETE	& \{id\}	& Método básico para el borrado de entidades de tipo Usuario de la base de datos. \\ \hline
-				
-				\multirow{1}{*}{5}	& GET	& \{id\}	& Método básico para obtener usuarios de la base de datos a partir de su ID. \\ \hline
-				
-				\multirow{1}{*}{6}	& GET	& u\-ser / \{u\-ser\-na\-me\}	& Método adicional al anterior para obtener usuarios de la base datos a partir del nombre de usuario.	\\ \hline
-				
-				\multirow{1}{*}{7}	& GET	& -	&  Método básico para la obtención del listado completo de entidades de tipo Usuario creadas en la base de datos.	\\ \hline
-				
-				\multirow{1}{*}{8}	& GET	& \{from\} / \{to\}	& Método básico para la obtención de un listado acotado de entidades de tipo Usuario creadas en la base de datos. Se obtienen tantas entidades como las indicadas en el parámetro \textit{to} a partir del usuario con el ID más cercano al indicado en el parámetro \textit{from}. \\ \hline
-				
-				
-				\multirow{1}{*}{9}	& GET	& count	& Método básico para conocer el número de entidades de tipo Usuario creadas en la base de datos.	\\ \hline
-				
-				\caption{Vista general de la API para la entidad Usuario}
-				\label{tab:apiUsuarioGeneral}
-			\end{longtable}
-	\end{center}
-	
-	\item \textbf{Reserva}
-	
-	\begin{center}
-			\begin{longtable}{|c|c|B{2.5cm}|A{8cm}|}
-				\hline
-				
-				\multicolumn{1}{|c|}{\textbf{ID}}	& \textbf{Método}	& \textbf{Ruta}	& \textbf{Objetivo} \\ 	\hline
-				\endfirsthead
-				
-				\multicolumn{4}{c}{{\bfseries \tablename\ \thetable{} -- Continúa desde la página anterior}} 			\\	\hline
-				\multicolumn{1}{|c|}{\textbf{ID}}	& \textbf{Método}	& \textbf{Ruta}	& \textbf{Objetivo} \\ 	\hline
-				\endhead
-				
-				\hline \multicolumn{4}{|r|}{{\textit{Continúa en la página siguiente}}} \\ \hline
-				\endfoot
-				
-				\endlastfoot
-				
-				\multirow{1}{*}{1}	& POST	& -	& Método básico para la creación de entidades de tipo Reserva en la base de datos.	\\ \hline
-				
-				\multirow{1}{*}{2}	& PUT	& \{id\}	& Método básico para la actualización directa (sin comprobaciones) de entidades de tipo Reserva en la base de datos. Este método, si bien queda disponible, no se ha utilizado en la aplicación desarrollada puesto que las reservas sólo se pueden crear o cancelar (eliminar). \\ \hline
-				
-				\multirow{1}{*}{3}	& DELETE	& \{id\}	& Método básico para el borrado de entidades de tipo Reserva de la base de datos. Este método, si bien queda disponible, no se ha utilizado, puesto que para el borrado de reservas se ha implementado el método descrito a continuación. \\ \hline
-				
-				\multirow{1}{*}{4}	& DELETE	& \{{u\-ser\-na\-me}\} / \{{book\-ing\-ty\-pe}\}	&	Método adicional al anterior para el borrado de entidades de tipo Reserva de la base de datos. Puesto que un usuario sólo puede cancelar sus propias reservas, este método realiza, bajo petición, una búsqueda del tipo de reserva especificado a su nombre y la elimina.	\\ \hline
-				
-				\multirow{1}{*}{5}	& GET	& \{id\}	& Método básico para obtener reservas de la base de datos a partir de su ID.	\\ \hline
-				
-				\multirow{1}{*}{6}	& GET	& -	& Método básico para la obtención del listado completo de entidades de tipo Reserva creadas en la base de datos.  \\ \hline
-				
-				\multirow{1}{*}{7}	& GET	& \{from\} / \{to\}	& Método básico para la obtención de un listado acotado de entidades de tipo Reserva creadas en la base de datos. Se obtienen tantas entidades como las indicadas en el parámetro \textit{to} a partir de la reserva con el ID más cercano al indicado en el parámetro \textit{from}. \\ \hline
-				
-				\multirow{1}{*}{8}	& GET	& count	& Método básico para conocer el número de entidades de tipo Reserva creadas en la base de datos. \\ \hline
-				
-				\caption{Vista general de la API para la entidad Reserva}
-				\label{tab:apiReservaGeneral}
-			\end{longtable}
-	\end{center}
-	
-\end{itemize}
+Finalmente, en el anexo~\ref{app:appAPI}, se recoge una descripción de la API implementada en el servidor a nivel de las diferentes URLs.
 
 
 \subsubsection{Interfaces de usuario}
@@ -1130,7 +1002,7 @@ Una vez considerados los principios generales y los específicos para los elemen
 
 En la figura~\ref{fig:fragmentsAndroid} se aporta un esquema gráfico de la utilidad de estos elementos de diseño para una mejor comprensión.
 
-\begin{figure} [!htb]
+\begin{figure}
 	\centering
 	\includegraphics[width=\linewidth,height=\textheight,keepaspectratio]{Images/FragmentsAndroid}
 	\caption[Fragmentos en el diseño de IUs]{Fragmentos en el diseño de IUs. \textit{Fuente:~\cite{AnDev}}}
