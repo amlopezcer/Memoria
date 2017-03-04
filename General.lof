@@ -57,34 +57,34 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Configuraci\IeC {\'o}n inicial de la conexi\IeC {\'o}n\relax }}{91}{figure.caption.101}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Pantalla inicial de la aplicaci\IeC {\'o}n\relax }}{92}{figure.caption.102}
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Registro de nuevos usuarios\relax }}{92}{figure.caption.104}
-\contentsline {figure}{\numberline {C.4}{\ignorespaces Inicio de sesi\IeC {\'o}n\relax }}{93}{figure.caption.106}
-\contentsline {figure}{\numberline {C.5}{\ignorespaces Pantalla principal de la aplicaci\IeC {\'o}n\relax }}{94}{figure.caption.108}
-\contentsline {figure}{\numberline {C.6}{\ignorespaces Detalle de una estaci\IeC {\'o}n\relax }}{94}{figure.caption.109}
-\contentsline {figure}{\numberline {C.7}{\ignorespaces Diferentes vistas y opciones\relax }}{95}{figure.caption.110}
-\contentsline {figure}{\numberline {C.8}{\ignorespaces Listado detallado del conjunto de estaciones\relax }}{95}{figure.caption.111}
-\contentsline {figure}{\numberline {C.9}{\ignorespaces Estado global del parque de estaciones\relax }}{96}{figure.caption.112}
-\contentsline {figure}{\numberline {C.10}{\ignorespaces Men\IeC {\'u} desplegable y opciones adicionales\relax }}{96}{figure.caption.113}
-\contentsline {figure}{\numberline {C.11}{\ignorespaces Opciones a la hora de operar con una estaci\IeC {\'o}n\relax }}{97}{figure.caption.115}
-\contentsline {figure}{\numberline {C.12}{\ignorespaces Actualizaci\IeC {\'o}n de la barra de estado al coger una bici\relax }}{98}{figure.caption.116}
-\contentsline {figure}{\numberline {C.13}{\ignorespaces Reserva de bicicleta y anclajes\relax }}{98}{figure.caption.117}
-\contentsline {figure}{\numberline {C.14}{\ignorespaces Cuenta de usuario\relax }}{99}{figure.caption.119}
-\contentsline {figure}{\numberline {C.15}{\ignorespaces Configuraciones posibles\relax }}{100}{figure.caption.121}
-\contentsline {figure}{\numberline {C.16}{\ignorespaces ``Superusuario'' activado\relax }}{100}{figure.caption.122}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Configuraci\IeC {\'o}n inicial de la conexi\IeC {\'o}n\relax }}{87}{figure.caption.99}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Pantalla inicial de la aplicaci\IeC {\'o}n\relax }}{88}{figure.caption.100}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Registro de nuevos usuarios\relax }}{88}{figure.caption.102}
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Inicio de sesi\IeC {\'o}n\relax }}{89}{figure.caption.104}
+\contentsline {figure}{\numberline {C.5}{\ignorespaces Pantalla principal de la aplicaci\IeC {\'o}n\relax }}{90}{figure.caption.106}
+\contentsline {figure}{\numberline {C.6}{\ignorespaces Detalle de una estaci\IeC {\'o}n\relax }}{90}{figure.caption.107}
+\contentsline {figure}{\numberline {C.7}{\ignorespaces Diferentes vistas y opciones\relax }}{91}{figure.caption.108}
+\contentsline {figure}{\numberline {C.8}{\ignorespaces Listado detallado del conjunto de estaciones\relax }}{91}{figure.caption.109}
+\contentsline {figure}{\numberline {C.9}{\ignorespaces Estado global del parque de estaciones\relax }}{92}{figure.caption.110}
+\contentsline {figure}{\numberline {C.10}{\ignorespaces Men\IeC {\'u} desplegable y opciones adicionales\relax }}{92}{figure.caption.111}
+\contentsline {figure}{\numberline {C.11}{\ignorespaces Opciones a la hora de operar con una estaci\IeC {\'o}n\relax }}{93}{figure.caption.113}
+\contentsline {figure}{\numberline {C.12}{\ignorespaces Actualizaci\IeC {\'o}n de la barra de estado al coger una bici\relax }}{94}{figure.caption.114}
+\contentsline {figure}{\numberline {C.13}{\ignorespaces Reserva de bicicleta y anclajes\relax }}{94}{figure.caption.115}
+\contentsline {figure}{\numberline {C.14}{\ignorespaces Cuenta de usuario\relax }}{95}{figure.caption.117}
+\contentsline {figure}{\numberline {C.15}{\ignorespaces Configuraciones posibles\relax }}{96}{figure.caption.119}
+\contentsline {figure}{\numberline {C.16}{\ignorespaces ``Superusuario'' activado\relax }}{96}{figure.caption.120}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Pantalla principal de MySQL Installer\relax }}{104}{figure.caption.125}
-\contentsline {figure}{\numberline {D.2}{\ignorespaces Instalaci\IeC {\'o}n de MySQL Server\relax }}{104}{figure.caption.126}
-\contentsline {figure}{\numberline {D.3}{\ignorespaces Instalaci\IeC {\'o}n de MySQL Server\relax }}{105}{figure.caption.127}
-\contentsline {figure}{\numberline {D.4}{\ignorespaces Configuraci\IeC {\'o}n de la conexi\IeC {\'o}n en MySQL Workbench\relax }}{106}{figure.caption.128}
-\contentsline {figure}{\numberline {D.5}{\ignorespaces Ejecuci\IeC {\'o}n de consultas SQL\relax }}{107}{figure.caption.129}
-\contentsline {figure}{\numberline {D.6}{\ignorespaces Carga de datos en MySQL Workbench\relax }}{107}{figure.caption.130}
-\contentsline {figure}{\numberline {D.7}{\ignorespaces Conexi\IeC {\'o}n del Connector/J\relax }}{108}{figure.caption.132}
-\contentsline {figure}{\numberline {D.8}{\ignorespaces Configuraci\IeC {\'o}n de la conexi\IeC {\'o}n\relax }}{109}{figure.caption.133}
-\contentsline {figure}{\numberline {D.9}{\ignorespaces Vista de la base de datos desde NetBeans\relax }}{109}{figure.caption.134}
-\contentsline {figure}{\numberline {D.10}{\ignorespaces Conexi\IeC {\'o}n base de datos\relax }}{109}{figure.caption.135}
-\contentsline {figure}{\numberline {D.11}{\ignorespaces Conexi\IeC {\'o}n base de datos\relax }}{110}{figure.caption.136}
-\contentsline {figure}{\numberline {D.12}{\ignorespaces Carga del proyecto\relax }}{110}{figure.caption.137}
-\contentsline {figure}{\numberline {D.13}{\ignorespaces Configuraci\IeC {\'o}n de claves en ``glassfish-resoruces.xml''\relax }}{111}{figure.caption.138}
-\contentsline {figure}{\numberline {D.14}{\ignorespaces Encendiendo GlassFish\relax }}{111}{figure.caption.139}
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Pantalla principal de MySQL Installer\relax }}{100}{figure.caption.123}
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Instalaci\IeC {\'o}n de MySQL Server\relax }}{100}{figure.caption.124}
+\contentsline {figure}{\numberline {D.3}{\ignorespaces Instalaci\IeC {\'o}n de MySQL Server\relax }}{101}{figure.caption.125}
+\contentsline {figure}{\numberline {D.4}{\ignorespaces Configuraci\IeC {\'o}n de la conexi\IeC {\'o}n en MySQL Workbench\relax }}{102}{figure.caption.126}
+\contentsline {figure}{\numberline {D.5}{\ignorespaces Ejecuci\IeC {\'o}n de consultas SQL\relax }}{103}{figure.caption.127}
+\contentsline {figure}{\numberline {D.6}{\ignorespaces Carga de datos en MySQL Workbench\relax }}{103}{figure.caption.128}
+\contentsline {figure}{\numberline {D.7}{\ignorespaces Conexi\IeC {\'o}n del Connector/J\relax }}{104}{figure.caption.130}
+\contentsline {figure}{\numberline {D.8}{\ignorespaces Configuraci\IeC {\'o}n de la conexi\IeC {\'o}n\relax }}{105}{figure.caption.131}
+\contentsline {figure}{\numberline {D.9}{\ignorespaces Vista de la base de datos desde NetBeans\relax }}{105}{figure.caption.132}
+\contentsline {figure}{\numberline {D.10}{\ignorespaces Conexi\IeC {\'o}n base de datos\relax }}{105}{figure.caption.133}
+\contentsline {figure}{\numberline {D.11}{\ignorespaces Conexi\IeC {\'o}n base de datos\relax }}{106}{figure.caption.134}
+\contentsline {figure}{\numberline {D.12}{\ignorespaces Carga del proyecto\relax }}{106}{figure.caption.135}
+\contentsline {figure}{\numberline {D.13}{\ignorespaces Configuraci\IeC {\'o}n de claves en ``glassfish-resoruces.xml''\relax }}{107}{figure.caption.136}
+\contentsline {figure}{\numberline {D.14}{\ignorespaces Encendiendo GlassFish\relax }}{107}{figure.caption.137}
